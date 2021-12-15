@@ -27,7 +27,7 @@
 > 获取首页轮播图信息（包括图片、文字、跳转链接等）
 
 ###### URL
-> https://api.metacat.world/api/v1/get\_carousel\_list
+> https://api.metacat.world/api/v1/get_carousel_list
 
 ###### 返回数据格式
 > JSON
@@ -50,7 +50,7 @@
 | data.list.detail_url     | string   | 轮播图跳转链接                                             |
 
 ###### 接口示例
-> curl -s 'https://api.metacat.world/api/v1/get\_carousel\_list' | jq .
+> curl -s 'https://api.metacat.world/api/v1/get_carousel_list' | jq .
 
 ```
 {
@@ -84,7 +84,7 @@
 > 获取Cryptovoxels Parcel页面数据，支持翻页
 
 ###### URL
-> https://api.metacat.world/api/v1/get\_cv\_parcel\_list
+> https://api.metacat.world/api/v1/get_cv_parcel_list
 
 ###### 返回数据格式
 > JSON
@@ -121,7 +121,7 @@
 | data.parcel\_list.parcel\_page\_url   |  string  |  场馆详情页 url                                     |
 
 ###### 接口示例
-> curl -s 'https://api.metacat.world/api/v1/get\_cv\_parcel\_list' | jq . 
+> curl -s 'https://api.metacat.world/api/v1/get_cv_parcel_list' | jq . 
 
 ```
 {
@@ -185,7 +185,7 @@
 > 获取Cryptovoxels Event页面数据，支持下拉加载更多
 
 ###### URL
-> https://api.metacat.world/api/v1/get\_cv\_event\_list
+> https://api.metacat.world/api/v1/get_cv_event_list
 
 ###### 返回数据格式
 > JSON
@@ -215,7 +215,7 @@
 | data. event_list.event_parcel_url     | string   |  活动场馆url                                           |
 
 ###### 接口示例
-> curl -s 'https://api.metacat.world/api/v1/get\_cv\_event\_list' | jq . 
+> curl -s 'https://api.metacat.world/api/v1/get_cv_event_list' | jq . 
 
 ```
 {
@@ -259,7 +259,7 @@
 > 获取Decentraland Parcel页面数据，支持翻页
 
 ###### URL
-> https://api.metacat.world/api/v1/get\_dcl\_parcel\_list
+> https://api.metacat.world/api/v1/get_dcl_parcel_list
 
 ###### 返回数据格式
 > JSON
@@ -296,7 +296,7 @@
 | data.parcel\_list.parcel\_page\_url   |  string  |  场馆详情页 url                                     |
 
 ###### 接口示例
-> curl -s 'https://api.metacat.world/api/v1/get\_dcl\_parcel\_list' | jq . 
+> curl -s 'https://api.metacat.world/api/v1/get_dcl_parcel_list' | jq . 
 
 ```
 {
@@ -362,7 +362,7 @@
 > 获取Decentraland Event页面数据，支持下拉加载更多
 
 ###### URL
-> https://api.metacat.world/api/v1/get\_dcl\_event\_list
+> https://api.metacat.world/api/v1/get_dcl_event_list
 
 ###### 返回数据格式
 > JSON
@@ -392,7 +392,7 @@
 | data. event_list.event\_parcel\_url     | string   |  活动场馆url                                           |
 
 ###### 接口示例
-> curl -s 'https://api.metacat.world/api/v1/get\_cv\_event\_list' | jq . 
+> curl -s 'https://api.metacat.world/api/v1/get_dcl_event_list' | jq . 
 
 ```
 {
