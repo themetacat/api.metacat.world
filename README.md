@@ -532,8 +532,8 @@
 | msg      | string   | code 码为非 100000 时，对应的 error msg                  |
 | data     | string   | 详见接口示例                                             |
 | data.base_info.logo_url     | string   | 详情页顶部，机构logo url        |
-| data.base_info.name     | string   | 详情页顶部，机构名称（页面展示忽略该值）        |
-| data.base_info.description     | string   | 详情页顶部，机构简介（机构logo下方）        |
+| data.base_info.name     | string   | 详情页顶部，机构名称（显示在机构logo下方）        |
+| data.base_info.description     | string   | 详情页顶部，机构简介（显示在机构联系方式下方）        |
 | data.base_info.website     | string   | 详情页顶部，机构官网        |
 | data.base_info.twitter     | string   | 详情页顶部，机构官方twitter        |
 | data.base_info.discord     | string   | 详情页顶部，机构官方discord        |
