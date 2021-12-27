@@ -12,6 +12,10 @@
 1. 获取Decentraland Parcel 列表接口
 2. 获取Decentraland Event 列表接口
 
+### 四、Topic 相关接口
+1. 获取首页 Topic 列表接口
+2. 获取 Topic 详情页信息接口
+
 ----
 ## 全局错误码
 
@@ -429,4 +433,163 @@
     ]
   }
 }
+```
+---
+**4\.1 获取首页 Topic 列表接口**
+###### 接口功能
+> 获取首页 Topic 列表接口，只返回4条数据
+
+###### URL
+> https://api.metacat.world/api/v1/get_topic_list
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -     | -           |
+
+###### 返回字段
+
+| 返回字段 | 字段类型 | 说明                                                     |
+| :------- | :------- | :------------------------------------------------------- |
+| code     | int      | 返回结果状态。100000：正常，其他：错误。详见“全局错误码” |
+| msg      | string   | code 码为非 100000 时，对应的 error msg                  |
+| data     | string   | 详见接口示例                                             |
+| data.total     | int   | 本次返回的list总条数                                             |
+| data.list.topic_id     | int   | 请求topic详情页时，传入该参数    |
+| data.list.name     | string   | topic名称    |
+| data.list.type     | string   | topic类型，显示在Topic封面右上角    |
+| data.list.img_url     | string   | topic封面图url    |
+
+###### 接口示例
+> curl -s 'https://api.metacat.world/api/v1/get_topic_list' | jq . 
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "total": 4,
+    "list": [
+      {
+        "topic_id": 102,
+        "name": "BCA",
+        "type": "Topic",
+        "img_url": "https://media-crvox.sfo2.digitaloceanspaces.com/0xa8093c09098452727492968ddfe4a0e033ab76bd/womps/1637658522776-db362d6d-ef18-4b39-95ff-5415da26d09a.jpg"
+      },
+      {
+        "topic_id": 100,
+        "name": "PonlaiiDesign",
+        "type": "Topic",
+        "img_url": "https://media-crvox.sfo2.digitaloceanspaces.com/0x01e0c7b70e0e05a06c7cc8deeb97fa03d6a77c9c/womps/1634867345988-16f1df8c-fc8d-492f-86f8-0184e0977697.jpg"
+      },
+      {
+        "topic_id": 104,
+        "name": "Voxel Architects",
+        "type": "Topic",
+        "img_url": "https://media-crvox.sfo2.digitaloceanspaces.com/0x455a569b9c7ee32e3ec5dadae3413f1355972e0d/womps/1639940993786-afc6b9b9-fe8c-4756-8518-03c81badcb86.jpg"
+      },
+      {
+        "topic_id": 106,
+        "name": "TopBidder",
+        "type": "Topic",
+        "img_url": "https://www.cryptovoxels.com/api/womps/2503.jpg"
+      }
+    ]
+  }
+}
+
+```
+---
+**4\.2 获取 Topic 详情页信息接口**
+###### 接口功能
+> 获取 Topic 详情页信息接口，一次返回Topic下的所有场馆数据
+
+###### URL
+> https://api.metacat.world/api/v1/get_topic_detail
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| id  | ture | int  | 100    | topic_id          |
+
+###### 返回字段
+
+| 返回字段 | 字段类型 | 说明                                                     |
+| :------- | :------- | :------------------------------------------------------- |
+| code     | int      | 返回结果状态。100000：正常，其他：错误。详见“全局错误码” |
+| msg      | string   | code 码为非 100000 时，对应的 error msg                  |
+| data     | string   | 详见接口示例                                             |
+| data.base_info.logo_url     | string   | 详情页顶部，机构logo url        |
+| data.base_info.name     | string   | 详情页顶部，机构名称（页面展示忽略该值）        |
+| data.base_info.description     | string   | 详情页顶部，机构简介（机构logo下方）        |
+| data.base_info.website     | string   | 详情页顶部，机构官网        |
+| data.base_info.twitter     | string   | 详情页顶部，机构官方twitter        |
+| data.base_info.discord     | string   | 详情页顶部，机构官方discord        |
+| data.parcel\_list.name    |  string  |  场馆名称                                      |
+| data.parcel\_list.description   |  string  |  场馆简介                                      |
+| data.parcel\_list.type   |  string  |  场馆类型（页面展示忽略该值）                                      |
+| data.parcel\_list.cover\_img\_url   |  string  |  场馆封面图url                                      |
+| data.parcel\_list.opensea\_url   |  string  |  场馆对应opensea url                                     |
+| data.parcel\_list.parcel\_page\_url   |  string  |  场馆详情页 url                                     |
+
+###### 接口示例
+> curl -s 'https://api.metacat.world/api/v1/get_topic_detail?id=103' | jq . 
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "base_info": {
+      "logo_url": "https://poster-phi.vercel.app/topic/logo/MetaLandscape_logo.png",
+      "name": "MetaLandscape",
+      "description": "ALL FOR METAVERSE",
+      "website": "",
+      "twitter": "https://twitter.com/ConFi0419",
+      "discord": ""
+    },
+    "parcel_list": [
+      {
+        "parcel_id": 4540,
+        "name": "ConFi's Crystal Ball",
+        "description": "None",
+        "type": "Other",
+        "cover_img_url": "https://media-crvox.sfo2.digitaloceanspaces.com/0xa32c90129e5a78ff2f5984d306f12cc813dd2cda/womps/1640262479487-fbf0a779-c538-40f9-b820-c07d9273a5b7.jpg",
+        "opensea_url": "https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/4540",
+        "parcel_page_url": "https://www.cryptovoxels.com/parcels/4540"
+      },
+      {
+        "parcel_id": 3415,
+        "name": "Red Romance",
+        "description": "The Black Fractal Gallery on Proton Island",
+        "type": "Other",
+        "cover_img_url": "https://media-crvox.sfo2.digitaloceanspaces.com/0xa32c90129e5a78ff2f5984d306f12cc813dd2cda/womps/1638770908853-20aaf49b-a446-4780-901c-5e05a69b7f22.jpg",
+        "opensea_url": "https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/3415",
+        "parcel_page_url": "https://www.cryptovoxels.com/parcels/3415"
+      },
+      {
+        "parcel_id": 5249,
+        "name": "Parcel_Id: 5249",
+        "description": "None",
+        "type": "Other",
+        "cover_img_url": "https://www.cryptovoxels.com/api/womps/19153.jpg",
+        "opensea_url": "https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/5249",
+        "parcel_page_url": "https://www.cryptovoxels.com/parcels/5249"
+      }
+    ]
+  }
+}
+
 ```
