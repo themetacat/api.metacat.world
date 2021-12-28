@@ -464,7 +464,7 @@
 | data.list.topic_id     | int   | 请求topic详情页时，传入该参数    |
 | data.list.name     | string   | topic名称    |
 | data.list.type     | string   | topic类型，显示在Topic封面右上角    |
-| data.list.img_url_list     | string   | topic封面图，4张小图对应的url    |
+| data.list.img_url_list     | list   | topic封面图，4张小图对应的url    |
 
 ###### 接口示例
 > curl -s 'https://api.metacat.world/api/v1/get_topic_list' | jq . 
