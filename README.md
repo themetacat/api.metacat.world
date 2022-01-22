@@ -19,6 +19,7 @@
 ### 五、Cryptovoxels 地图相关接口
 1. 获取 Cryptovoxels 地图流量数据
 2. 获取 Cryptovoxels 地图的地块详细信息
+3. 获取 Cryptovoxels 第三级地图数据
 
 ----
 ## 全局错误码
@@ -762,5 +763,315 @@
   }
 }
 ```
+---
+**5\.3 获取 Cryptovoxels 第三级地图数据**
+###### 接口功能
+> 获取 Cryptovoxels 第三级地图数据接口
 
+###### URL
+> https://api.metacat.world/api/v1/get_cv_map_level_three
 
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回字段
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": [
+    {
+      "properties": {
+        "parcel_id": 4050,
+        "name": null,
+        "island": "Berlin",
+        "suburb": "Berlin"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3857"
+          }
+        },
+        "coordinates": [
+          [
+            [
+              -7.129899995,
+              -7.11
+            ],
+            [
+              -6.98,
+              -7.11
+            ],
+            [
+              -6.98,
+              -7.26
+            ],
+            [
+              -7.129899995,
+              -7.26
+            ],
+            [
+              -7.129899995,
+              -7.11
+            ]
+          ]
+        ]
+      },
+      "streets": [
+        {
+          "properties": {
+            "id": 1630,
+            "name": "Axel-Springer-Str",
+            "island": "Berlin",
+            "kind": null,
+            "visible": true
+          },
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -6.96,
+                -7.52
+              ],
+              [
+                -6.96,
+                -6.4
+              ]
+            ]
+          }
+        },
+        {
+          "properties": {
+            "id": 1654,
+            "name": "Lilienthalstraße",
+            "island": "Berlin",
+            "kind": null,
+            "visible": true
+          },
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -6.96,
+                -7.27
+              ],
+              [
+                -6.4,
+                -7.27
+              ]
+            ]
+          }
+        },
+        {
+          "properties": {
+            "id": 1682,
+            "name": "Brandesstraße",
+            "island": "Berlin",
+            "kind": null,
+            "visible": true
+          },
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -7.26,
+                -7.09
+              ],
+              [
+                -6.96,
+                -7.09
+              ]
+            ]
+          }
+        },
+        {
+          "properties": {
+            "id": 1683,
+            "name": "Ritterstraße",
+            "island": "Berlin",
+            "kind": null,
+            "visible": true
+          },
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -7.26,
+                -7.28
+              ],
+              [
+                -6.96,
+                -7.28
+              ]
+            ]
+          }
+        },
+        {
+          "properties": {
+            "id": 1700,
+            "name": "Gröbenufer",
+            "island": "Berlin",
+            "kind": null,
+            "visible": true
+          },
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -6.96,
+                -7.08
+              ],
+              [
+                -6.69,
+                -7.08
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "properties": {
+        "parcel_id": 4011,
+        "name": "MAGALL - Headquarter",
+        "island": "Berlin",
+        "suburb": "Berlin"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3857"
+          }
+        },
+        "coordinates": [
+          [
+            [
+              -6.810100005,
+              -5.8
+            ],
+            [
+              -6.94,
+              -5.8
+            ],
+            [
+              -6.94,
+              -5.65
+            ],
+            [
+              -6.810100005,
+              -5.65
+            ],
+            [
+              -6.810100005,
+              -5.8
+            ]
+          ]
+        ]
+      },
+      "streets": [
+        {
+          "properties": {
+            "id": 1631,
+            "name": "Schleusenufer",
+            "island": "Berlin",
+            "kind": null,
+            "visible": true
+          },
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -6.96,
+                -6.4
+              ],
+              [
+                -6.96,
+                -5.28
+              ]
+            ]
+          }
+        },
+        {
+          "properties": {
+            "id": 1651,
+            "name": "Sixtusgarten",
+            "island": "Berlin",
+            "kind": null,
+            "visible": true
+          },
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -6.96,
+                -5.82
+              ],
+              [
+                -6.4,
+                -5.82
+              ]
+            ]
+          }
+        },
+        {
+          "properties": {
+            "id": 1652,
+            "name": "Sebastianstraße",
+            "island": "Berlin",
+            "kind": null,
+            "visible": true
+          },
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -7.52,
+                -5.7
+              ],
+              [
+                -6.96,
+                -5.7
+              ]
+            ]
+          }
+        },
+        {
+          "properties": {
+            "id": 1673,
+            "name": "Kottbusser Straße",
+            "island": "Berlin",
+            "kind": null,
+            "visible": true
+          },
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -6.96,
+                -5.63
+              ],
+              [
+                -6.65,
+                -5.63
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
+```
