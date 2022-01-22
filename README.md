@@ -16,6 +16,10 @@
 1. 获取首页 Topic 列表接口
 2. 获取 Topic 详情页信息接口
 
+### 五、Cryptovoxels 地图相关接口
+1. 获取 Cryptovoxels 地图流量数据
+2. 获取 Cryptovoxels 地图的地块详细信息
+
 ----
 ## 全局错误码
 
@@ -646,3 +650,117 @@
 }
 
 ```
+---
+**5\.1 获取 Cryptovoxels 地图流量数据接口**
+###### 接口功能
+> 获取 Cryptovoxels 地图流量周、月、全部时间的流量数据接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_cv_map_traffic
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| type  | false | string  | 100    | week：最近7天流量数据，month：最近30天流量数据，all：所有流量数据；默认值：week          |
+
+###### 返回字段
+
+| 返回字段 | 字段类型 | 说明                                                     |
+| :------- | :------- | :------------------------------------------------------- |
+| code     | int      | 返回结果状态。100000：正常，其他：错误。详见“全局错误码” |
+| msg      | string   | code 码为非 100000 时，对应的 error msg                  |
+| data     | string   | 详见接口示例                                             |
+| data.key     | int   | parcel_id（地块id）      |
+| data.value     | int   | 地块对应的总流量        |
+
+###### 接口示例
+> curl -s 'https://api.metacat.world/api/v1/get_cv_map_traffic?type=week' | jq . 
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "1": 1711,
+    "2": 1624,
+    "3": 2219,
+    "4": 1569,
+    "5": 362,
+    "6": 438
+  }
+}
+```
+---
+**5\.2 获取 Cryptovoxels 地图的地块详细信息**
+###### 接口功能
+> 获取 Cryptovoxels 地块详细信息接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_cv_parcel_detail
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| id  | true | int  | 1    | 地块id    |
+
+###### 返回字段
+
+| 返回字段 | 字段类型 | 说明                                                     |
+| :------- | :------- | :------------------------------------------------------- |
+| code     | int      | 返回结果状态。100000：正常，其他：错误。详见“全局错误码” |
+| msg      | string   | code 码为非 100000 时，对应的 error msg                  |
+| data     | string   | 详见接口示例                                             |
+| data.parcel_id     | int   | parcel_id（地块id）      |
+| data.name     | string   | 地块名称      |
+| data.cover_img_url     | string   | 地块封面图       |
+| data.opensea_url     | string   |    地块对应的opensea链接     |
+| data.parcel_page_url     | string   |  地块对应的 cryptovoxels 页面链接      |
+| data.island     | string   |   地块所属的岛名      |
+| data.suburb     | string   |     地块所属的街区名    |
+| data.traffic.week     | int   |   地块最近7天流量     |
+| data.traffic.month    | int   |  地块最近30天流量       |
+| data.traffic.all     | int   |    地块总流量     |
+| data.last_price.eth    | float   |    地块最后一次交易金额对应的eth     |
+| data.last_price.usd     | int   |   地块最后一次交易金额对应的usd      |
+
+###### 接口示例
+> curl -s 'https://api.metacat.world/api/v1/get_cv_parcel_detail?id=12' | jq . 
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "parcel_id": 12,
+    "name": "The Metalith Throne",
+    "cover_img_url": "https://www.cryptovoxels.com/api/womps/16509.jpg",
+    "opensea_url": "https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/12",
+    "parcel_page_url": "https://www.cryptovoxels.com/parcels/12",
+    "island": "Origin City",
+    "suburb": "The Center",
+    "traffic": {
+      "week": 1769,
+      "month": 4920,
+      "all": 87883
+    },
+    "last_price": {
+      "eth": 1.57,
+      "usd": 3569
+    }
+  }
+}
+```
+
+
