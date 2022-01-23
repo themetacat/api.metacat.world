@@ -17,9 +17,8 @@
 2. 获取 Topic 详情页信息接口
 
 ### 五、Cryptovoxels 地图相关接口
-1. 获取 Cryptovoxels 地图流量数据
-2. 获取 Cryptovoxels 地图的地块详细信息
-3. 获取 Cryptovoxels 第三级地图数据
+1. 获取 Cryptovoxels 地图的地块详细信息
+2. 获取 Cryptovoxels 第三级地图数据
 
 ----
 ## 全局错误码
@@ -652,53 +651,7 @@
 
 ```
 ---
-**5\.1 获取 Cryptovoxels 地图流量数据接口**
-###### 接口功能
-> 获取 Cryptovoxels 地图流量周、月、全部时间的流量数据接口
-
-###### URL
-> https://api.metacat.world/api/v1/get_cv_map_traffic
-
-###### 返回数据格式
-> JSON
-
-###### HTTP 请求方式
-> GET
-
-###### 请求参数
-| 参数  | 必选  | 类型 | 默认值 | 描述           |
-| :---- | :---- | :--: | :----- | -------------- |
-| type  | false | string  | 100    | week：最近7天流量数据，month：最近30天流量数据，all：所有流量数据；默认值：week          |
-
-###### 返回字段
-
-| 返回字段 | 字段类型 | 说明                                                     |
-| :------- | :------- | :------------------------------------------------------- |
-| code     | int      | 返回结果状态。100000：正常，其他：错误。详见“全局错误码” |
-| msg      | string   | code 码为非 100000 时，对应的 error msg                  |
-| data     | string   | 详见接口示例                                             |
-| data.key     | int   | parcel_id（地块id）      |
-| data.value     | int   | 地块对应的总流量        |
-
-###### 接口示例
-> curl -s 'https://api.metacat.world/api/v1/get_cv_map_traffic?type=week' | jq . 
-
-```
-{
-  "code": 100000,
-  "msg": "success",
-  "data": {
-    "1": 1711,
-    "2": 1624,
-    "3": 2219,
-    "4": 1569,
-    "5": 362,
-    "6": 438
-  }
-}
-```
----
-**5\.2 获取 Cryptovoxels 地图的地块详细信息**
+**5\.1 获取 Cryptovoxels 地图的地块详细信息**
 ###### 接口功能
 > 获取 Cryptovoxels 地块详细信息接口
 
@@ -764,7 +717,7 @@
 }
 ```
 ---
-**5\.3 获取 Cryptovoxels 第三级地图数据**
+**5\.2 获取 Cryptovoxels 第三级地图数据**
 ###### 接口功能
 > 获取 Cryptovoxels 第三级地图数据接口
 
@@ -785,293 +738,137 @@
 ###### 返回字段
 ```
 {
-  "code": 100000,
-  "msg": "success",
-  "data": [
-    {
-      "properties": {
-        "parcel_id": 4050,
-        "name": null,
-        "island": "Berlin",
-        "suburb": "Berlin"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "crs": {
-          "type": "name",
-          "properties": {
-            "name": "EPSG:3857"
-          }
-        },
-        "coordinates": [
-          [
-            [
-              -7.129899995,
-              -7.11
-            ],
-            [
-              -6.98,
-              -7.11
-            ],
-            [
-              -6.98,
-              -7.26
-            ],
-            [
-              -7.129899995,
-              -7.26
-            ],
-            [
-              -7.129899995,
-              -7.11
-            ]
-          ]
-        ]
-      },
-      "streets": [
-        {
-          "properties": {
-            "id": 1630,
-            "name": "Axel-Springer-Str",
-            "island": "Berlin",
-            "kind": null,
-            "visible": true
-          },
-          "geometry": {
-            "type": "LineString",
-            "coordinates": [
-              [
-                -6.96,
-                -7.52
-              ],
-              [
-                -6.96,
-                -6.4
-              ]
-            ]
-          }
-        },
-        {
-          "properties": {
-            "id": 1654,
-            "name": "Lilienthalstraße",
-            "island": "Berlin",
-            "kind": null,
-            "visible": true
-          },
-          "geometry": {
-            "type": "LineString",
-            "coordinates": [
-              [
-                -6.96,
-                -7.27
-              ],
-              [
-                -6.4,
-                -7.27
-              ]
-            ]
-          }
-        },
-        {
-          "properties": {
-            "id": 1682,
-            "name": "Brandesstraße",
-            "island": "Berlin",
-            "kind": null,
-            "visible": true
-          },
-          "geometry": {
-            "type": "LineString",
-            "coordinates": [
-              [
-                -7.26,
-                -7.09
-              ],
-              [
-                -6.96,
-                -7.09
-              ]
-            ]
-          }
-        },
-        {
-          "properties": {
-            "id": 1683,
-            "name": "Ritterstraße",
-            "island": "Berlin",
-            "kind": null,
-            "visible": true
-          },
-          "geometry": {
-            "type": "LineString",
-            "coordinates": [
-              [
-                -7.26,
-                -7.28
-              ],
-              [
-                -6.96,
-                -7.28
-              ]
-            ]
-          }
-        },
-        {
-          "properties": {
-            "id": 1700,
-            "name": "Gröbenufer",
-            "island": "Berlin",
-            "kind": null,
-            "visible": true
-          },
-          "geometry": {
-            "type": "LineString",
-            "coordinates": [
-              [
-                -6.96,
-                -7.08
-              ],
-              [
-                -6.69,
-                -7.08
-              ]
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "properties": {
-        "parcel_id": 4011,
-        "name": "MAGALL - Headquarter",
-        "island": "Berlin",
-        "suburb": "Berlin"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "crs": {
-          "type": "name",
-          "properties": {
-            "name": "EPSG:3857"
-          }
-        },
-        "coordinates": [
-          [
-            [
-              -6.810100005,
-              -5.8
-            ],
-            [
-              -6.94,
-              -5.8
-            ],
-            [
-              -6.94,
-              -5.65
-            ],
-            [
-              -6.810100005,
-              -5.65
-            ],
-            [
-              -6.810100005,
-              -5.8
-            ]
-          ]
-        ]
-      },
-      "streets": [
-        {
-          "properties": {
-            "id": 1631,
-            "name": "Schleusenufer",
-            "island": "Berlin",
-            "kind": null,
-            "visible": true
-          },
-          "geometry": {
-            "type": "LineString",
-            "coordinates": [
-              [
-                -6.96,
-                -6.4
-              ],
-              [
-                -6.96,
-                -5.28
-              ]
-            ]
-          }
-        },
-        {
-          "properties": {
-            "id": 1651,
-            "name": "Sixtusgarten",
-            "island": "Berlin",
-            "kind": null,
-            "visible": true
-          },
-          "geometry": {
-            "type": "LineString",
-            "coordinates": [
-              [
-                -6.96,
-                -5.82
-              ],
-              [
-                -6.4,
-                -5.82
-              ]
-            ]
-          }
-        },
-        {
-          "properties": {
-            "id": 1652,
-            "name": "Sebastianstraße",
-            "island": "Berlin",
-            "kind": null,
-            "visible": true
-          },
-          "geometry": {
-            "type": "LineString",
-            "coordinates": [
-              [
-                -7.52,
-                -5.7
-              ],
-              [
-                -6.96,
-                -5.7
-              ]
-            ]
-          }
-        },
-        {
-          "properties": {
-            "id": 1673,
-            "name": "Kottbusser Straße",
-            "island": "Berlin",
-            "kind": null,
-            "visible": true
-          },
-          "geometry": {
-            "type": "LineString",
-            "coordinates": [
-              [
-                -6.96,
-                -5.63
-              ],
-              [
-                -6.65,
-                -5.63
-              ]
-            ]
-          }
-        }
-      ]
-    }
-  ]
-}
+	"code": 100000,
+	"msg": "success",
+	"data": {
+		"stats": {
+			"traffic": {
+				"week": {
+					"min": 1,
+					"max": 12721
+				},
+				"month": {
+					"min": 1,
+					"max": 21287
+				},
+				"all": {
+					"min": 0,
+					"max": 137360
+				}
+			}
+		},
+		"parcels": [{
+				"properties": {
+					"parcel_id": 4050,
+					"name": null,
+					"island": "Berlin",
+					"suburb": "Berlin"
+				},
+				"geometry": {
+					"type": "Polygon",
+					"crs": {
+						"type": "name",
+						"properties": {
+							"name": "EPSG:3857"
+						}
+					},
+					"coordinates": [
+						[
+							[-7.129899995, -7.11],
+							[-6.98, -7.11],
+							[-6.98, -7.26],
+							[-7.129899995, -7.26],
+							[-7.129899995, -7.11]
+						]
+					]
+				},
+				"streets": [{
+						"properties": {
+							"id": 1630,
+							"name": "Axel-Springer-Str",
+							"island": "Berlin",
+							"kind": null,
+							"visible": true
+						},
+						"geometry": {
+							"type": "LineString",
+							"coordinates": [
+								[-6.96, -7.52],
+								[-6.96, -6.4]
+							]
+						}
+					},
+					{
+						"properties": {
+							"id": 1654,
+							"name": "Lilienthalstraße",
+							"island": "Berlin",
+							"kind": null,
+							"visible": true
+						},
+						"geometry": {
+							"type": "LineString",
+							"coordinates": [
+								[-6.96, -7.27],
+								[-6.4, -7.27]
+							]
+						}
+					},
+					{
+						"properties": {
+							"id": 1682,
+							"name": "Brandesstraße",
+							"island": "Berlin",
+							"kind": null,
+							"visible": true
+						},
+						"geometry": {
+							"type": "LineString",
+							"coordinates": [
+								[-7.26, -7.09],
+								[-6.96, -7.09]
+							]
+						}
+					},
+					{
+						"properties": {
+							"id": 1683,
+							"name": "Ritterstraße",
+							"island": "Berlin",
+							"kind": null,
+							"visible": true
+						},
+						"geometry": {
+							"type": "LineString",
+							"coordinates": [
+								[-7.26, -7.28],
+								[-6.96, -7.28]
+							]
+						}
+					},
+					{
+						"properties": {
+							"id": 1700,
+							"name": "Gröbenufer",
+							"island": "Berlin",
+							"kind": null,
+							"visible": true
+						},
+						"geometry": {
+							"type": "LineString",
+							"coordinates": [
+								[-6.96, -7.08],
+								[-6.69, -7.08]
+							]
+						}
+					}
+				],
+				"traffic": {
+					"week": 24,
+					"month": 82,
+					"all": 3833
+				}
+			}
+		}
+	}
 ```
