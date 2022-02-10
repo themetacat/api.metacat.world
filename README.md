@@ -15,6 +15,7 @@
 ### 四、Topic 相关接口
 1. 获取首页 Topic 列表接口
 2. 获取 Topic 详情页信息接口
+3.   获取 Topic 列表页信息接口
 
 ### 五、Cryptovoxels 地图相关接口
 1. 获取 Cryptovoxels 地图的地块详细信息
@@ -649,6 +650,84 @@
   }
 }
 
+```
+---
+**4\.3 获取 Topic 列表页信息接口**
+###### 接口功能
+> 获取 Topic 列表页信息接口，带分页逻辑
+
+###### URL
+> https://api.metacat.world/api/v1/get_builder_list
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| page  | false | int  | 1    |          |
+| count  | false | int  | 50    |          |
+
+###### 返回字段
+
+| 返回字段 | 字段类型 | 说明                                                     |
+| :------- | :------- | :------------------------------------------------------- |
+| code     | int      | 返回结果状态。100000：正常，其他：错误。详见“全局错误码” |
+| msg      | string   | code 码为非 100000 时，对应的 error msg                  |
+| data     | string   | 详见接口示例                                             |
+| data.page     | int   | 当前页码                                             |
+| data.count     | int   | 当前页返回的总条数                                             |
+| data.total_page     | int   | 总页数                                             |
+
+
+###### 接口示例
+> curl -s 'https://api.metacat.world/api/v1/get_builder_list?page=4&count=3' | jq . 
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "page": 1,
+    "count": 3,
+    "total_page": 8,
+    "list": [
+      {
+        "topic_id": 100,
+        "name": "PonlaiiDesign",
+        "img_url_list": [
+          "https://media-crvox.sfo2.digitaloceanspaces.com/0x38bbd375d49d6237984cbfa19719c419af9fe514/womps/1640789121816-fd81a23c-be06-44cc-93df-67232c023196.jpg",
+          "https://media-crvox.sfo2.digitaloceanspaces.com/0x33718d7bf5bdab246409443dda7494aab795095b/womps/1640791793522-41212cc7-d83c-49f9-81d5-4dc58d1196ae.jpg",
+          "https://media-crvox.sfo2.digitaloceanspaces.com/0x38bbd375d49d6237984cbfa19719c419af9fe514/womps/1640789937819-62e96e3d-4a1b-4353-be33-06cebaad4642.jpg",
+          "https://media-crvox.sfo2.digitaloceanspaces.com/0x38bbd375d49d6237984cbfa19719c419af9fe514/womps/1640789490467-1e4b0aac-08cd-486d-a840-00336cbab069.jpg"
+        ]
+      },
+      {
+        "topic_id": 101,
+        "name": "MetaEstate",
+        "img_url_list": [
+          "https://media-crvox.sfo2.digitaloceanspaces.com/0x10c919762aee011b0f62964c6e9051dc482764fb/womps/1642658941111-8424f63a-f63b-40cc-9b00-b0586e0d52a0.jpg",
+          "https://media-crvox.sfo2.digitaloceanspaces.com/0xc0beefeed699f6d6a08397fcbf8fbadf9f83eb5d/womps/1640245498965-8fe18578-e1e9-42e5-96b8-b6bd51883b33.jpg",
+          "https://media-crvox.sfo2.digitaloceanspaces.com/0x41c851d34Ea8e954ae05F06Bb652DaE71c5662D1/womps/1643654817336-e95c8f06-1e55-4057-bfcc-3d3b853ed694.jpg",
+          "https://media-crvox.sfo2.digitaloceanspaces.com/0x411e07616e24fed46c647ef3a6325d4c7d0645eb/womps/1641820017142-1e516370-0ff7-4f74-beaf-dec81c2153b3.jpg"
+        ]
+      },
+      {
+        "topic_id": 102,
+        "name": "BCA",
+        "img_url_list": [
+          "https://media-crvox.sfo2.digitaloceanspaces.com/0xffc0695bc801b68c7ce5503b11c8bc0afab47b33/womps/1642139873697-c66a81d3-1c15-463f-9618-108daa32ade0.jpg",
+          "https://media-crvox.sfo2.digitaloceanspaces.com/0xd67c34169b372d5b3932c548a940d4ea74fe7af5/womps/1643703170129-94c80ae7-f840-4812-80bf-0864350f2612.jpg",
+          "https://media-crvox.sfo2.digitaloceanspaces.com/0xa8093c09098452727492968ddfe4a0e033ab76bd/womps/1637657931992-7a2ef5e0-190f-412f-b09f-59c439b3d8e9.jpg",
+          "https://media-crvox.sfo2.digitaloceanspaces.com/0xa8093c09098452727492968ddfe4a0e033ab76bd/womps/1637658522776-db362d6d-ef18-4b39-95ff-5415da26d09a.jpg"
+        ]
+      }
+    ]
+  }
+}
 ```
 ---
 **5\.1 获取 Cryptovoxels 地图的地块详细信息**
