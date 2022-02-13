@@ -747,6 +747,8 @@
 | 参数  | 必选  | 类型 | 默认值 | 描述           |
 | :---- | :---- | :--: | :----- | -------------- |
 | id  | true | int  | 1    | 地块id    |
+| map_type  | false | string  | traffic  | 地图类型， traffic：流量热力图；price：价格热力图   |
+| time_range  | false | string  | quarter   | 地图类型为 price 时，传入该值，month：最近30天；quarter：最近90天；year：最近365天；all：所有时间范围  |
 
 ###### 返回字段
 
@@ -768,7 +770,7 @@
 | data.last_price.eth    | float   |    地块最后一次交易金额对应的eth     |
 | data.last_price.usd     | int   |   地块最后一次交易金额对应的usd      |
 
-###### 接口示例
+###### 接口示例 1
 > curl -s 'https://api.metacat.world/api/v1/get_cv_parcel_detail?id=12' | jq . 
 
 ```
@@ -792,6 +794,43 @@
       "eth": 1.57,
       "usd": 3569
     }
+  }
+}
+```
+
+###### 接口示例 2
+> curl -s 'https://api.metacat.world/api/v1/get_cv_parcel_detail?id=241&map_type=price&time_range=all' | jq . 
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "parcel_id": 241,
+    "name": "abcd",
+    "cover_img_url": "https://www.cryptovoxels.com/api/womps/15723.jpg",
+    "opensea_url": "https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/241",
+    "parcel_page_url": "https://www.cryptovoxels.com/parcels/241",
+    "island": "Origin City",
+    "suburb": "North Terrace",
+    "time_range_sale": {
+      "eth": "31.14",
+      "usd": 53212
+    },
+    "last_sale_list": [
+      {
+        "date": "2022.01.06",
+        "eth": "8.00",
+        "usd": 28455,
+        "is_primary": 0
+      },
+      {
+        "date": "2021.03.11",
+        "eth": "5.75",
+        "usd": 10363,
+        "is_primary": 0
+      }
+    ]
   }
 }
 ```
