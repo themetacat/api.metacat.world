@@ -1075,19 +1075,6 @@
   "msg": "success",
   "data": {
     "monthly": {
-      "yticks": [
-        0,
-        175060,
-        350120,
-        525180,
-        700240,
-        875300,
-        1050360,
-        1225420,
-        1400480,
-        1575540,
-        1750600
-      ],
       "data": [
         {
           "time": "2019.09",
@@ -1293,168 +1280,9 @@
   "msg": "success",
   "data": {
     "daily": {
-      "yticks": [
-        0,
-        4,
-        8,
-        12,
-        16,
-        20,
-        24,
-        28,
-        32,
-        36,
-        40,
-        44
-      ],
       "data": [
         {
           "time": "01.24",
-          "value": 0,
-          "type": "primary"
-        },
-        {
-          "time": "01.25",
-          "value": 17,
-          "type": "primary"
-        },
-        {
-          "time": "01.26",
-          "value": 27,
-          "type": "primary"
-        },
-        {
-          "time": "01.27",
-          "value": 13,
-          "type": "primary"
-        },
-        {
-          "time": "01.28",
-          "value": 19,
-          "type": "primary"
-        },
-        {
-          "time": "01.29",
-          "value": 0,
-          "type": "primary"
-        },
-        {
-          "time": "01.30",
-          "value": 0,
-          "type": "primary"
-        },
-        {
-          "time": "01.31",
-          "value": 0,
-          "type": "primary"
-        },
-        {
-          "time": "02.01",
-          "value": 4,
-          "type": "primary"
-        },
-        {
-          "time": "02.02",
-          "value": 35,
-          "type": "primary"
-        },
-        {
-          "time": "02.03",
-          "value": 10,
-          "type": "primary"
-        },
-        {
-          "time": "02.04",
-          "value": 21,
-          "type": "primary"
-        },
-        {
-          "time": "02.05",
-          "value": 11,
-          "type": "primary"
-        },
-        {
-          "time": "02.06",
-          "value": 3,
-          "type": "primary"
-        },
-        {
-          "time": "02.07",
-          "value": 4,
-          "type": "primary"
-        },
-        {
-          "time": "02.08",
-          "value": 4,
-          "type": "primary"
-        },
-        {
-          "time": "02.09",
-          "value": 31,
-          "type": "primary"
-        },
-        {
-          "time": "02.10",
-          "value": 5,
-          "type": "primary"
-        },
-        {
-          "time": "02.11",
-          "value": 12,
-          "type": "primary"
-        },
-        {
-          "time": "02.12",
-          "value": 0,
-          "type": "primary"
-        },
-        {
-          "time": "02.13",
-          "value": 0,
-          "type": "primary"
-        },
-        {
-          "time": "02.14",
-          "value": 0,
-          "type": "primary"
-        },
-        {
-          "time": "02.15",
-          "value": 4,
-          "type": "primary"
-        },
-        {
-          "time": "02.16",
-          "value": 14,
-          "type": "primary"
-        },
-        {
-          "time": "02.17",
-          "value": 19,
-          "type": "primary"
-        },
-        {
-          "time": "02.18",
-          "value": 16,
-          "type": "primary"
-        },
-        {
-          "time": "02.19",
-          "value": 8,
-          "type": "primary"
-        },
-        {
-          "time": "02.20",
-          "value": 0,
-          "type": "primary"
-        },
-        {
-          "time": "02.21",
-          "value": 0,
-          "type": "primary"
-        },
-        {
-          "time": "02.22",
           "value": 0,
           "type": "primary"
         },
@@ -1465,8 +1293,18 @@
         },
         {
           "time": "01.25",
+          "value": 17,
+          "type": "primary"
+        },
+        {
+          "time": "01.25",
           "value": 7,
           "type": "secondary"
+        },
+        {
+          "time": "01.26",
+          "value": 27,
+          "type": "primary"
         },
         {
           "time": "01.26",
@@ -1475,8 +1313,18 @@
         },
         {
           "time": "01.27",
+          "value": 13,
+          "type": "primary"
+        },
+        {
+          "time": "01.27",
           "value": 7,
           "type": "secondary"
+        },
+        {
+          "time": "01.28",
+          "value": 19,
+          "type": "primary"
         },
         {
           "time": "01.28",
@@ -1485,8 +1333,18 @@
         },
         {
           "time": "01.29",
+          "value": 0,
+          "type": "primary"
+        },
+        {
+          "time": "01.29",
           "value": 2,
           "type": "secondary"
+        },
+        {
+          "time": "01.30",
+          "value": 0,
+          "type": "primary"
         },
         {
           "time": "01.30",
@@ -1495,8 +1353,18 @@
         },
         {
           "time": "01.31",
+          "value": 0,
+          "type": "primary"
+        },
+        {
+          "time": "01.31",
           "value": 2,
           "type": "secondary"
+        },
+        {
+          "time": "02.01",
+          "value": 4,
+          "type": "primary"
         },
         {
           "time": "02.01",
@@ -1505,8 +1373,18 @@
         },
         {
           "time": "02.02",
+          "value": 35,
+          "type": "primary"
+        },
+        {
+          "time": "02.02",
           "value": 6,
           "type": "secondary"
+        },
+        {
+          "time": "02.03",
+          "value": 10,
+          "type": "primary"
         },
         {
           "time": "02.03",
@@ -1515,8 +1393,18 @@
         },
         {
           "time": "02.04",
+          "value": 21,
+          "type": "primary"
+        },
+        {
+          "time": "02.04",
           "value": 5,
           "type": "secondary"
+        },
+        {
+          "time": "02.05",
+          "value": 11,
+          "type": "primary"
         },
         {
           "time": "02.05",
@@ -1525,8 +1413,18 @@
         },
         {
           "time": "02.06",
+          "value": 3,
+          "type": "primary"
+        },
+        {
+          "time": "02.06",
           "value": 5,
           "type": "secondary"
+        },
+        {
+          "time": "02.07",
+          "value": 4,
+          "type": "primary"
         },
         {
           "time": "02.07",
@@ -1536,7 +1434,17 @@
         {
           "time": "02.08",
           "value": 4,
+          "type": "primary"
+        },
+        {
+          "time": "02.08",
+          "value": 4,
           "type": "secondary"
+        },
+        {
+          "time": "02.09",
+          "value": 31,
+          "type": "primary"
         },
         {
           "time": "02.09",
@@ -1546,7 +1454,17 @@
         {
           "time": "02.10",
           "value": 5,
+          "type": "primary"
+        },
+        {
+          "time": "02.10",
+          "value": 5,
           "type": "secondary"
+        },
+        {
+          "time": "02.11",
+          "value": 12,
+          "type": "primary"
         },
         {
           "time": "02.11",
@@ -1555,8 +1473,18 @@
         },
         {
           "time": "02.12",
+          "value": 0,
+          "type": "primary"
+        },
+        {
+          "time": "02.12",
           "value": 5,
           "type": "secondary"
+        },
+        {
+          "time": "02.13",
+          "value": 0,
+          "type": "primary"
         },
         {
           "time": "02.13",
@@ -1565,8 +1493,18 @@
         },
         {
           "time": "02.14",
+          "value": 0,
+          "type": "primary"
+        },
+        {
+          "time": "02.14",
           "value": 1,
           "type": "secondary"
+        },
+        {
+          "time": "02.15",
+          "value": 4,
+          "type": "primary"
         },
         {
           "time": "02.15",
@@ -1575,8 +1513,18 @@
         },
         {
           "time": "02.16",
+          "value": 14,
+          "type": "primary"
+        },
+        {
+          "time": "02.16",
           "value": 2,
           "type": "secondary"
+        },
+        {
+          "time": "02.17",
+          "value": 19,
+          "type": "primary"
         },
         {
           "time": "02.17",
@@ -1585,8 +1533,18 @@
         },
         {
           "time": "02.18",
+          "value": 16,
+          "type": "primary"
+        },
+        {
+          "time": "02.18",
           "value": 5,
           "type": "secondary"
+        },
+        {
+          "time": "02.19",
+          "value": 8,
+          "type": "primary"
         },
         {
           "time": "02.19",
@@ -1596,12 +1554,27 @@
         {
           "time": "02.20",
           "value": 0,
+          "type": "primary"
+        },
+        {
+          "time": "02.20",
+          "value": 0,
           "type": "secondary"
         },
         {
           "time": "02.21",
           "value": 0,
+          "type": "primary"
+        },
+        {
+          "time": "02.21",
+          "value": 0,
           "type": "secondary"
+        },
+        {
+          "time": "02.22",
+          "value": 0,
+          "type": "primary"
         },
         {
           "time": "02.22",
@@ -1611,168 +1584,10 @@
       ]
     },
     "monthly": {
-      "yticks": [
-        0,
-        74,
-        148,
-        222,
-        296,
-        370,
-        444,
-        518,
-        592,
-        666,
-        740
-      ],
       "data": [
         {
           "time": "2019.09",
           "value": 152,
-          "type": "primary"
-        },
-        {
-          "time": "2019.10",
-          "value": 153,
-          "type": "primary"
-        },
-        {
-          "time": "2019.11",
-          "value": 166,
-          "type": "primary"
-        },
-        {
-          "time": "2019.12",
-          "value": 188,
-          "type": "primary"
-        },
-        {
-          "time": "2020.01",
-          "value": 381,
-          "type": "primary"
-        },
-        {
-          "time": "2020.02",
-          "value": 262,
-          "type": "primary"
-        },
-        {
-          "time": "2020.03",
-          "value": 243,
-          "type": "primary"
-        },
-        {
-          "time": "2020.04",
-          "value": 125,
-          "type": "primary"
-        },
-        {
-          "time": "2020.05",
-          "value": 180,
-          "type": "primary"
-        },
-        {
-          "time": "2020.06",
-          "value": 233,
-          "type": "primary"
-        },
-        {
-          "time": "2020.07",
-          "value": 159,
-          "type": "primary"
-        },
-        {
-          "time": "2020.08",
-          "value": 62,
-          "type": "primary"
-        },
-        {
-          "time": "2020.09",
-          "value": 184,
-          "type": "primary"
-        },
-        {
-          "time": "2020.10",
-          "value": 153,
-          "type": "primary"
-        },
-        {
-          "time": "2020.11",
-          "value": 159,
-          "type": "primary"
-        },
-        {
-          "time": "2020.12",
-          "value": 40,
-          "type": "primary"
-        },
-        {
-          "time": "2021.01",
-          "value": 42,
-          "type": "primary"
-        },
-        {
-          "time": "2021.02",
-          "value": 87,
-          "type": "primary"
-        },
-        {
-          "time": "2021.03",
-          "value": 158,
-          "type": "primary"
-        },
-        {
-          "time": "2021.04",
-          "value": 190,
-          "type": "primary"
-        },
-        {
-          "time": "2021.05",
-          "value": 164,
-          "type": "primary"
-        },
-        {
-          "time": "2021.06",
-          "value": 103,
-          "type": "primary"
-        },
-        {
-          "time": "2021.07",
-          "value": 244,
-          "type": "primary"
-        },
-        {
-          "time": "2021.08",
-          "value": 217,
-          "type": "primary"
-        },
-        {
-          "time": "2021.09",
-          "value": 215,
-          "type": "primary"
-        },
-        {
-          "time": "2021.10",
-          "value": 177,
-          "type": "primary"
-        },
-        {
-          "time": "2021.11",
-          "value": 360,
-          "type": "primary"
-        },
-        {
-          "time": "2021.12",
-          "value": 217,
-          "type": "primary"
-        },
-        {
-          "time": "2022.01",
-          "value": 165,
-          "type": "primary"
-        },
-        {
-          "time": "2022.02",
-          "value": 201,
           "type": "primary"
         },
         {
@@ -1782,8 +1597,18 @@
         },
         {
           "time": "2019.10",
+          "value": 153,
+          "type": "primary"
+        },
+        {
+          "time": "2019.10",
           "value": 21,
           "type": "secondary"
+        },
+        {
+          "time": "2019.11",
+          "value": 166,
+          "type": "primary"
         },
         {
           "time": "2019.11",
@@ -1792,8 +1617,18 @@
         },
         {
           "time": "2019.12",
+          "value": 188,
+          "type": "primary"
+        },
+        {
+          "time": "2019.12",
           "value": 97,
           "type": "secondary"
+        },
+        {
+          "time": "2020.01",
+          "value": 381,
+          "type": "primary"
         },
         {
           "time": "2020.01",
@@ -1802,8 +1637,18 @@
         },
         {
           "time": "2020.02",
+          "value": 262,
+          "type": "primary"
+        },
+        {
+          "time": "2020.02",
           "value": 140,
           "type": "secondary"
+        },
+        {
+          "time": "2020.03",
+          "value": 243,
+          "type": "primary"
         },
         {
           "time": "2020.03",
@@ -1812,8 +1657,18 @@
         },
         {
           "time": "2020.04",
+          "value": 125,
+          "type": "primary"
+        },
+        {
+          "time": "2020.04",
           "value": 114,
           "type": "secondary"
+        },
+        {
+          "time": "2020.05",
+          "value": 180,
+          "type": "primary"
         },
         {
           "time": "2020.05",
@@ -1822,8 +1677,18 @@
         },
         {
           "time": "2020.06",
+          "value": 233,
+          "type": "primary"
+        },
+        {
+          "time": "2020.06",
           "value": 158,
           "type": "secondary"
+        },
+        {
+          "time": "2020.07",
+          "value": 159,
+          "type": "primary"
         },
         {
           "time": "2020.07",
@@ -1832,8 +1697,18 @@
         },
         {
           "time": "2020.08",
+          "value": 62,
+          "type": "primary"
+        },
+        {
+          "time": "2020.08",
           "value": 66,
           "type": "secondary"
+        },
+        {
+          "time": "2020.09",
+          "value": 184,
+          "type": "primary"
         },
         {
           "time": "2020.09",
@@ -1842,8 +1717,18 @@
         },
         {
           "time": "2020.10",
+          "value": 153,
+          "type": "primary"
+        },
+        {
+          "time": "2020.10",
           "value": 172,
           "type": "secondary"
+        },
+        {
+          "time": "2020.11",
+          "value": 159,
+          "type": "primary"
         },
         {
           "time": "2020.11",
@@ -1852,8 +1737,18 @@
         },
         {
           "time": "2020.12",
+          "value": 40,
+          "type": "primary"
+        },
+        {
+          "time": "2020.12",
           "value": 43,
           "type": "secondary"
+        },
+        {
+          "time": "2021.01",
+          "value": 42,
+          "type": "primary"
         },
         {
           "time": "2021.01",
@@ -1862,8 +1757,18 @@
         },
         {
           "time": "2021.02",
+          "value": 87,
+          "type": "primary"
+        },
+        {
+          "time": "2021.02",
           "value": 97,
           "type": "secondary"
+        },
+        {
+          "time": "2021.03",
+          "value": 158,
+          "type": "primary"
         },
         {
           "time": "2021.03",
@@ -1872,8 +1777,18 @@
         },
         {
           "time": "2021.04",
+          "value": 190,
+          "type": "primary"
+        },
+        {
+          "time": "2021.04",
           "value": 147,
           "type": "secondary"
+        },
+        {
+          "time": "2021.05",
+          "value": 164,
+          "type": "primary"
         },
         {
           "time": "2021.05",
@@ -1882,8 +1797,18 @@
         },
         {
           "time": "2021.06",
+          "value": 103,
+          "type": "primary"
+        },
+        {
+          "time": "2021.06",
           "value": 99,
           "type": "secondary"
+        },
+        {
+          "time": "2021.07",
+          "value": 244,
+          "type": "primary"
         },
         {
           "time": "2021.07",
@@ -1892,8 +1817,18 @@
         },
         {
           "time": "2021.08",
+          "value": 217,
+          "type": "primary"
+        },
+        {
+          "time": "2021.08",
           "value": 225,
           "type": "secondary"
+        },
+        {
+          "time": "2021.09",
+          "value": 215,
+          "type": "primary"
         },
         {
           "time": "2021.09",
@@ -1902,8 +1837,18 @@
         },
         {
           "time": "2021.10",
+          "value": 177,
+          "type": "primary"
+        },
+        {
+          "time": "2021.10",
           "value": 133,
           "type": "secondary"
+        },
+        {
+          "time": "2021.11",
+          "value": 360,
+          "type": "primary"
         },
         {
           "time": "2021.11",
@@ -1912,13 +1857,28 @@
         },
         {
           "time": "2021.12",
+          "value": 217,
+          "type": "primary"
+        },
+        {
+          "time": "2021.12",
           "value": 230,
           "type": "secondary"
         },
         {
           "time": "2022.01",
+          "value": 165,
+          "type": "primary"
+        },
+        {
+          "time": "2022.01",
           "value": 157,
           "type": "secondary"
+        },
+        {
+          "time": "2022.02",
+          "value": 201,
+          "type": "primary"
         },
         {
           "time": "2022.02",
@@ -1956,19 +1916,6 @@
   "msg": "success",
   "data": {
     "eth": {
-      "yticks": [
-        0,
-        156,
-        312,
-        468,
-        624,
-        780,
-        936,
-        1092,
-        1248,
-        1404,
-        1560
-      ],
       "data": [
         {
           "time": "2019-09",
@@ -2273,18 +2220,6 @@
       ]
     },
     "usd": {
-      "yticks": [
-        0,
-        677035,
-        1354070,
-        2031105,
-        2708140,
-        3385175,
-        4062210,
-        4739245,
-        5416280,
-        6093315
-      ],
       "data": [
         {
           "time": "2019-09",
@@ -2617,19 +2552,6 @@
   "msg": "success",
   "data": {
     "monthly": {
-      "yticks": [
-        0,
-        61,
-        122,
-        183,
-        244,
-        305,
-        366,
-        427,
-        488,
-        549,
-        610
-      ],
       "data": [
         {
           "time": "2019.09",
@@ -2812,19 +2734,6 @@
   "msg": "success",
   "data": {
     "monthly": {
-      "yticks": [
-        0,
-        236,
-        472,
-        708,
-        944,
-        1180,
-        1416,
-        1652,
-        1888,
-        2124,
-        2360
-      ],
       "data": [
         {
           "time": "2021.07",
