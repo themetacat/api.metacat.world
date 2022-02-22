@@ -24,8 +24,8 @@
 ### 六、Metaverse Analytics 相关接口
 1. 获取各元宇宙平台概要信息接口
 2. 获取 Cryptovoxels 流量统计信息接口
-3. 获取 Cryptovoxels 地块成交均价统计信息接口
-4. 获取 Cryptovoxels 地块成交总量统计信息接口
+3. 获取 Cryptovoxels 地块成交均价统计信息接口（未完成）
+4. 获取 Cryptovoxels 地块成交总数量统计信息接口
 5. 获取 Cryptovoxels 地块销售总额统计信息接口
 6. 获取 Cryptovoxels 地块mint情况统计信息接口
 7. 获取 Cryptovoxels 地主总数统计信息接口
@@ -1075,42 +1075,6 @@
   "msg": "success",
   "data": {
     "monthly": {
-      "xticks": [
-        "2019.05",
-        "2019.06",
-        "2019.07",
-        "2019.08",
-        "2019.09",
-        "2019.10",
-        "2019.11",
-        "2019.12",
-        "2020.01",
-        "2020.02",
-        "2020.03",
-        "2020.04",
-        "2020.05",
-        "2020.06",
-        "2020.07",
-        "2020.08",
-        "2020.09",
-        "2020.10",
-        "2020.11",
-        "2020.12",
-        "2021.01",
-        "2021.02",
-        "2021.03",
-        "2021.04",
-        "2021.05",
-        "2021.06",
-        "2021.07",
-        "2021.08",
-        "2021.09",
-        "2021.10",
-        "2021.11",
-        "2021.12",
-        "2022.01",
-        "2022.02"
-      ],
       "yticks": [
         0,
         175060,
@@ -1125,52 +1089,191 @@
         1750600
       ],
       "data": [
-        14418,
-        47500,
-        35286,
-        23028,
-        216856,
-        243541,
-        302170,
-        330170,
-        392747,
-        496149,
-        563487,
-        151320,
-        400318,
-        377516,
-        318256,
-        268795,
-        286729,
-        398606,
-        484243,
-        497008,
-        478027,
-        735253,
-        1385395,
-        1591459,
-        1564293,
-        1448315,
-        1429352,
-        1138015,
-        834697,
-        1055954,
-        1082945,
-        1223326,
-        1076354,
-        509081
+        {
+          "time": "2019.09",
+          "value": 216856,
+          "type": "all"
+        },
+        {
+          "time": "2019.10",
+          "value": 243541,
+          "type": "all"
+        },
+        {
+          "time": "2019.11",
+          "value": 302170,
+          "type": "all"
+        },
+        {
+          "time": "2019.12",
+          "value": 330170,
+          "type": "all"
+        },
+        {
+          "time": "2020.01",
+          "value": 392747,
+          "type": "all"
+        },
+        {
+          "time": "2020.02",
+          "value": 496149,
+          "type": "all"
+        },
+        {
+          "time": "2020.03",
+          "value": 563487,
+          "type": "all"
+        },
+        {
+          "time": "2020.04",
+          "value": 151320,
+          "type": "all"
+        },
+        {
+          "time": "2020.05",
+          "value": 400318,
+          "type": "all"
+        },
+        {
+          "time": "2020.06",
+          "value": 377516,
+          "type": "all"
+        },
+        {
+          "time": "2020.07",
+          "value": 318256,
+          "type": "all"
+        },
+        {
+          "time": "2020.08",
+          "value": 268795,
+          "type": "all"
+        },
+        {
+          "time": "2020.09",
+          "value": 286729,
+          "type": "all"
+        },
+        {
+          "time": "2020.10",
+          "value": 398606,
+          "type": "all"
+        },
+        {
+          "time": "2020.11",
+          "value": 484243,
+          "type": "all"
+        },
+        {
+          "time": "2020.12",
+          "value": 497008,
+          "type": "all"
+        },
+        {
+          "time": "2021.01",
+          "value": 478027,
+          "type": "all"
+        },
+        {
+          "time": "2021.02",
+          "value": 735253,
+          "type": "all"
+        },
+        {
+          "time": "2021.03",
+          "value": 1385395,
+          "type": "all"
+        },
+        {
+          "time": "2021.04",
+          "value": 1591459,
+          "type": "all"
+        },
+        {
+          "time": "2021.05",
+          "value": 1564293,
+          "type": "all"
+        },
+        {
+          "time": "2021.06",
+          "value": 1448315,
+          "type": "all"
+        },
+        {
+          "time": "2021.07",
+          "value": 1429352,
+          "type": "all"
+        },
+        {
+          "time": "2021.08",
+          "value": 1138015,
+          "type": "all"
+        },
+        {
+          "time": "2021.09",
+          "value": 834697,
+          "type": "all"
+        },
+        {
+          "time": "2021.10",
+          "value": 1055954,
+          "type": "all"
+        },
+        {
+          "time": "2021.11",
+          "value": 1082945,
+          "type": "all"
+        },
+        {
+          "time": "2021.12",
+          "value": 1223326,
+          "type": "all"
+        },
+        {
+          "time": "2022.01",
+          "value": 1076354,
+          "type": "all"
+        },
+        {
+          "time": "2022.02",
+          "value": 509081,
+          "type": "all"
+        }
       ]
     }
   }
 }
 ```
 ---
-**6\.4 获取 Cryptovoxels 地块成交总量统计信息接口**
+**6\.3 获取 Cryptovoxels 地块成交均价统计信息接口**
 ###### 接口功能
-> 获取 Cryptovoxels 地块成交总量统计信息接口
+> 获取 Cryptovoxels 地块成交均价统计信息接口
 
 ###### URL
-> https://api.metacat.world/api/v1/get_cv_traffic_stats
+> https://api.metacat.world/api/v1/get_cv_parcel_avg_price_stats
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回字段
+```
+
+```
+---
+**6\.4 获取 Cryptovoxels 地块成交总数量统计信息接口**
+###### 接口功能
+> 获取 Cryptovoxels 地块成交总数量统计信息接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_cv_parcel_sold_total_stats
 
 ###### 返回数据格式
 > JSON
@@ -1190,38 +1293,6 @@
   "msg": "success",
   "data": {
     "daily": {
-      "xticks": [
-        "01.24",
-        "01.25",
-        "01.26",
-        "01.27",
-        "01.28",
-        "01.29",
-        "01.30",
-        "01.31",
-        "02.01",
-        "02.02",
-        "02.03",
-        "02.04",
-        "02.05",
-        "02.06",
-        "02.07",
-        "02.08",
-        "02.09",
-        "02.10",
-        "02.11",
-        "02.12",
-        "02.13",
-        "02.14",
-        "02.15",
-        "02.16",
-        "02.17",
-        "02.18",
-        "02.19",
-        "02.20",
-        "02.21",
-        "02.22"
-      ],
       "yticks": [
         0,
         4,
@@ -1236,121 +1307,310 @@
         40,
         44
       ],
-      "data": {
-        "primary": [
-          0,
-          17,
-          27,
-          13,
-          19,
-          0,
-          0,
-          0,
-          4,
-          35,
-          10,
-          21,
-          11,
-          3,
-          4,
-          4,
-          31,
-          5,
-          12,
-          0,
-          0,
-          0,
-          4,
-          14,
-          19,
-          16,
-          8,
-          0,
-          0,
-          0
-        ],
-        "secondary": [
-          6,
-          7,
-          9,
-          7,
-          4,
-          2,
-          3,
-          2,
-          3,
-          6,
-          5,
-          5,
-          7,
-          5,
-          7,
-          4,
-          5,
-          5,
-          2,
-          5,
-          6,
-          1,
-          2,
-          2,
-          8,
-          5,
-          11,
-          0,
-          0,
-          0
-        ]
-      }
+      "data": [
+        {
+          "time": "01.24",
+          "value": 0,
+          "type": "primary"
+        },
+        {
+          "time": "01.25",
+          "value": 17,
+          "type": "primary"
+        },
+        {
+          "time": "01.26",
+          "value": 27,
+          "type": "primary"
+        },
+        {
+          "time": "01.27",
+          "value": 13,
+          "type": "primary"
+        },
+        {
+          "time": "01.28",
+          "value": 19,
+          "type": "primary"
+        },
+        {
+          "time": "01.29",
+          "value": 0,
+          "type": "primary"
+        },
+        {
+          "time": "01.30",
+          "value": 0,
+          "type": "primary"
+        },
+        {
+          "time": "01.31",
+          "value": 0,
+          "type": "primary"
+        },
+        {
+          "time": "02.01",
+          "value": 4,
+          "type": "primary"
+        },
+        {
+          "time": "02.02",
+          "value": 35,
+          "type": "primary"
+        },
+        {
+          "time": "02.03",
+          "value": 10,
+          "type": "primary"
+        },
+        {
+          "time": "02.04",
+          "value": 21,
+          "type": "primary"
+        },
+        {
+          "time": "02.05",
+          "value": 11,
+          "type": "primary"
+        },
+        {
+          "time": "02.06",
+          "value": 3,
+          "type": "primary"
+        },
+        {
+          "time": "02.07",
+          "value": 4,
+          "type": "primary"
+        },
+        {
+          "time": "02.08",
+          "value": 4,
+          "type": "primary"
+        },
+        {
+          "time": "02.09",
+          "value": 31,
+          "type": "primary"
+        },
+        {
+          "time": "02.10",
+          "value": 5,
+          "type": "primary"
+        },
+        {
+          "time": "02.11",
+          "value": 12,
+          "type": "primary"
+        },
+        {
+          "time": "02.12",
+          "value": 0,
+          "type": "primary"
+        },
+        {
+          "time": "02.13",
+          "value": 0,
+          "type": "primary"
+        },
+        {
+          "time": "02.14",
+          "value": 0,
+          "type": "primary"
+        },
+        {
+          "time": "02.15",
+          "value": 4,
+          "type": "primary"
+        },
+        {
+          "time": "02.16",
+          "value": 14,
+          "type": "primary"
+        },
+        {
+          "time": "02.17",
+          "value": 19,
+          "type": "primary"
+        },
+        {
+          "time": "02.18",
+          "value": 16,
+          "type": "primary"
+        },
+        {
+          "time": "02.19",
+          "value": 8,
+          "type": "primary"
+        },
+        {
+          "time": "02.20",
+          "value": 0,
+          "type": "primary"
+        },
+        {
+          "time": "02.21",
+          "value": 0,
+          "type": "primary"
+        },
+        {
+          "time": "02.22",
+          "value": 0,
+          "type": "primary"
+        },
+        {
+          "time": "01.24",
+          "value": 6,
+          "type": "secondary"
+        },
+        {
+          "time": "01.25",
+          "value": 7,
+          "type": "secondary"
+        },
+        {
+          "time": "01.26",
+          "value": 9,
+          "type": "secondary"
+        },
+        {
+          "time": "01.27",
+          "value": 7,
+          "type": "secondary"
+        },
+        {
+          "time": "01.28",
+          "value": 4,
+          "type": "secondary"
+        },
+        {
+          "time": "01.29",
+          "value": 2,
+          "type": "secondary"
+        },
+        {
+          "time": "01.30",
+          "value": 3,
+          "type": "secondary"
+        },
+        {
+          "time": "01.31",
+          "value": 2,
+          "type": "secondary"
+        },
+        {
+          "time": "02.01",
+          "value": 3,
+          "type": "secondary"
+        },
+        {
+          "time": "02.02",
+          "value": 6,
+          "type": "secondary"
+        },
+        {
+          "time": "02.03",
+          "value": 5,
+          "type": "secondary"
+        },
+        {
+          "time": "02.04",
+          "value": 5,
+          "type": "secondary"
+        },
+        {
+          "time": "02.05",
+          "value": 7,
+          "type": "secondary"
+        },
+        {
+          "time": "02.06",
+          "value": 5,
+          "type": "secondary"
+        },
+        {
+          "time": "02.07",
+          "value": 7,
+          "type": "secondary"
+        },
+        {
+          "time": "02.08",
+          "value": 4,
+          "type": "secondary"
+        },
+        {
+          "time": "02.09",
+          "value": 5,
+          "type": "secondary"
+        },
+        {
+          "time": "02.10",
+          "value": 5,
+          "type": "secondary"
+        },
+        {
+          "time": "02.11",
+          "value": 2,
+          "type": "secondary"
+        },
+        {
+          "time": "02.12",
+          "value": 5,
+          "type": "secondary"
+        },
+        {
+          "time": "02.13",
+          "value": 6,
+          "type": "secondary"
+        },
+        {
+          "time": "02.14",
+          "value": 1,
+          "type": "secondary"
+        },
+        {
+          "time": "02.15",
+          "value": 2,
+          "type": "secondary"
+        },
+        {
+          "time": "02.16",
+          "value": 2,
+          "type": "secondary"
+        },
+        {
+          "time": "02.17",
+          "value": 8,
+          "type": "secondary"
+        },
+        {
+          "time": "02.18",
+          "value": 5,
+          "type": "secondary"
+        },
+        {
+          "time": "02.19",
+          "value": 11,
+          "type": "secondary"
+        },
+        {
+          "time": "02.20",
+          "value": 0,
+          "type": "secondary"
+        },
+        {
+          "time": "02.21",
+          "value": 0,
+          "type": "secondary"
+        },
+        {
+          "time": "02.22",
+          "value": 0,
+          "type": "secondary"
+        }
+      ]
     },
     "monthly": {
-      "xticks": [
-        "2018.06",
-        "2018.07",
-        "2018.08",
-        "2018.09",
-        "2018.10",
-        "2018.11",
-        "2018.12",
-        "2019.01",
-        "2019.02",
-        "2019.03",
-        "2019.04",
-        "2019.05",
-        "2019.06",
-        "2019.07",
-        "2019.08",
-        "2019.09",
-        "2019.10",
-        "2019.11",
-        "2019.12",
-        "2020.01",
-        "2020.02",
-        "2020.03",
-        "2020.04",
-        "2020.05",
-        "2020.06",
-        "2020.07",
-        "2020.08",
-        "2020.09",
-        "2020.10",
-        "2020.11",
-        "2020.12",
-        "2021.01",
-        "2021.02",
-        "2021.03",
-        "2021.04",
-        "2021.05",
-        "2021.06",
-        "2021.07",
-        "2021.08",
-        "2021.09",
-        "2021.10",
-        "2021.11",
-        "2021.12",
-        "2022.01",
-        "2022.02"
-      ],
       "yticks": [
         0,
         74,
@@ -1364,102 +1624,1249 @@
         666,
         740
       ],
-      "data": {
-        "primary": [
-          20,
-          36,
-          61,
-          62,
-          47,
-          77,
-          71,
-          47,
-          55,
-          100,
-          257,
-          144,
-          147,
-          43,
-          83,
-          152,
-          153,
-          166,
-          188,
-          381,
-          262,
-          243,
-          125,
-          180,
-          233,
-          159,
-          62,
-          184,
-          153,
-          159,
-          40,
-          42,
-          87,
-          158,
-          190,
-          164,
-          103,
-          244,
-          217,
-          215,
-          177,
-          360,
-          217,
-          165,
-          201
-        ],
-        "secondary": [
-          0,
-          1,
-          3,
-          9,
-          5,
-          11,
-          8,
-          6,
-          17,
-          53,
-          35,
-          63,
-          41,
-          28,
-          29,
-          27,
-          21,
-          31,
-          97,
-          133,
-          140,
-          180,
-          114,
-          109,
-          158,
-          81,
-          66,
-          77,
-          172,
-          59,
-          43,
-          46,
-          97,
-          174,
-          147,
-          106,
-          99,
-          153,
-          225,
-          148,
-          133,
-          261,
-          230,
-          157,
-          94
-        ]
-      }
+      "data": [
+        {
+          "time": "2019.09",
+          "value": 152,
+          "type": "primary"
+        },
+        {
+          "time": "2019.10",
+          "value": 153,
+          "type": "primary"
+        },
+        {
+          "time": "2019.11",
+          "value": 166,
+          "type": "primary"
+        },
+        {
+          "time": "2019.12",
+          "value": 188,
+          "type": "primary"
+        },
+        {
+          "time": "2020.01",
+          "value": 381,
+          "type": "primary"
+        },
+        {
+          "time": "2020.02",
+          "value": 262,
+          "type": "primary"
+        },
+        {
+          "time": "2020.03",
+          "value": 243,
+          "type": "primary"
+        },
+        {
+          "time": "2020.04",
+          "value": 125,
+          "type": "primary"
+        },
+        {
+          "time": "2020.05",
+          "value": 180,
+          "type": "primary"
+        },
+        {
+          "time": "2020.06",
+          "value": 233,
+          "type": "primary"
+        },
+        {
+          "time": "2020.07",
+          "value": 159,
+          "type": "primary"
+        },
+        {
+          "time": "2020.08",
+          "value": 62,
+          "type": "primary"
+        },
+        {
+          "time": "2020.09",
+          "value": 184,
+          "type": "primary"
+        },
+        {
+          "time": "2020.10",
+          "value": 153,
+          "type": "primary"
+        },
+        {
+          "time": "2020.11",
+          "value": 159,
+          "type": "primary"
+        },
+        {
+          "time": "2020.12",
+          "value": 40,
+          "type": "primary"
+        },
+        {
+          "time": "2021.01",
+          "value": 42,
+          "type": "primary"
+        },
+        {
+          "time": "2021.02",
+          "value": 87,
+          "type": "primary"
+        },
+        {
+          "time": "2021.03",
+          "value": 158,
+          "type": "primary"
+        },
+        {
+          "time": "2021.04",
+          "value": 190,
+          "type": "primary"
+        },
+        {
+          "time": "2021.05",
+          "value": 164,
+          "type": "primary"
+        },
+        {
+          "time": "2021.06",
+          "value": 103,
+          "type": "primary"
+        },
+        {
+          "time": "2021.07",
+          "value": 244,
+          "type": "primary"
+        },
+        {
+          "time": "2021.08",
+          "value": 217,
+          "type": "primary"
+        },
+        {
+          "time": "2021.09",
+          "value": 215,
+          "type": "primary"
+        },
+        {
+          "time": "2021.10",
+          "value": 177,
+          "type": "primary"
+        },
+        {
+          "time": "2021.11",
+          "value": 360,
+          "type": "primary"
+        },
+        {
+          "time": "2021.12",
+          "value": 217,
+          "type": "primary"
+        },
+        {
+          "time": "2022.01",
+          "value": 165,
+          "type": "primary"
+        },
+        {
+          "time": "2022.02",
+          "value": 201,
+          "type": "primary"
+        },
+        {
+          "time": "2019.09",
+          "value": 27,
+          "type": "secondary"
+        },
+        {
+          "time": "2019.10",
+          "value": 21,
+          "type": "secondary"
+        },
+        {
+          "time": "2019.11",
+          "value": 31,
+          "type": "secondary"
+        },
+        {
+          "time": "2019.12",
+          "value": 97,
+          "type": "secondary"
+        },
+        {
+          "time": "2020.01",
+          "value": 133,
+          "type": "secondary"
+        },
+        {
+          "time": "2020.02",
+          "value": 140,
+          "type": "secondary"
+        },
+        {
+          "time": "2020.03",
+          "value": 180,
+          "type": "secondary"
+        },
+        {
+          "time": "2020.04",
+          "value": 114,
+          "type": "secondary"
+        },
+        {
+          "time": "2020.05",
+          "value": 109,
+          "type": "secondary"
+        },
+        {
+          "time": "2020.06",
+          "value": 158,
+          "type": "secondary"
+        },
+        {
+          "time": "2020.07",
+          "value": 81,
+          "type": "secondary"
+        },
+        {
+          "time": "2020.08",
+          "value": 66,
+          "type": "secondary"
+        },
+        {
+          "time": "2020.09",
+          "value": 77,
+          "type": "secondary"
+        },
+        {
+          "time": "2020.10",
+          "value": 172,
+          "type": "secondary"
+        },
+        {
+          "time": "2020.11",
+          "value": 59,
+          "type": "secondary"
+        },
+        {
+          "time": "2020.12",
+          "value": 43,
+          "type": "secondary"
+        },
+        {
+          "time": "2021.01",
+          "value": 46,
+          "type": "secondary"
+        },
+        {
+          "time": "2021.02",
+          "value": 97,
+          "type": "secondary"
+        },
+        {
+          "time": "2021.03",
+          "value": 174,
+          "type": "secondary"
+        },
+        {
+          "time": "2021.04",
+          "value": 147,
+          "type": "secondary"
+        },
+        {
+          "time": "2021.05",
+          "value": 106,
+          "type": "secondary"
+        },
+        {
+          "time": "2021.06",
+          "value": 99,
+          "type": "secondary"
+        },
+        {
+          "time": "2021.07",
+          "value": 153,
+          "type": "secondary"
+        },
+        {
+          "time": "2021.08",
+          "value": 225,
+          "type": "secondary"
+        },
+        {
+          "time": "2021.09",
+          "value": 148,
+          "type": "secondary"
+        },
+        {
+          "time": "2021.10",
+          "value": 133,
+          "type": "secondary"
+        },
+        {
+          "time": "2021.11",
+          "value": 261,
+          "type": "secondary"
+        },
+        {
+          "time": "2021.12",
+          "value": 230,
+          "type": "secondary"
+        },
+        {
+          "time": "2022.01",
+          "value": 157,
+          "type": "secondary"
+        },
+        {
+          "time": "2022.02",
+          "value": 94,
+          "type": "secondary"
+        }
+      ]
+    }
+  }
+}
+```
+---
+**6\.5 获取 Cryptovoxels 地块销售总额统计信息接口**
+###### 接口功能
+> 获取 Cryptovoxels 地块销售总额统计信息接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_cv_parcel_sold_sum_stats
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回字段
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "eth": {
+      "yticks": [
+        0,
+        156,
+        312,
+        468,
+        624,
+        780,
+        936,
+        1092,
+        1248,
+        1404,
+        1560
+      ],
+      "data": [
+        {
+          "time": "2019-09",
+          "value": 75.35,
+          "type": "primary"
+        },
+        {
+          "time": "2019-10",
+          "value": 72.88,
+          "type": "primary"
+        },
+        {
+          "time": "2019-11",
+          "value": 117.86,
+          "type": "primary"
+        },
+        {
+          "time": "2019-12",
+          "value": 182.5,
+          "type": "primary"
+        },
+        {
+          "time": "2020-01",
+          "value": 661.65,
+          "type": "primary"
+        },
+        {
+          "time": "2020-02",
+          "value": 565.13,
+          "type": "primary"
+        },
+        {
+          "time": "2020-03",
+          "value": 719.86,
+          "type": "primary"
+        },
+        {
+          "time": "2020-04",
+          "value": 453.54,
+          "type": "primary"
+        },
+        {
+          "time": "2020-05",
+          "value": 287.83,
+          "type": "primary"
+        },
+        {
+          "time": "2020-06",
+          "value": 316.67,
+          "type": "primary"
+        },
+        {
+          "time": "2020-07",
+          "value": 176,
+          "type": "primary"
+        },
+        {
+          "time": "2020-08",
+          "value": 52.01,
+          "type": "primary"
+        },
+        {
+          "time": "2020-09",
+          "value": 157.47,
+          "type": "primary"
+        },
+        {
+          "time": "2020-10",
+          "value": 216.14,
+          "type": "primary"
+        },
+        {
+          "time": "2020-11",
+          "value": 222.39,
+          "type": "primary"
+        },
+        {
+          "time": "2020-12",
+          "value": 31.41,
+          "type": "primary"
+        },
+        {
+          "time": "2021-01",
+          "value": 32.37,
+          "type": "primary"
+        },
+        {
+          "time": "2021-02",
+          "value": 92.45,
+          "type": "primary"
+        },
+        {
+          "time": "2021-03",
+          "value": 314.02,
+          "type": "primary"
+        },
+        {
+          "time": "2021-04",
+          "value": 388.78,
+          "type": "primary"
+        },
+        {
+          "time": "2021-05",
+          "value": 257.74,
+          "type": "primary"
+        },
+        {
+          "time": "2021-06",
+          "value": 188.8,
+          "type": "primary"
+        },
+        {
+          "time": "2021-07",
+          "value": 414.4,
+          "type": "primary"
+        },
+        {
+          "time": "2021-08",
+          "value": 358.63,
+          "type": "primary"
+        },
+        {
+          "time": "2021-09",
+          "value": 416.27,
+          "type": "primary"
+        },
+        {
+          "time": "2021-10",
+          "value": 272.36,
+          "type": "primary"
+        },
+        {
+          "time": "2021-11",
+          "value": 562.06,
+          "type": "primary"
+        },
+        {
+          "time": "2021-12",
+          "value": 470.42,
+          "type": "primary"
+        },
+        {
+          "time": "2022-01",
+          "value": 381.64,
+          "type": "primary"
+        },
+        {
+          "time": "2022-02",
+          "value": 0,
+          "type": "primary"
+        },
+        {
+          "time": "2019-09",
+          "value": 27.28,
+          "type": "secondary"
+        },
+        {
+          "time": "2019-10",
+          "value": 13.92,
+          "type": "secondary"
+        },
+        {
+          "time": "2019-11",
+          "value": 30.83,
+          "type": "secondary"
+        },
+        {
+          "time": "2019-12",
+          "value": 197.75,
+          "type": "secondary"
+        },
+        {
+          "time": "2020-01",
+          "value": 394.61,
+          "type": "secondary"
+        },
+        {
+          "time": "2020-02",
+          "value": 587.78,
+          "type": "secondary"
+        },
+        {
+          "time": "2020-03",
+          "value": 705.12,
+          "type": "secondary"
+        },
+        {
+          "time": "2020-04",
+          "value": 470.11,
+          "type": "secondary"
+        },
+        {
+          "time": "2020-05",
+          "value": 345.94,
+          "type": "secondary"
+        },
+        {
+          "time": "2020-06",
+          "value": 584.92,
+          "type": "secondary"
+        },
+        {
+          "time": "2020-07",
+          "value": 220.02,
+          "type": "secondary"
+        },
+        {
+          "time": "2020-08",
+          "value": 125.97,
+          "type": "secondary"
+        },
+        {
+          "time": "2020-09",
+          "value": 165.32,
+          "type": "secondary"
+        },
+        {
+          "time": "2020-10",
+          "value": 454.99,
+          "type": "secondary"
+        },
+        {
+          "time": "2020-11",
+          "value": 139.14,
+          "type": "secondary"
+        },
+        {
+          "time": "2020-12",
+          "value": 272.62,
+          "type": "secondary"
+        },
+        {
+          "time": "2021-01",
+          "value": 72.98,
+          "type": "secondary"
+        },
+        {
+          "time": "2021-02",
+          "value": 660.45,
+          "type": "secondary"
+        },
+        {
+          "time": "2021-03",
+          "value": 651.88,
+          "type": "secondary"
+        },
+        {
+          "time": "2021-04",
+          "value": 516.34,
+          "type": "secondary"
+        },
+        {
+          "time": "2021-05",
+          "value": 267.79,
+          "type": "secondary"
+        },
+        {
+          "time": "2021-06",
+          "value": 224.55,
+          "type": "secondary"
+        },
+        {
+          "time": "2021-07",
+          "value": 380.39,
+          "type": "secondary"
+        },
+        {
+          "time": "2021-08",
+          "value": 620.89,
+          "type": "secondary"
+        },
+        {
+          "time": "2021-09",
+          "value": 357.05,
+          "type": "secondary"
+        },
+        {
+          "time": "2021-10",
+          "value": 386.33,
+          "type": "secondary"
+        },
+        {
+          "time": "2021-11",
+          "value": 821.69,
+          "type": "secondary"
+        },
+        {
+          "time": "2021-12",
+          "value": 727.48,
+          "type": "secondary"
+        },
+        {
+          "time": "2022-01",
+          "value": 486.87,
+          "type": "secondary"
+        },
+        {
+          "time": "2022-02",
+          "value": 0,
+          "type": "secondary"
+        }
+      ]
+    },
+    "usd": {
+      "yticks": [
+        0,
+        677035,
+        1354070,
+        2031105,
+        2708140,
+        3385175,
+        4062210,
+        4739245,
+        5416280,
+        6093315
+      ],
+      "data": [
+        {
+          "time": "2019-09",
+          "value": 13683,
+          "type": "primary"
+        },
+        {
+          "time": "2019-10",
+          "value": 13119,
+          "type": "primary"
+        },
+        {
+          "time": "2019-11",
+          "value": 19139,
+          "type": "primary"
+        },
+        {
+          "time": "2019-12",
+          "value": 24094,
+          "type": "primary"
+        },
+        {
+          "time": "2020-01",
+          "value": 105358,
+          "type": "primary"
+        },
+        {
+          "time": "2020-02",
+          "value": 135408,
+          "type": "primary"
+        },
+        {
+          "time": "2020-03",
+          "value": 119695,
+          "type": "primary"
+        },
+        {
+          "time": "2020-04",
+          "value": 67057,
+          "type": "primary"
+        },
+        {
+          "time": "2020-05",
+          "value": 58761,
+          "type": "primary"
+        },
+        {
+          "time": "2020-06",
+          "value": 76012,
+          "type": "primary"
+        },
+        {
+          "time": "2020-07",
+          "value": 42962,
+          "type": "primary"
+        },
+        {
+          "time": "2020-08",
+          "value": 20745,
+          "type": "primary"
+        },
+        {
+          "time": "2020-09",
+          "value": 56740,
+          "type": "primary"
+        },
+        {
+          "time": "2020-10",
+          "value": 81136,
+          "type": "primary"
+        },
+        {
+          "time": "2020-11",
+          "value": 100556,
+          "type": "primary"
+        },
+        {
+          "time": "2020-12",
+          "value": 18719,
+          "type": "primary"
+        },
+        {
+          "time": "2021-01",
+          "value": 41841,
+          "type": "primary"
+        },
+        {
+          "time": "2021-02",
+          "value": 158155,
+          "type": "primary"
+        },
+        {
+          "time": "2021-03",
+          "value": 542351,
+          "type": "primary"
+        },
+        {
+          "time": "2021-04",
+          "value": 867335,
+          "type": "primary"
+        },
+        {
+          "time": "2021-05",
+          "value": 799482,
+          "type": "primary"
+        },
+        {
+          "time": "2021-06",
+          "value": 432717,
+          "type": "primary"
+        },
+        {
+          "time": "2021-07",
+          "value": 888565,
+          "type": "primary"
+        },
+        {
+          "time": "2021-08",
+          "value": 1064215,
+          "type": "primary"
+        },
+        {
+          "time": "2021-09",
+          "value": 1391441,
+          "type": "primary"
+        },
+        {
+          "time": "2021-10",
+          "value": 1033794,
+          "type": "primary"
+        },
+        {
+          "time": "2021-11",
+          "value": 2486111,
+          "type": "primary"
+        },
+        {
+          "time": "2021-12",
+          "value": 1996087,
+          "type": "primary"
+        },
+        {
+          "time": "2022-01",
+          "value": 1115463,
+          "type": "primary"
+        },
+        {
+          "time": "2022-02",
+          "value": 0,
+          "type": "primary"
+        },
+        {
+          "time": "2019-09",
+          "value": 5504,
+          "type": "secondary"
+        },
+        {
+          "time": "2019-10",
+          "value": 2543,
+          "type": "secondary"
+        },
+        {
+          "time": "2019-11",
+          "value": 5284,
+          "type": "secondary"
+        },
+        {
+          "time": "2019-12",
+          "value": 26676,
+          "type": "secondary"
+        },
+        {
+          "time": "2020-01",
+          "value": 59774,
+          "type": "secondary"
+        },
+        {
+          "time": "2020-02",
+          "value": 129842,
+          "type": "secondary"
+        },
+        {
+          "time": "2020-03",
+          "value": 118157,
+          "type": "secondary"
+        },
+        {
+          "time": "2020-04",
+          "value": 78413,
+          "type": "secondary"
+        },
+        {
+          "time": "2020-05",
+          "value": 71245,
+          "type": "secondary"
+        },
+        {
+          "time": "2020-06",
+          "value": 138874,
+          "type": "secondary"
+        },
+        {
+          "time": "2020-07",
+          "value": 57591,
+          "type": "secondary"
+        },
+        {
+          "time": "2020-08",
+          "value": 50337,
+          "type": "secondary"
+        },
+        {
+          "time": "2020-09",
+          "value": 60210,
+          "type": "secondary"
+        },
+        {
+          "time": "2020-10",
+          "value": 167136,
+          "type": "secondary"
+        },
+        {
+          "time": "2020-11",
+          "value": 63993,
+          "type": "secondary"
+        },
+        {
+          "time": "2020-12",
+          "value": 172874,
+          "type": "secondary"
+        },
+        {
+          "time": "2021-01",
+          "value": 87466,
+          "type": "secondary"
+        },
+        {
+          "time": "2021-02",
+          "value": 1140946,
+          "type": "secondary"
+        },
+        {
+          "time": "2021-03",
+          "value": 1137707,
+          "type": "secondary"
+        },
+        {
+          "time": "2021-04",
+          "value": 1141304,
+          "type": "secondary"
+        },
+        {
+          "time": "2021-05",
+          "value": 853028,
+          "type": "secondary"
+        },
+        {
+          "time": "2021-06",
+          "value": 534176,
+          "type": "secondary"
+        },
+        {
+          "time": "2021-07",
+          "value": 812291,
+          "type": "secondary"
+        },
+        {
+          "time": "2021-08",
+          "value": 1902969,
+          "type": "secondary"
+        },
+        {
+          "time": "2021-09",
+          "value": 1243782,
+          "type": "secondary"
+        },
+        {
+          "time": "2021-10",
+          "value": 1488606,
+          "type": "secondary"
+        },
+        {
+          "time": "2021-11",
+          "value": 3668753,
+          "type": "secondary"
+        },
+        {
+          "time": "2021-12",
+          "value": 3100435,
+          "type": "secondary"
+        },
+        {
+          "time": "2022-01",
+          "value": 1544749,
+          "type": "secondary"
+        },
+        {
+          "time": "2022-02",
+          "value": 0,
+          "type": "secondary"
+        }
+      ]
+    }
+  }
+}
+```
+---
+**6\.6 获取 Cryptovoxels 地块mint情况统计信息接口**
+###### 接口功能
+> 获取 Cryptovoxels 地块mint情况统计信息接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_cv_mint_stats
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回字段
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "monthly": {
+      "yticks": [
+        0,
+        61,
+        122,
+        183,
+        244,
+        305,
+        366,
+        427,
+        488,
+        549,
+        610
+      ],
+      "data": [
+        {
+          "time": "2019.09",
+          "value": 214,
+          "type": "all"
+        },
+        {
+          "time": "2019.10",
+          "value": 155,
+          "type": "all"
+        },
+        {
+          "time": "2019.11",
+          "value": 92,
+          "type": "all"
+        },
+        {
+          "time": "2019.12",
+          "value": 249,
+          "type": "all"
+        },
+        {
+          "time": "2020.01",
+          "value": 399,
+          "type": "all"
+        },
+        {
+          "time": "2020.02",
+          "value": 267,
+          "type": "all"
+        },
+        {
+          "time": "2020.03",
+          "value": 282,
+          "type": "all"
+        },
+        {
+          "time": "2020.04",
+          "value": 38,
+          "type": "all"
+        },
+        {
+          "time": "2020.05",
+          "value": 183,
+          "type": "all"
+        },
+        {
+          "time": "2020.06",
+          "value": 285,
+          "type": "all"
+        },
+        {
+          "time": "2020.07",
+          "value": 144,
+          "type": "all"
+        },
+        {
+          "time": "2020.08",
+          "value": 46,
+          "type": "all"
+        },
+        {
+          "time": "2020.09",
+          "value": 206,
+          "type": "all"
+        },
+        {
+          "time": "2020.10",
+          "value": 139,
+          "type": "all"
+        },
+        {
+          "time": "2020.11",
+          "value": 195,
+          "type": "all"
+        },
+        {
+          "time": "2020.12",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2021.01",
+          "value": 43,
+          "type": "all"
+        },
+        {
+          "time": "2021.02",
+          "value": 102,
+          "type": "all"
+        },
+        {
+          "time": "2021.03",
+          "value": 206,
+          "type": "all"
+        },
+        {
+          "time": "2021.04",
+          "value": 186,
+          "type": "all"
+        },
+        {
+          "time": "2021.05",
+          "value": 154,
+          "type": "all"
+        },
+        {
+          "time": "2021.06",
+          "value": 63,
+          "type": "all"
+        },
+        {
+          "time": "2021.07",
+          "value": 273,
+          "type": "all"
+        },
+        {
+          "time": "2021.08",
+          "value": 272,
+          "type": "all"
+        },
+        {
+          "time": "2021.09",
+          "value": 232,
+          "type": "all"
+        },
+        {
+          "time": "2021.10",
+          "value": 233,
+          "type": "all"
+        },
+        {
+          "time": "2021.11",
+          "value": 557,
+          "type": "all"
+        },
+        {
+          "time": "2021.12",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2022.01",
+          "value": 402,
+          "type": "all"
+        },
+        {
+          "time": "2022.02",
+          "value": 395,
+          "type": "all"
+        }
+      ]
+    }
+  }
+}
+```
+---
+**6\.7 获取 Cryptovoxels 地主总数统计信息接口**
+###### 接口功能
+> 获取 Cryptovoxels 地主总数统计信息接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_cv_parcel_owner_stats
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回字段
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "monthly": {
+      "yticks": [
+        0,
+        236,
+        472,
+        708,
+        944,
+        1180,
+        1416,
+        1652,
+        1888,
+        2124,
+        2360
+      ],
+      "data": [
+        {
+          "time": "2021.07",
+          "value": 1396,
+          "type": "all"
+        },
+        {
+          "time": "2021.08",
+          "value": 1470,
+          "type": "all"
+        },
+        {
+          "time": "2021.09",
+          "value": 1539,
+          "type": "all"
+        },
+        {
+          "time": "2021.10",
+          "value": 1617,
+          "type": "all"
+        },
+        {
+          "time": "2021.11",
+          "value": 1812,
+          "type": "all"
+        },
+        {
+          "time": "2021.12",
+          "value": 1945,
+          "type": "all"
+        },
+        {
+          "time": "2022.01",
+          "value": 2054,
+          "type": "all"
+        },
+        {
+          "time": "2022.02",
+          "value": 2149,
+          "type": "all"
+        }
+      ]
     }
   }
 }
