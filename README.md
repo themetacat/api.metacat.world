@@ -29,6 +29,10 @@
 5. 获取 Cryptovoxels 地块销售总额统计信息接口
 6. 获取 Cryptovoxels 地块mint情况统计信息接口
 7. 获取 Cryptovoxels 地主总数统计信息接口
+8.   获取 Decentraland 地块成交均价统计信息接口
+9. 获取 Decentraland 地块成交总数量统计信息接口
+10. 获取 Decentraland 地块销售总额统计信息接口
+11. 获取 Decentraland 地主总数统计信息接口
 
 ----
 ## 全局错误码
@@ -4475,6 +4479,3184 @@
         {
           "time": "2022.02",
           "value": 2149,
+          "type": "all"
+        }
+      ]
+    }
+  }
+}
+```
+---
+**6\.8 获取 Decentraland 地块成交均价统计信息接口**
+###### 接口功能
+> 获取 Decentraland 地块成交均价统计信息接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_dcl_parcel_avg_price_stats
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回字段
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "daily": {
+      "data": {
+        "mana": [
+          {
+            "time": "2022.01.30",
+            "value_avg": 5494,
+            "value_min": 4879,
+            "value_max": 6150,
+            "type": "land"
+          },
+          {
+            "time": "2022.01.30",
+            "value_avg": 27900,
+            "value_min": 27900,
+            "value_max": 27900,
+            "type": "estate"
+          },
+          {
+            "time": "2022.01.31",
+            "value_avg": 6275,
+            "value_min": 4998,
+            "value_max": 11333,
+            "type": "land"
+          },
+          {
+            "time": "2022.01.31",
+            "value_avg": 360000,
+            "value_min": 360000,
+            "value_max": 360000,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.01",
+            "value_avg": 6836,
+            "value_min": 4950,
+            "value_max": 15888,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.01",
+            "value_avg": 48166,
+            "value_min": 9000,
+            "value_max": 69000,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.02",
+            "value_avg": 5859,
+            "value_min": 4939,
+            "value_max": 6999,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.02",
+            "value_avg": 56944,
+            "value_min": 48888,
+            "value_max": 65000,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.03",
+            "value_avg": 7183,
+            "value_min": 5000,
+            "value_max": 9999,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.03",
+            "value_avg": 29998,
+            "value_min": 20000,
+            "value_max": 39997,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.04",
+            "value_avg": 6261,
+            "value_min": 5100,
+            "value_max": 12499,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.04",
+            "value_avg": 181999,
+            "value_min": 11000,
+            "value_max": 510000,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.05",
+            "value_avg": 6292,
+            "value_min": 5150,
+            "value_max": 9999,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.05",
+            "value_avg": 29966,
+            "value_min": 12000,
+            "value_max": 45000,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.06",
+            "value_avg": 6233,
+            "value_min": 4799,
+            "value_max": 8450,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.06",
+            "value_avg": 34573,
+            "value_min": 21500,
+            "value_max": 52221,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.07",
+            "value_avg": 8001,
+            "value_min": 4799,
+            "value_max": 15650,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.07",
+            "value_avg": 36559,
+            "value_min": 6997,
+            "value_max": 69000,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.08",
+            "value_avg": 5563,
+            "value_min": 4600,
+            "value_max": 8888,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.08",
+            "value_avg": 14499,
+            "value_min": 9498,
+            "value_max": 18000,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.09",
+            "value_avg": 5931,
+            "value_min": 4200,
+            "value_max": 10419,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.09",
+            "value_avg": 17000,
+            "value_min": 17000,
+            "value_max": 17000,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.10",
+            "value_avg": 6876,
+            "value_min": 4697,
+            "value_max": 10000,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.10",
+            "value_avg": 15500,
+            "value_min": 15500,
+            "value_max": 15500,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.11",
+            "value_avg": 5386,
+            "value_min": 4697,
+            "value_max": 6456,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.11",
+            "value_avg": 10497,
+            "value_min": 10497,
+            "value_max": 10497,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.12",
+            "value_avg": 6384,
+            "value_min": 5245,
+            "value_max": 10200,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.12",
+            "value_avg": 19420,
+            "value_min": 19420,
+            "value_max": 19420,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.13",
+            "value_avg": 6648,
+            "value_min": 5150,
+            "value_max": 9250,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.13",
+            "value_avg": 45678,
+            "value_min": 45678,
+            "value_max": 45678,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.14",
+            "value_avg": 6243,
+            "value_min": 5169,
+            "value_max": 7420,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.14",
+            "value_avg": 17890,
+            "value_min": 17890,
+            "value_max": 17890,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.15",
+            "value_avg": 5986,
+            "value_min": 4688,
+            "value_max": 9000,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.15",
+            "value_avg": 20900,
+            "value_min": 20900,
+            "value_max": 20900,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.16",
+            "value_avg": 7378,
+            "value_min": 4950,
+            "value_max": 11222,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.16",
+            "value_avg": 20140,
+            "value_min": 17000,
+            "value_max": 24000,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.17",
+            "value_avg": 6540,
+            "value_min": 4869,
+            "value_max": 10000,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.17",
+            "value_avg": 14999,
+            "value_min": 14999,
+            "value_max": 14999,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.18",
+            "value_avg": 7242,
+            "value_min": 4400,
+            "value_max": 15420,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.18",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 0,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.19",
+            "value_avg": 5556,
+            "value_min": 4600,
+            "value_max": 6999,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.19",
+            "value_avg": 195500,
+            "value_min": 76000,
+            "value_max": 315000,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.20",
+            "value_avg": 5886,
+            "value_min": 4950,
+            "value_max": 8800,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.20",
+            "value_avg": 23998,
+            "value_min": 19997,
+            "value_max": 28000,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.21",
+            "value_avg": 6190,
+            "value_min": 4032,
+            "value_max": 9500,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.21",
+            "value_avg": 80000,
+            "value_min": 80000,
+            "value_max": 80000,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.22",
+            "value_avg": 5877,
+            "value_min": 4800,
+            "value_max": 9000,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.22",
+            "value_avg": 9018,
+            "value_min": 8049,
+            "value_max": 9987,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.23",
+            "value_avg": 7181,
+            "value_min": 4300,
+            "value_max": 15500,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.23",
+            "value_avg": 8314,
+            "value_min": 8314,
+            "value_max": 8314,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.24",
+            "value_avg": 5418,
+            "value_min": 4947,
+            "value_max": 6888,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.24",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 0,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.25",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 0,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.25",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 0,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.26",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 0,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.26",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 0,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.27",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 0,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.27",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 0,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.28",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 0,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.28",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 0,
+            "type": "estate"
+          }
+        ],
+        "usd": [
+          {
+            "time": "2022.01.30",
+            "value_avg": 13055,
+            "value_min": 11594,
+            "value_max": 14615,
+            "type": "land"
+          },
+          {
+            "time": "2022.01.30",
+            "value_avg": 66300,
+            "value_min": 66300,
+            "value_max": 66300,
+            "type": "estate"
+          },
+          {
+            "time": "2022.01.31",
+            "value_avg": 15878,
+            "value_min": 12646,
+            "value_max": 28675,
+            "type": "land"
+          },
+          {
+            "time": "2022.01.31",
+            "value_avg": 910893,
+            "value_min": 910893,
+            "value_max": 910893,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.01",
+            "value_avg": 19408,
+            "value_min": 14052,
+            "value_max": 45101,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.01",
+            "value_avg": 136731,
+            "value_min": 25548,
+            "value_max": 195871,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.02",
+            "value_avg": 15804,
+            "value_min": 13322,
+            "value_max": 18879,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.02",
+            "value_avg": 153597,
+            "value_min": 131867,
+            "value_max": 175326,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.03",
+            "value_avg": 18383,
+            "value_min": 12796,
+            "value_max": 25589,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.03",
+            "value_avg": 76771,
+            "value_min": 51183,
+            "value_max": 102359,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.04",
+            "value_avg": 16655,
+            "value_min": 13567,
+            "value_max": 33249,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.04",
+            "value_avg": 484147,
+            "value_min": 29261,
+            "value_max": 1356683,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.05",
+            "value_avg": 17795,
+            "value_min": 14564,
+            "value_max": 28276,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.05",
+            "value_avg": 84743,
+            "value_min": 33935,
+            "value_max": 127256,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.06",
+            "value_avg": 18995,
+            "value_min": 14624,
+            "value_max": 25750,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.06",
+            "value_avg": 105356,
+            "value_min": 65517,
+            "value_max": 159133,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.07",
+            "value_avg": 26555,
+            "value_min": 15927,
+            "value_max": 51938,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.07",
+            "value_avg": 121330,
+            "value_min": 23221,
+            "value_max": 228992,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.08",
+            "value_avg": 18367,
+            "value_min": 15187,
+            "value_max": 29344,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.08",
+            "value_avg": 47870,
+            "value_min": 31358,
+            "value_max": 59428,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.09",
+            "value_avg": 20734,
+            "value_min": 14682,
+            "value_max": 36421,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.09",
+            "value_avg": 59425,
+            "value_min": 59425,
+            "value_max": 59425,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.10",
+            "value_avg": 23063,
+            "value_min": 15754,
+            "value_max": 33540,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.10",
+            "value_avg": 51986,
+            "value_min": 51986,
+            "value_max": 51986,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.11",
+            "value_avg": 16991,
+            "value_min": 14816,
+            "value_max": 20364,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.11",
+            "value_avg": 33110,
+            "value_min": 33110,
+            "value_max": 33110,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.12",
+            "value_avg": 18739,
+            "value_min": 15394,
+            "value_max": 29936,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.12",
+            "value_avg": 56996,
+            "value_min": 56996,
+            "value_max": 56996,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.13",
+            "value_avg": 19378,
+            "value_min": 15011,
+            "value_max": 26962,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.13",
+            "value_avg": 133143,
+            "value_min": 133143,
+            "value_max": 133143,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.14",
+            "value_avg": 17762,
+            "value_min": 14706,
+            "value_max": 21110,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.14",
+            "value_avg": 50897,
+            "value_min": 50897,
+            "value_max": 50897,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.15",
+            "value_avg": 17073,
+            "value_min": 13370,
+            "value_max": 25668,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.15",
+            "value_avg": 59606,
+            "value_min": 59606,
+            "value_max": 59606,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.16",
+            "value_avg": 24559,
+            "value_min": 16476,
+            "value_max": 37353,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.16",
+            "value_avg": 67036,
+            "value_min": 56585,
+            "value_max": 79884,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.17",
+            "value_avg": 21459,
+            "value_min": 15975,
+            "value_max": 32810,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.17",
+            "value_avg": 49212,
+            "value_min": 49212,
+            "value_max": 49212,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.18",
+            "value_avg": 22392,
+            "value_min": 13605,
+            "value_max": 47679,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.18",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 0,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.19",
+            "value_avg": 16611,
+            "value_min": 13752,
+            "value_max": 20924,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.19",
+            "value_avg": 584460,
+            "value_min": 227207,
+            "value_max": 941714,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.20",
+            "value_avg": 17133,
+            "value_min": 14407,
+            "value_max": 25613,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.20",
+            "value_avg": 69847,
+            "value_min": 58201,
+            "value_max": 81494,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.21",
+            "value_avg": 16790,
+            "value_min": 10935,
+            "value_max": 25765,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.21",
+            "value_avg": 216972,
+            "value_min": 216972,
+            "value_max": 216972,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.22",
+            "value_avg": 14656,
+            "value_min": 11969,
+            "value_max": 22442,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.22",
+            "value_avg": 22486,
+            "value_min": 20070,
+            "value_max": 24902,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.23",
+            "value_avg": 19004,
+            "value_min": 11380,
+            "value_max": 41019,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.23",
+            "value_avg": 22002,
+            "value_min": 22002,
+            "value_max": 22002,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.24",
+            "value_avg": 14006,
+            "value_min": 12789,
+            "value_max": 17807,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.24",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 0,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.25",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 0,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.25",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 0,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.26",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 0,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.26",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 0,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.27",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 0,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.27",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 0,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02.28",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 0,
+            "type": "land"
+          },
+          {
+            "time": "2022.02.28",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 0,
+            "type": "estate"
+          }
+        ]
+      }
+    },
+    "monthly": {
+      "data": {
+        "mana": [
+          {
+            "time": "2019.09",
+            "value_avg": 18793,
+            "value_min": 9000,
+            "value_max": 210000,
+            "type": "land"
+          },
+          {
+            "time": "2019.09",
+            "value_avg": 149135,
+            "value_min": 23500,
+            "value_max": 1150000,
+            "type": "estate"
+          },
+          {
+            "time": "2019.10",
+            "value_avg": 18837,
+            "value_min": 8000,
+            "value_max": 60000,
+            "type": "land"
+          },
+          {
+            "time": "2019.10",
+            "value_avg": 56225,
+            "value_min": 23998,
+            "value_max": 138000,
+            "type": "estate"
+          },
+          {
+            "time": "2019.11",
+            "value_avg": 20056,
+            "value_min": 5000,
+            "value_max": 225000,
+            "type": "land"
+          },
+          {
+            "time": "2019.11",
+            "value_avg": 215874,
+            "value_min": 38000,
+            "value_max": 425000,
+            "type": "estate"
+          },
+          {
+            "time": "2019.12",
+            "value_avg": 17597,
+            "value_min": 8000,
+            "value_max": 150000,
+            "type": "land"
+          },
+          {
+            "time": "2019.12",
+            "value_avg": 196360,
+            "value_min": 55555,
+            "value_max": 530000,
+            "type": "estate"
+          },
+          {
+            "time": "2020.01",
+            "value_avg": 21197,
+            "value_min": 1,
+            "value_max": 128000,
+            "type": "land"
+          },
+          {
+            "time": "2020.01",
+            "value_avg": 91088,
+            "value_min": 27000,
+            "value_max": 212000,
+            "type": "estate"
+          },
+          {
+            "time": "2020.02",
+            "value_avg": 22628,
+            "value_min": 100,
+            "value_max": 149000,
+            "type": "land"
+          },
+          {
+            "time": "2020.02",
+            "value_avg": 125022,
+            "value_min": 1,
+            "value_max": 750000,
+            "type": "estate"
+          },
+          {
+            "time": "2020.03",
+            "value_avg": 18217,
+            "value_min": 10000,
+            "value_max": 79600,
+            "type": "land"
+          },
+          {
+            "time": "2020.03",
+            "value_avg": 113811,
+            "value_min": 28000,
+            "value_max": 999989,
+            "type": "estate"
+          },
+          {
+            "time": "2020.04",
+            "value_avg": 20080,
+            "value_min": 2345,
+            "value_max": 99000,
+            "type": "land"
+          },
+          {
+            "time": "2020.04",
+            "value_avg": 156990,
+            "value_min": 24000,
+            "value_max": 1370000,
+            "type": "estate"
+          },
+          {
+            "time": "2020.05",
+            "value_avg": 18724,
+            "value_min": 1999,
+            "value_max": 85000,
+            "type": "land"
+          },
+          {
+            "time": "2020.05",
+            "value_avg": 188817,
+            "value_min": 27500,
+            "value_max": 1400000,
+            "type": "estate"
+          },
+          {
+            "time": "2020.06",
+            "value_avg": 20038,
+            "value_min": 9000,
+            "value_max": 85000,
+            "type": "land"
+          },
+          {
+            "time": "2020.06",
+            "value_avg": 145614,
+            "value_min": 26800,
+            "value_max": 595000,
+            "type": "estate"
+          },
+          {
+            "time": "2020.07",
+            "value_avg": 18687,
+            "value_min": 10000,
+            "value_max": 77000,
+            "type": "land"
+          },
+          {
+            "time": "2020.07",
+            "value_avg": 55264,
+            "value_min": 30000,
+            "value_max": 150000,
+            "type": "estate"
+          },
+          {
+            "time": "2020.08",
+            "value_avg": 15079,
+            "value_min": 6380,
+            "value_max": 90000,
+            "type": "land"
+          },
+          {
+            "time": "2020.08",
+            "value_avg": 59555,
+            "value_min": 20999,
+            "value_max": 300000,
+            "type": "estate"
+          },
+          {
+            "time": "2020.09",
+            "value_avg": 13136,
+            "value_min": 8000,
+            "value_max": 41999,
+            "type": "land"
+          },
+          {
+            "time": "2020.09",
+            "value_avg": 69061,
+            "value_min": 19800,
+            "value_max": 199999,
+            "type": "estate"
+          },
+          {
+            "time": "2020.10",
+            "value_avg": 12443,
+            "value_min": 1,
+            "value_max": 32000,
+            "type": "land"
+          },
+          {
+            "time": "2020.10",
+            "value_avg": 60955,
+            "value_min": 16000,
+            "value_max": 225000,
+            "type": "estate"
+          },
+          {
+            "time": "2020.11",
+            "value_avg": 13156,
+            "value_min": 5500,
+            "value_max": 59500,
+            "type": "land"
+          },
+          {
+            "time": "2020.11",
+            "value_avg": 58027,
+            "value_min": 14999,
+            "value_max": 360000,
+            "type": "estate"
+          },
+          {
+            "time": "2020.12",
+            "value_avg": 10686,
+            "value_min": 6000,
+            "value_max": 64000,
+            "type": "land"
+          },
+          {
+            "time": "2020.12",
+            "value_avg": 46206,
+            "value_min": 15990,
+            "value_max": 225000,
+            "type": "estate"
+          },
+          {
+            "time": "2021.01",
+            "value_avg": 12506,
+            "value_min": 6200,
+            "value_max": 78888,
+            "type": "land"
+          },
+          {
+            "time": "2021.01",
+            "value_avg": 76643,
+            "value_min": 12000,
+            "value_max": 500000,
+            "type": "estate"
+          },
+          {
+            "time": "2021.02",
+            "value_avg": 12017,
+            "value_min": 4000,
+            "value_max": 180000,
+            "type": "land"
+          },
+          {
+            "time": "2021.02",
+            "value_avg": 76315,
+            "value_min": 12499,
+            "value_max": 411000,
+            "type": "estate"
+          },
+          {
+            "time": "2021.03",
+            "value_avg": 9374,
+            "value_min": 2600,
+            "value_max": 69420,
+            "type": "land"
+          },
+          {
+            "time": "2021.03",
+            "value_avg": 56162,
+            "value_min": 1300,
+            "value_max": 300000,
+            "type": "estate"
+          },
+          {
+            "time": "2021.04",
+            "value_avg": 7262,
+            "value_min": 3988,
+            "value_max": 30000,
+            "type": "land"
+          },
+          {
+            "time": "2021.04",
+            "value_avg": 53849,
+            "value_min": 10000,
+            "value_max": 301000,
+            "type": "estate"
+          },
+          {
+            "time": "2021.05",
+            "value_avg": 5813,
+            "value_min": 3699,
+            "value_max": 14700,
+            "type": "land"
+          },
+          {
+            "time": "2021.05",
+            "value_avg": 40666,
+            "value_min": 7000,
+            "value_max": 759361,
+            "type": "estate"
+          },
+          {
+            "time": "2021.06",
+            "value_avg": 6620,
+            "value_min": 3332,
+            "value_max": 47887,
+            "type": "land"
+          },
+          {
+            "time": "2021.06",
+            "value_avg": 57298,
+            "value_min": 8888,
+            "value_max": 1295000,
+            "type": "estate"
+          },
+          {
+            "time": "2021.07",
+            "value_avg": 7004,
+            "value_min": 4100,
+            "value_max": 16900,
+            "type": "land"
+          },
+          {
+            "time": "2021.07",
+            "value_avg": 24948,
+            "value_min": 8500,
+            "value_max": 98000,
+            "type": "estate"
+          },
+          {
+            "time": "2021.08",
+            "value_avg": 6632,
+            "value_min": 4420,
+            "value_max": 15000,
+            "type": "land"
+          },
+          {
+            "time": "2021.08",
+            "value_avg": 28921,
+            "value_min": 8000,
+            "value_max": 158000,
+            "type": "estate"
+          },
+          {
+            "time": "2021.09",
+            "value_avg": 6879,
+            "value_min": 500,
+            "value_max": 49999,
+            "type": "land"
+          },
+          {
+            "time": "2021.09",
+            "value_avg": 36337,
+            "value_min": 10000,
+            "value_max": 250000,
+            "type": "estate"
+          },
+          {
+            "time": "2021.10",
+            "value_avg": 7459,
+            "value_min": 3000,
+            "value_max": 52000,
+            "type": "land"
+          },
+          {
+            "time": "2021.10",
+            "value_avg": 38641,
+            "value_min": 20,
+            "value_max": 350000,
+            "type": "estate"
+          },
+          {
+            "time": "2021.11",
+            "value_avg": 4955,
+            "value_min": 700,
+            "value_max": 28000,
+            "type": "land"
+          },
+          {
+            "time": "2021.11",
+            "value_avg": 42819,
+            "value_min": 5000,
+            "value_max": 618000,
+            "type": "estate"
+          },
+          {
+            "time": "2021.12",
+            "value_avg": 5468,
+            "value_min": 3,
+            "value_max": 125000,
+            "type": "land"
+          },
+          {
+            "time": "2021.12",
+            "value_avg": 45556,
+            "value_min": 6000,
+            "value_max": 300000,
+            "type": "estate"
+          },
+          {
+            "time": "2022.01",
+            "value_avg": 6041,
+            "value_min": 1490,
+            "value_max": 24999,
+            "type": "land"
+          },
+          {
+            "time": "2022.01",
+            "value_avg": 53284,
+            "value_min": 10,
+            "value_max": 425000,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02",
+            "value_avg": 6328,
+            "value_min": 4032,
+            "value_max": 15888,
+            "type": "land"
+          },
+          {
+            "time": "2022.02",
+            "value_avg": 47719,
+            "value_min": 6997,
+            "value_max": 510000,
+            "type": "estate"
+          }
+        ],
+        "usd": [
+          {
+            "time": "2019.09",
+            "value_avg": 597,
+            "value_min": 271,
+            "value_max": 5958,
+            "type": "land"
+          },
+          {
+            "time": "2019.09",
+            "value_avg": 4757,
+            "value_min": 763,
+            "value_max": 37351,
+            "type": "estate"
+          },
+          {
+            "time": "2019.10",
+            "value_avg": 578,
+            "value_min": 245,
+            "value_max": 1910,
+            "type": "land"
+          },
+          {
+            "time": "2019.10",
+            "value_avg": 1767,
+            "value_min": 667,
+            "value_max": 4425,
+            "type": "estate"
+          },
+          {
+            "time": "2019.11",
+            "value_avg": 565,
+            "value_min": 149,
+            "value_max": 6429,
+            "type": "land"
+          },
+          {
+            "time": "2019.11",
+            "value_avg": 5610,
+            "value_min": 1205,
+            "value_max": 12631,
+            "type": "estate"
+          },
+          {
+            "time": "2019.12",
+            "value_avg": 483,
+            "value_min": 203,
+            "value_max": 3781,
+            "type": "land"
+          },
+          {
+            "time": "2019.12",
+            "value_avg": 5322,
+            "value_min": 1454,
+            "value_max": 14069,
+            "type": "estate"
+          },
+          {
+            "time": "2020.01",
+            "value_avg": 742,
+            "value_min": 0,
+            "value_max": 4551,
+            "type": "land"
+          },
+          {
+            "time": "2020.01",
+            "value_avg": 3133,
+            "value_min": 956,
+            "value_max": 7189,
+            "type": "estate"
+          },
+          {
+            "time": "2020.02",
+            "value_avg": 1255,
+            "value_min": 6,
+            "value_max": 9730,
+            "type": "land"
+          },
+          {
+            "time": "2020.02",
+            "value_avg": 7236,
+            "value_min": 0,
+            "value_max": 48068,
+            "type": "estate"
+          },
+          {
+            "time": "2020.03",
+            "value_avg": 547,
+            "value_min": 210,
+            "value_max": 2718,
+            "type": "land"
+          },
+          {
+            "time": "2020.03",
+            "value_avg": 2715,
+            "value_min": 685,
+            "value_max": 22143,
+            "type": "estate"
+          },
+          {
+            "time": "2020.04",
+            "value_avg": 564,
+            "value_min": 71,
+            "value_max": 2836,
+            "type": "land"
+          },
+          {
+            "time": "2020.04",
+            "value_avg": 4608,
+            "value_min": 772,
+            "value_max": 40137,
+            "type": "estate"
+          },
+          {
+            "time": "2020.05",
+            "value_avg": 685,
+            "value_min": 81,
+            "value_max": 3347,
+            "type": "land"
+          },
+          {
+            "time": "2020.05",
+            "value_avg": 6990,
+            "value_min": 992,
+            "value_max": 54345,
+            "type": "estate"
+          },
+          {
+            "time": "2020.06",
+            "value_avg": 820,
+            "value_min": 395,
+            "value_max": 3404,
+            "type": "land"
+          },
+          {
+            "time": "2020.06",
+            "value_avg": 5997,
+            "value_min": 1129,
+            "value_max": 24142,
+            "type": "estate"
+          },
+          {
+            "time": "2020.07",
+            "value_avg": 753,
+            "value_min": 465,
+            "value_max": 3062,
+            "type": "land"
+          },
+          {
+            "time": "2020.07",
+            "value_avg": 2302,
+            "value_min": 1210,
+            "value_max": 6391,
+            "type": "estate"
+          },
+          {
+            "time": "2020.08",
+            "value_avg": 1303,
+            "value_min": 508,
+            "value_max": 4890,
+            "type": "land"
+          },
+          {
+            "time": "2020.08",
+            "value_avg": 5356,
+            "value_min": 1615,
+            "value_max": 31077,
+            "type": "estate"
+          },
+          {
+            "time": "2020.09",
+            "value_avg": 1034,
+            "value_min": 606,
+            "value_max": 3437,
+            "type": "land"
+          },
+          {
+            "time": "2020.09",
+            "value_avg": 5551,
+            "value_min": 1356,
+            "value_max": 16171,
+            "type": "estate"
+          },
+          {
+            "time": "2020.10",
+            "value_avg": 923,
+            "value_min": 0,
+            "value_max": 2271,
+            "type": "land"
+          },
+          {
+            "time": "2020.10",
+            "value_avg": 4519,
+            "value_min": 1183,
+            "value_max": 16853,
+            "type": "estate"
+          },
+          {
+            "time": "2020.11",
+            "value_avg": 1071,
+            "value_min": 448,
+            "value_max": 4404,
+            "type": "land"
+          },
+          {
+            "time": "2020.11",
+            "value_avg": 4634,
+            "value_min": 976,
+            "value_max": 29755,
+            "type": "estate"
+          },
+          {
+            "time": "2020.12",
+            "value_avg": 904,
+            "value_min": 500,
+            "value_max": 5069,
+            "type": "land"
+          },
+          {
+            "time": "2020.12",
+            "value_avg": 3870,
+            "value_min": 1346,
+            "value_max": 18219,
+            "type": "estate"
+          },
+          {
+            "time": "2021.01",
+            "value_avg": 1575,
+            "value_min": 572,
+            "value_max": 10895,
+            "type": "land"
+          },
+          {
+            "time": "2021.01",
+            "value_avg": 10814,
+            "value_min": 1504,
+            "value_max": 77803,
+            "type": "estate"
+          },
+          {
+            "time": "2021.02",
+            "value_avg": 3084,
+            "value_min": 944,
+            "value_max": 53525,
+            "type": "land"
+          },
+          {
+            "time": "2021.02",
+            "value_avg": 18854,
+            "value_min": 3004,
+            "value_max": 104741,
+            "type": "estate"
+          },
+          {
+            "time": "2021.03",
+            "value_avg": 6585,
+            "value_min": 1184,
+            "value_max": 66279,
+            "type": "land"
+          },
+          {
+            "time": "2021.03",
+            "value_avg": 41815,
+            "value_min": 638,
+            "value_max": 294837,
+            "type": "estate"
+          },
+          {
+            "time": "2021.04",
+            "value_avg": 8380,
+            "value_min": 4063,
+            "value_max": 32721,
+            "type": "land"
+          },
+          {
+            "time": "2021.04",
+            "value_avg": 63765,
+            "value_min": 9426,
+            "value_max": 403665,
+            "type": "estate"
+          },
+          {
+            "time": "2021.05",
+            "value_avg": 6707,
+            "value_min": 2505,
+            "value_max": 18306,
+            "type": "land"
+          },
+          {
+            "time": "2021.05",
+            "value_avg": 42343,
+            "value_min": 5636,
+            "value_max": 758891,
+            "type": "estate"
+          },
+          {
+            "time": "2021.06",
+            "value_avg": 4340,
+            "value_min": 2093,
+            "value_max": 34201,
+            "type": "land"
+          },
+          {
+            "time": "2021.06",
+            "value_avg": 38116,
+            "value_min": 3934,
+            "value_max": 896747,
+            "type": "estate"
+          },
+          {
+            "time": "2021.07",
+            "value_avg": 4396,
+            "value_min": 2609,
+            "value_max": 9942,
+            "type": "land"
+          },
+          {
+            "time": "2021.07",
+            "value_avg": 15330,
+            "value_min": 4943,
+            "value_max": 56850,
+            "type": "estate"
+          },
+          {
+            "time": "2021.08",
+            "value_avg": 5517,
+            "value_min": 3225,
+            "value_max": 13534,
+            "type": "land"
+          },
+          {
+            "time": "2021.08",
+            "value_avg": 22978,
+            "value_min": 5832,
+            "value_max": 134475,
+            "type": "estate"
+          },
+          {
+            "time": "2021.09",
+            "value_avg": 6047,
+            "value_min": 537,
+            "value_max": 41372,
+            "type": "land"
+          },
+          {
+            "time": "2021.09",
+            "value_avg": 27997,
+            "value_min": 6116,
+            "value_max": 188574,
+            "type": "estate"
+          },
+          {
+            "time": "2021.10",
+            "value_avg": 8353,
+            "value_min": 3448,
+            "value_max": 39903,
+            "type": "land"
+          },
+          {
+            "time": "2021.10",
+            "value_avg": 36052,
+            "value_min": 70,
+            "value_max": 274668,
+            "type": "estate"
+          },
+          {
+            "time": "2021.11",
+            "value_avg": 18703,
+            "value_min": 2279,
+            "value_max": 102329,
+            "type": "land"
+          },
+          {
+            "time": "2021.11",
+            "value_avg": 175810,
+            "value_min": 22760,
+            "value_max": 2514870,
+            "type": "estate"
+          },
+          {
+            "time": "2021.12",
+            "value_avg": 19827,
+            "value_min": 10,
+            "value_max": 434811,
+            "type": "land"
+          },
+          {
+            "time": "2021.12",
+            "value_avg": 167103,
+            "value_min": 19785,
+            "value_max": 1043547,
+            "type": "estate"
+          },
+          {
+            "time": "2022.01",
+            "value_avg": 16573,
+            "value_min": 4589,
+            "value_max": 83779,
+            "type": "land"
+          },
+          {
+            "time": "2022.01",
+            "value_avg": 146983,
+            "value_min": 32,
+            "value_max": 1166084,
+            "type": "estate"
+          },
+          {
+            "time": "2022.02",
+            "value_avg": 18630,
+            "value_min": 10935,
+            "value_max": 51938,
+            "type": "land"
+          },
+          {
+            "time": "2022.02",
+            "value_avg": 137953,
+            "value_min": 20070,
+            "value_max": 1356683,
+            "type": "estate"
+          }
+        ]
+      }
+    }
+  }
+}
+```
+---
+**6\.9 获取 Decentraland 地块成交总数量统计信息接口**
+###### 接口功能
+> 获取 Decentraland 地块成交总数量统计信息接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_dcl_parcel_sold_total_stats
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回字段
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "daily": {
+      "data": [
+        {
+          "time": "2022.01.30",
+          "value": 9,
+          "type": "land"
+        },
+        {
+          "time": "2022.01.30",
+          "value": 1,
+          "type": "estate"
+        },
+        {
+          "time": "2022.01.31",
+          "value": 13,
+          "type": "land"
+        },
+        {
+          "time": "2022.01.31",
+          "value": 1,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.01",
+          "value": 13,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.01",
+          "value": 3,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.02",
+          "value": 17,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.02",
+          "value": 2,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.03",
+          "value": 13,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.03",
+          "value": 2,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.04",
+          "value": 10,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.04",
+          "value": 3,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.05",
+          "value": 12,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.05",
+          "value": 3,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.06",
+          "value": 13,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.06",
+          "value": 3,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.07",
+          "value": 9,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.07",
+          "value": 5,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.08",
+          "value": 10,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.08",
+          "value": 3,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.09",
+          "value": 19,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.09",
+          "value": 1,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.10",
+          "value": 8,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.10",
+          "value": 1,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.11",
+          "value": 7,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.11",
+          "value": 1,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.12",
+          "value": 9,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.12",
+          "value": 1,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.13",
+          "value": 8,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.13",
+          "value": 1,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.14",
+          "value": 5,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.14",
+          "value": 1,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.15",
+          "value": 6,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.15",
+          "value": 1,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.16",
+          "value": 8,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.16",
+          "value": 3,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.17",
+          "value": 8,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.17",
+          "value": 1,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.18",
+          "value": 5,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.18",
+          "value": 0,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.19",
+          "value": 11,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.19",
+          "value": 2,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.20",
+          "value": 14,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.20",
+          "value": 2,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.21",
+          "value": 11,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.21",
+          "value": 1,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.22",
+          "value": 12,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.22",
+          "value": 2,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.23",
+          "value": 11,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.23",
+          "value": 1,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.24",
+          "value": 9,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.24",
+          "value": 0,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.25",
+          "value": 0,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.25",
+          "value": 0,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.26",
+          "value": 0,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.26",
+          "value": 0,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.27",
+          "value": 0,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.27",
+          "value": 0,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02.28",
+          "value": 0,
+          "type": "land"
+        },
+        {
+          "time": "2022.02.28",
+          "value": 0,
+          "type": "estate"
+        }
+      ]
+    },
+    "monthly": {
+      "data": [
+        {
+          "time": "2019.09",
+          "value": 123,
+          "type": "land"
+        },
+        {
+          "time": "2019.09",
+          "value": 18,
+          "type": "estate"
+        },
+        {
+          "time": "2019.10",
+          "value": 172,
+          "type": "land"
+        },
+        {
+          "time": "2019.10",
+          "value": 16,
+          "type": "estate"
+        },
+        {
+          "time": "2019.11",
+          "value": 103,
+          "type": "land"
+        },
+        {
+          "time": "2019.11",
+          "value": 8,
+          "type": "estate"
+        },
+        {
+          "time": "2019.12",
+          "value": 147,
+          "type": "land"
+        },
+        {
+          "time": "2019.12",
+          "value": 14,
+          "type": "estate"
+        },
+        {
+          "time": "2020.01",
+          "value": 236,
+          "type": "land"
+        },
+        {
+          "time": "2020.01",
+          "value": 22,
+          "type": "estate"
+        },
+        {
+          "time": "2020.02",
+          "value": 538,
+          "type": "land"
+        },
+        {
+          "time": "2020.02",
+          "value": 62,
+          "type": "estate"
+        },
+        {
+          "time": "2020.03",
+          "value": 175,
+          "type": "land"
+        },
+        {
+          "time": "2020.03",
+          "value": 27,
+          "type": "estate"
+        },
+        {
+          "time": "2020.04",
+          "value": 128,
+          "type": "land"
+        },
+        {
+          "time": "2020.04",
+          "value": 39,
+          "type": "estate"
+        },
+        {
+          "time": "2020.05",
+          "value": 138,
+          "type": "land"
+        },
+        {
+          "time": "2020.05",
+          "value": 22,
+          "type": "estate"
+        },
+        {
+          "time": "2020.06",
+          "value": 86,
+          "type": "land"
+        },
+        {
+          "time": "2020.06",
+          "value": 26,
+          "type": "estate"
+        },
+        {
+          "time": "2020.07",
+          "value": 131,
+          "type": "land"
+        },
+        {
+          "time": "2020.07",
+          "value": 20,
+          "type": "estate"
+        },
+        {
+          "time": "2020.08",
+          "value": 146,
+          "type": "land"
+        },
+        {
+          "time": "2020.08",
+          "value": 14,
+          "type": "estate"
+        },
+        {
+          "time": "2020.09",
+          "value": 128,
+          "type": "land"
+        },
+        {
+          "time": "2020.09",
+          "value": 19,
+          "type": "estate"
+        },
+        {
+          "time": "2020.10",
+          "value": 135,
+          "type": "land"
+        },
+        {
+          "time": "2020.10",
+          "value": 26,
+          "type": "estate"
+        },
+        {
+          "time": "2020.11",
+          "value": 103,
+          "type": "land"
+        },
+        {
+          "time": "2020.11",
+          "value": 25,
+          "type": "estate"
+        },
+        {
+          "time": "2020.12",
+          "value": 169,
+          "type": "land"
+        },
+        {
+          "time": "2020.12",
+          "value": 35,
+          "type": "estate"
+        },
+        {
+          "time": "2021.01",
+          "value": 156,
+          "type": "land"
+        },
+        {
+          "time": "2021.01",
+          "value": 59,
+          "type": "estate"
+        },
+        {
+          "time": "2021.02",
+          "value": 230,
+          "type": "land"
+        },
+        {
+          "time": "2021.02",
+          "value": 30,
+          "type": "estate"
+        },
+        {
+          "time": "2021.03",
+          "value": 536,
+          "type": "land"
+        },
+        {
+          "time": "2021.03",
+          "value": 58,
+          "type": "estate"
+        },
+        {
+          "time": "2021.04",
+          "value": 297,
+          "type": "land"
+        },
+        {
+          "time": "2021.04",
+          "value": 61,
+          "type": "estate"
+        },
+        {
+          "time": "2021.05",
+          "value": 214,
+          "type": "land"
+        },
+        {
+          "time": "2021.05",
+          "value": 39,
+          "type": "estate"
+        },
+        {
+          "time": "2021.06",
+          "value": 162,
+          "type": "land"
+        },
+        {
+          "time": "2021.06",
+          "value": 50,
+          "type": "estate"
+        },
+        {
+          "time": "2021.07",
+          "value": 121,
+          "type": "land"
+        },
+        {
+          "time": "2021.07",
+          "value": 34,
+          "type": "estate"
+        },
+        {
+          "time": "2021.08",
+          "value": 144,
+          "type": "land"
+        },
+        {
+          "time": "2021.08",
+          "value": 57,
+          "type": "estate"
+        },
+        {
+          "time": "2021.09",
+          "value": 283,
+          "type": "land"
+        },
+        {
+          "time": "2021.09",
+          "value": 53,
+          "type": "estate"
+        },
+        {
+          "time": "2021.10",
+          "value": 250,
+          "type": "land"
+        },
+        {
+          "time": "2021.10",
+          "value": 66,
+          "type": "estate"
+        },
+        {
+          "time": "2021.11",
+          "value": 565,
+          "type": "land"
+        },
+        {
+          "time": "2021.11",
+          "value": 65,
+          "type": "estate"
+        },
+        {
+          "time": "2021.12",
+          "value": 679,
+          "type": "land"
+        },
+        {
+          "time": "2021.12",
+          "value": 69,
+          "type": "estate"
+        },
+        {
+          "time": "2022.01",
+          "value": 488,
+          "type": "land"
+        },
+        {
+          "time": "2022.01",
+          "value": 60,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02",
+          "value": 248,
+          "type": "land"
+        },
+        {
+          "time": "2022.02",
+          "value": 43,
+          "type": "estate"
+        }
+      ]
+    }
+  }
+}
+```
+---
+**6\.10 获取 Decentraland 地块销售总额统计信息接口**
+###### 接口功能
+> 获取 Decentraland 地块销售总额统计信息接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_dcl_parcel_sold_sum_stats
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回字段
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "mana": {
+      "data": [
+        {
+          "time": "2019.09",
+          "value": 2311616,
+          "type": "land"
+        },
+        {
+          "time": "2019.09",
+          "value": 2684442,
+          "type": "estate"
+        },
+        {
+          "time": "2019.10",
+          "value": 3240082,
+          "type": "land"
+        },
+        {
+          "time": "2019.10",
+          "value": 899606,
+          "type": "estate"
+        },
+        {
+          "time": "2019.11",
+          "value": 2065864,
+          "type": "land"
+        },
+        {
+          "time": "2019.11",
+          "value": 1726999,
+          "type": "estate"
+        },
+        {
+          "time": "2019.12",
+          "value": 2586766,
+          "type": "land"
+        },
+        {
+          "time": "2019.12",
+          "value": 2749047,
+          "type": "estate"
+        },
+        {
+          "time": "2020.01",
+          "value": 5002692,
+          "type": "land"
+        },
+        {
+          "time": "2020.01",
+          "value": 2003949,
+          "type": "estate"
+        },
+        {
+          "time": "2020.02",
+          "value": 12173892,
+          "type": "land"
+        },
+        {
+          "time": "2020.02",
+          "value": 7751371,
+          "type": "estate"
+        },
+        {
+          "time": "2020.03",
+          "value": 3188049,
+          "type": "land"
+        },
+        {
+          "time": "2020.03",
+          "value": 3072916,
+          "type": "estate"
+        },
+        {
+          "time": "2020.04",
+          "value": 2570276,
+          "type": "land"
+        },
+        {
+          "time": "2020.04",
+          "value": 6122614,
+          "type": "estate"
+        },
+        {
+          "time": "2020.05",
+          "value": 2583942,
+          "type": "land"
+        },
+        {
+          "time": "2020.05",
+          "value": 4153994,
+          "type": "estate"
+        },
+        {
+          "time": "2020.06",
+          "value": 1723348,
+          "type": "land"
+        },
+        {
+          "time": "2020.06",
+          "value": 3785973,
+          "type": "estate"
+        },
+        {
+          "time": "2020.07",
+          "value": 2448024,
+          "type": "land"
+        },
+        {
+          "time": "2020.07",
+          "value": 1105298,
+          "type": "estate"
+        },
+        {
+          "time": "2020.08",
+          "value": 2201670,
+          "type": "land"
+        },
+        {
+          "time": "2020.08",
+          "value": 833782,
+          "type": "estate"
+        },
+        {
+          "time": "2020.09",
+          "value": 1681478,
+          "type": "land"
+        },
+        {
+          "time": "2020.09",
+          "value": 1312173,
+          "type": "estate"
+        },
+        {
+          "time": "2020.10",
+          "value": 1679925,
+          "type": "land"
+        },
+        {
+          "time": "2020.10",
+          "value": 1584835,
+          "type": "estate"
+        },
+        {
+          "time": "2020.11",
+          "value": 1355139,
+          "type": "land"
+        },
+        {
+          "time": "2020.11",
+          "value": 1450693,
+          "type": "estate"
+        },
+        {
+          "time": "2020.12",
+          "value": 1806027,
+          "type": "land"
+        },
+        {
+          "time": "2020.12",
+          "value": 1617243,
+          "type": "estate"
+        },
+        {
+          "time": "2021.01",
+          "value": 1950936,
+          "type": "land"
+        },
+        {
+          "time": "2021.01",
+          "value": 4521962,
+          "type": "estate"
+        },
+        {
+          "time": "2021.02",
+          "value": 2764083,
+          "type": "land"
+        },
+        {
+          "time": "2021.02",
+          "value": 2289452,
+          "type": "estate"
+        },
+        {
+          "time": "2021.03",
+          "value": 5024514,
+          "type": "land"
+        },
+        {
+          "time": "2021.03",
+          "value": 3257407,
+          "type": "estate"
+        },
+        {
+          "time": "2021.04",
+          "value": 2156824,
+          "type": "land"
+        },
+        {
+          "time": "2021.04",
+          "value": 3284795,
+          "type": "estate"
+        },
+        {
+          "time": "2021.05",
+          "value": 1244016,
+          "type": "land"
+        },
+        {
+          "time": "2021.05",
+          "value": 1586006,
+          "type": "estate"
+        },
+        {
+          "time": "2021.06",
+          "value": 1072529,
+          "type": "land"
+        },
+        {
+          "time": "2021.06",
+          "value": 2864900,
+          "type": "estate"
+        },
+        {
+          "time": "2021.07",
+          "value": 847536,
+          "type": "land"
+        },
+        {
+          "time": "2021.07",
+          "value": 848234,
+          "type": "estate"
+        },
+        {
+          "time": "2021.08",
+          "value": 955009,
+          "type": "land"
+        },
+        {
+          "time": "2021.08",
+          "value": 1648503,
+          "type": "estate"
+        },
+        {
+          "time": "2021.09",
+          "value": 1947016,
+          "type": "land"
+        },
+        {
+          "time": "2021.09",
+          "value": 1925905,
+          "type": "estate"
+        },
+        {
+          "time": "2021.10",
+          "value": 1864754,
+          "type": "land"
+        },
+        {
+          "time": "2021.10",
+          "value": 2550334,
+          "type": "estate"
+        },
+        {
+          "time": "2021.11",
+          "value": 2799690,
+          "type": "land"
+        },
+        {
+          "time": "2021.11",
+          "value": 2783275,
+          "type": "estate"
+        },
+        {
+          "time": "2021.12",
+          "value": 3713373,
+          "type": "land"
+        },
+        {
+          "time": "2021.12",
+          "value": 3143376,
+          "type": "estate"
+        },
+        {
+          "time": "2022.01",
+          "value": 2948337,
+          "type": "land"
+        },
+        {
+          "time": "2022.01",
+          "value": 3197083,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02",
+          "value": 1569370,
+          "type": "land"
+        },
+        {
+          "time": "2022.02",
+          "value": 2051949,
+          "type": "estate"
+        }
+      ]
+    },
+    "usd": {
+      "data": [
+        {
+          "time": "2019.09",
+          "value": 73517,
+          "type": "land"
+        },
+        {
+          "time": "2019.09",
+          "value": 85643,
+          "type": "estate"
+        },
+        {
+          "time": "2019.10",
+          "value": 99440,
+          "type": "land"
+        },
+        {
+          "time": "2019.10",
+          "value": 28283,
+          "type": "estate"
+        },
+        {
+          "time": "2019.11",
+          "value": 58289,
+          "type": "land"
+        },
+        {
+          "time": "2019.11",
+          "value": 44885,
+          "type": "estate"
+        },
+        {
+          "time": "2019.12",
+          "value": 71056,
+          "type": "land"
+        },
+        {
+          "time": "2019.12",
+          "value": 74508,
+          "type": "estate"
+        },
+        {
+          "time": "2020.01",
+          "value": 175148,
+          "type": "land"
+        },
+        {
+          "time": "2020.01",
+          "value": 68927,
+          "type": "estate"
+        },
+        {
+          "time": "2020.02",
+          "value": 675282,
+          "type": "land"
+        },
+        {
+          "time": "2020.02",
+          "value": 448640,
+          "type": "estate"
+        },
+        {
+          "time": "2020.03",
+          "value": 95797,
+          "type": "land"
+        },
+        {
+          "time": "2020.03",
+          "value": 73323,
+          "type": "estate"
+        },
+        {
+          "time": "2020.04",
+          "value": 72216,
+          "type": "land"
+        },
+        {
+          "time": "2020.04",
+          "value": 179731,
+          "type": "estate"
+        },
+        {
+          "time": "2020.05",
+          "value": 94535,
+          "type": "land"
+        },
+        {
+          "time": "2020.05",
+          "value": 153796,
+          "type": "estate"
+        },
+        {
+          "time": "2020.06",
+          "value": 70568,
+          "type": "land"
+        },
+        {
+          "time": "2020.06",
+          "value": 155924,
+          "type": "estate"
+        },
+        {
+          "time": "2020.07",
+          "value": 98718,
+          "type": "land"
+        },
+        {
+          "time": "2020.07",
+          "value": 46041,
+          "type": "estate"
+        },
+        {
+          "time": "2020.08",
+          "value": 190305,
+          "type": "land"
+        },
+        {
+          "time": "2020.08",
+          "value": 74988,
+          "type": "estate"
+        },
+        {
+          "time": "2020.09",
+          "value": 132368,
+          "type": "land"
+        },
+        {
+          "time": "2020.09",
+          "value": 105471,
+          "type": "estate"
+        },
+        {
+          "time": "2020.10",
+          "value": 124635,
+          "type": "land"
+        },
+        {
+          "time": "2020.10",
+          "value": 117511,
+          "type": "estate"
+        },
+        {
+          "time": "2020.11",
+          "value": 110363,
+          "type": "land"
+        },
+        {
+          "time": "2020.11",
+          "value": 115854,
+          "type": "estate"
+        },
+        {
+          "time": "2020.12",
+          "value": 152817,
+          "type": "land"
+        },
+        {
+          "time": "2020.12",
+          "value": 135472,
+          "type": "estate"
+        },
+        {
+          "time": "2021.01",
+          "value": 245779,
+          "type": "land"
+        },
+        {
+          "time": "2021.01",
+          "value": 638056,
+          "type": "estate"
+        },
+        {
+          "time": "2021.02",
+          "value": 709403,
+          "type": "land"
+        },
+        {
+          "time": "2021.02",
+          "value": 565642,
+          "type": "estate"
+        },
+        {
+          "time": "2021.03",
+          "value": 3529714,
+          "type": "land"
+        },
+        {
+          "time": "2021.03",
+          "value": 2425284,
+          "type": "estate"
+        },
+        {
+          "time": "2021.04",
+          "value": 2489097,
+          "type": "land"
+        },
+        {
+          "time": "2021.04",
+          "value": 3889673,
+          "type": "estate"
+        },
+        {
+          "time": "2021.05",
+          "value": 1435325,
+          "type": "land"
+        },
+        {
+          "time": "2021.05",
+          "value": 1651385,
+          "type": "estate"
+        },
+        {
+          "time": "2021.06",
+          "value": 703143,
+          "type": "land"
+        },
+        {
+          "time": "2021.06",
+          "value": 1905821,
+          "type": "estate"
+        },
+        {
+          "time": "2021.07",
+          "value": 532034,
+          "type": "land"
+        },
+        {
+          "time": "2021.07",
+          "value": 521230,
+          "type": "estate"
+        },
+        {
+          "time": "2021.08",
+          "value": 794561,
+          "type": "land"
+        },
+        {
+          "time": "2021.08",
+          "value": 1309768,
+          "type": "estate"
+        },
+        {
+          "time": "2021.09",
+          "value": 1711352,
+          "type": "land"
+        },
+        {
+          "time": "2021.09",
+          "value": 1483887,
+          "type": "estate"
+        },
+        {
+          "time": "2021.10",
+          "value": 2088319,
+          "type": "land"
+        },
+        {
+          "time": "2021.10",
+          "value": 2379460,
+          "type": "estate"
+        },
+        {
+          "time": "2021.11",
+          "value": 10567284,
+          "type": "land"
+        },
+        {
+          "time": "2021.11",
+          "value": 11427664,
+          "type": "estate"
+        },
+        {
+          "time": "2021.12",
+          "value": 13462606,
+          "type": "land"
+        },
+        {
+          "time": "2021.12",
+          "value": 11530122,
+          "type": "estate"
+        },
+        {
+          "time": "2022.01",
+          "value": 8088046,
+          "type": "land"
+        },
+        {
+          "time": "2022.01",
+          "value": 8819028,
+          "type": "estate"
+        },
+        {
+          "time": "2022.02",
+          "value": 4620409,
+          "type": "land"
+        },
+        {
+          "time": "2022.02",
+          "value": 5931991,
+          "type": "estate"
+        }
+      ]
+    }
+  }
+}
+```
+---
+**6\.11 获取 Decentraland 地主总数统计信息接口**
+###### 接口功能
+> 获取 Decentraland 地主总数统计信息接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_dcl_parcel_owner_stats
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回字段
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "monthly": {
+      "data": [
+        {
+          "time": "2019.09",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2019.10",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2019.11",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2019.12",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2020.01",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2020.02",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2020.03",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2020.04",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2020.05",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2020.06",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2020.07",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2020.08",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2020.09",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2020.10",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2020.11",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2020.12",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2021.01",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2021.02",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2021.03",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2021.04",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2021.05",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2021.06",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2021.07",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2021.08",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2021.09",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2021.10",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2021.11",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2021.12",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2022.01",
+          "value": 0,
+          "type": "all"
+        },
+        {
+          "time": "2022.02",
+          "value": 5335,
           "type": "all"
         }
       ]
