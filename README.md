@@ -29,10 +29,20 @@
 5. 获取 Cryptovoxels 地块销售总额统计信息接口
 6. 获取 Cryptovoxels 地块mint情况统计信息接口
 7. 获取 Cryptovoxels 地主总数统计信息接口
-8.   获取 Decentraland 地块成交均价统计信息接口
+8. 获取 Decentraland 地块成交均价统计信息接口
 9. 获取 Decentraland 地块成交总数量统计信息接口
 10. 获取 Decentraland 地块销售总额统计信息接口
 11. 获取 Decentraland 地主总数统计信息接口
+
+### 七、用户登录相关接口
+1. 获取钱包登录所需 nonce 接口
+2. 用户登录接口
+3. 用户登出接口
+4. 用户 access_token 刷新接口
+5. 获取当前登录者基本信息接口
+6. 更新当前登录者基本信息接口
+7.   更新当前登录者头像接口（待定）
+8. 获取当前登录者地块列表接口
 
 ----
 ## 全局错误码
@@ -41,6 +51,12 @@
 | :----: | :----------------------------------------- | :--------------------------------- |
 | 100000 | success                                    |                                    |
 | 100001 | param error                                |                                    |
+| 100002 | signature verify failed                    |                                    |
+| 100003 | please login first                         | refresh_token 过期，请重新登录     |
+| 100004 | update failed                              |                                    |
+| 100005 | system error, please retry                 |                                    |
+| 100006 | nick_name exist                            |                                    |
+| 100007 | email exist                                |                                    |
 
 ----
 ## 接口详情
@@ -7661,6 +7677,349 @@
         }
       ]
     }
+  }
+}
+```
+---
+**7.1 获取钱包登录所需 nonce 接口**
+###### 接口功能
+> 获取钱包登录所需 nonce 接口
+
+###### URL
+> https://api.metacat.world/api/v1/user/get_nonce
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数    | 必选 |  类型  | 默认值 | 描述           |
+| :------ | :--- | :----: | :----- | -------------- |
+| address | true | string | 无     | 以太坊钱包地址 |
+
+###### 返回字段
+| 返回字段 | 字段类型 | 说明                                                     |
+| :------- | :------- | :------------------------------------------------------- |
+| code     | int      | 返回结果状态。100000：正常，其他：错误。详见“全局错误码” |
+| msg      | string   | code 码为非 100000 时，对应的 error msg                  |
+| data     | string   | 详见接口示例                                             |
+
+###### 接口示例
+> curl -s 'https://api.metacat.world/api/v1/user/get_nonce?address=0xD67c34169b372d5B3932c548a940D4Ea74Fe7aF5' | jq .
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "address": "0xd67c34169b372d5b3932c548a940d4ea74fe7af5",
+    "nonce": "Hi from MetaCat! Sign this message to prove you have access to this wallet and we'll log you in. This won't cost you any Ether.\nFor enhanced security, here's a one-time code (no need to remember it): 39139878"
+  }
+}
+```
+---
+**7.2 用户登录接口 **
+###### 接口功能
+> 对 nonce 签名后，请求的登录接口，登录成功返回 access_token 和 refresh_token
+> **注：若接口返回数据中 profile 字段内容为空，则说明用户尚未设置基本信息**
+
+###### URL
+> https://api.metacat.world/api/v1/user/login_signature
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> POST
+
+###### 请求参数
+| 参数      | 必选 |  类型  | 默认值 | 描述                    |
+| :-------- | :--- | :----: | :----- | ----------------------- |
+| address   | true | string | 无     | 用户钱包地址            |
+| signature | true | string | 无     | 用户钱包对 nonce 的签名 |
+
+###### 返回字段
+| 返回字段 | 字段类型 | 说明                                                     |
+| :------- | :------- | :------------------------------------------------------- |
+| code     | int      | 返回结果状态。100000：正常，其他：错误。详见“全局错误码” |
+| msg      | string   | code 码为非 100000 时，对应的 error msg                  |
+| data     | string   | 详见接口示例                                             |
+
+###### 接口示例
+> curl -s -d 'address=0xD67c34169b372d5B3932c548a940D4Ea74Fe7aF5&signature=0xa63391de17be74963a077db91c92ec5244ca725275fa1d276cce17ee711061004d4abf1d424e24a35fdfbb60045e4c126452b18c70b77082694000c3d89320a11c' https://api.metacat.world/api/v1/user/login_signature | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTgyMjIyOTEsImZsYWciOjAsImlhdCI6MTYxODE5MzQ5MSwiaXNzIjoiYXJ0Z2VlIiwid2FsbGV0X2FkZHJlc3MiOiIweEQ2N2MzNDE2OWIzNzJkNUIzOTMyYzU0OGE5NDBENEVhNzRGZTdhRjUifQ.Bt7RJ4StnLBhbhP8tFCqUJ4RkPUmJyyP1nEY8HBCZnI",
+    "refresh_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjA3ODU0OTEsImZsYWciOjEsImlhdCI6MTYxODE5MzQ5MSwiaXNzIjoiYXJ0Z2VlIiwid2FsbGV0X2FkZHJlc3MiOiIweEQ2N2MzNDE2OWIzNzJkNUIzOTMyYzU0OGE5NDBENEVhNzRGZTdhRjUifQ.2Vd9SnGHPtvlRvQay_I42vz1ADQGQJzm8Cz09EWAIAg",
+    "profile": {
+      "address": "0xD67c34169b372d5B3932c548a940D4Ea74Fe7aF5",
+      "name": "k1ic",
+      "avatar": "https://poster-phi.vercel.app/metacat_logo.png"
+    }
+  }
+}
+```
+---
+**7.3 用户登出接口 **
+###### 接口功能
+>
+
+###### URL
+> https://api.metacat.world/api/v1/user/logout
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> POST
+
+###### 请求参数
+| 参数          | 必选 | 类型  | 默认值 | 描述              |
+| :------------ | :--- | :---: | :----- | ----------------- |
+| Header        |      |       |        | 请求报文头        |
+| Authorization | true | sring | 无     | 值为 access_token |
+
+###### 返回字段
+| 返回字段 | 字段类型 | 说明                                                     |
+| :------- | :------- | :------------------------------------------------------- |
+| code     | int      | 返回结果状态。100000：正常，其他：错误。详见“全局错误码” |
+| msg      | string   | code 码为非 100000 时，对应的 error msg                  |
+| data     | string   | 详见接口示例                                             |
+
+###### 接口示例
+> curl -s -H 'Authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTc4MjAzMzksImZsYWciOjAsImlhdCI6MTYxNzc5MTUzOSwiaXNzIjoiYXJ0Z2VlIiwid2FsbGV0X2FkZHJlc3MiOiIweEQ2N2MzNDE2OWIzNzJkNUIzOTMyYzU0OGE5NDBENEVhNzRGZTdhRjUifQ.bZf7nfyQdbndB4LJDYre06EFqcZzh4YFj1MBQQCxYWk' -d '' 'https://api.metacat.world/api/v1/user/logout' | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success"
+}
+```
+---
+**7.4 用户 access_token 刷新接口**
+
+###### 接口功能
+> 请求任何登录保护接口时，若接口返回 code: 100003，则表示 access_token 已过期；此时前端可通过 refresh_token 接口尝试获取新的 access_token，若该接口依然返回 code: 100003，则表示 refresh_token 也已过期，此时需再走一遍登录流程
+
+###### URL
+> https://api.metacat.world/api/v1/user/refresh_token
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述                                                                                                    |
+| :------------ | :--- | :----: | :----- | ------------------------------------------------------------------------------------------------------- |
+| refresh_token | true | string | 无     | 用于更新 access_token 的 refresh_token，首次登录时随 access_token 一起下发，但有效期比 refresh_token 长 |
+
+###### 返回字段
+
+| 返回字段 | 字段类型 | 说明                                                     |
+| :------- | :------- | :------------------------------------------------------- |
+| code     | int      | 返回结果状态。100000：正常，其他：错误。详见“全局错误码” |
+| msg      | string   | code 码为非 100000 时，对应的 error msg                  |
+| data     | string   | 详见接口示例                                             |
+
+###### 接口示例
+> curl -s 'https://api.metacat.world/api/v1/user/refresh_token?refresh\_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjAzODI5OTEsImZsYWciOjEsImlhdCI6MTYxNzc5MDk5MSwiaXNzIjoiYXJ0Z2VlIiwid2FsbGV0X2FkZHJlc3MiOiIweEQ2N2MzNDE2OWIzNzJkNUIzOTMyYzU0OGE5NDBENEVhNzRGZTdhRjUifQ.B36i\_hZBVA\_AzpvOuK25r0tt0IoolXpOGWHxHs6bRng' | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTc4MjAzMzksImZsYWciOjAsImlhdCI6MTYxNzc5MTUzOSwiaXNzIjoiYXJ0Z2VlIiwid2FsbGV0X2FkZHJlc3MiOiIweEQ2N2MzNDE2OWIzNzJkNUIzOTMyYzU0OGE5NDBENEVhNzRGZTdhRjUifQ.bZf7nfyQdbndB4LJDYre06EFqcZzh4YFj1MBQQCxYWk",
+    "refresh_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjAzODI5OTEsImZsYWciOjEsImlhdCI6MTYxNzc5MDk5MSwiaXNzIjoiYXJ0Z2VlIiwid2FsbGV0X2FkZHJlc3MiOiIweEQ2N2MzNDE2OWIzNzJkNUIzOTMyYzU0OGE5NDBENEVhNzRGZTdhRjUifQ.B36i_hZBVA_AzpvOuK25r0tt0IoolXpOGWHxHs6bRng"
+  }
+}
+```
+---
+**7.5 获取当前登录者基本信息接口**
+
+###### 接口功能
+> 需先登录
+
+###### URL
+> https://api.metacat.world/api/v1/user/get_base_info
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 | 类型  | 默认值 | 描述              |
+| :------------ | :--- | :---: | :----- | ----------------- |
+| Header        |      |       |        | 请求报文头        |
+| Authorization | true | sring | 无     | 值为 access_token |
+
+###### 返回字段
+| 返回字段 | 字段类型 | 说明                                                     |
+| :------- | :------- | :------------------------------------------------------- |
+| code     | int      | 返回结果状态。100000：正常，其他：错误。详见“全局错误码” |
+| msg      | string   | code 码为非 100000 时，对应的 error msg                  |
+| data     | string   | 详见接口示例                                             |
+
+###### 接口示例
+> curl -s -H 'Authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTc4ODUyNjEsImZsYWciOjAsImlhdCI6MTYxNzg1NjQ2MSwiaXNzIjoiYXJ0Z2VlIiwid2FsbGV0X2FkZHJlc3MiOiIweEQ2N2MzNDE2OWIzNzJkNUIzOTMyYzU0OGE5NDBENEVhNzRGZTdhRjUifQ.TdVCc49KR0gM3XspXp-afHuuIH0AfulXF0ZmBghrqf8' https://api.metacat.world/api/v1/user/get_base_info | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "profile": {
+      "address": "0xd67c34169b372d5b3932c548a940d4ea74fe7af5",
+      "nick_name": "k1ic",
+      "avatar": "https://poster-phi.vercel.app/metacat_logo.png",
+      "links": {
+			"twitter_name": "Metacat007",
+			"website_url": "https://www.k1ic.com/"
+      }
+    }
+  }
+}
+```
+---
+**7.6 更新当前登录者基本信息接口**
+
+###### 接口功能
+> 仅限当前登录者修改自己的基本信息（**注：每次需全量传参**）
+
+###### URL
+> https://api.metacat.world/api/v1/user/update_base_info
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> POST
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+| Body          |      |        |        | 请求体            |
+| Body.nick_name          | true | string | ‘’     | 用户昵称          |
+| Body.twitter_name         | true | string | ‘’     | 用户twitter名称          |
+| Body.website_url         | true | string | ‘’     | 用户个人站点链接          |
+
+###### 返回字段
+| 返回字段 | 字段类型 | 说明                                                     |
+| :------- | :------- | :------------------------------------------------------- |
+| code     | int      | 返回结果状态。100000：正常，其他：错误。详见“全局错误码” |
+| msg      | string   | code 码为非 100000 时，对应的 error msg                  |
+| data     | string   | 详见接口示例                                             |
+
+###### 接口示例
+> curl -s -H 'Authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTc4ODUyNjEsImZsYWciOjAsImlhdCI6MTYxNzg1NjQ2MSwiaXNzIjoiYXJ0Z2VlIiwid2FsbGV0X2FkZHJlc3MiOiIweEQ2N2MzNDE2OWIzNzJkNUIzOTMyYzU0OGE5NDBENEVhNzRGZTdhRjUifQ.TdVCc49KR0gM3XspXp-afHuuIH0AfulXF0ZmBghrqf8' -d 'nick_name=k1ic&twitter_name=Metacat007&website_url=https://www.k1ic.com/' https://api.metacat.world/api/v1/user/update_base_info | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success"
+}
+```
+---
+**7.8 获取当前登录者地块列表接口**
+
+###### 接口功能
+> 仅限获取当前登录者自己的地块列表
+
+###### URL
+> https://api.metacat.world/api/v1/user/get_parcel_list
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+
+###### 接口示例
+> curl -s -H 'Authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTc4ODUyNjEsImZsYWciOjAsImlhdCI6MTYxNzg1NjQ2MSwiaXNzIjoiYXJ0Z2VlIiwid2FsbGV0X2FkZHJlc3MiOiIweEQ2N2MzNDE2OWIzNzJkNUIzOTMyYzU0OGE5NDBENEVhNzRGZTdhRjUifQ.TdVCc49KR0gM3XspXp-afHuuIH0AfulXF0ZmBghrqf8' https://api.metacat.world/api/v1/user/get_parcel_list | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "cryptovoxels_parcel_list": [
+      {
+        "parcel_id": 4,
+        "name": "@westcoastbill 21x: glass age",
+        "description": "www.twitter.com/westcoastbill",
+        "type": "other",
+        "cover_img_url": "https://media-crvox.sfo2.digitaloceanspaces.com/0xab43a7ff49943acb0d77bbb8bc1a2c911c473d48/womps/1637842579139-27503614-dcb9-4882-9ae0-cae7d9af861d.jpg",
+        "opensea_url": "https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/4",
+        "parcel_page_url": "https://www.cryptovoxels.com/parcels/4"
+      },
+      {
+        "parcel_id": 1,
+        "name": "@westcoastbill 21x: space age",
+        "description": "Thank you Nick/Ben.  We won't let you down. leandro and @westcoastbill - http://twitter.com/westcoastbill www.21x.com",
+        "type": "other",
+        "cover_img_url": "https://media-crvox.sfo2.digitaloceanspaces.com/0x2401934ab882a6e66bbea33cd8d7e10e6990c283/womps/1638266003900-6bf35b63-742a-4d9f-ba71-fea8b9be9ebc.jpg",
+        "opensea_url": "https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/1",
+        "parcel_page_url": "https://www.cryptovoxels.com/parcels/1"
+      },
+      {
+        "parcel_id": 2,
+        "name": "Welcome!",
+        "description": "Welcome to Cryptovoxels! This build was done by the skilled and talented Devil to show our new custom tiles features. Explore to find some tips and tricks of how to explore the world.",
+        "type": "other",
+        "cover_img_url": "https://media-crvox.sfo2.digitaloceanspaces.com/0x1168652fd8553de2ca689793c0f7f975ae15d4f8/womps/1639359337606-4eebfbee-550a-4e23-a92a-1c78ec67c48b.jpg",
+        "opensea_url": "https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/2",
+        "parcel_page_url": "https://www.cryptovoxels.com/parcels/2"
+      }
+    ],
+    "decentraland_parcel_list": [
+      {
+        "parcel_id": "2092",
+        "internal_type": "estate",
+        "name": "AETHERIAN project",
+        "description": "Aetherian City will be one of the main attractions for visitors and dwellers of Decentraland, as it intends to be the largest cyberpunk-agglomeration of the metaverse.",
+        "type": "other",
+        "cover_img_url": "https://api.decentraland.org/v1/estates/2092/map.png",
+        "opensea_url": "https://opensea.io/assets/0x959e104e1a4db6317fa58f8295f586e1a978c297/2092",
+        "parcel_page_url": "https://market.decentraland.org/contracts/0x959e104e1a4db6317fa58f8295f586e1a978c297/tokens/2092"
+      },
+      {
+        "parcel_id": "1976",
+        "internal_type": "estate",
+        "name": "Dragon City",
+        "description": "A perfect combination of China’s ancient culture and Western modernization, a reflection of both the Eastern and Western civilizations.",
+        "type": "other",
+        "cover_img_url": "https://api.decentraland.org/v1/estates/1976/map.png",
+        "opensea_url": "https://opensea.io/assets/0x959e104e1a4db6317fa58f8295f586e1a978c297/1976",
+        "parcel_page_url": "https://market.decentraland.org/contracts/0x959e104e1a4db6317fa58f8295f586e1a978c297/tokens/1976"
+      },
+      {
+        "parcel_id": "1769",
+        "internal_type": "estate",
+        "name": "District X",
+        "description": "Decentraland’s premier land, content, and service company providing land rentals/leases, prefab and custom content, and in-world services.",
+        "type": "other",
+        "cover_img_url": "https://api.decentraland.org/v1/estates/1769/map.png",
+        "opensea_url": "https://opensea.io/assets/0x959e104e1a4db6317fa58f8295f586e1a978c297/1769",
+        "parcel_page_url": "https://market.decentraland.org/contracts/0x959e104e1a4db6317fa58f8295f586e1a978c297/tokens/1769"
+      }
+    ]
   }
 }
 ```
