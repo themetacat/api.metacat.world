@@ -41,7 +41,7 @@
 4. 用户 access_token 刷新接口
 5. 获取当前登录者基本信息接口
 6. 更新当前登录者基本信息接口
-7.   更新当前登录者头像接口（待定）
+7. 更新当前登录者头像接口（待定）
 8. 获取当前登录者地块列表接口
 
 ----
@@ -52,11 +52,13 @@
 | 100000 | success                                    |                                    |
 | 100001 | param error                                |                                    |
 | 100002 | signature verify failed                    |                                    |
-| 100003 | please login first                         | refresh_token 过期，请重新登录     |
+| 100003 | please login first                         | refresh_token 过期，请重新登录        |
 | 100004 | update failed                              |                                    |
 | 100005 | system error, please retry                 |                                    |
 | 100006 | nick_name exist                            |                                    |
 | 100007 | email exist                                |                                    |
+| 100008 | user not exist                             |  用户不存在                              |
+| 100009 | twitter_name exist                         |                                    |
 
 ----
 ## 接口详情
@@ -7860,7 +7862,7 @@
 | 参数          | 必选 | 类型  | 默认值 | 描述              |
 | :------------ | :--- | :---: | :----- | ----------------- |
 | Header        |      |       |        | 请求报文头        |
-| Authorization | true | sring | 无     | 值为 access_token |
+| Header.Authorization | true | sring | 无     | 值为 access_token |
 
 ###### 返回字段
 | 返回字段 | 字段类型 | 说明                                                     |
