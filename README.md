@@ -43,6 +43,7 @@
 6. 更新当前登录者基本信息接口
 7. 更新当前登录者头像接口（待定）
 8. 获取当前登录者地块列表接口
+9. 判断 nick_name 是否已存在的接口
 
 ----
 ## 全局错误码
@@ -8023,5 +8024,35 @@
       }
     ]
   }
+}
+```
+---
+**7.9 判断 nick_name 是否已存在 **
+
+###### 接口功能
+> 
+
+###### URL
+> https://api.metacat.world/api/v1/user/is_nick_name_exist
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| Body.nick_name | true | sring  | 无     | 必填 |
+
+###### 接口示例
+> curl -s https://api.metacat.world/api/v1/user/is_nick_name_exist?nick_nam='jobs' | jq .
+
+```
+{
+  "code": 100006,
+  "msg": "nick_name exist"
 }
 ```
