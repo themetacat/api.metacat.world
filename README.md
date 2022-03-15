@@ -41,9 +41,8 @@
 4. 用户 access_token 刷新接口
 5. 获取当前登录者基本信息接口
 6. 更新当前登录者基本信息接口
-7. 更新当前登录者头像接口（待定）
-8. 获取当前登录者地块列表接口
-9. 判断 nick_name 是否已存在的接口
+7. 获取当前登录者地块列表接口
+8. 判断 nick_name 是否已存在的接口
 
 ----
 ## 全局错误码
@@ -7916,6 +7915,7 @@
 | Body.nick_name          | true | string | ‘’     | 用户昵称          |
 | Body.twitter_name         | true | string | ‘’     | 用户twitter名称          |
 | Body.website_url         | true | string | ‘’     | 用户个人站点链接          |
+| Body.avatar         | true | string | ‘’     | 用户头像          |
 
 ###### 返回字段
 | 返回字段 | 字段类型 | 说明                                                     |
@@ -7925,7 +7925,7 @@
 | data     | string   | 详见接口示例                                             |
 
 ###### 接口示例
-> curl -s -H 'Authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTc4ODUyNjEsImZsYWciOjAsImlhdCI6MTYxNzg1NjQ2MSwiaXNzIjoiYXJ0Z2VlIiwid2FsbGV0X2FkZHJlc3MiOiIweEQ2N2MzNDE2OWIzNzJkNUIzOTMyYzU0OGE5NDBENEVhNzRGZTdhRjUifQ.TdVCc49KR0gM3XspXp-afHuuIH0AfulXF0ZmBghrqf8' -d 'nick_name=k1ic&twitter_name=Metacat007&website_url=https://www.k1ic.com/' https://api.metacat.world/api/v1/user/update_base_info | jq .
+> curl -s -H 'Authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTc4ODUyNjEsImZsYWciOjAsImlhdCI6MTYxNzg1NjQ2MSwiaXNzIjoiYXJ0Z2VlIiwid2FsbGV0X2FkZHJlc3MiOiIweEQ2N2MzNDE2OWIzNzJkNUIzOTMyYzU0OGE5NDBENEVhNzRGZTdhRjUifQ.TdVCc49KR0gM3XspXp-afHuuIH0AfulXF0ZmBghrqf8' -d 'nick_name=k1ic&twitter_name=Metacat007&website_url=https://www.k1ic.com/&avatar=https://s2.coinmarketcap.com/static/img/coins/64x64/6210.png' https://api.metacat.world/api/v1/user/update_base_info | jq .
 
 ```
 {
@@ -7934,7 +7934,7 @@
 }
 ```
 ---
-**7.8 获取当前登录者地块列表接口**
+**7.7 获取当前登录者地块列表接口**
 
 ###### 接口功能
 > 仅限获取当前登录者自己的地块列表
@@ -8027,7 +8027,7 @@
 }
 ```
 ---
-**7.9 判断 nick_name 是否已存在的接口 **
+**7.8 判断 nick_name 是否已存在的接口 **
 
 ###### 接口功能
 > 
