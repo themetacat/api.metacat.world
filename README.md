@@ -7915,7 +7915,7 @@
 | Body.nick_name          | true | string | ‘’     | 用户昵称          |
 | Body.twitter_name         | true | string | ‘’     | 用户twitter名称          |
 | Body.website_url         | true | string | ‘’     | 用户个人站点链接          |
-| Body.avatar         | true | string | ‘’     | 用户头像          |
+| Body.avatar         | true | string | ‘’     | 用户头像url         |
 
 ###### 返回字段
 | 返回字段 | 字段类型 | 说明                                                     |
