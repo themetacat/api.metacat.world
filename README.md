@@ -8044,6 +8044,8 @@
 ###### 请求参数
 | 参数          | 必选 |  类型  | 默认值 | 描述              |
 | :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
 | Body        |      |        |        | 请求体            |
 | Body.nick_name | true | sring  | 无     | 必填 |
 
