@@ -44,6 +44,9 @@
 7. 获取当前登录者地块列表接口
 8. 判断 nick_name 是否已存在的接口
 
+### 八、虚拟土地租赁相关接口
+1.  获取当前登录者 Cryptovoxels 地块列表接口
+
 ----
 ## 全局错误码
 
@@ -8056,5 +8059,93 @@
 {
   "code": 100006,
   "msg": "nick_name exist"
+}
+```
+---
+**8.1 获取当前登录者 Cryptovoxels 地块列表接口**
+
+###### 接口功能
+> 仅限获取当前登录者自己的地块列表
+
+###### URL
+> https://api.metacat.world/api/v1/rent/get_owned_cv_parcel_list
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+
+###### 接口示例
+> curl -s -H 'Authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDc4NzU0NTQsImZsYWciOjAsImlhdCI6MTY0Nzg0NjY1NCwiaXNzIjoibWV0YWNhdCIsIndhbGxldF9hZGRyZXNzIjoiMHgzOEJiRDM3NWQ0OWQ2MjM3OTg0Y2JmYTE5NzE5YzQxOWFmOUZFNTE0In0.cu98LvoCovuPh9Xm9I-LfrXCSgXhvfQsbhENO-ZJiI8' https://api.metacat.world/api/v1/rent/get_owned_cv_parcel_list | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "parcel_list": [
+      {
+        "parcel_id": 5701,
+        "name": "MetaCat Firenze",
+        "description": "# Metaverse Data Analytics & Content Navigation.\n## Website: [www.metacat.world](https://www.metacat.world/) Twitter: [@Metacat007](https://twitter.com/Metacat007) Medium: [@themetacat](https://medium.com/@themetacat)",
+        "type": "Other",
+        "cover_img_url": "https://media-crvox.sfo2.digitaloceanspaces.com/0xd30a79e487351eb0064c8a78eb341da364d78a9a/womps/1644892311425-85279617-f76a-43da-ac5b-9034bf8aed6d.jpg",
+        "opensea_url": "https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/5701",
+        "parcel_page_url": "https://www.cryptovoxels.com/parcels/5701",
+        "island": "Miami",
+        "suburb": "Miami",
+        "area": 129,
+        "high": 17,
+        "traffic": 1230,
+        "price": 0.1,
+        "status": "leased",
+        "end_date": "2022.08.12",
+        "is_built": "no"
+      },
+      {
+        "parcel_id": 6616,
+        "name": "MetaCat HQ",
+        "description": "# Metaverse Data Analytics & Content Navigation.\n## Website: [www.metacat.world](https://www.metacat.world/) Twitter: [@Metacat007](https://twitter.com/Metacat007) Medium: [@themetacat](https://medium.com/@themetacat)",
+        "type": "HQ",
+        "cover_img_url": "",
+        "opensea_url": "https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/6616",
+        "parcel_page_url": "https://www.cryptovoxels.com/parcels/6616",
+        "island": "Scarcity",
+        "suburb": "Bronze",
+        "area": 195,
+        "high": 13,
+        "traffic": 1230,
+        "price": 0.1,
+        "status": "leased",
+        "end_date": "2022.08.12",
+        "is_built": "no"
+      },
+      {
+        "parcel_id": 7246,
+        "name": "None",
+        "description": "None",
+        "type": "Other",
+        "cover_img_url": "",
+        "opensea_url": "https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/7246",
+        "parcel_page_url": "https://www.cryptovoxels.com/parcels/7246",
+        "island": "Andromeda",
+        "suburb": "Milky Way",
+        "area": 527,
+        "high": 8,
+        "traffic": 1230,
+        "price": 0.1,
+        "status": "leased",
+        "end_date": "2022.08.12",
+        "is_built": "no"
+      }
+    ]
+  }
 }
 ```
