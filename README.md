@@ -20,6 +20,8 @@
 ### 五、Cryptovoxels 地图相关接口
 1. 获取 Cryptovoxels 地图的地块详细信息
 2. 获取 Cryptovoxels 第三级地图数据
+3.  获取 Decentraland 第三级地图数据
+4.  获取 Decentraland 地图的 Land 详细信息
 
 ### 六、Metaverse Analytics 相关接口
 1. 获取各元宇宙平台概要信息接口
@@ -1023,6 +1025,260 @@
 			}
 		}
 	}
+```
+---
+**5\.3 获取 Decentraland 第三级地图数据**
+###### 接口功能
+> 获取 Decentraland 第三级地图数据接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_dcl_price_map_level_three
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 接口示例
+> curl -s 'https://api.metacat.world/api/v1/get_dcl_price_map_level_three' | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "stats": {
+      "price": {
+        "level_one": [
+          {
+            "month": {
+              "start": 74112,
+              "end": 18437
+            },
+            "quarter": {
+              "start": 83778,
+              "end": 22357
+            },
+            "year": {
+              "start": 434811,
+              "end": 21465
+            },
+            "all": {
+              "start": 244168,
+              "end": 18122
+            }
+          },
+          {
+            "month": {
+              "start": 17807,
+              "end": 14958
+            },
+            "quarter": {
+              "start": 22262,
+              "end": 18723
+            },
+            "year": {
+              "start": 21411,
+              "end": 17517
+            },
+            "all": {
+              "start": 18112,
+              "end": 14524
+            }
+          },
+          {
+            "month": {
+              "start": 14947,
+              "end": 14099
+            },
+            "quarter": {
+              "start": 18676,
+              "end": 17089
+            },
+            "year": {
+              "start": 17515,
+              "end": 15483
+            },
+            "all": {
+              "start": 14514,
+              "end": 11150
+            }
+          },
+          {
+            "month": {
+              "start": 14091,
+              "end": 13625
+            },
+            "quarter": {
+              "start": 17051,
+              "end": 15926
+            },
+            "year": {
+              "start": 15476,
+              "end": 13831
+            },
+            "all": {
+              "start": 11142,
+              "end": 7281
+            }
+          },
+          {
+            "month": {
+              "start": 13594,
+              "end": 13149
+            },
+            "quarter": {
+              "start": 15908,
+              "end": 14765
+            },
+            "year": {
+              "start": 13826,
+              "end": 11658
+            },
+            "all": {
+              "start": 7273,
+              "end": 5110
+            }
+          },
+          {
+            "month": {
+              "start": 13134,
+              "end": 12052
+            },
+            "quarter": {
+              "start": 14764,
+              "end": 13604
+            },
+            "year": {
+              "start": 11653,
+              "end": 7058
+            },
+            "all": {
+              "start": 5097,
+              "end": 2623
+            }
+          },
+          {
+            "month": {
+              "start": 11984,
+              "end": 9699
+            },
+            "quarter": {
+              "start": 13594,
+              "end": 11490
+            },
+            "year": {
+              "start": 7057,
+              "end": 4573
+            },
+            "all": {
+              "start": 2618,
+              "end": 1061
+            }
+          },
+          {
+            "month": {
+              "start": 9681,
+              "end": 0
+            },
+            "quarter": {
+              "start": 11485,
+              "end": 0
+            },
+            "year": {
+              "start": 4572,
+              "end": 0
+            },
+            "all": {
+              "start": 1058,
+              "end": 0
+            }
+          }
+        ]
+      }
+    },
+    "parcels": [
+      {
+        "properties": {
+          "land_id": 1.157920892373162e+77,
+          "id": "-150,150",
+          "type": "district",
+          "top": true,
+          "left": false,
+          "topLeft": false,
+          "estate_id": "1186"
+        },
+        "price": {
+          "month": 0,
+          "quarter": 0,
+          "year": 0,
+          "all": 0
+        }
+      }
+    ]
+  }
+}
+```
+---
+**5\.4 获取 Decentraland 地图的 Land 详细信息**
+###### 接口功能
+> 获取 Decentraland 地图的 Land 详细信息接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_dcl_parcel_detail
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| land_id | True | string  | ''    | 地块id  |
+
+###### 接口示例
+> curl -s 'https://api.metacat.world/api/v1/get_dcl_parcel_detail?land_id=115792089237316195423570985008687907802227629627499794519951392893147897921560' | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "land_id": "115792089237316195423570985008687907802227629627499794519951392893147897921560",
+    "estate_id": 0,
+    "name": "Fashion District Parcel (2)",
+    "description": "Great Location",
+    "cover_img_url": "https://api.decentraland.org/v2/parcels/-150/24/map.png",
+    "opensea_url": "https://opensea.io/assets/0xf87e31492faf9a91b02ee0deaad50d51d56d5d4d/115792089237316195423570985008687907802227629627499794519951392893147897921560",
+    "parcel_page_url": "https://market.decentraland.org/contracts/0xf87e31492faf9a91b02ee0deaad50d51d56d5d4d/tokens/115792089237316195423570985008687907802227629627499794519951392893147897921560",
+    "time_range_sale": {
+      "mana": 129137,
+      "usd": 25463.78
+    },
+    "last_sale_list": [
+      {
+        "date": "2021.11.14",
+        "mana": 5222,
+        "usd": 17004.55,
+        "is_primary": 0
+      },
+      {
+        "date": "2018.12.11",
+        "mana": 24995,
+        "usd": 1415.95,
+        "is_primary": 0
+      }
+    ]
+  }
+}
 ```
 ---
 **6\.1 获取各元宇宙平台概要信息接口**
