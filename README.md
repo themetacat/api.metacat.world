@@ -47,7 +47,11 @@
 8. 判断 nick_name 是否已存在的接口
 
 ### 八、虚拟土地租赁相关接口
-1.  获取当前登录者 Cryptovoxels 地块列表接口
+1. 获取当前登录者 Cryptovoxels 地块列表接口
+2. 批量（单个）挂出 Cryptovoxels 待租地块接口
+3. 批量（单个）取消已挂出 Cryptovoxels 地块接口
+4. 批量（单个）更新已挂出 Cryptovoxels 地块为租赁中接口
+5. 单个更新 Cryptovoxels 地块租赁信息接口
 
 ----
 ## 全局错误码
@@ -62,8 +66,9 @@
 | 100005 | system error, please retry                 |                                    |
 | 100006 | nick_name exist                            |                                    |
 | 100007 | email exist                                |                                    |
-| 100008 | user not exist                             |  用户不存在                              |
+| 100008 | user not exist                             |  用户不存在                          |
 | 100009 | twitter_name exist                         |                                    |
+| 100010 | parcel not yours                           |       地块不属于当前用户              |
 
 ----
 ## 接口详情
@@ -8403,5 +8408,141 @@
       }
     ]
   }
+}
+```
+---
+**8.2 批量（单个）挂出 Cryptovoxels 待租地块接口**
+
+###### 接口功能
+> 仅限获取当前登录者，批量（单个）挂出自己拥有的 Cryptovoxels 地块
+
+###### URL
+> https://api.metacat.world/api/v1/rent/batch_list_cv_parcels
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> POST
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+| Body        |      |        |        | 请求体            |
+| Body.parcel_ids        |   true   |    sring   |    无    |  多个地块id用逗号分隔，如：5701,6616     |
+| Body.is_built        |   true   |    sring    |    no   |   地块是否已建造：yes or no    |
+| Body.price        |   true   |    float or int    |    0.1   |   地块租赁价格    |
+| Body.start_at        |   true   |    int    |       |   地块可租开始时间，须大于等于当前时间，格式：1648121354    |
+| Body.end_at        |   true   |    int    |       |   地块可租结束时间，须大于地块可租开始时间，格式：1656070154    |
+
+###### 接口示例
+> curl -s -H 'Authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDc4NzU0NTQsImZsYWciOjAsImlhdCI6MTY0Nzg0NjY1NCwiaXNzIjoibWV0YWNhdCIsIndhbGxldF9hZGRyZXNzIjoiMHgzOEJiRDM3NWQ0OWQ2MjM3OTg0Y2JmYTE5NzE5YzQxOWFmOUZFNTE0In0.cu98LvoCovuPh9Xm9I-LfrXCSgXhvfQsbhENO-ZJiI8' https://api.metacat.world/api/v1/rent/batch_list_cv_parcels -d 'parcel_ids=5701,6616&price=0.1&is_built=no&start_at=1648121354&end_at=1656070154' | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success"
+}
+```
+---
+**8.3 批量（单个）取消已挂出 Cryptovoxels 地块接口**
+
+###### 接口功能
+> 仅限获取当前登录者，批量（单个）取消自己拥有的已挂出 Cryptovoxels 地块
+
+###### URL
+> https://api.metacat.world/api/v1/rent/batch_cancel_listed_cv_parcels
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> POST
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+| Body        |      |        |        | 请求体            |
+| Body.parcel_ids        |   true   |    sring or int   |    无    |  多个地块id用逗号分隔，如：5701,6616     |
+
+###### 接口示例
+> curl -s -H 'Authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDc4NzU0NTQsImZsYWciOjAsImlhdCI6MTY0Nzg0NjY1NCwiaXNzIjoibWV0YWNhdCIsIndhbGxldF9hZGRyZXNzIjoiMHgzOEJiRDM3NWQ0OWQ2MjM3OTg0Y2JmYTE5NzE5YzQxOWFmOUZFNTE0In0.cu98LvoCovuPh9Xm9I-LfrXCSgXhvfQsbhENO-ZJiI8' https://api.metacat.world/api/v1/rent/batch_cancel_listed_cv_parcels -d 'parcel_ids=5701,6616' | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success"
+}
+```
+---
+**8.4 批量（单个）更新已挂出 Cryptovoxels 地块为租赁中接口**
+
+###### 接口功能
+> 仅限获取当前登录者，批量（单个）更新自己拥有的已挂出 Cryptovoxels 地块状态为租赁中
+
+###### URL
+> https://api.metacat.world/api/v1/rent/batch_lease_listed_cv_parcels
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> POST
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+| Body        |      |        |        | 请求体            |
+| Body.parcel_ids        |   true   |    sring or int   |    无    |  多个地块id用逗号分隔，如：5701,6616     |
+
+###### 接口示例
+> curl -s -H 'Authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDc4NzU0NTQsImZsYWciOjAsImlhdCI6MTY0Nzg0NjY1NCwiaXNzIjoibWV0YWNhdCIsIndhbGxldF9hZGRyZXNzIjoiMHgzOEJiRDM3NWQ0OWQ2MjM3OTg0Y2JmYTE5NzE5YzQxOWFmOUZFNTE0In0.cu98LvoCovuPh9Xm9I-LfrXCSgXhvfQsbhENO-ZJiI8' https://api.metacat.world/api/v1/rent/batch_lease_listed_cv_parcels -d 'parcel_ids=5701,6616' | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success"
+}
+```
+---
+**8.5 单个更新 Cryptovoxels 地块租赁信息接口**
+
+###### 接口功能
+> 仅限获取当前登录者，单个更新已挂出地块租赁信息
+
+###### URL
+> https://api.metacat.world/api/v1/rent/update_cv_parcel
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> POST
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+| Body        |      |        |        | 请求体            |
+| Body.parcel_id        |   true   |    int   |    无    |  地块id，如：5701    |
+| Body.is_built        |   false   |    sring    |    no   |   地块是否已建造：yes or no    |
+| Body.price        |   false   |    float or int    |    0.1   |   地块租赁价格    |
+| Body.start_at        |   false   |    int    |       |   地块可租开始时间，须大于等于当前时间，格式：1648121354    |
+| Body.end_at        |   false   |    int    |       |   地块可租结束时间，须大于地块可租开始时间，格式：1656070154    |
+
+###### 接口示例
+> curl -s -H 'Authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDc4NzU0NTQsImZsYWciOjAsImlhdCI6MTY0Nzg0NjY1NCwiaXNzIjoibWV0YWNhdCIsIndhbGxldF9hZGRyZXNzIjoiMHgzOEJiRDM3NWQ0OWQ2MjM3OTg0Y2JmYTE5NzE5YzQxOWFmOUZFNTE0In0.cu98LvoCovuPh9Xm9I-LfrXCSgXhvfQsbhENO-ZJiI8' https://api.metacat.world/api/v1/rent/update_cv_parcel -d 'parcel_id=5701&price=0.1&is_built=no&start_at=1648121354&end_at=1656070154' | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success"
 }
 ```
