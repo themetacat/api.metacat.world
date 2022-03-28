@@ -53,6 +53,10 @@
 4. 批量（单个）更新已挂出 Cryptovoxels 地块为租赁中接口
 5. 单个更新 Cryptovoxels 地块租赁信息接口
 
+### 九、Wearable 相关接口
+1. 获取 OKX Wearable 列表页数据接口
+2. 获取 OKX Wearable 详情页数据接口 
+
 ----
 ## 全局错误码
 
@@ -8544,5 +8548,197 @@
 {
   "code": 100000,
   "msg": "success"
+}
+```
+---
+**9.1 获取 OKX Wearable 列表页数据接口**
+
+###### 接口功能
+> 一次返回列表中全部数据
+
+###### URL
+> https://api.metacat.world/api/v1/wearable/get_okx_wearable_list
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| -        |    -  |     -   |     -   | -           |
+
+
+###### 接口示例
+> curl -s https://api.metacat.world/api/v1/wearable/get_okx_wearable_list | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": [
+    {
+      "kol": {
+        "name": "比特币子琪",
+        "title": "",
+        "desc": "",
+        "2d_url": "https://poster-phi.vercel.app/wearable/okx/BTC521.png",
+        "3d_url": "https://poster-phi.vercel.app/wearable/okx/BTC521.vox",
+        "contact": {
+          "twitter": "https://twitter.com/BTC521",
+          "weibo": ""
+        }
+      },
+      "artist": {
+        "name": "MERMAID",
+        "website": ""
+      },
+      "id": 100
+    },
+    {
+      "kol": {
+        "name": "MetaCat",
+        "title": "",
+        "desc": "",
+        "2d_url": "https://poster-phi.vercel.app/wearable/okx/MetaCat.png",
+        "3d_url": "https://poster-phi.vercel.app/wearable/okx/MetaCat.vox",
+        "contact": {
+          "twitter": "https://twitter.com/MetaCat007",
+          "weibo": "https://weibo.com/u/6104067155"
+        }
+      },
+      "artist": {
+        "name": "MERMAID",
+        "website": ""
+      },
+      "id": 101
+    },
+    {
+      "kol": {
+        "name": "杰尼龟",
+        "title": "",
+        "desc": "",
+        "2d_url": "https://poster-phi.vercel.app/wearable/okx/Squirtle.png",
+        "3d_url": "https://poster-phi.vercel.app/wearable/okx/Squirtle.vox",
+        "contact": {
+          "twitter": "",
+          "weibo": ""
+        }
+      },
+      "artist": {
+        "name": "MERMAID",
+        "website": ""
+      },
+      "id": 102
+    },
+    {
+      "kol": {
+        "name": "牛静熊动",
+        "title": "",
+        "desc": "",
+        "2d_url": "https://poster-phi.vercel.app/wearable/okx/niujingxiongdong.png",
+        "3d_url": "https://poster-phi.vercel.app/wearable/okx/niujingxiongdong.vox",
+        "contact": {
+          "twitter": "",
+          "weibo": ""
+        }
+      },
+      "artist": {
+        "name": "MERMAID",
+        "website": ""
+      },
+      "id": 103
+    },
+    {
+      "kol": {
+        "name": "张力",
+        "title": "",
+        "desc": "",
+        "2d_url": "https://poster-phi.vercel.app/wearable/okx/zhangli.png",
+        "3d_url": "https://poster-phi.vercel.app/wearable/okx/zhangli.vox",
+        "contact": {
+          "twitter": "",
+          "weibo": ""
+        }
+      },
+      "artist": {
+        "name": "MERMAID",
+        "website": ""
+      },
+      "id": 104
+    },
+    {
+      "kol": {
+        "name": "孙宇晨",
+        "title": "",
+        "desc": "",
+        "2d_url": "https://poster-phi.vercel.app/wearable/okx/sunyuchentron.png",
+        "3d_url": "https://poster-phi.vercel.app/wearable/okx/sunyuchentron.vox",
+        "contact": {
+          "twitter": "https://twitter.com/sunyuchentron",
+          "weibo": ""
+        }
+      },
+      "artist": {
+        "name": "MERMAID",
+        "website": ""
+      },
+      "id": 105
+    }
+  ]
+}
+```
+---
+**9.2 获取 OKX Wearable 详情页数据接口 **
+
+###### 接口功能
+> 通过id获取 OKX Wearable 详情
+
+###### URL
+> https://api.metacat.world/api/v1/wearable/get_okx_wearable_detail
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| Body.id        |    true  |    int  |     -   |      |
+
+
+###### 接口示例
+> curl -s https://api.metacat.world/api/v1/wearable/get_okx_wearable_detail?id=100 | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": [
+    {
+      "kol": {
+        "name": "比特币子琪",
+        "title": "子棋-热搜点评员",
+        "desc": "微博@公众号：子棋-热搜点评员 专注行情分析，挖掘优质项目！ Weibo and WeChat public account: Bitcoin Ziqi, focusing on market analysis,discover high-quality projects. #BTC $ETH",
+        "2d_url": "https://poster-phi.vercel.app/wearable/okx/BTC521.png",
+        "3d_url": "https://poster-phi.vercel.app/wearable/okx/BTC521.vox",
+        "contact": {
+          "twitter": "https://twitter.com/BTC521",
+          "weibo": "https://weibo.com/u/6201825184"
+        }
+      },
+      "artist": {
+        "name": "XUECHUN",
+        "website": "https://opensea.io/XUECHUN"
+      },
+      "id": 100
+    }
+  ]
 }
 ```
