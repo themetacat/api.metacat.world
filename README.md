@@ -8583,18 +8583,19 @@
     {
       "kol": {
         "name": "比特币子琪",
-        "title": "",
-        "desc": "",
-        "2d_url": "https://poster-phi.vercel.app/wearable/okx/BTC521.png",
-        "3d_url": "https://poster-phi.vercel.app/wearable/okx/BTC521.vox",
+        "title": "子棋-热搜点评员",
+        "desc": "微博@公众号：子棋-热搜点评员 专注行情分析，挖掘优质项目！ Weibo and WeChat public account: Bitcoin Ziqi, focusing on market analysis,discover high-quality projects. #BTC $ETH",
+        "d2_url": "https://poster-phi.vercel.app/wearable/okx/BTC521.png",
+        "d3_url": "https://poster-phi.vercel.app/wearable/okx/BTC521.vox",
+        "opensea_url": "https://opensea.io/assets/matic/0x469da19448b0fafcf781350efcd5a09267ca1f99/60",
         "contact": {
           "twitter": "https://twitter.com/BTC521",
-          "weibo": ""
+          "weibo": "https://weibo.com/u/6201825184"
         }
       },
       "artist": {
-        "name": "MERMAID",
-        "website": ""
+        "name": "Angelica",
+        "website": "https://opensea.io/XUECHUN"
       },
       "id": 100
     },
@@ -8602,17 +8603,18 @@
       "kol": {
         "name": "MetaCat",
         "title": "",
-        "desc": "",
-        "2d_url": "https://poster-phi.vercel.app/wearable/okx/MetaCat.png",
-        "3d_url": "https://poster-phi.vercel.app/wearable/okx/MetaCat.vox",
+        "desc": "MetaCat focuses on metaverse data analysis, content navigation, and land leasing. The official website www.metacat.world launched in December 2021. It started to provide data services such as Metaverse Monthly Report in Q3 of 2021. MetaCat is one of Co-founders of  WearableDao, which dedicated to solving the problem of dressing in the metaverse.",
+        "d2_url": "https://poster-phi.vercel.app/wearable/okx/MetaCat.png",
+        "d3_url": "https://poster-phi.vercel.app/wearable/okx/MetaCat.vox",
+        "opensea_url": "https://opensea.io/assets/matic/0xb7469e28640bed0d7155f3ac220c240f4fdee0ec/29",
         "contact": {
           "twitter": "https://twitter.com/MetaCat007",
           "weibo": "https://weibo.com/u/6104067155"
         }
       },
       "artist": {
-        "name": "MERMAID",
-        "website": ""
+        "name": "WackoZacco",
+        "website": "https://opensea.io/WackoZacco"
       },
       "id": 101
     },
@@ -8621,8 +8623,9 @@
         "name": "杰尼龟",
         "title": "",
         "desc": "",
-        "2d_url": "https://poster-phi.vercel.app/wearable/okx/Squirtle.png",
-        "3d_url": "https://poster-phi.vercel.app/wearable/okx/Squirtle.vox",
+        "d2_url": "https://poster-phi.vercel.app/wearable/okx/Squirtle.png",
+        "d3_url": "https://poster-phi.vercel.app/wearable/okx/Squirtle.vox",
+        "opensea_url": "https://opensea.io/assets/matic/0xb7469e28640bed0d7155f3ac220c240f4fdee0ec/29",
         "contact": {
           "twitter": "",
           "weibo": ""
@@ -8639,15 +8642,16 @@
         "name": "牛静熊动",
         "title": "",
         "desc": "",
-        "2d_url": "https://poster-phi.vercel.app/wearable/okx/niujingxiongdong.png",
-        "3d_url": "https://poster-phi.vercel.app/wearable/okx/niujingxiongdong.vox",
+        "d2_url": "https://poster-phi.vercel.app/wearable/okx/niujingxiongdong.png",
+        "d3_url": "https://poster-phi.vercel.app/wearable/okx/niujingxiongdong.vox",
+        "opensea_url": "https://opensea.io/assets/matic/0xb7469e28640bed0d7155f3ac220c240f4fdee0ec/29",
         "contact": {
           "twitter": "",
           "weibo": ""
         }
       },
       "artist": {
-        "name": "MERMAID",
+        "name": "丁棟樑",
         "website": ""
       },
       "id": 103
@@ -8657,15 +8661,16 @@
         "name": "张力",
         "title": "",
         "desc": "",
-        "2d_url": "https://poster-phi.vercel.app/wearable/okx/zhangli.png",
-        "3d_url": "https://poster-phi.vercel.app/wearable/okx/zhangli.vox",
+        "d2_url": "https://poster-phi.vercel.app/wearable/okx/zhangli.png",
+        "d3_url": "https://poster-phi.vercel.app/wearable/okx/zhangli.vox",
+        "opensea_url": "https://opensea.io/assets/matic/0xb7469e28640bed0d7155f3ac220c240f4fdee0ec/29",
         "contact": {
           "twitter": "",
           "weibo": ""
         }
       },
       "artist": {
-        "name": "MERMAID",
+        "name": "熊诗怡",
         "website": ""
       },
       "id": 104
@@ -8675,8 +8680,9 @@
         "name": "孙宇晨",
         "title": "",
         "desc": "",
-        "2d_url": "https://poster-phi.vercel.app/wearable/okx/sunyuchentron.png",
-        "3d_url": "https://poster-phi.vercel.app/wearable/okx/sunyuchentron.vox",
+        "d2_url": "https://poster-phi.vercel.app/wearable/okx/sunyuchentron.png",
+        "d3_url": "https://poster-phi.vercel.app/wearable/okx/sunyuchentron.vox",
+        "opensea_url": "https://opensea.io/assets/matic/0xb7469e28640bed0d7155f3ac220c240f4fdee0ec/29",
         "contact": {
           "twitter": "https://twitter.com/sunyuchentron",
           "weibo": ""
@@ -8726,15 +8732,16 @@
         "name": "比特币子琪",
         "title": "子棋-热搜点评员",
         "desc": "微博@公众号：子棋-热搜点评员 专注行情分析，挖掘优质项目！ Weibo and WeChat public account: Bitcoin Ziqi, focusing on market analysis,discover high-quality projects. #BTC $ETH",
-        "2d_url": "https://poster-phi.vercel.app/wearable/okx/BTC521.png",
-        "3d_url": "https://poster-phi.vercel.app/wearable/okx/BTC521.vox",
+        "d2_url": "https://poster-phi.vercel.app/wearable/okx/BTC521.png",
+        "d3_url": "https://poster-phi.vercel.app/wearable/okx/BTC521.vox",
+        "opensea_url": "https://opensea.io/assets/matic/0x469da19448b0fafcf781350efcd5a09267ca1f99/60",
         "contact": {
           "twitter": "https://twitter.com/BTC521",
           "weibo": "https://weibo.com/u/6201825184"
         }
       },
       "artist": {
-        "name": "XUECHUN",
+        "name": "Angelica",
         "website": "https://opensea.io/XUECHUN"
       },
       "id": 100
