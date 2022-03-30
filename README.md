@@ -52,6 +52,8 @@
 3. 批量（单个）取消已挂出 Cryptovoxels 地块接口
 4. 批量（单个）更新已挂出 Cryptovoxels 地块为租赁中接口
 5. 单个更新 Cryptovoxels 地块租赁信息接口
+6. 获取 Cryptovoxels 岛屿列表接口
+7. 批量（单个）更新租赁中 Cryptovoxels 地块为已挂出接口
 
 ### 九、Wearable 相关接口
 1. 获取 OKX Wearable 列表页数据接口
@@ -8543,6 +8545,201 @@
 
 ###### 接口示例
 > curl -s -H 'Authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDc4NzU0NTQsImZsYWciOjAsImlhdCI6MTY0Nzg0NjY1NCwiaXNzIjoibWV0YWNhdCIsIndhbGxldF9hZGRyZXNzIjoiMHgzOEJiRDM3NWQ0OWQ2MjM3OTg0Y2JmYTE5NzE5YzQxOWFmOUZFNTE0In0.cu98LvoCovuPh9Xm9I-LfrXCSgXhvfQsbhENO-ZJiI8' https://api.metacat.world/api/v1/rent/update_cv_parcel -d 'parcel_id=5701&price=0.1&is_built=no&start_at=1648121354&end_at=1656070154' | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success"
+}
+```
+---
+**8.6 获取 Cryptovoxels 岛屿列表接口**
+
+###### 接口功能
+> 获取 Cryptovoxels 当前的所有岛屿信息
+
+###### URL
+> https://api.metacat.world/api/v1/get_cv_islands
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| -        |   -   |    -   |    -    |  -    |
+
+###### 接口示例
+> curl -s ‘https://api.metacat.world/api/v1/get_cv_islands' | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": [
+    {
+      "id": 1,
+      "name": "Origin City"
+    },
+    {
+      "id": 2,
+      "name": "Proxima"
+    },
+    {
+      "id": 3,
+      "name": "Ceres"
+    },
+    {
+      "id": 4,
+      "name": "Little Ceres"
+    },
+    {
+      "id": 5,
+      "name": "Trinity"
+    },
+    {
+      "id": 6,
+      "name": "The Bronx"
+    },
+    {
+      "id": 7,
+      "name": "Electron"
+    },
+    {
+      "id": 8,
+      "name": "Proton"
+    },
+    {
+      "id": 9,
+      "name": "Neutron"
+    },
+    {
+      "id": 10,
+      "name": "Euro"
+    },
+    {
+      "id": 11,
+      "name": "Tokyo"
+    },
+    {
+      "id": 12,
+      "name": "Berlin"
+    },
+    {
+      "id": 13,
+      "name": "Helios"
+    },
+    {
+      "id": 14,
+      "name": "Milan"
+    },
+    {
+      "id": 15,
+      "name": "Poneke"
+    },
+    {
+      "id": 16,
+      "name": "San Francisco"
+    },
+    {
+      "id": 17,
+      "name": "Far Far Away"
+    },
+    {
+      "id": 18,
+      "name": "Vibes"
+    },
+    {
+      "id": 19,
+      "name": "Test Island"
+    },
+    {
+      "id": 20,
+      "name": "Satoshi"
+    },
+    {
+      "id": 21,
+      "name": "Miami"
+    },
+    {
+      "id": 22,
+      "name": "München"
+    },
+    {
+      "id": 23,
+      "name": "新宿区"
+    },
+    {
+      "id": 24,
+      "name": "서울"
+    },
+    {
+      "id": 26,
+      "name": "Pluto"
+    },
+    {
+      "id": 27,
+      "name": "Igloo"
+    },
+    {
+      "id": 28,
+      "name": "Honolulu"
+    },
+    {
+      "id": 29,
+      "name": "Pilikai"
+    },
+    {
+      "id": 30,
+      "name": "Kauai"
+    },
+    {
+      "id": 31,
+      "name": "Scarcity"
+    },
+    {
+      "id": 33,
+      "name": "Flora"
+    },
+    {
+      "id": 34,
+      "name": "Fauna"
+    },
+    {
+      "id": 35,
+      "name": "Andromeda"
+    }
+  ]
+}
+```
+**8.7 批量（单个）更新租赁中 Cryptovoxels 地块为已挂出接口**
+
+###### 接口功能
+> 仅限获取当前登录者，批量（单个）更新自己拥有的租赁中 Cryptovoxels 地块状态为已挂出
+
+###### URL
+> https://api.metacat.world/api/v1/rent/batch_fallback_to_listed_cv_parcels
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> POST
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+| Body        |      |        |        | 请求体            |
+| Body.parcel_ids        |   true   |    sring or int   |    无    |  多个地块id用逗号分隔，如：5701,6616     |
+
+###### 接口示例
+> curl -s -H 'Authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDc4NzU0NTQsImZsYWciOjAsImlhdCI6MTY0Nzg0NjY1NCwiaXNzIjoibWV0YWNhdCIsIndhbGxldF9hZGRyZXNzIjoiMHgzOEJiRDM3NWQ0OWQ2MjM3OTg0Y2JmYTE5NzE5YzQxOWFmOUZFNTE0In0.cu98LvoCovuPh9Xm9I-LfrXCSgXhvfQsbhENO-ZJiI8' https://api.metacat.world/api/v1/rent/batch_fallback_to_listed_cv_parcels -d 'parcel_ids=5701,6616' | jq .
 
 ```
 {
