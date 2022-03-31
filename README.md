@@ -53,7 +53,7 @@
 4. 批量（单个）更新已挂出 Cryptovoxels 地块为租赁中接口
 5. 单个更新 Cryptovoxels 地块租赁信息接口
 6. 获取 Cryptovoxels 岛屿列表接口
-7. 批量（单个）更新租赁中 Cryptovoxels 地块为已挂出接口
+7. 单个更新租赁中 Cryptovoxels 地块为已挂出状态接口
 
 ### 九、Wearable 相关接口
 1. 获取 OKX Wearable 列表页数据接口
@@ -8716,13 +8716,13 @@
   ]
 }
 ```
-**8.7 批量（单个）更新租赁中 Cryptovoxels 地块为已挂出接口**
+**8.7 单个更新租赁中 Cryptovoxels 地块为已挂出状态接口**
 
 ###### 接口功能
-> 仅限获取当前登录者，批量（单个）更新自己拥有的租赁中 Cryptovoxels 地块状态为已挂出
+> 仅限获取当前登录者，单个更新自己拥有的租赁中 Cryptovoxels 地块状态为已挂出状态
 
 ###### URL
-> https://api.metacat.world/api/v1/rent/batch_fallback_to_listed_cv_parcels
+> https://api.metacat.world/api/v1/rent/cv_parcel_fallback_to_listed_status
 
 ###### 支持格式
 > JSON
@@ -8739,7 +8739,7 @@
 | Body.parcel_ids        |   true   |    sring or int   |    无    |  多个地块id用逗号分隔，如：5701,6616     |
 
 ###### 接口示例
-> curl -s -H 'Authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDc4NzU0NTQsImZsYWciOjAsImlhdCI6MTY0Nzg0NjY1NCwiaXNzIjoibWV0YWNhdCIsIndhbGxldF9hZGRyZXNzIjoiMHgzOEJiRDM3NWQ0OWQ2MjM3OTg0Y2JmYTE5NzE5YzQxOWFmOUZFNTE0In0.cu98LvoCovuPh9Xm9I-LfrXCSgXhvfQsbhENO-ZJiI8' https://api.metacat.world/api/v1/rent/batch_fallback_to_listed_cv_parcels -d 'parcel_ids=5701,6616' | jq .
+> curl -s -H 'Authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDc4NzU0NTQsImZsYWciOjAsImlhdCI6MTY0Nzg0NjY1NCwiaXNzIjoibWV0YWNhdCIsIndhbGxldF9hZGRyZXNzIjoiMHgzOEJiRDM3NWQ0OWQ2MjM3OTg0Y2JmYTE5NzE5YzQxOWFmOUZFNTE0In0.cu98LvoCovuPh9Xm9I-LfrXCSgXhvfQsbhENO-ZJiI8' https://api.metacat.world/api/v1/rent/cv_parcel_fallback_to_listed_status -d 'parcel_id=5701' | jq .
 
 ```
 {
