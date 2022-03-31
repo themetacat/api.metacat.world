@@ -8736,7 +8736,7 @@
 | Header        |      |        |        | 请求头            |
 | Header.Authorization | true | sring  | 无     | 值为 access_token |
 | Body        |      |        |        | 请求体            |
-| Body.parcel_ids        |   true   |    sring or int   |    无    |  多个地块id用逗号分隔，如：5701,6616     |
+| Body.parcel_id        |   true   |    sint   |    无    |  地块id，如：5701     |
 
 ###### 接口示例
 > curl -s -H 'Authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDc4NzU0NTQsImZsYWciOjAsImlhdCI6MTY0Nzg0NjY1NCwiaXNzIjoibWV0YWNhdCIsIndhbGxldF9hZGRyZXNzIjoiMHgzOEJiRDM3NWQ0OWQ2MjM3OTg0Y2JmYTE5NzE5YzQxOWFmOUZFNTE0In0.cu98LvoCovuPh9Xm9I-LfrXCSgXhvfQsbhENO-ZJiI8' https://api.metacat.world/api/v1/rent/cv_parcel_fallback_to_listed_status -d 'parcel_id=5701' | jq .
