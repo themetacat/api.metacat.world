@@ -54,6 +54,7 @@
 5. 单个更新 Cryptovoxels 地块租赁信息接口
 6. 获取 Cryptovoxels 岛屿列表接口
 7. 单个更新租赁中 Cryptovoxels 地块为已挂出状态接口
+8. 获取租赁市场 Cryptovoxels 地块列表接口
 
 ### 九、Wearable 相关接口
 1. 获取 OKX Wearable 列表页数据接口
@@ -8559,7 +8560,7 @@
 > 获取 Cryptovoxels 当前的所有岛屿信息
 
 ###### URL
-> https://api.metacat.world/api/v1/get_cv_islands
+> https://api.metacat.world/api/v1/rent/get_cv_island_list
 
 ###### 支持格式
 > JSON
@@ -8574,7 +8575,7 @@
 | -        |   -   |    -   |    -    |  -    |
 
 ###### 接口示例
-> curl -s ‘https://api.metacat.world/api/v1/get_cv_islands' | jq .
+> curl -s ‘https://api.metacat.world/api/v1/rent/get_cv_island_list' | jq .
 
 ```
 {
@@ -8716,6 +8717,7 @@
   ]
 }
 ```
+---
 **8.7 单个更新租赁中 Cryptovoxels 地块为已挂出状态接口**
 
 ###### 接口功能
@@ -8745,6 +8747,89 @@
 {
   "code": 100000,
   "msg": "success"
+}
+```
+---
+**8.8 获取租赁市场 Cryptovoxels 地块列表接口**
+
+###### 接口功能
+> 
+
+###### URL
+> https://api.metacat.world/api/v1/rent/get_listed_cv_parcels
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> POST
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+| Body        |      |        |        | 请求体            |
+| Body.page  | false | int  | 1      | 页码           |
+| Body.count | false | int  | 50     | 每页返回的条数 |
+| Body.island_ids | false | string  | all    | 地块所属岛屿筛选，传入岛屿id，多个岛屿id用英文逗号分隔，如：5701,6616，默认值：0（筛选全部） |
+| Body.area_scope | false | string  | ''     | 地块面积筛选范围，默认值：0（筛选全部） |
+| Body.height_scope | false | string  | ''     | 地块高度筛选范围，默认值：0（筛选全部） |
+| Body.price_scope | false | string  | ''     | 地块租金筛选范围，默认值：0（筛选全部） |
+| Body.built_status | false | string  | all    | 地块建筑情况，yes：已建造，no：未建造，默认值：all（筛选全部） |
+| Body.sort_field | false | string  | default    | 结构集排序字段，area：按面积排序，height：按高度排序，price：按租金排序，built：按是否建造排序，default：默认排序 |
+| Body.sort_type | false | string  | desc     | 排序规则，asc：升序排列，desc：降序排列 |
+
+###### 接口示例
+> curl -s 'https://api.metacat.world/api/v1/rent/get_listed_cv_parcels?page=1&count=50&island_ids=all&area_scope=100_200&height_scope=20_&price_scope=0_0.1&built_status=no&sort_field=area&sort_type=desc' | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "page": 1,
+    "count": 50,
+    "total_page": 3,
+    "parcel_list": [
+      {
+        "parcel_id": 6616,
+        "name": "MetaCat HQ",
+        "island": "Scarcity",
+        "suburb": "Bronze",
+        "height": 13,
+        "area": 196,
+        "built_status": 1,
+        "end_date": "2022.05.01",
+        "traffic": 22,
+        "price": "0.10"
+      },
+      {
+        "parcel_id": 7246,
+        "name": "Home",
+        "island": "Andromeda",
+        "suburb": "Milky Way",
+        "height": 8,
+        "area": 528,
+        "built_status": 1,
+        "end_date": "2022.05.01",
+        "traffic": 97,
+        "price": "0.10"
+      },
+      {
+        "parcel_id": 5701,
+        "name": "MetaCat Firenze",
+        "island": "Miami",
+        "suburb": "Miami",
+        "height": 17,
+        "area": 130,
+        "built_status": 1,
+        "end_date": "2022.05.01",
+        "traffic": 178,
+        "price": "0.10"
+      }
+    ]
+  }
 }
 ```
 ---
