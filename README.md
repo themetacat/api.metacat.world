@@ -59,6 +59,8 @@
 ### 九、Wearable 相关接口
 1. 获取 OKX Wearable 列表页数据接口
 2. 获取 OKX Wearable 详情页数据接口 
+3. 获取 WearableDao 的 Wearable 列表页数据接口
+4. 获取 WearableDao 的 Wearable 详情页数据接口 
 
 ----
 ## 全局错误码
@@ -8773,9 +8775,9 @@
 | Body.page  | false | int  | 1      | 页码           |
 | Body.count | false | int  | 50     | 每页返回的条数 |
 | Body.island_ids | false | string  | all    | 地块所属岛屿筛选，传入岛屿id，多个岛屿id用英文逗号分隔，如：5701,6616，默认值：0（筛选全部） |
-| Body.area_scope | false | string  | ''     | 地块面积筛选范围，默认值：0（筛选全部） |
-| Body.height_scope | false | string  | ''     | 地块高度筛选范围，默认值：0（筛选全部） |
-| Body.price_scope | false | string  | ''     | 地块租金筛选范围，默认值：0（筛选全部） |
+| Body.area_scope | false | string  | ''     | 地块面积筛选范围，默认值：''（筛选全部） |
+| Body.height_scope | false | string  | ''     | 地块高度筛选范围，默认值：''（筛选全部） |
+| Body.price_scope | false | string  | ''     | 地块租金筛选范围，默认值：''（筛选全部） |
 | Body.built_status | false | string  | all    | 地块建筑情况，yes：已建造，no：未建造，默认值：all（筛选全部） |
 | Body.sort_field | false | string  | default    | 结构集排序字段，area：按面积排序，height：按高度排序，price：按租金排序，built：按是否建造排序，default：默认排序 |
 | Body.sort_type | false | string  | desc     | 排序规则，asc：升序排列，desc：降序排列 |
@@ -9025,6 +9027,191 @@
       "artist": {
         "name": "Angelica",
         "website": "https://opensea.io/XUECHUN"
+      },
+      "id": 100
+    }
+  ]
+}
+```
+---
+**9.3 获取 WearableDao 的 Wearable 列表页数据接口**
+
+###### 接口功能
+> 一次返回列表中全部数据
+
+###### URL
+> https://api.metacat.world/api/v1/wearable/get_dao_wearable_list
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| -        |    -  |     -   |     -   | -           |
+
+
+###### 接口示例
+> curl -s https://api.metacat.world/api/v1/wearable/get_dao_wearable_list | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": [
+    {
+      "artwork": {
+        "name": "比特币子琪",
+        "desc": "微博@公众号：子棋-热搜点评员 专注行情分析，挖掘优质项目！ Weibo and WeChat public account: Bitcoin Ziqi, focusing on market analysis,discover high-quality projects. #BTC $ETH",
+        "vox_url": "https://poster-phi.vercel.app/wearable/okx/BTC521.vox",
+        "opensea_url": "https://opensea.io/assets/matic/0x469da19448b0fafcf781350efcd5a09267ca1f99/60"
+      },
+      "artist": {
+        "name": "Angelica",
+        "contact": {
+          "homepape": "https://www.xuechun.space/",
+          "twitter": "https://twitter.com/BTC521",
+          "weibo": "https://weibo.com/u/6201825184"
+        }
+      },
+      "id": 100
+    },
+    {
+      "artwork": {
+        "name": "MetaCat-Pet",
+        "desc": "MetaCat focuses on metaverse data analysis, content navigation, and land leasing. The official website www.metacat.world launched in December 2021. It started to provide data services such as Metaverse Monthly Report in Q3 of 2021. MetaCat is one of Co-founders of  WearableDao, which dedicated to solving the problem of dressing in the metaverse.",
+        "vox_url": "https://poster-phi.vercel.app/wearable/okx/MetaCat.vox",
+        "opensea_url": "https://opensea.io/assets/matic/0xb7469e28640bed0d7155f3ac220c240f4fdee0ec/29"
+      },
+      "artist": {
+        "name": "WackoZacco",
+        "contact": {
+          "homepape": "https://opensea.io/WackoZacco",
+          "twitter": "https://twitter.com/wackozacco420",
+          "weibo": ""
+        }
+      },
+      "id": 101
+    },
+    {
+      "artwork": {
+        "name": "杰尼龟",
+        "desc": "",
+        "vox_url": "https://poster-phi.vercel.app/wearable/okx/Squirtle.vox",
+        "opensea_url": "https://opensea.io/assets/matic/0xb7469e28640bed0d7155f3ac220c240f4fdee0ec/29"
+      },
+      "artist": {
+        "name": "MERMAID",
+        "contact": {
+          "homepape": "https://opensea.io/WackoZacco",
+          "twitter": "https://twitter.com/wackozacco420",
+          "weibo": ""
+        }
+      },
+      "id": 102
+    },
+    {
+      "artwork": {
+        "name": "牛静熊动",
+        "desc": "",
+        "vox_url": "https://poster-phi.vercel.app/wearable/okx/niujingxiongdong.vox",
+        "opensea_url": "https://opensea.io/assets/matic/0xb7469e28640bed0d7155f3ac220c240f4fdee0ec/29"
+      },
+      "artist": {
+        "name": "丁棟樑",
+        "contact": {
+          "homepape": "",
+          "twitter": "",
+          "weibo": ""
+        }
+      },
+      "id": 103
+    },
+    {
+      "artwork": {
+        "name": "张力",
+        "desc": "",
+        "vox_url": "https://poster-phi.vercel.app/wearable/okx/zhangli.vox",
+        "opensea_url": "https://opensea.io/assets/matic/0xb7469e28640bed0d7155f3ac220c240f4fdee0ec/29"
+      },
+      "artist": {
+        "name": "熊诗怡",
+        "contact": {
+          "homepape": "",
+          "twitter": "",
+          "weibo": ""
+        }
+      },
+      "id": 104
+    },
+    {
+      "artwork": {
+        "name": "孙宇晨",
+        "desc": "",
+        "vox_url": "https://poster-phi.vercel.app/wearable/okx/sunyuchentron.vox",
+        "opensea_url": "https://opensea.io/assets/matic/0xb7469e28640bed0d7155f3ac220c240f4fdee0ec/29"
+      },
+      "artist": {
+        "name": "MERMAID",
+        "contact": {
+          "homepape": "",
+          "twitter": "",
+          "weibo": ""
+        }
+      },
+      "id": 105
+    }
+  ]
+}
+```
+---
+**9.4 获取 WearableDao 的 Wearable 详情页数据接口  **
+
+###### 接口功能
+> 通过id获取 WearableDao 的 Wearable 详情
+
+###### URL
+> https://api.metacat.world/api/v1/wearable/get_dao_wearable_detail
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| Body.id        |    true  |    int  |     -   |      |
+
+
+###### 接口示例
+> curl -s https://api.metacat.world/api/v1/wearable/get_dao_wearable_detail?id=100 | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": [
+    {
+      "artwork": {
+        "name": "比特币子琪",
+        "desc": "微博@公众号：子棋-热搜点评员 专注行情分析，挖掘优质项目！ Weibo and WeChat public account: Bitcoin Ziqi, focusing on market analysis,discover high-quality projects. #BTC $ETH",
+        "vox_url": "https://poster-phi.vercel.app/wearable/okx/BTC521.vox",
+        "opensea_url": "https://opensea.io/assets/matic/0x469da19448b0fafcf781350efcd5a09267ca1f99/60"
+      },
+      "artist": {
+        "name": "Angelica",
+        "contact": {
+          "homepape": "https://www.xuechun.space/",
+          "twitter": "https://twitter.com/BTC521",
+          "weibo": "https://weibo.com/u/6201825184"
+        }
       },
       "id": 100
     }
