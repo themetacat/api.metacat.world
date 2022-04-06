@@ -46,7 +46,7 @@
 7. 获取当前登录者地块列表接口
 8. 判断 nick_name 是否已存在的接口
 
-### 八、虚拟土地租赁相关接口
+### 八、Cryptovoxels 租赁相关接口
 1. 获取当前登录者 Cryptovoxels 地块列表接口
 2. 批量（单个）挂出 Cryptovoxels 待租地块接口
 3. 批量（单个）取消已挂出 Cryptovoxels 地块接口
@@ -61,6 +61,25 @@
 2. 获取 OKX Wearable 详情页数据接口 
 3. 获取 WearableDao 的 Wearable 列表页数据接口
 4. 获取 WearableDao 的 Wearable 详情页数据接口 
+
+### 十、Decentraland 地图相关接口
+1. 获取 Decentraland 均价热力图数据接口
+2. 获取 Decentraland 地块详情数据接口 
+
+### 十一、TheSandbox 地图相关接口
+1. 获取 TheSandbox 均价热力图数据接口
+2. 获取 TheSandbox 地块详情数据接口
+
+### 十二、Decentraland 租赁相关接口
+1. 获取当前登录者 Decentraland 地块列表接口
+2. 批量（单个）挂出 Decentraland 待租地块接口
+3. 批量（单个）取消已挂出 Decentraland 地块接口
+4. 批量（单个）更新已挂出 Decentraland 地块为租赁中接口
+5. 单个更新 Decentraland 地块租赁信息接口
+6. 获取 Decentraland 岛屿列表接口
+7. 单个更新租赁中 Decentraland 地块为已挂出状态接口
+8. 获取租赁市场 Decentraland 地块列表接口
+9. 获取当前登录者 Decentraland 地块列表接口
 
 ----
 ## 全局错误码
@@ -78,6 +97,7 @@
 | 100008 | user not exist                             |  用户不存在                          |
 | 100009 | twitter_name exist                         |                                    |
 | 100010 | parcel not yours                           |       地块不属于当前用户              |
+| 100011 | parcel not in leased                           |       地块不属于当前用户              |
 
 ----
 ## 接口详情
@@ -8764,7 +8784,7 @@
 > JSON
 
 ###### HTTP 请求方式
-> POST
+> GET
 
 ###### 请求参数
 | 参数          | 必选 |  类型  | 默认值 | 描述              |
@@ -9217,4 +9237,453 @@
     }
   ]
 }
+```
+---
+**10.1 获取 Decentraland 均价热力图数据接口**
+
+###### 接口功能
+> 一次获取全部 Decentraland 全部地块的均价热力图数据
+
+###### URL
+> https://api.metacat.world/api/v1/get_dcl_price_map_level_three
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| -        |    -  |    -  |     -   |      |
+
+###### 接口示例
+> curl -s ’https://api.metacat.world/api/v1/get_dcl_price_map_level_three‘ | jq .
+
+```
+```
+---
+**10.2 获取 Decentraland 地块详情数据接口**
+
+###### 接口功能
+> 获取单个 Decentraland Land 的详情数据
+
+###### URL
+> https://api.metacat.world/api/v1/get_dcl_parcel_detail
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| -        |    -  |    -  |     -   |      |
+
+###### 接口示例
+> curl -s ‘https://api.metacat.world/api/v1/get_dcl_parcel_detail?land_id=115792089237316195423570985008687907822304289275835163864290494731622222397399’ | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "land_id": "115792089237316195423570985008687907822304289275835163864290494731622222397399",
+    "estate_id": 612,
+    "name": "Parcel -92,-41",
+    "description": "",
+    "cover_img_url": "https://api.decentraland.org/v2/parcels/-92/-41/map.png",
+    "opensea_url": "https://opensea.io/assets/0xf87e31492faf9a91b02ee0deaad50d51d56d5d4d/115792089237316195423570985008687907822304289275835163864290494731622222397399",
+    "parcel_page_url": "https://market.decentraland.org/contracts/0xf87e31492faf9a91b02ee0deaad50d51d56d5d4d/tokens/115792089237316195423570985008687907822304289275835163864290494731622222397399",
+    "time_range_sale": {},
+    "last_sale_list": []
+  }
+}
+```
+---
+**11.1 获取 TheSandbox 均价热力图数据接口**
+
+###### 接口功能
+> 一次获取全部 TheSandbox 全部地块的均价热力图数据
+
+###### URL
+> https://api.metacat.world/api/v1/get_sandbox_price_map_level_three
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| -        |    -  |    -  |     -   |      |
+
+###### 接口示例
+> curl -s ’https://api.metacat.world/api/v1/get_sandbox_price_map_level_three‘ | jq .
+
+```
+```
+---
+**11.2 获取 TheSandbox 地块详情数据接口**
+
+###### 接口功能
+> 获取单个 TheSandbox Land 的详情数据
+
+###### URL
+> https://api.metacat.world/api/v1/get_dcl_parcel_detail
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| -        |    -  |    -  |     -   |      |
+
+###### 接口示例
+> curl -s ‘https://api.metacat.world/api/v1/get_sandbox_parcel_detail?token_id=45’ | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "token_id": "45",
+    "land_id": "afc9cb8b-c281-46ad-b1ba-ebfd1cce3de0",
+    "estate_id": 0,
+    "name": "Land (-159,-204)",
+    "description": "",
+    "cover_img_url": "https://api.sandbox.game/lands/afc9cb8b-c281-46ad-b1ba-ebfd1cce3de0/preview",
+    "opensea_url": "https://opensea.io/assets/0x5cc5b05a8a13e3fbdb0bb9fccd98d38e50f90c38/45",
+    "parcel_page_url": "https://www.sandbox.game/en/map/?currentX=1514&currentY=615&zoom=0.5&liteMap=false&x=-159&y=-204",
+    "time_range_sale": {},
+    "last_sale_list": []
+  }
+}
+```
+---
+**12.1 获取当前登录者 Decentraland 地块列表接口**
+
+###### 接口功能
+> 仅限获取当前登录者自己的地块列表
+
+###### URL
+> https://api.metacat.world/api/v1/rent/get_owned_dcl_parcel_list
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+
+###### 接口示例
+> curl -s -H 'Authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDk3NzEwNDIsImZsYWciOjAsImlhdCI6MTY0OTE2NjI0MiwiaXNzIjoibWV0YWNhdCIsIndhbGxldF9hZGRyZXNzIjoiMHhENjdjMzQxNjliMzcyZDVCMzkzMmM1NDhhOTQwRDRFYTc0RmU3YUY1In0.PyXOtSNxOvaDb78Yfi9ygppEZJuKQ4ia3kiPoN2SdWA' https://api.metacat.world/api/v1/rent/get_owned_dcl_parcel_list | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "parcel_list": [
+      {
+        "parcel_id": "115792089237316195423570985008687907814477794836653579204632878760691553533896",
+        "name": "BitBuzz - In Crypto We Trust",
+        "description": "Double street access - close to plaza's - plans for expansion",
+        "coordinate": [
+          "-115,-56"
+        ],
+        "type": "other",
+        "internal_type": "land",
+        "land_total": 1,
+        "cover_img_url": "https://api.decentraland.org/v1/parcels/-115/-56/map.png",
+        "opensea_url": "https://opensea.io/assets/0xf87e31492faf9a91b02ee0deaad50d51d56d5d4d/115792089237316195423570985008687907814477794836653579204632878760691553533896",
+        "parcel_page_url": "https://market.decentraland.org/contracts/0xf87e31492faf9a91b02ee0deaad50d51d56d5d4d/tokens/115792089237316195423570985008687907814477794836653579204632878760691553533896",
+        "price": 0,
+        "status": "not_for_rent",
+        "end_date": "",
+        "is_built": "no"
+      },
+      {
+        "parcel_id": "1766",
+        "name": "Digitible NFT Inc  Office (FreeRoss.org/petition)",
+        "description": "Premium Estate overlooking Plaza & Districts PRIME LOCATION",
+        "coordinate": [
+          "-46,64",
+          "-46,63",
+          "-45,64"
+        ],
+        "type": "other",
+        "internal_type": "estate",
+        "land_total": 8,
+        "cover_img_url": "https://api.decentraland.org/v1/estates/1766/map.png",
+        "opensea_url": "https://opensea.io/assets/0x959e104e1a4db6317fa58f8295f586e1a978c297/1766",
+        "parcel_page_url": "https://market.decentraland.org/contracts/0x959e104e1a4db6317fa58f8295f586e1a978c297/tokens/1766",
+        "price": 0,
+        "status": "not_for_rent",
+        "end_date": "",
+        "is_built": "no"
+      },
+      {
+        "parcel_id": "2146",
+        "name": "BitBuzz Gallery @CryptoSteveWand",
+        "description": "A collection of rare crypto art collected by Steve Wand",
+        "coordinate": [
+          "39,-80",
+          "39,-81",
+          "39,-82"
+        ],
+        "type": "gallery",
+        "internal_type": "estate",
+        "land_total": 8,
+        "cover_img_url": "https://api.decentraland.org/v1/estates/2146/map.png",
+        "opensea_url": "https://opensea.io/assets/0x959e104e1a4db6317fa58f8295f586e1a978c297/2146",
+        "parcel_page_url": "https://market.decentraland.org/contracts/0x959e104e1a4db6317fa58f8295f586e1a978c297/tokens/2146",
+        "price": 0,
+        "status": "not_for_rent",
+        "end_date": "",
+        "is_built": "no"
+      },
+      {
+        "parcel_id": "2419",
+        "name": "NFT Magazine Headquarters",
+        "description": null,
+        "coordinate": [
+          "-38,-108",
+          "-37,-108",
+          "-36,-108"
+        ],
+        "type": "HQ",
+        "internal_type": "estate",
+        "land_total": 3,
+        "cover_img_url": "https://api.decentraland.org/v1/estates/2419/map.png",
+        "opensea_url": "https://opensea.io/assets/0x959e104e1a4db6317fa58f8295f586e1a978c297/2419",
+        "parcel_page_url": "https://market.decentraland.org/contracts/0x959e104e1a4db6317fa58f8295f586e1a978c297/tokens/2419",
+        "price": 0,
+        "status": "not_for_rent",
+        "end_date": "",
+        "is_built": "no"
+      }
+    ]
+  }
+}
+```
+---
+**12.2 批量（单个）挂出 Decentraland 待租地块接口**
+
+###### 接口功能
+> 仅限获取当前登录者，批量（单个）挂出自己拥有的 Decentraland 地块
+
+###### URL
+> https://api.metacat.world/api/v1/rent/batch_list_dcl_parcels
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> POST
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+| Body        |      |        |        | 请求体            |
+| Body.parcel_ids        |   true   |    sring   |    无    |  多个地块id用逗号分隔，如：5701,6616     |
+| Body.is_built        |   true   |    sring    |    no   |   地块是否已建造：yes or no    |
+| Body.price        |   true   |    float or int    |    0.1   |   地块租赁价格    |
+| Body.start_at        |   true   |    int    |       |   地块可租开始时间，须大于等于当前时间，格式：1648121354    |
+| Body.end_at        |   true   |    int    |       |   地块可租结束时间，须大于地块可租开始时间，格式：1656070154    |
+
+###### 接口示例
+> curl -s -H 'Authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDk3NzEwNDIsImZsYWciOjAsImlhdCI6MTY0OTE2NjI0MiwiaXNzIjoibWV0YWNhdCIsIndhbGxldF9hZGRyZXNzIjoiMHhENjdjMzQxNjliMzcyZDVCMzkzMmM1NDhhOTQwRDRFYTc0RmU3YUY1In0.PyXOtSNxOvaDb78Yfi9ygppEZJuKQ4ia3kiPoN2SdWA' https://api.metacat.world/api/v1/rent/batch_list_dcl_parcels -d 'parcel_ids=115792089237316195423570985008687907814477794836653579204632878760691553533896,1766&price=0.1&is_built=no&start_at=1648121354&end_at=1656070154' | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success"
+}
+```
+---
+**12.3 批量（单个）取消已挂出 Decentraland 地块接口**
+
+###### 接口功能
+> 仅限获取当前登录者，批量（单个）取消自己拥有的已挂出 Decentraland 地块
+
+###### URL
+> https://api.metacat.world/api/v1/rent/batch_cancel_listed_dcl_parcels
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> POST
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+| Body        |      |        |        | 请求体            |
+| Body.parcel_ids        |   true   |    sring  |    无    |  多个地块id用逗号分隔，如：115792089237316195423570985008687907814477794836653579204632878760691553533896,1766     |
+
+###### 接口示例
+> curl -s -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDk3NzEwNDIsImZsYWciOjAsImlhdCI6MTY0OTE2NjI0MiwiaXNzIjoibWV0YWNhdCIsIndhbGxldF9hZGRyZXNzIjoiMHhENjdjMzQxNjliMzcyZDVCMzkzMmM1NDhhOTQwRDRFYTc0RmU3YUY1In0.PyXOtSNxOvaDb78Yfi9ygppEZJuKQ4ia3kiPoN2SdWA' https://api.metacat.world/api/v1/rent/batch_cancel_listed_dcl_parcels -d 'parcel_ids=115792089237316195423570985008687907814477794836653579204632878760691553533896,1766' | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success"
+}
+```
+---
+**12.4 批量（单个）更新已挂出 Decentraland 地块为租赁中接口**
+
+###### 接口功能
+> 仅限获取当前登录者，批量（单个）更新自己拥有的已挂出 Decentraland 地块状态为租赁中
+
+###### URL
+> https://api.metacat.world/api/v1/rent/batch_lease_listed_dcl_parcels
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> POST
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+| Body        |      |        |        | 请求体            |
+| Body.parcel_ids        |   true   |    sring  |    无    |  多个地块id用逗号分隔，如：115792089237316195423570985008687907814477794836653579204632878760691553533896,1766     |
+
+###### 接口示例
+> curl -s -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDk3NzEwNDIsImZsYWciOjAsImlhdCI6MTY0OTE2NjI0MiwiaXNzIjoibWV0YWNhdCIsIndhbGxldF9hZGRyZXNzIjoiMHhENjdjMzQxNjliMzcyZDVCMzkzMmM1NDhhOTQwRDRFYTc0RmU3YUY1In0.PyXOtSNxOvaDb78Yfi9ygppEZJuKQ4ia3kiPoN2SdWA' https://api.metacat.world/api/v1/rent/batch_lease_listed_dcl_parcels -d 'parcel_ids=115792089237316195423570985008687907814477794836653579204632878760691553533896,1766' | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success"
+}
+```
+---
+**12.5 单个更新 Decentraland 地块租赁信息接口**
+
+###### 接口功能
+> 仅限获取当前登录者，单个更新已挂出的 Decentraland 地块租赁信息
+
+###### URL
+> https://api.metacat.world/api/v1/rent/update_dcl_parcel
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> POST
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+| Body        |      |        |        | 请求体            |
+| Body.parcel_id        |   true   |    sring   |    无    |  地块id，如：115792089237316195423570985008687907814477794836653579204632878760691553533896    |
+| Body.is_built        |   false   |    sring    |    no   |   地块是否已建造：yes or no    |
+| Body.price        |   false   |    float or int    |    0.1   |   地块租赁价格    |
+| Body.start_at        |   false   |    int    |       |   地块可租开始时间，须大于等于当前时间，格式：1648121354    |
+| Body.end_at        |   false   |    int    |       |   地块可租结束时间，须大于地块可租开始时间，格式：1656070154    |
+
+###### 接口示例
+> curl -s -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDk3NzEwNDIsImZsYWciOjAsImlhdCI6MTY0OTE2NjI0MiwiaXNzIjoibWV0YWNhdCIsIndhbGxldF9hZGRyZXNzIjoiMHhENjdjMzQxNjliMzcyZDVCMzkzMmM1NDhhOTQwRDRFYTc0RmU3YUY1In0.PyXOtSNxOvaDb78Yfi9ygppEZJuKQ4ia3kiPoN2SdWA' https://api.metacat.world/api/v1/rent/update_dcl_parcel -d 'parcel_id=115792089237316195423570985008687907814477794836653579204632878760691553533896&price=0.9&is_built=yes&start_at=1648121354&end_at=1656070154' | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success"
+}
+```
+---
+**12.6 单个更新租赁中 Decentraland 地块为已挂出状态接口**
+
+###### 接口功能
+> 仅限获取当前登录者，单个更新自己拥有的租赁中 Decentraland 地块状态为已挂出状态
+
+###### URL
+> https://api.metacat.world/api/v1/rent/dcl_parcel_fallback_to_listed_status
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> POST
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+| Body        |      |        |        | 请求体            |
+| Body.parcel_id        |   true   |    sring   |    无    |  地块id，如：115792089237316195423570985008687907814477794836653579204632878760691553533896     |
+
+###### 接口示例
+> curl -s -H 'Authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDk3NzEwNDIsImZsYWciOjAsImlhdCI6MTY0OTE2NjI0MiwiaXNzIjoibWV0YWNhdCIsIndhbGxldF9hZGRyZXNzIjoiMHhENjdjMzQxNjliMzcyZDVCMzkzMmM1NDhhOTQwRDRFYTc0RmU3YUY1In0.PyXOtSNxOvaDb78Yfi9ygppEZJuKQ4ia3kiPoN2SdWA' https://api.metacat.world/api/v1/rent/dcl_parcel_fallback_to_listed_status -d 'parcel_id=115792089237316195423570985008687907814477794836653579204632878760691553533896' | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success"
+}
+```
+---
+**12.7 获取租赁市场 Decentraland 地块列表接口**
+
+###### 接口功能
+> 
+
+###### URL
+> https://api.metacat.world/api/v1/rent/get_listed_dcl_parcels
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+| Body        |      |        |        | 请求体            |
+| Body.page  | false | int  | 1      | 页码           |
+| Body.count | false | int  | 50     | 每页返回的条数 |
+| Body.size_scope | false | string  | ''     | 地块数量筛选范围，默认值：''（筛选全部） |
+| Body.price_scope | false | string  | ''     | 地块租金筛选范围，默认值：''（筛选全部） |
+| Body.built_status | false | string  | all    | 地块建筑情况，yes：已建造，no：未建造，默认值：all（筛选全部） |
+| Body.sort_field | false | string  | default    | 结构集排序字段，size：按出租地块数量，price：按租金排序，default：默认排序 |
+| Body.sort_type | false | string  | desc     | 排序规则，asc：升序排列，desc：降序排列 |
+
+###### 接口示例
+> curl -s 'https://api.metacat.world/api/v1/rent/get_listed_dcl_parcels?page=1&count=50&size_scope=2_5&price_scope=0_0.1&built_status=no&sort_field=area&sort_type=desc' | jq .
+
+```
 ```
