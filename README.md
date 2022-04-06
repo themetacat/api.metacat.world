@@ -9684,4 +9684,55 @@
 > curl -s 'https://api.metacat.world/api/v1/rent/get_listed_dcl_parcels?page=1&count=50&size_scope=2_5&price_scope=0_0.1&built_status=no&sort_field=area&sort_type=desc' | jq .
 
 ```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "page": 1,
+    "count": 20,
+    "total_page": 2,
+    "parcel_list": [
+      {
+        "parcel_id": "115792089237316195423570985008687907814477794836653579204632878760691553533896",
+        "name": "BitBuzz - In Crypto We Trust",
+        "coordinate": [
+          "-115,-56"
+        ],
+        "internal_type": "land",
+        "land_total": 1,
+        "cover_img_url": "https://api.decentraland.org/v1/parcels/-115/-56/map.png",
+        "parcel_page_url": "https://market.decentraland.org/contracts/0xf87e31492faf9a91b02ee0deaad50d51d56d5d4d/tokens/115792089237316195423570985008687907814477794836653579204632878760691553533896",
+        "built_status": 1,
+        "end_date": "2022.06.24",
+        "price": "0.90",
+        "owner": {
+          "addr": "0xD67c34169b372d5B3932c548a940D4Ea74Fe7aF5",
+          "email": null,
+          "twitter_name": "k1ic234"
+        }
+      },
+      {
+        "parcel_id": "1766",
+        "name": "Digitible NFT Inc  Office (FreeRoss.org/petition)",
+        "coordinate": [
+          "-46,64",
+          "-46,63",
+          "-45,64"
+        ],
+        "internal_type": "estate",
+        "land_total": 8,
+        "cover_img_url": "https://api.decentraland.org/v1/estates/1766/map.png",
+        "parcel_page_url": "https://market.decentraland.org/contracts/0x959e104e1a4db6317fa58f8295f586e1a978c297/tokens/1766",
+        "built_status": 0,
+        "end_date": "2022.06.24",
+        "price": "0.10",
+        "owner": {
+          "addr": "0xD67c34169b372d5B3932c548a940D4Ea74Fe7aF5",
+          "email": null,
+          "twitter_name": "k1ic234"
+        }
+      }
+    ]
+  }
+}
 ```
