@@ -76,9 +76,8 @@
 3. 批量（单个）取消已挂出 Decentraland 地块接口
 4. 批量（单个）更新已挂出 Decentraland 地块为租赁中接口
 5. 单个更新 Decentraland 地块租赁信息接口
-6. 获取 Decentraland 岛屿列表接口
-7. 单个更新租赁中 Decentraland 地块为已挂出状态接口
-8. 获取租赁市场 Decentraland 地块列表接口
+6. 单个更新租赁中 Decentraland 地块为已挂出状态接口
+7. 获取租赁市场 Decentraland 地块列表接口
 
 ----
 ## 全局错误码
