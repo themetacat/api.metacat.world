@@ -79,7 +79,6 @@
 6. 获取 Decentraland 岛屿列表接口
 7. 单个更新租赁中 Decentraland 地块为已挂出状态接口
 8. 获取租赁市场 Decentraland 地块列表接口
-9. 获取当前登录者 Decentraland 地块列表接口
 
 ----
 ## 全局错误码
