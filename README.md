@@ -9681,7 +9681,7 @@
 | Body.sort_type | false | string  | desc     | 排序规则，asc：升序排列，desc：降序排列 |
 
 ###### 接口示例
-> curl -s 'https://api.metacat.world/api/v1/rent/get_listed_dcl_parcels?page=1&count=50&size_scope=2_5&price_scope=0_0.1&built_status=no&sort_field=area&sort_type=desc' | jq .
+> curl -s 'https://api.metacat.world/api/v1/rent/get_listed_dcl_parcels?page=1&count=50&size_scope=1_9&price_scope=0_1.1&built_status=all&sort_field=size&sort_type=asc' | jq .
 
 ```
 {
