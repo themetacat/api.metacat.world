@@ -35,6 +35,9 @@
 9. 获取 Decentraland 地块成交总数量统计信息接口
 10. 获取 Decentraland 地块销售总额统计信息接口
 11. 获取 Decentraland 地主总数统计信息接口
+12. 获取 Sandbox 地块成交均价统计信息接口
+13. 获取 Sandbox 地块成交总数量统计信息接口
+14. 获取 Sandbox 地块销售总额统计信息接口
 
 ### 七、用户登录相关接口
 1. 获取钱包登录所需 nonce 接口
@@ -7967,6 +7970,1562 @@
           "time": "2022.02",
           "value": 5335,
           "type": "all"
+        }
+      ]
+    }
+  }
+}
+```
+---
+**6\.12 获取 Sandbox 地块成交均价统计信息接口**
+###### 接口功能
+> 获取 Sandbox 地块成交均价统计信息接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_sandbox_parcel_avg_price_stats
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回字段
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "daily": {
+      "data": {
+        "eth": [
+          {
+            "time": "2022.03.09",
+            "value_avg": 3,
+            "value_min": 2,
+            "value_max": 4,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.10",
+            "value_avg": 3,
+            "value_min": 2,
+            "value_max": 4,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.11",
+            "value_avg": 3,
+            "value_min": 2,
+            "value_max": 5,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.12",
+            "value_avg": 3,
+            "value_min": 2,
+            "value_max": 6,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.13",
+            "value_avg": 3,
+            "value_min": 2,
+            "value_max": 5,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.14",
+            "value_avg": 3,
+            "value_min": 2,
+            "value_max": 8,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.15",
+            "value_avg": 2,
+            "value_min": 2,
+            "value_max": 3,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.16",
+            "value_avg": 3,
+            "value_min": 2,
+            "value_max": 8,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.17",
+            "value_avg": 3,
+            "value_min": 2,
+            "value_max": 7,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.18",
+            "value_avg": 3,
+            "value_min": 2,
+            "value_max": 5,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.19",
+            "value_avg": 3,
+            "value_min": 2,
+            "value_max": 6,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.20",
+            "value_avg": 3,
+            "value_min": 2,
+            "value_max": 6,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.21",
+            "value_avg": 2,
+            "value_min": 2,
+            "value_max": 4,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.22",
+            "value_avg": 3,
+            "value_min": 2,
+            "value_max": 6,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.23",
+            "value_avg": 3,
+            "value_min": 2,
+            "value_max": 8,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.24",
+            "value_avg": 2,
+            "value_min": 2,
+            "value_max": 7,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.25",
+            "value_avg": 3,
+            "value_min": 1,
+            "value_max": 7,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.26",
+            "value_avg": 2,
+            "value_min": 2,
+            "value_max": 7,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.27",
+            "value_avg": 2,
+            "value_min": 2,
+            "value_max": 4,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.28",
+            "value_avg": 2,
+            "value_min": 1,
+            "value_max": 6,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.29",
+            "value_avg": 2,
+            "value_min": 1,
+            "value_max": 5,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.30",
+            "value_avg": 2,
+            "value_min": 0,
+            "value_max": 6,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.31",
+            "value_avg": 2,
+            "value_min": 0,
+            "value_max": 14,
+            "type": "land"
+          },
+          {
+            "time": "2022.04.01",
+            "value_avg": 2,
+            "value_min": 1,
+            "value_max": 6,
+            "type": "land"
+          },
+          {
+            "time": "2022.04.02",
+            "value_avg": 2,
+            "value_min": 1,
+            "value_max": 6,
+            "type": "land"
+          },
+          {
+            "time": "2022.04.03",
+            "value_avg": 2,
+            "value_min": 1,
+            "value_max": 10,
+            "type": "land"
+          },
+          {
+            "time": "2022.04.04",
+            "value_avg": 2,
+            "value_min": 1,
+            "value_max": 5,
+            "type": "land"
+          },
+          {
+            "time": "2022.04.05",
+            "value_avg": 2,
+            "value_min": 1,
+            "value_max": 4,
+            "type": "land"
+          },
+          {
+            "time": "2022.04.06",
+            "value_avg": 2,
+            "value_min": 1,
+            "value_max": 3,
+            "type": "land"
+          },
+          {
+            "time": "2022.04.07",
+            "value_avg": 2,
+            "value_min": 1,
+            "value_max": 2,
+            "type": "land"
+          }
+        ],
+        "usd": [
+          {
+            "time": "2022.03.09",
+            "value_avg": 8639,
+            "value_min": 6633,
+            "value_max": 13407,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.10",
+            "value_avg": 8708,
+            "value_min": 5963,
+            "value_max": 11594,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.11",
+            "value_avg": 8269,
+            "value_min": 6531,
+            "value_max": 16330,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.12",
+            "value_avg": 8553,
+            "value_min": 5809,
+            "value_max": 18792,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.13",
+            "value_avg": 8844,
+            "value_min": 6106,
+            "value_max": 14935,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.14",
+            "value_avg": 8790,
+            "value_min": 6628,
+            "value_max": 24453,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.15",
+            "value_avg": 8074,
+            "value_min": 7055,
+            "value_max": 10708,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.16",
+            "value_avg": 9026,
+            "value_min": 6555,
+            "value_max": 24631,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.17",
+            "value_avg": 8928,
+            "value_min": 5532,
+            "value_max": 21843,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.18",
+            "value_avg": 10394,
+            "value_min": 7877,
+            "value_max": 17363,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.19",
+            "value_avg": 11048,
+            "value_min": 7653,
+            "value_max": 19357,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.20",
+            "value_avg": 10815,
+            "value_min": 8054,
+            "value_max": 20962,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.21",
+            "value_avg": 9808,
+            "value_min": 7399,
+            "value_max": 13546,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.22",
+            "value_avg": 10396,
+            "value_min": 6444,
+            "value_max": 20579,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.23",
+            "value_avg": 10573,
+            "value_min": 7769,
+            "value_max": 30837,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.24",
+            "value_avg": 10132,
+            "value_min": 8206,
+            "value_max": 23356,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.25",
+            "value_avg": 10852,
+            "value_min": 6518,
+            "value_max": 24168,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.26",
+            "value_avg": 9714,
+            "value_min": 6931,
+            "value_max": 22539,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.27",
+            "value_avg": 8850,
+            "value_min": 6941,
+            "value_max": 15304,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.28",
+            "value_avg": 8606,
+            "value_min": 6504,
+            "value_max": 19666,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.29",
+            "value_avg": 8418,
+            "value_min": 6456,
+            "value_max": 16153,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.30",
+            "value_avg": 8401,
+            "value_min": 0,
+            "value_max": 19967,
+            "type": "land"
+          },
+          {
+            "time": "2022.03.31",
+            "value_avg": 9543,
+            "value_min": 1,
+            "value_max": 46631,
+            "type": "land"
+          },
+          {
+            "time": "2022.04.01",
+            "value_avg": 8764,
+            "value_min": 5931,
+            "value_max": 19329,
+            "type": "land"
+          },
+          {
+            "time": "2022.04.02",
+            "value_avg": 8037,
+            "value_min": 5156,
+            "value_max": 24135,
+            "type": "land"
+          },
+          {
+            "time": "2022.04.03",
+            "value_avg": 7547,
+            "value_min": 5034,
+            "value_max": 32216,
+            "type": "land"
+          },
+          {
+            "time": "2022.04.04",
+            "value_avg": 6940,
+            "value_min": 5626,
+            "value_max": 16982,
+            "type": "land"
+          },
+          {
+            "time": "2022.04.05",
+            "value_avg": 6757,
+            "value_min": 4369,
+            "value_max": 13560,
+            "type": "land"
+          },
+          {
+            "time": "2022.04.06",
+            "value_avg": 6967,
+            "value_min": 4956,
+            "value_max": 11288,
+            "type": "land"
+          },
+          {
+            "time": "2022.04.07",
+            "value_avg": 6599,
+            "value_min": 6224,
+            "value_max": 7235,
+            "type": "land"
+          }
+        ]
+      }
+    },
+    "monthly": {
+      "data": {
+        "eth": [
+          {
+            "time": "2019.11",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 0,
+            "type": "land"
+          },
+          {
+            "time": "2019.12",
+            "value_avg": 1,
+            "value_min": 0,
+            "value_max": 5,
+            "type": "land"
+          },
+          {
+            "time": "2020.01",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 1,
+            "type": "land"
+          },
+          {
+            "time": "2020.02",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 18,
+            "type": "land"
+          },
+          {
+            "time": "2020.03",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 9,
+            "type": "land"
+          },
+          {
+            "time": "2020.04",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 0,
+            "type": "land"
+          },
+          {
+            "time": "2020.05",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 8,
+            "type": "land"
+          },
+          {
+            "time": "2020.06",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 4,
+            "type": "land"
+          },
+          {
+            "time": "2020.07",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 0,
+            "type": "land"
+          },
+          {
+            "time": "2020.08",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 1,
+            "type": "land"
+          },
+          {
+            "time": "2020.09",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 8,
+            "type": "land"
+          },
+          {
+            "time": "2020.10",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 5,
+            "type": "land"
+          },
+          {
+            "time": "2020.11",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 45,
+            "type": "land"
+          },
+          {
+            "time": "2020.12",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 4,
+            "type": "land"
+          },
+          {
+            "time": "2021.01",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 7,
+            "type": "land"
+          },
+          {
+            "time": "2021.02",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 9,
+            "type": "land"
+          },
+          {
+            "time": "2021.03",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 6,
+            "type": "land"
+          },
+          {
+            "time": "2021.04",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 5,
+            "type": "land"
+          },
+          {
+            "time": "2021.05",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 5,
+            "type": "land"
+          },
+          {
+            "time": "2021.06",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 17,
+            "type": "land"
+          },
+          {
+            "time": "2021.07",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 11,
+            "type": "land"
+          },
+          {
+            "time": "2021.08",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 26,
+            "type": "land"
+          },
+          {
+            "time": "2021.09",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 10,
+            "type": "land"
+          },
+          {
+            "time": "2021.10",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 8,
+            "type": "land"
+          },
+          {
+            "time": "2021.11",
+            "value_avg": 2,
+            "value_min": 0,
+            "value_max": 24,
+            "type": "land"
+          },
+          {
+            "time": "2021.12",
+            "value_avg": 3,
+            "value_min": 0,
+            "value_max": 24,
+            "type": "land"
+          },
+          {
+            "time": "2022.01",
+            "value_avg": 3,
+            "value_min": 0,
+            "value_max": 31,
+            "type": "land"
+          },
+          {
+            "time": "2022.02",
+            "value_avg": 4,
+            "value_min": 0,
+            "value_max": 44,
+            "type": "land"
+          },
+          {
+            "time": "2022.03",
+            "value_avg": 3,
+            "value_min": 0,
+            "value_max": 33,
+            "type": "land"
+          },
+          {
+            "time": "2022.04",
+            "value_avg": 2,
+            "value_min": 1,
+            "value_max": 10,
+            "type": "land"
+          }
+        ],
+        "usd": [
+          {
+            "time": "2019.11",
+            "value_avg": 0,
+            "value_min": 0,
+            "value_max": 0,
+            "type": "land"
+          },
+          {
+            "time": "2019.12",
+            "value_avg": 545,
+            "value_min": 28,
+            "value_max": 2825,
+            "type": "land"
+          },
+          {
+            "time": "2020.01",
+            "value_avg": 872,
+            "value_min": 649,
+            "value_max": 2825,
+            "type": "land"
+          },
+          {
+            "time": "2020.02",
+            "value_avg": 331,
+            "value_min": 2,
+            "value_max": 4158,
+            "type": "land"
+          },
+          {
+            "time": "2020.03",
+            "value_avg": 573,
+            "value_min": 34,
+            "value_max": 5650,
+            "type": "land"
+          },
+          {
+            "time": "2020.04",
+            "value_avg": 889,
+            "value_min": 38,
+            "value_max": 1356,
+            "type": "land"
+          },
+          {
+            "time": "2020.05",
+            "value_avg": 1304,
+            "value_min": 565,
+            "value_max": 22451,
+            "type": "land"
+          },
+          {
+            "time": "2020.06",
+            "value_avg": 378,
+            "value_min": 0,
+            "value_max": 4209,
+            "type": "land"
+          },
+          {
+            "time": "2020.07",
+            "value_avg": 520,
+            "value_min": 336,
+            "value_max": 847,
+            "type": "land"
+          },
+          {
+            "time": "2020.08",
+            "value_avg": 95,
+            "value_min": 21,
+            "value_max": 2825,
+            "type": "land"
+          },
+          {
+            "time": "2020.09",
+            "value_avg": 2766,
+            "value_min": 1,
+            "value_max": 25352,
+            "type": "land"
+          },
+          {
+            "time": "2020.10",
+            "value_avg": 1905,
+            "value_min": 925,
+            "value_max": 14126,
+            "type": "land"
+          },
+          {
+            "time": "2020.11",
+            "value_avg": 2436,
+            "value_min": 1,
+            "value_max": 128400,
+            "type": "land"
+          },
+          {
+            "time": "2020.12",
+            "value_avg": 1545,
+            "value_min": 0,
+            "value_max": 12840,
+            "type": "land"
+          },
+          {
+            "time": "2021.01",
+            "value_avg": 1603,
+            "value_min": 25,
+            "value_max": 22453,
+            "type": "land"
+          },
+          {
+            "time": "2021.02",
+            "value_avg": 2146,
+            "value_min": 0,
+            "value_max": 25663,
+            "type": "land"
+          },
+          {
+            "time": "2021.03",
+            "value_avg": 1692,
+            "value_min": 0,
+            "value_max": 18734,
+            "type": "land"
+          },
+          {
+            "time": "2021.04",
+            "value_avg": 1724,
+            "value_min": 0,
+            "value_max": 14490,
+            "type": "land"
+          },
+          {
+            "time": "2021.05",
+            "value_avg": 1158,
+            "value_min": 0,
+            "value_max": 14400,
+            "type": "land"
+          },
+          {
+            "time": "2021.06",
+            "value_avg": 2004,
+            "value_min": 12,
+            "value_max": 48000,
+            "type": "land"
+          },
+          {
+            "time": "2021.07",
+            "value_avg": 1667,
+            "value_min": 0,
+            "value_max": 32000,
+            "type": "land"
+          },
+          {
+            "time": "2021.08",
+            "value_avg": 1554,
+            "value_min": 0,
+            "value_max": 73459,
+            "type": "land"
+          },
+          {
+            "time": "2021.09",
+            "value_avg": 1909,
+            "value_min": 1,
+            "value_max": 28064,
+            "type": "land"
+          },
+          {
+            "time": "2021.10",
+            "value_avg": 1980,
+            "value_min": 0,
+            "value_max": 24075,
+            "type": "land"
+          },
+          {
+            "time": "2021.11",
+            "value_avg": 7123,
+            "value_min": 0,
+            "value_max": 67530,
+            "type": "land"
+          },
+          {
+            "time": "2021.12",
+            "value_avg": 9352,
+            "value_min": 0,
+            "value_max": 69880,
+            "type": "land"
+          },
+          {
+            "time": "2022.01",
+            "value_avg": 11069,
+            "value_min": 0,
+            "value_max": 89454,
+            "type": "land"
+          },
+          {
+            "time": "2022.02",
+            "value_avg": 11292,
+            "value_min": 0,
+            "value_max": 123387,
+            "type": "land"
+          },
+          {
+            "time": "2022.03",
+            "value_avg": 9402,
+            "value_min": 0,
+            "value_max": 91442,
+            "type": "land"
+          },
+          {
+            "time": "2022.04",
+            "value_avg": 7430,
+            "value_min": 4369,
+            "value_max": 32216,
+            "type": "land"
+          }
+        ]
+      }
+    }
+  }
+}
+```
+---
+**6\.13 获取 Sandbox 地块成交总数量统计信息接口**
+###### 接口功能
+> 获取 Sandbox 地块成交总数量统计信息接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_sandbox_parcel_sold_total_stats
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回字段
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "daily": {
+      "data": [
+        {
+          "time": "2022.03.09",
+          "value": 35,
+          "type": "land"
+        },
+        {
+          "time": "2022.03.10",
+          "value": 49,
+          "type": "land"
+        },
+        {
+          "time": "2022.03.11",
+          "value": 35,
+          "type": "land"
+        },
+        {
+          "time": "2022.03.12",
+          "value": 42,
+          "type": "land"
+        },
+        {
+          "time": "2022.03.13",
+          "value": 52,
+          "type": "land"
+        },
+        {
+          "time": "2022.03.14",
+          "value": 51,
+          "type": "land"
+        },
+        {
+          "time": "2022.03.15",
+          "value": 40,
+          "type": "land"
+        },
+        {
+          "time": "2022.03.16",
+          "value": 50,
+          "type": "land"
+        },
+        {
+          "time": "2022.03.17",
+          "value": 45,
+          "type": "land"
+        },
+        {
+          "time": "2022.03.18",
+          "value": 39,
+          "type": "land"
+        },
+        {
+          "time": "2022.03.19",
+          "value": 40,
+          "type": "land"
+        },
+        {
+          "time": "2022.03.20",
+          "value": 40,
+          "type": "land"
+        },
+        {
+          "time": "2022.03.21",
+          "value": 71,
+          "type": "land"
+        },
+        {
+          "time": "2022.03.22",
+          "value": 40,
+          "type": "land"
+        },
+        {
+          "time": "2022.03.23",
+          "value": 45,
+          "type": "land"
+        },
+        {
+          "time": "2022.03.24",
+          "value": 54,
+          "type": "land"
+        },
+        {
+          "time": "2022.03.25",
+          "value": 43,
+          "type": "land"
+        },
+        {
+          "time": "2022.03.26",
+          "value": 38,
+          "type": "land"
+        },
+        {
+          "time": "2022.03.27",
+          "value": 28,
+          "type": "land"
+        },
+        {
+          "time": "2022.03.28",
+          "value": 61,
+          "type": "land"
+        },
+        {
+          "time": "2022.03.29",
+          "value": 45,
+          "type": "land"
+        },
+        {
+          "time": "2022.03.30",
+          "value": 32,
+          "type": "land"
+        },
+        {
+          "time": "2022.03.31",
+          "value": 50,
+          "type": "land"
+        },
+        {
+          "time": "2022.04.01",
+          "value": 40,
+          "type": "land"
+        },
+        {
+          "time": "2022.04.02",
+          "value": 44,
+          "type": "land"
+        },
+        {
+          "time": "2022.04.03",
+          "value": 67,
+          "type": "land"
+        },
+        {
+          "time": "2022.04.04",
+          "value": 74,
+          "type": "land"
+        },
+        {
+          "time": "2022.04.05",
+          "value": 41,
+          "type": "land"
+        },
+        {
+          "time": "2022.04.06",
+          "value": 43,
+          "type": "land"
+        },
+        {
+          "time": "2022.04.07",
+          "value": 5,
+          "type": "land"
+        }
+      ]
+    },
+    "monthly": {
+      "data": [
+        {
+          "time": "2019.11",
+          "value": 0,
+          "type": "land"
+        },
+        {
+          "time": "2019.12",
+          "value": 146,
+          "type": "land"
+        },
+        {
+          "time": "2020.01",
+          "value": 15,
+          "type": "land"
+        },
+        {
+          "time": "2020.02",
+          "value": 486,
+          "type": "land"
+        },
+        {
+          "time": "2020.03",
+          "value": 133,
+          "type": "land"
+        },
+        {
+          "time": "2020.04",
+          "value": 40,
+          "type": "land"
+        },
+        {
+          "time": "2020.05",
+          "value": 45,
+          "type": "land"
+        },
+        {
+          "time": "2020.06",
+          "value": 271,
+          "type": "land"
+        },
+        {
+          "time": "2020.07",
+          "value": 47,
+          "type": "land"
+        },
+        {
+          "time": "2020.08",
+          "value": 3638,
+          "type": "land"
+        },
+        {
+          "time": "2020.09",
+          "value": 275,
+          "type": "land"
+        },
+        {
+          "time": "2020.10",
+          "value": 150,
+          "type": "land"
+        },
+        {
+          "time": "2020.11",
+          "value": 176,
+          "type": "land"
+        },
+        {
+          "time": "2020.12",
+          "value": 217,
+          "type": "land"
+        },
+        {
+          "time": "2021.01",
+          "value": 159,
+          "type": "land"
+        },
+        {
+          "time": "2021.02",
+          "value": 301,
+          "type": "land"
+        },
+        {
+          "time": "2021.03",
+          "value": 612,
+          "type": "land"
+        },
+        {
+          "time": "2021.04",
+          "value": 698,
+          "type": "land"
+        },
+        {
+          "time": "2021.05",
+          "value": 372,
+          "type": "land"
+        },
+        {
+          "time": "2021.06",
+          "value": 611,
+          "type": "land"
+        },
+        {
+          "time": "2021.07",
+          "value": 1049,
+          "type": "land"
+        },
+        {
+          "time": "2021.08",
+          "value": 1191,
+          "type": "land"
+        },
+        {
+          "time": "2021.09",
+          "value": 1078,
+          "type": "land"
+        },
+        {
+          "time": "2021.10",
+          "value": 1158,
+          "type": "land"
+        },
+        {
+          "time": "2021.11",
+          "value": 5636,
+          "type": "land"
+        },
+        {
+          "time": "2021.12",
+          "value": 2720,
+          "type": "land"
+        },
+        {
+          "time": "2022.01",
+          "value": 2383,
+          "type": "land"
+        },
+        {
+          "time": "2022.02",
+          "value": 1961,
+          "type": "land"
+        },
+        {
+          "time": "2022.03",
+          "value": 1464,
+          "type": "land"
+        },
+        {
+          "time": "2022.04",
+          "value": 314,
+          "type": "land"
+        }
+      ]
+    }
+  }
+}
+```
+---
+**6\.14 获取 Sandbox 地块销售总额统计信息接口**
+###### 接口功能
+> 获取 Sandbox 地块销售总额统计信息接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_sandbox_parcel_sold_sum_stats
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回字段
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "eth": {
+      "data": [
+        {
+          "time": "2019.11",
+          "value": 0,
+          "type": "land"
+        },
+        {
+          "time": "2019.12",
+          "value": 207,
+          "type": "land"
+        },
+        {
+          "time": "2020.01",
+          "value": 4,
+          "type": "land"
+        },
+        {
+          "time": "2020.02",
+          "value": 242,
+          "type": "land"
+        },
+        {
+          "time": "2020.03",
+          "value": 106,
+          "type": "land"
+        },
+        {
+          "time": "2020.04",
+          "value": 13,
+          "type": "land"
+        },
+        {
+          "time": "2020.05",
+          "value": 20,
+          "type": "land"
+        },
+        {
+          "time": "2020.06",
+          "value": 118,
+          "type": "land"
+        },
+        {
+          "time": "2020.07",
+          "value": 8,
+          "type": "land"
+        },
+        {
+          "time": "2020.08",
+          "value": 578,
+          "type": "land"
+        },
+        {
+          "time": "2020.09",
+          "value": 269,
+          "type": "land"
+        },
+        {
+          "time": "2020.10",
+          "value": 101,
+          "type": "land"
+        },
+        {
+          "time": "2020.11",
+          "value": 152,
+          "type": "land"
+        },
+        {
+          "time": "2020.12",
+          "value": 119,
+          "type": "land"
+        },
+        {
+          "time": "2021.01",
+          "value": 90,
+          "type": "land"
+        },
+        {
+          "time": "2021.02",
+          "value": 229,
+          "type": "land"
+        },
+        {
+          "time": "2021.03",
+          "value": 368,
+          "type": "land"
+        },
+        {
+          "time": "2021.04",
+          "value": 427,
+          "type": "land"
+        },
+        {
+          "time": "2021.05",
+          "value": 154,
+          "type": "land"
+        },
+        {
+          "time": "2021.06",
+          "value": 435,
+          "type": "land"
+        },
+        {
+          "time": "2021.07",
+          "value": 622,
+          "type": "land"
+        },
+        {
+          "time": "2021.08",
+          "value": 658,
+          "type": "land"
+        },
+        {
+          "time": "2021.09",
+          "value": 731,
+          "type": "land"
+        },
+        {
+          "time": "2021.10",
+          "value": 815,
+          "type": "land"
+        },
+        {
+          "time": "2021.11",
+          "value": 14283,
+          "type": "land"
+        },
+        {
+          "time": "2021.12",
+          "value": 9045,
+          "type": "land"
+        },
+        {
+          "time": "2022.01",
+          "value": 9386,
+          "type": "land"
+        },
+        {
+          "time": "2022.02",
+          "value": 8078,
+          "type": "land"
+        },
+        {
+          "time": "2022.03",
+          "value": 4594,
+          "type": "land"
+        },
+        {
+          "time": "2022.04",
+          "value": 698,
+          "type": "land"
+        }
+      ]
+    },
+    "usd": {
+      "data": [
+        {
+          "time": "2019.11",
+          "value": 0,
+          "type": "land"
+        },
+        {
+          "time": "2019.12",
+          "value": 79687,
+          "type": "land"
+        },
+        {
+          "time": "2020.01",
+          "value": 13081,
+          "type": "land"
+        },
+        {
+          "time": "2020.02",
+          "value": 161125,
+          "type": "land"
+        },
+        {
+          "time": "2020.03",
+          "value": 76249,
+          "type": "land"
+        },
+        {
+          "time": "2020.04",
+          "value": 35566,
+          "type": "land"
+        },
+        {
+          "time": "2020.05",
+          "value": 58698,
+          "type": "land"
+        },
+        {
+          "time": "2020.06",
+          "value": 102704,
+          "type": "land"
+        },
+        {
+          "time": "2020.07",
+          "value": 24485,
+          "type": "land"
+        },
+        {
+          "time": "2020.08",
+          "value": 347078,
+          "type": "land"
+        },
+        {
+          "time": "2020.09",
+          "value": 760724,
+          "type": "land"
+        },
+        {
+          "time": "2020.10",
+          "value": 285825,
+          "type": "land"
+        },
+        {
+          "time": "2020.11",
+          "value": 428897,
+          "type": "land"
+        },
+        {
+          "time": "2020.12",
+          "value": 335320,
+          "type": "land"
+        },
+        {
+          "time": "2021.01",
+          "value": 254881,
+          "type": "land"
+        },
+        {
+          "time": "2021.02",
+          "value": 646025,
+          "type": "land"
+        },
+        {
+          "time": "2021.03",
+          "value": 1035819,
+          "type": "land"
+        },
+        {
+          "time": "2021.04",
+          "value": 1203750,
+          "type": "land"
+        },
+        {
+          "time": "2021.05",
+          "value": 431056,
+          "type": "land"
+        },
+        {
+          "time": "2021.06",
+          "value": 1224870,
+          "type": "land"
+        },
+        {
+          "time": "2021.07",
+          "value": 1749152,
+          "type": "land"
+        },
+        {
+          "time": "2021.08",
+          "value": 1851335,
+          "type": "land"
+        },
+        {
+          "time": "2021.09",
+          "value": 2058603,
+          "type": "land"
+        },
+        {
+          "time": "2021.10",
+          "value": 2293525,
+          "type": "land"
+        },
+        {
+          "time": "2021.11",
+          "value": 40148210,
+          "type": "land"
+        },
+        {
+          "time": "2021.12",
+          "value": 25439306,
+          "type": "land"
+        },
+        {
+          "time": "2022.01",
+          "value": 26377581,
+          "type": "land"
+        },
+        {
+          "time": "2022.02",
+          "value": 22143943,
+          "type": "land"
+        },
+        {
+          "time": "2022.03",
+          "value": 13765477,
+          "type": "land"
+        },
+        {
+          "time": "2022.04",
+          "value": 2333189,
+          "type": "land"
         }
       ]
     }
