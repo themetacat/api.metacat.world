@@ -82,6 +82,10 @@
 6. 单个更新租赁中 Decentraland 地块为已挂出状态接口
 7. 获取租赁市场 Decentraland 地块列表接口
 
+### 十三、SomniumSpace 地图相关接口
+1. 获取 SomniumSpace 均价热力图数据接口
+2. 获取 SomniumSpace 地块详情数据接口
+
 ----
 ## 全局错误码
 
@@ -11290,6 +11294,90 @@
           "email": null,
           "twitter_name": "k1ic234"
         }
+      }
+    ]
+  }
+}
+```
+---
+**13.1 获取 SomniumSpace 均价热力图数据接口**
+
+###### 接口功能
+> 一次获取全部 SomniumSpace 全部地块的均价热力图数据
+
+###### URL
+> https://api.metacat.world/api/v1/get_somniumspace_price_map_level_three
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| -        |    -  |    -  |     -   |      |
+
+###### 接口示例
+> curl -s ’https://api.metacat.world/api/v1/get_somniumspace_price_map_level_three‘ | jq .
+
+```
+```
+---
+**13.2 获取 SomniumSpace 地块详情数据接口**
+
+###### 接口功能
+> 获取单个 SomniumSpace Land 的详情数据
+
+###### URL
+> https://api.metacat.world/api/v1/get_somniumspace_parcel_detail
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| -        |    -  |    -  |     -   |      |
+
+###### 接口示例
+> curl -s ‘https://api.metacat.world/api/v1/get_somniumspace_parcel_detail?token_id=1396’ | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "token_id": "1396",
+    "name": "Parcel_ID:1396",
+    "description": "",
+    "size": "M",
+    "location": "waterfront",
+    "cover_img_url": "https://poster-phi.vercel.app/somniumspace/preview_img/1396.png",
+    "opensea_url": "https://opensea.io/assets/0x913ae503153d9a335398d0785ba60a2d63ddb4e2/1396",
+    "parcel_page_url": "https://somniumspace.com/parcel/1396",
+    "time_range_sale": {
+      "eth": 14.18,
+      "usd": 46281.37
+    },
+    "last_sale_list": [
+      {
+        "date": "2022.04.06",
+        "eth": 13.35,
+        "usd": 43580.54,
+        "is_primary": 0
+      },
+      {
+        "date": "2019.10.14",
+        "eth": 0.83,
+        "usd": 2700.82,
+        "is_primary": 0
       }
     ]
   }
