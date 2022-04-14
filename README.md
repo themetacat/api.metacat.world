@@ -95,6 +95,11 @@
 1. 获取 SomniumSpace 均价热力图数据接口
 2. 获取 SomniumSpace 地块详情数据接口
 
+### 十四、Cryptovoxels 用户地块流量相关接口
+1. 获取当前登录者 Cryptovoxels 地块每日流量总数接口
+2. 获取当前登录者 Cryptovoxels 地块每日/每周/每月流量占比接口 
+3. 获取当前登录者 Cryptovoxels 地块每日流量统计接口 
+
 ----
 ## 全局错误码
 
@@ -16058,5 +16063,284 @@
       }
     ]
   }
+}
+```
+---
+**14.1 获取当前登录者 Cryptovoxels 地块每日流量总数接口**
+
+###### 接口功能
+> 仅限获取当前登录者 Cryptovoxels 地块每日流量总数接口
+
+###### URL
+> https://api.metacat.world/api/v1/user/get_cv_parcel_traffic_daily_stats
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+
+###### 接口示例
+> curl -s -H 'Authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTA1MTEyMjIsImZsYWciOjAsImlhdCI6MTY0OTkwNjQyMiwiaXNzIjoibWV0YWNhdCIsIndhbGxldF9hZGRyZXNzIjoiMHhENjdjMzQxNjliMzcyZDVCMzkzMmM1NDhhOTQwRDRFYTc0RmU3YUY1In0.ry4H4sDcdMjpxKyKKuFQyD-fv9bP_erH6kXHaUcKoAA' https://api.metacat.world/api/v1/user/get_cv_parcel_traffic_daily_stats | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "2022.04.13": 6,
+    "2022.04.12": 7,
+    "2022.04.11": 2,
+    "2022.04.10": 5,
+    "2022.04.09": 12,
+    "2022.04.08": 1,
+    "2022.04.07": 12,
+    "2022.04.06": 3,
+    "2022.04.05": 7,
+    "2022.04.04": 7,
+    "2022.04.03": 16,
+    "2022.04.02": 26,
+    "2022.04.01": 11,
+    "2022.03.31": 7,
+    "2022.03.30": 6
+  }
+}
+```
+---
+**14.2 获取当前登录者 Cryptovoxels 地块每日/每周/每月流量占比接口**
+
+###### 接口功能
+> 仅限获取当前登录者 Cryptovoxels 地块每日/每周/每月流量占比接口 
+
+###### URL
+> https://api.metacat.world/api/v1/user/get_cv_parcel_traffic_percentage
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+
+###### 接口示例
+> curl -s -H 'Authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTA1MTEyMjIsImZsYWciOjAsImlhdCI6MTY0OTkwNjQyMiwiaXNzIjoibWV0YWNhdCIsIndhbGxldF9hZGRyZXNzIjoiMHhENjdjMzQxNjliMzcyZDVCMzkzMmM1NDhhOTQwRDRFYTc0RmU3YUY1In0.ry4H4sDcdMjpxKyKKuFQyD-fv9bP_erH6kXHaUcKoAA' https://api.metacat.world/api/v1/user/get_cv_parcel_traffic_percentage | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "day": {
+      "747": {
+        "name": "None",
+        "percent": 0.17
+      },
+      "2152": {
+        "name": "Pranksyland",
+        "percent": 0.17
+      },
+      "2791": {
+        "name": "None",
+        "percent": 0.17
+      },
+      "2832": {
+        "name": "None",
+        "percent": 0.17
+      },
+      "2987": {
+        "name": "None",
+        "percent": 0.17
+      },
+      "2988": {
+        "name": "None",
+        "percent": 0.17
+      },
+      "0": {
+        "name": "Other",
+        "percent": 0
+      }
+    },
+    "week": {
+      "932": {
+        "name": "Metapurse HQ",
+        "percent": 0.18
+      },
+      "3024": {
+        "name": "None",
+        "percent": 0.09
+      },
+      "2873": {
+        "name": "None",
+        "percent": 0.07
+      },
+      "3019": {
+        "name": "None",
+        "percent": 0.07
+      },
+      "2973": {
+        "name": "None",
+        "percent": 0.07
+      },
+      "1341": {
+        "name": "The Open Gallery",
+        "percent": 0.07
+      },
+      "0": {
+        "name": "Other",
+        "percent": 0.47
+      }
+    },
+    "month": {
+      "932": {
+        "name": "Metapurse HQ",
+        "percent": 0.15
+      },
+      "2883": {
+        "name": "None",
+        "percent": 0.05
+      },
+      "3005": {
+        "name": "None",
+        "percent": 0.04
+      },
+      "3019": {
+        "name": "None",
+        "percent": 0.04
+      },
+      "1847": {
+        "name": "None",
+        "percent": 0.04
+      },
+      "747": {
+        "name": "None",
+        "percent": 0.04
+      },
+      "0": {
+        "name": "Other",
+        "percent": 0.65
+      }
+    }
+  }
+}
+```
+---
+**14.3 获取当前登录者 Cryptovoxels 地块每日流量统计接口**
+
+###### 接口功能
+> 仅限获取当前登录者 Cryptovoxels 地块每日流量统计接口
+
+###### URL
+> https://api.metacat.world/api/v1/user/get_cv_parcel_traffic_detail
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+
+###### 接口示例
+> curl -s -H 'Authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTA1MTEyMjIsImZsYWciOjAsImlhdCI6MTY0OTkwNjQyMiwiaXNzIjoibWV0YWNhdCIsIndhbGxldF9hZGRyZXNzIjoiMHhENjdjMzQxNjliMzcyZDVCMzkzMmM1NDhhOTQwRDRFYTc0RmU3YUY1In0.ry4H4sDcdMjpxKyKKuFQyD-fv9bP_erH6kXHaUcKoAA' https://api.metacat.world/api/v1/user/get_cv_parcel_traffic_detail | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": [
+    {
+      "parcel_id": 528,
+      "parcel_name": "None",
+      "island": "Origin City",
+      "suburb": "Kitties",
+      "total_traffic": 1390,
+      "traffic_detail": {
+        "2022.03.16": 0,
+        "2022.03.17": 0,
+        "2022.03.18": 0,
+        "2022.03.19": 0,
+        "2022.03.20": 0,
+        "2022.03.21": 0,
+        "2022.03.22": 0,
+        "2022.03.23": 0,
+        "2022.03.24": 1,
+        "2022.03.25": 0,
+        "2022.03.26": 0,
+        "2022.03.27": 0,
+        "2022.03.28": 0,
+        "2022.03.29": 0,
+        "2022.03.30": 1,
+        "2022.03.31": 0,
+        "2022.04.01": 0,
+        "2022.04.02": 0,
+        "2022.04.03": 0,
+        "2022.04.04": 0,
+        "2022.04.05": 0,
+        "2022.04.06": 0,
+        "2022.04.07": 1,
+        "2022.04.08": 1,
+        "2022.04.09": 0,
+        "2022.04.10": 0,
+        "2022.04.11": 0,
+        "2022.04.12": 0,
+        "2022.04.13": 0,
+        "2022.04.14": 0
+      }
+    },
+    {
+      "parcel_id": 747,
+      "parcel_name": "None",
+      "island": "Origin City",
+      "suburb": "Hiro",
+      "total_traffic": 1642,
+      "traffic_detail": {
+        "2022.03.16": 0,
+        "2022.03.17": 1,
+        "2022.03.18": 0,
+        "2022.03.19": 0,
+        "2022.03.20": 0,
+        "2022.03.21": 0,
+        "2022.03.22": 0,
+        "2022.03.23": 0,
+        "2022.03.24": 0,
+        "2022.03.25": 0,
+        "2022.03.26": 0,
+        "2022.03.27": 0,
+        "2022.03.28": 2,
+        "2022.03.29": 0,
+        "2022.03.30": 0,
+        "2022.03.31": 0,
+        "2022.04.01": 0,
+        "2022.04.02": 0,
+        "2022.04.03": 0,
+        "2022.04.04": 1,
+        "2022.04.05": 0,
+        "2022.04.06": 0,
+        "2022.04.07": 0,
+        "2022.04.08": 0,
+        "2022.04.09": 0,
+        "2022.04.10": 0,
+        "2022.04.11": 0,
+        "2022.04.12": 0,
+        "2022.04.13": 1,
+        "2022.04.14": 0
+      }
+    }
+  ]
 }
 ```
