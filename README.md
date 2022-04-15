@@ -99,6 +99,9 @@
 1. 获取当前登录者 Cryptovoxels 地块每日流量总数接口
 2. 获取当前登录者 Cryptovoxels 地块每日/每周/每月流量占比接口 
 3. 获取当前登录者 Cryptovoxels 地块每日流量统计接口 
+4. 获取当前登录者 Cryptovoxels 地块id 列表接口
+5. 获取当前登录者 Cryptovoxels 单个地块一段时间内的每日流量统计接口
+
 
 ----
 ## 全局错误码
@@ -16265,7 +16268,7 @@
   "data": [
     {
       "parcel_id": 528,
-      "parcel_name": "None",
+      "parcel_name": "",
       "island": "Origin City",
       "suburb": "Kitties",
       "total_traffic": 1390,
@@ -16304,7 +16307,7 @@
     },
     {
       "parcel_id": 747,
-      "parcel_name": "None",
+      "parcel_name": "",
       "island": "Origin City",
       "suburb": "Hiro",
       "total_traffic": 1642,
@@ -16342,5 +16345,290 @@
       }
     }
   ]
+}
+```
+---
+**14.4 获取当前登录者 Cryptovoxels 地块id 列表接口**
+
+###### 接口功能
+> 仅限获取当前登录者 Cryptovoxels 地块id 列表接口
+
+###### URL
+> https://api.metacat.world/api/v1/user/get_cv_parcel_id_list
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+
+###### 接口示例
+> curl -s -H 'Authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTA1MTEyMjIsImZsYWciOjAsImlhdCI6MTY0OTkwNjQyMiwiaXNzIjoibWV0YWNhdCIsIndhbGxldF9hZGRyZXNzIjoiMHhENjdjMzQxNjliMzcyZDVCMzkzMmM1NDhhOTQwRDRFYTc0RmU3YUY1In0.ry4H4sDcdMjpxKyKKuFQyD-fv9bP_erH6kXHaUcKoAA' https://api.metacat.world/api/v1/user/get_cv_parcel_id_list | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": [
+    {
+      "parcel_id": 528,
+      "name": ""
+    },
+    {
+      "parcel_id": 747,
+      "name": ""
+    },
+    {
+      "parcel_id": 932,
+      "name": "Metapurse HQ"
+    },
+    {
+      "parcel_id": 1251,
+      "name": ""
+    },
+    {
+      "parcel_id": 1341,
+      "name": "The Open Gallery"
+    },
+    {
+      "parcel_id": 1847,
+      "name": ""
+    },
+    {
+      "parcel_id": 2152,
+      "name": "Pranksyland"
+    },
+    {
+      "parcel_id": 2246,
+      "name": "Pranksyland"
+    },
+    {
+      "parcel_id": 2727,
+      "name": ""
+    },
+    {
+      "parcel_id": 2770,
+      "name": ""
+    },
+    {
+      "parcel_id": 2791,
+      "name": ""
+    },
+    {
+      "parcel_id": 2808,
+      "name": "Pranksyland"
+    },
+    {
+      "parcel_id": 2810,
+      "name": ""
+    },
+    {
+      "parcel_id": 2832,
+      "name": ""
+    },
+    {
+      "parcel_id": 2839,
+      "name": ""
+    },
+    {
+      "parcel_id": 2846,
+      "name": ""
+    },
+    {
+      "parcel_id": 2848,
+      "name": ""
+    },
+    {
+      "parcel_id": 2873,
+      "name": ""
+    },
+    {
+      "parcel_id": 2883,
+      "name": ""
+    },
+    {
+      "parcel_id": 2884,
+      "name": "Playa non hate-ah"
+    },
+    {
+      "parcel_id": 2895,
+      "name": ""
+    },
+    {
+      "parcel_id": 2905,
+      "name": ""
+    },
+    {
+      "parcel_id": 2911,
+      "name": ""
+    },
+    {
+      "parcel_id": 2918,
+      "name": ""
+    },
+    {
+      "parcel_id": 2931,
+      "name": ""
+    },
+    {
+      "parcel_id": 2937,
+      "name": ""
+    },
+    {
+      "parcel_id": 2948,
+      "name": ""
+    },
+    {
+      "parcel_id": 2954,
+      "name": ""
+    },
+    {
+      "parcel_id": 2956,
+      "name": ""
+    },
+    {
+      "parcel_id": 2958,
+      "name": "The Face Shrine"
+    },
+    {
+      "parcel_id": 2962,
+      "name": ""
+    },
+    {
+      "parcel_id": 2966,
+      "name": ""
+    },
+    {
+      "parcel_id": 2973,
+      "name": ""
+    },
+    {
+      "parcel_id": 2974,
+      "name": ""
+    },
+    {
+      "parcel_id": 2976,
+      "name": ""
+    },
+    {
+      "parcel_id": 2986,
+      "name": ""
+    },
+    {
+      "parcel_id": 2987,
+      "name": ""
+    },
+    {
+      "parcel_id": 2988,
+      "name": ""
+    },
+    {
+      "parcel_id": 2994,
+      "name": ""
+    },
+    {
+      "parcel_id": 2999,
+      "name": ""
+    },
+    {
+      "parcel_id": 3004,
+      "name": ""
+    },
+    {
+      "parcel_id": 3005,
+      "name": ""
+    },
+    {
+      "parcel_id": 3007,
+      "name": ""
+    },
+    {
+      "parcel_id": 3013,
+      "name": ""
+    },
+    {
+      "parcel_id": 3016,
+      "name": "a flower and a rock"
+    },
+    {
+      "parcel_id": 3019,
+      "name": ""
+    },
+    {
+      "parcel_id": 3024,
+      "name": ""
+    }
+  ]
+}
+```
+---
+**14.5 获取当前登录者 Cryptovoxels 单个地块一段时间内的每日流量统计接口**
+
+###### 接口功能
+> 仅限获取当前登录者 Cryptovoxels 单个地块一段时间内的每日流量统计接口
+
+###### URL
+> https://api.metacat.world/api/v1/user/get_cv_parcel_traffic_list
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+| Body        |      |        |        | 请求体            |
+| Body.parcel_id | true |    int    |        | 地块id           |
+| Body.day_total | false |    int    |     30   | 获取最近多少天的流量数据，默认30天          |
+
+###### 接口示例
+> curl -s -H 'Authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTA1MTEyMjIsImZsYWciOjAsImlhdCI6MTY0OTkwNjQyMiwiaXNzIjoibWV0YWNhdCIsIndhbGxldF9hZGRyZXNzIjoiMHhENjdjMzQxNjliMzcyZDVCMzkzMmM1NDhhOTQwRDRFYTc0RmU3YUY1In0.ry4H4sDcdMjpxKyKKuFQyD-fv9bP_erH6kXHaUcKoAA' https://api.metacat.world/api/v1/user/get_cv_parcel_traffic_list?parcel_id=5701&day_total=30 | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "2022.03.17": 21,
+    "2022.03.18": 3,
+    "2022.03.19": 0,
+    "2022.03.20": 0,
+    "2022.03.21": 3,
+    "2022.03.22": 14,
+    "2022.03.23": 4,
+    "2022.03.24": 32,
+    "2022.03.25": 7,
+    "2022.03.26": 0,
+    "2022.03.27": 3,
+    "2022.03.28": 7,
+    "2022.03.29": 1,
+    "2022.03.30": 2,
+    "2022.03.31": 4,
+    "2022.04.01": 6,
+    "2022.04.02": 2,
+    "2022.04.03": 0,
+    "2022.04.04": 1,
+    "2022.04.05": 5,
+    "2022.04.06": 1,
+    "2022.04.07": 2,
+    "2022.04.08": 5,
+    "2022.04.09": 0,
+    "2022.04.10": 0,
+    "2022.04.11": 0,
+    "2022.04.12": 3,
+    "2022.04.13": 4,
+    "2022.04.14": 0,
+    "2022.04.15": 0
+  }
 }
 ```
