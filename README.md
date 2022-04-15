@@ -16096,23 +16096,68 @@
 {
   "code": 100000,
   "msg": "success",
-  "data": {
-    "2022.04.13": 6,
-    "2022.04.12": 7,
-    "2022.04.11": 2,
-    "2022.04.10": 5,
-    "2022.04.09": 12,
-    "2022.04.08": 1,
-    "2022.04.07": 12,
-    "2022.04.06": 3,
-    "2022.04.05": 7,
-    "2022.04.04": 7,
-    "2022.04.03": 16,
-    "2022.04.02": 26,
-    "2022.04.01": 11,
-    "2022.03.31": 7,
-    "2022.03.30": 6
-  }
+  "data": [
+    {
+      "time": "2022.04.14",
+      "value": 8
+    },
+    {
+      "time": "2022.04.13",
+      "value": 6
+    },
+    {
+      "time": "2022.04.12",
+      "value": 7
+    },
+    {
+      "time": "2022.04.11",
+      "value": 2
+    },
+    {
+      "time": "2022.04.10",
+      "value": 5
+    },
+    {
+      "time": "2022.04.09",
+      "value": 12
+    },
+    {
+      "time": "2022.04.08",
+      "value": 1
+    },
+    {
+      "time": "2022.04.07",
+      "value": 12
+    },
+    {
+      "time": "2022.04.06",
+      "value": 3
+    },
+    {
+      "time": "2022.04.05",
+      "value": 7
+    },
+    {
+      "time": "2022.04.04",
+      "value": 7
+    },
+    {
+      "time": "2022.04.03",
+      "value": 16
+    },
+    {
+      "time": "2022.04.02",
+      "value": 26
+    },
+    {
+      "time": "2022.04.01",
+      "value": 11
+    },
+    {
+      "time": "2022.03.31",
+      "value": 7
+    }
+  ]
 }
 ```
 ---
@@ -16144,96 +16189,117 @@
   "code": 100000,
   "msg": "success",
   "data": {
-    "day": {
-      "747": {
-        "name": "None",
-        "percent": 0.17
-      },
-      "2152": {
+    "day": [
+      {
+        "parcel_id": 2808,
         "name": "Pranksyland",
-        "percent": 0.17
+        "percent": 0.38
       },
-      "2791": {
-        "name": "None",
-        "percent": 0.17
+      {
+        "parcel_id": 747,
+        "name": "",
+        "percent": 0.12
       },
-      "2832": {
-        "name": "None",
-        "percent": 0.17
+      {
+        "parcel_id": 932,
+        "name": "Metapurse HQ",
+        "percent": 0.12
       },
-      "2987": {
-        "name": "None",
-        "percent": 0.17
+      {
+        "parcel_id": 2954,
+        "name": "",
+        "percent": 0.12
       },
-      "2988": {
-        "name": "None",
-        "percent": 0.17
+      {
+        "parcel_id": 2987,
+        "name": "",
+        "percent": 0.12
       },
-      "0": {
+      {
+        "parcel_id": 2999,
+        "name": "",
+        "percent": 0.12
+      },
+      {
+        "parcel_id": 0,
         "name": "Other",
         "percent": 0
       }
-    },
-    "week": {
-      "932": {
+    ],
+    "week": [
+      {
+        "parcel_id": 932,
         "name": "Metapurse HQ",
-        "percent": 0.18
+        "percent": 0.17
       },
-      "3024": {
-        "name": "None",
-        "percent": 0.09
+      {
+        "parcel_id": 2808,
+        "name": "Pranksyland",
+        "percent": 0.1
       },
-      "2873": {
-        "name": "None",
+      {
+        "parcel_id": 2873,
+        "name": "",
         "percent": 0.07
       },
-      "3019": {
-        "name": "None",
+      {
+        "parcel_id": 3024,
+        "name": "",
         "percent": 0.07
       },
-      "2973": {
-        "name": "None",
-        "percent": 0.07
-      },
-      "1341": {
-        "name": "The Open Gallery",
-        "percent": 0.07
-      },
-      "0": {
-        "name": "Other",
-        "percent": 0.47
-      }
-    },
-    "month": {
-      "932": {
-        "name": "Metapurse HQ",
-        "percent": 0.15
-      },
-      "2883": {
-        "name": "None",
+      {
+        "parcel_id": 2152,
+        "name": "Pranksyland",
         "percent": 0.05
       },
-      "3005": {
-        "name": "None",
-        "percent": 0.04
+      {
+        "parcel_id": 747,
+        "name": "",
+        "percent": 0.05
       },
-      "3019": {
-        "name": "None",
-        "percent": 0.04
-      },
-      "1847": {
-        "name": "None",
-        "percent": 0.04
-      },
-      "747": {
-        "name": "None",
-        "percent": 0.04
-      },
-      "0": {
+      {
+        "parcel_id": 0,
         "name": "Other",
-        "percent": 0.65
+        "percent": 0.49
       }
-    }
+    ],
+    "month": [
+      {
+        "parcel_id": 932,
+        "name": "Metapurse HQ",
+        "percent": 0.14
+      },
+      {
+        "parcel_id": 2883,
+        "name": "",
+        "percent": 0.05
+      },
+      {
+        "parcel_id": 3005,
+        "name": "",
+        "percent": 0.04
+      },
+      {
+        "parcel_id": 3019,
+        "name": "",
+        "percent": 0.04
+      },
+      {
+        "parcel_id": 3024,
+        "name": "",
+        "percent": 0.04
+      },
+      {
+        "parcel_id": 1847,
+        "name": "",
+        "percent": 0.04
+      },
+      {
+        "parcel_id": 0,
+        "name": "Other",
+        "percent": 0.66
+      }
+    ]
   }
 }
 ```
