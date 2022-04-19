@@ -102,6 +102,8 @@
 4. 获取当前登录者 Cryptovoxels 地块id 列表接口
 5. 获取当前登录者 Cryptovoxels 单个地块一段时间内的每日流量统计接口
 
+### 十五、Metaverse Learn 相关接口
+1. 获取 Metaverse Learn 文章列表接口
 
 ----
 ## 全局错误码
@@ -16859,5 +16861,72 @@
       "value": 0
     }
   ]
+}
+```
+---
+**15\.1 获取 Metaverse Learn 文章列表接口**
+###### 接口功能
+> 获取 Metaverse Learn 文章列表接口，支持翻页
+
+###### URL
+> https://api.metacat.world/api/v1/learn/get_article_list
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| page  | false | int  | 1      | 页码           |
+| count | false | int  | 50     | 每页返回的条数 |
+| type | false | string  |   en  | 文章类型，en：英文版，zh：中文版，默认值：en|
+
+###### 接口示例
+> curl -s 'https://api.metacat.world/api/v1/learn/get_article_list' | jq . 
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "page":1,
+        "count":50,
+        "total_page":1,
+        "list":[
+            {
+                "id":100,
+                "title":"Ten Business Models in Metaverse",
+                "desc":"Of course, just like none of Facebook, Google, Amazon can represent the internet by itself, it must the connections and interactions between multiple metaverse platforms that creates the real Metaverse.",
+                "cover_img_url":"https://poster-phi.vercel.app/Ten_Business_Models_in%20_Metaverse.png",
+                "link_url":"https://medium.com/coinmonks/ten-business-models-in-metaverse-72587f42048b",
+                "source":"MetaCat",
+                "author":"Dawnxue",
+                "time":"2022-03-19"
+            },
+            {
+                "id":101,
+                "title":"Present & Future of CryptoVoxels Metaverse",
+                "desc":"15 years ago, if I were to tell you that we would spend most of our waking hours staring at screens, it would have sounded dystopian Today, we spend ~7 hours per day on TVs, smartphones, computers, and nobody bats an eye.",
+                "cover_img_url":"https://poster-phi.vercel.app/Ten_Business_Models_in%20_Metaverse.png",
+                "link_url":"https://medium.com/coinmonks/present-future-of-cryptovoxels-metaverse-a4ed94f6b309",
+                "source":"MetaCat",
+                "author":"Dawnxue",
+                "time":"2021-04-13"
+            },
+            {
+                "id":102,
+                "title":"Analysis of Parcel Sales on Decentraland",
+                "desc":"Metaverse is currently one of the hottest words. It\u2019s not only ranked number 1 in 2021\u2019s top ten popular terms, but also mentioned in People\u2019s Daily, China\u2019s most authoritative governmental newspaper, on Dec 9 in relation to its parcel market. This article will look into Decentraland, one of the most mentioned metaverse platforms.",
+                "cover_img_url":"https://poster-phi.vercel.app/Ten_Business_Models_in%20_Metaverse.png",
+                "link_url":"https://medium.com/@themetacat/analysis-of-parcel-sales-on-decentraland-a-metaverse-platform-6d0d8755254d",
+                "source":"MetaCat",
+                "author":"Dawnxue",
+                "time":"2021-09-10"
+            }
+        ]
+    }
 }
 ```
