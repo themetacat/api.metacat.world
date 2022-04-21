@@ -106,6 +106,11 @@
 1. 获取 Metaverse Learn 文章列表接口
 2. 获取 Metaverse Report 文章列表接口
 
+### 十六、All Worlds 相关接口
+1. 获取六个平台最近一月/季度/年和所有时间销售总额占比
+2. 获取六个平台每 月/季度 平均价
+3. 获取六个平台每 月/季度/年 各个总量
+
 ----
 ## 全局错误码
 
@@ -17025,6 +17030,666 @@
                 "time":"2021-10-31"
             }
         ]
+    }
+}
+```
+---
+**16.1 获取六个平台最近一月/季度/年和所有时间销售总额占比**
+###### 接口功能
+> 获取六个平台最近一月/季度/年和所有时间销售总额占比
+
+###### URL
+> https://api.metacat.world/api/v1/analytics/get_sales_amount_percent
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回示例
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+		 "month":[
+            {
+                "name":"cryptovoxels",
+                "value":0.02
+            },
+            {
+                "name":"decentraland",
+                "value":0.08
+            },
+            {
+                "name":"sandbox",
+                "value":0.27
+            },
+            {
+                "name":"somniumspace",
+                "value":0.02
+            },
+            {
+                "name":"nft",
+                "value":0.39
+            },
+            {
+                "name":"webb",
+                "value":0.23
+            }
+        ],
+        "quarter":[
+            {
+                "name":"cryptovoxels",
+                "value":0.02
+            },
+            {
+                "name":"decentraland",
+                "value":0.08
+            },
+            {
+                "name":"sandbox",
+                "value":0.27
+            },
+            {
+                "name":"somniumspace",
+                "value":0.02
+            },
+            {
+                "name":"nft",
+                "value":0.39
+            },
+            {
+                "name":"webb",
+                "value":0.23
+            }
+        ],
+        "year":[
+            {
+                "name":"cryptovoxels",
+                "value":0.03
+            },
+            {
+                "name":"decentraland",
+                "value":0.08
+            },
+            {
+                "name":"sandbox",
+                "value":0.25
+            },
+            {
+                "name":"somniumspace",
+                "value":0.01
+            },
+            {
+                "name":"nft",
+                "value":0.43
+            },
+            {
+                "name":"webb",
+                "value":0.2
+            }
+        ],
+        "all_time":[
+            {
+                "name":"cryptovoxels",
+                "value":0.08
+            },
+            {
+                "name":"decentraland",
+                "value":0.13
+            },
+            {
+                "name":"sandbox",
+                "value":0.3
+            },
+            {
+                "name":"somniumspace",
+                "value":0.08
+            },
+            {
+                "name":"nft",
+                "value":0.28
+            },
+            {
+                "name":"webb",
+                "value":0.14
+				
+			}
+        ]
+    }
+}
+```
+---
+**16.2 获取六个平台每 月/季度 平均价**
+###### 接口功能
+> 获取六个平台每 月/季度 平均价
+
+###### URL
+> https://api.metacat.world/api/v1/analytics/get_avg_parcel_price
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回示例
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "monthly":{
+            "eth":[
+                {
+                    "time":"2019.11",
+                    "name":"Cryptovoxels",
+                    "value":123
+                },
+                {
+                    "time":"2019.11",
+                    "name":"Decentraland",
+                    "value":1479
+                },
+                {
+                    "time":"2019.11",
+                    "name":"The Sandbox",
+                    "value":0
+                },
+                {
+                    "time":"2019.11",
+                    "name":"Somnium Space",
+                    "value":8287
+                },
+                {
+                    "time":"2019.11",
+                    "name":"NFT Worlds",
+                    "value":0
+                },
+                {
+                    "time":"2019.11",
+                    "name":"Worldwide Webb",
+                    "value":0
+                },
+                {
+                    "time":"2019.12",
+                    "name":"Cryptovoxels",
+                    "value":176
+                },
+                {
+                    "time":"2019.12",
+                    "name":"Decentraland",
+                    "value":1309
+                },
+                {
+                    "time":"2019.12",
+                    "name":"The Sandbox",
+                    "value":545
+                },
+                {
+                    "time":"2019.12",
+                    "name":"Somnium Space",
+                    "value":5594
+                },
+                {
+                    "time":"2019.12",
+                    "name":"NFT Worlds",
+                    "value":0
+                },
+                {
+                    "time":"2019.12",
+                    "name":"Worldwide Webb",
+                    "value":0
+                },
+                {
+                    "time":"2020.01",
+                    "name":"Cryptovoxels",
+                    "value":318
+                },
+                {
+                    "time":"2020.01",
+                    "name":"Decentraland",
+                    "value":1598
+                },
+                {
+                    "time":"2020.01",
+                    "name":"The Sandbox",
+                    "value":872
+                },
+                {
+                    "time":"2020.01",
+                    "name":"Somnium Space",
+                    "value":5192
+                },
+                {
+                    "time":"2020.01",
+                    "name":"NFT Worlds",
+                    "value":0
+                },
+                {
+                    "time":"2020.01",
+                    "name":"Worldwide Webb",
+                    "value":0
+                },
+                {
+                    "time":"2020.02",
+                    "name":"Cryptovoxels",
+                    "value":654
+                },
+                {
+                    "time":"2020.02",
+                    "name":"Decentraland",
+                    "value":3043
+                },
+                {
+                    "time":"2020.02",
+                    "name":"The Sandbox",
+                    "value":331
+                },
+                {
+                    "time":"2020.02",
+                    "name":"Somnium Space",
+                    "value":7800
+                },
+                {
+                    "time":"2020.02",
+                    "name":"NFT Worlds",
+                    "value":0
+                },
+                {
+                    "time":"2020.02",
+                    "name":"Worldwide Webb",
+                    "value":0
+                },
+
+            ]
+        },
+        "quarterly":{
+            "eth":[
+                {
+                    "time":"2018Q2",
+                    "name":"Cryptovoxels",
+                    "value":92
+                },
+                {
+                    "time":"2018Q2",
+                    "name":"Decentraland",
+                    "value":0
+                },
+                {
+                    "time":"2018Q2",
+                    "name":"The Sandbox",
+                    "value":0
+                },
+                {
+                    "time":"2018Q2",
+                    "name":"Somnium Space",
+                    "value":0
+                },
+                {
+                    "time":"2018Q2",
+                    "name":"NFT Worlds",
+                    "value":0
+                },
+                {
+                    "time":"2018Q2",
+                    "name":"Worldwide Webb",
+                    "value":0
+                },
+                {
+                    "time":"2018Q3",
+                    "name":"Cryptovoxels",
+                    "value":52
+                },
+                {
+                    "time":"2018Q3",
+                    "name":"Decentraland",
+                    "value":0
+                },
+                {
+                    "time":"2018Q3",
+                    "name":"The Sandbox",
+                    "value":0
+                },
+                {
+                    "time":"2018Q3",
+                    "name":"Somnium Space",
+                    "value":0
+                },
+                {
+                    "time":"2018Q3",
+                    "name":"NFT Worlds",
+                    "value":0
+                },
+                {
+                    "time":"2018Q3",
+                    "name":"Worldwide Webb",
+                    "value":0
+                },
+            ]
+        }
+    }
+}
+```
+---
+**16.3 获取六个平台每 月/季度/年 各个总量**
+###### 接口功能
+> 获取六个平台每 月/季度 各个总量
+
+###### URL
+> https://api.metacat.world/api/v1/analytics/get_sales_amount_stack
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回示例
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "monthly":{
+            "usd":[
+                {
+                    "time":"2019.11",
+                    "name":"Cryptovoxels",
+                    "value":24424
+                },
+                {
+                    "time":"2019.11",
+                    "name":"Decentraland",
+                    "value":50763
+                },
+                {
+                    "time":"2019.11",
+                    "name":"The Sandbox",
+                    "value":0
+                },
+                {
+                    "time":"2019.11",
+                    "name":"Somnium Space",
+                    "value":223774
+                },
+                {
+                    "time":"2019.11",
+                    "name":"NFT Worlds",
+                    "value":0
+                },
+                {
+                    "time":"2019.11",
+                    "name":"Worldwide Webb",
+                    "value":0
+                },
+                {
+                    "time":"2019.12",
+                    "name":"Cryptovoxels",
+                    "value":50771
+                },
+                {
+                    "time":"2019.12",
+                    "name":"Decentraland",
+                    "value":57829
+                },
+                {
+                    "time":"2019.12",
+                    "name":"The Sandbox",
+                    "value":79687
+                },
+                {
+                    "time":"2019.12",
+                    "name":"Somnium Space",
+                    "value":55943
+                },
+                {
+                    "time":"2019.12",
+                    "name":"NFT Worlds",
+                    "value":0
+                },
+                {
+                    "time":"2019.12",
+                    "name":"Worldwide Webb",
+                    "value":0
+                },
+                {
+                    "time":"2020.01",
+                    "name":"Cryptovoxels",
+                    "value":165133
+                },
+                {
+                    "time":"2020.01",
+                    "name":"Decentraland",
+                    "value":146270
+                },
+                {
+                    "time":"2020.01",
+                    "name":"The Sandbox",
+                    "value":13081
+                },
+                {
+                    "time":"2020.01",
+                    "name":"Somnium Space",
+                    "value":109040
+                },
+                {
+                    "time":"2020.01",
+                    "name":"NFT Worlds",
+                    "value":0
+                },
+                {
+                    "time":"2020.01",
+                    "name":"Worldwide Webb",
+                    "value":0
+                },
+                {
+                    "time":"2020.02",
+                    "name":"Cryptovoxels",
+                    "value":265251
+                },
+                {
+                    "time":"2020.02",
+                    "name":"Decentraland",
+                    "value":690550
+                },
+                {
+                    "time":"2020.02",
+                    "name":"The Sandbox",
+                    "value":161125
+                },
+                {
+                    "time":"2020.02",
+                    "name":"Somnium Space",
+                    "value":327613
+                },
+                {
+                    "time":"2020.02",
+                    "name":"NFT Worlds",
+                    "value":0
+                },
+                {
+                    "time":"2020.02",
+                    "name":"Worldwide Webb",
+                    "value":0
+                }
+            ]
+        },
+        "quarterly":{
+            "usd":[
+                {
+                    "time":"2018Q2",
+                    "name":"Cryptovoxels",
+                    "value":1840
+                },
+                {
+                    "time":"2018Q2",
+                    "name":"Decentraland",
+                    "value":0
+                },
+                {
+                    "time":"2018Q2",
+                    "name":"The Sandbox",
+                    "value":0
+                },
+                {
+                    "time":"2018Q2",
+                    "name":"Somnium Space",
+                    "value":0
+                },
+                {
+                    "time":"2018Q2",
+                    "name":"NFT Worlds",
+                    "value":0
+                },
+                {
+                    "time":"2018Q2",
+                    "name":"Worldwide Webb",
+                    "value":0
+                },
+                {
+                    "time":"2018Q3",
+                    "name":"Cryptovoxels",
+                    "value":8828
+                },
+                {
+                    "time":"2018Q3",
+                    "name":"Decentraland",
+                    "value":0
+                },
+                {
+                    "time":"2018Q3",
+                    "name":"The Sandbox",
+                    "value":0
+                },
+                {
+                    "time":"2018Q3",
+                    "name":"Somnium Space",
+                    "value":0
+                },
+                {
+                    "time":"2018Q3",
+                    "name":"NFT Worlds",
+                    "value":0
+                },
+                {
+                    "time":"2018Q3",
+                    "name":"Worldwide Webb",
+                    "value":0
+                },
+                {
+                    "time":"2018Q4",
+                    "name":"Cryptovoxels",
+                    "value":9979
+                },
+                {
+                    "time":"2018Q4",
+                    "name":"Decentraland",
+                    "value":1165494
+                },
+                {
+                    "time":"2018Q4",
+                    "name":"The Sandbox",
+                    "value":0
+                },
+                {
+                    "time":"2018Q4",
+                    "name":"Somnium Space",
+                    "value":0
+                },
+                {
+                    "time":"2018Q4",
+                    "name":"NFT Worlds",
+                    "value":0
+                },
+                {
+                    "time":"2018Q4",
+                    "name":"Worldwide Webb",
+                    "value":0
+                }
+            ]
+        },
+        "yearly":{
+            "usd":[
+                {
+                    "time":"2018",
+                    "name":"Cryptovoxels",
+                    "value":20649
+                },
+                {
+                    "time":"2018",
+                    "name":"Decentraland",
+                    "value":1165494
+                },
+                {
+                    "time":"2018",
+                    "name":"The Sandbox",
+                    "value":0
+                },
+                {
+                    "time":"2018",
+                    "name":"Somnium Space",
+                    "value":0
+                },
+                {
+                    "time":"2018",
+                    "name":"NFT Worlds",
+                    "value":0
+                },
+                {
+                    "time":"2018",
+                    "name":"Worldwide Webb",
+                    "value":0
+                },
+                {
+                    "time":"2019",
+                    "name":"Cryptovoxels",
+                    "value":231258
+                },
+                {
+                    "time":"2019",
+                    "name":"Decentraland",
+                    "value":1679500
+                },
+                {
+                    "time":"2019",
+                    "name":"The Sandbox",
+                    "value":79687
+                },
+                {
+                    "time":"2019",
+                    "name":"Somnium Space",
+                    "value":3809515
+                },
+                {
+                    "time":"2019",
+                    "name":"NFT Worlds",
+                    "value":0
+                },
+                {
+                    "time":"2019",
+                    "name":"Worldwide Webb",
+                    "value":0
+                }
+            ]
+        }
     }
 }
 ```
