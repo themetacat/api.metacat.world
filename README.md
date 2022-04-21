@@ -104,6 +104,7 @@
 
 ### 十五、Metaverse Learn 相关接口
 1. 获取 Metaverse Learn 文章列表接口
+2. 获取 Metaverse Report 文章列表接口
 
 ----
 ## 全局错误码
@@ -16925,6 +16926,103 @@
                 "source":"MetaCat",
                 "author":"Dawnxue",
                 "time":"2021-09-10"
+            }
+        ]
+    }
+}
+```
+---
+**15\.2 获取 Metaverse Report 文章列表接口**
+###### 接口功能
+> 获取 Metaverse Report 文章列表接口，支持翻页
+
+###### URL
+> https://api.metacat.world/api/v1/learn/get_metaverse_report_list
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| page  | false | int  | 1      | 页码           |
+| count | false | int  | 50     | 每页返回的条数 |
+| type | false | string  |   en  | 文章类型，en：英文版，zh：中文版，默认值：en|
+
+###### 接口示例
+> curl -s 'https://api.metacat.world/api/v1/learn/get_metaverse_report_list' | jq . 
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "page":1,
+        "count":50,
+        "total_page":1,
+        "list":[
+            {
+                "id":105,
+                "title":"Metaverse Monthly Summary 2022-03",
+                "desc":"The performance from February to March was very poor. NFT Worlds still increased in February, but fell sharply in March; Other metaverse platforms showed a sharp decline from early February or late January to now.",
+                "cover_img_url":"https://poster-phi.vercel.app/metaverse_learn/Metaverse_Monthly_Summary_2022-03.png",
+                "link_url":"https://medium.com/@themetacat/metaverse-summary-2022-03-c6b78b37f047",
+                "source":"MetaCat",
+                "author":"DawnXue",
+                "time":"2022-04-03"
+            },
+            {
+                "id":104,
+                "title":"Metaverse Monthly Summary 2022-02",
+                "desc":"The overall NFT market was sluggish, resulting in a low average transaction price; at the same time, there were fewer New Year activities in February than in January, resulting in a significant drop in the number of visits.",
+                "cover_img_url":"https://poster-phi.vercel.app/metaverse_learn/Metaverse_Monthly_Summary_2022-02.png",
+                "link_url":"https://medium.com/@themetacat/metaverse-monthly-summary-2022-02-74c673e8f967",
+                "source":"MetaCat",
+                "author":"DawnXue",
+                "time":"2022-03-04"
+            },
+            {
+                "id":103,
+                "title":"Metaverse Monthly Summary 2022-01",
+                "desc":"The \u201cMeta effect\u201d at the end of October 2021 led to the Metaverse sector being hot in November and December 2021; in January 2022, the market became more rational, and multiple indicators (such as: Avg Price(USD), Parcel Sold Total, Parcel Sold Sum, and Total Visits) Significant decline; but indicators such as Parcel Sold Sum and Avg Price(USD) are still higher than in October 2021.",
+                "cover_img_url":"https://poster-phi.vercel.app/metaverse_learn/Metaverse_Monthly_Summary_2022-01.png",
+                "link_url":"https://medium.com/@themetacat/metaverse-monthly-summary-2022-01-b734589fe3b0",
+                "source":"MetaCat",
+                "author":"DawnXue",
+                "time":"2022-02-05"
+            },
+            {
+                "id":102,
+                "title":"Metaverse Monthly Summary 2021-12",
+                "desc":"It covers all the data dynamics of Cryptovoxels and Decentraland of metaverse project.",
+                "cover_img_url":"https://poster-phi.vercel.app/metaverse_learn/Metaverse_Monthly_Summary_2021-12.png",
+                "link_url":"https://medium.com/@themetacat/metaverse-monthly-summary-2021-12-ba5baf493c1f",
+                "source":"MetaCat",
+                "author":"DawnXue",
+                "time":"2022-01-05"
+            },
+            {
+                "id":101,
+                "title":"Metaverse Monthly Summary 2021-11",
+                "desc":"The primary and secondary markets rose sharply, reached the highest in history.",
+                "cover_img_url":"https://poster-phi.vercel.app/metaverse_learn/Metaverse_Monthly_Summary_2021-11.png",
+                "link_url":"https://medium.com/coinmonks/cryptovoxels-monthly-summary-2021-11-d1acd54fdb29",
+                "source":"MetaCat",
+                "author":"DawnXue",
+                "time":"2021-12-01"
+            },
+            {
+                "id":100,
+                "title":"Metaverse Monthly Summary 2021-10",
+                "desc":"The transaction volume in the primary market has decreased significantly, and the transaction volume in the secondary market has increased slightly.The average transaction price in the primary market dropped slightly, and the average transaction price in the secondary market rose sharply.",
+                "cover_img_url":"https://poster-phi.vercel.app/metaverse_learn/Metaverse_Monthly_Summary_2021-10.png",
+                "link_url":"https://medium.com/coinmonks/cryptovoxels-monthly-summary-2021-10-be31ae4a53a2",
+                "source":"MetaCat",
+                "author":"DawnXue",
+                "time":"2021-10-31"
             }
         ]
     }
