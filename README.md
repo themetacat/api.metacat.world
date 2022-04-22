@@ -746,6 +746,24 @@
         "opensea_url": "https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/5249",
         "parcel_page_url": "https://www.cryptovoxels.com/parcels/5249"
       }
+    ],
+     "traffic_list":[
+      {
+        "time":"2022.04.22",
+        "value":0
+      },
+      {
+        "time":"2022.04.21",
+        "value":0
+      },
+      {
+        "time":"2022.04.20",
+        "value":2
+      },
+      {
+        "time":"2022.04.19",
+        "value":9
+      }
     ]
   }
 }
@@ -17282,38 +17300,7 @@
                     "time":"2020.01",
                     "name":"Worldwide Webb",
                     "value":0
-                },
-                {
-                    "time":"2020.02",
-                    "name":"Cryptovoxels",
-                    "value":654
-                },
-                {
-                    "time":"2020.02",
-                    "name":"Decentraland",
-                    "value":3043
-                },
-                {
-                    "time":"2020.02",
-                    "name":"The Sandbox",
-                    "value":331
-                },
-                {
-                    "time":"2020.02",
-                    "name":"Somnium Space",
-                    "value":7800
-                },
-                {
-                    "time":"2020.02",
-                    "name":"NFT Worlds",
-                    "value":0
-                },
-                {
-                    "time":"2020.02",
-                    "name":"Worldwide Webb",
-                    "value":0
-                },
-
+                }
             ]
         },
         "quarterly":{
@@ -17469,66 +17456,6 @@
                     "time":"2019.12",
                     "name":"Worldwide Webb",
                     "value":0
-                },
-                {
-                    "time":"2020.01",
-                    "name":"Cryptovoxels",
-                    "value":165133
-                },
-                {
-                    "time":"2020.01",
-                    "name":"Decentraland",
-                    "value":146270
-                },
-                {
-                    "time":"2020.01",
-                    "name":"The Sandbox",
-                    "value":13081
-                },
-                {
-                    "time":"2020.01",
-                    "name":"Somnium Space",
-                    "value":109040
-                },
-                {
-                    "time":"2020.01",
-                    "name":"NFT Worlds",
-                    "value":0
-                },
-                {
-                    "time":"2020.01",
-                    "name":"Worldwide Webb",
-                    "value":0
-                },
-                {
-                    "time":"2020.02",
-                    "name":"Cryptovoxels",
-                    "value":265251
-                },
-                {
-                    "time":"2020.02",
-                    "name":"Decentraland",
-                    "value":690550
-                },
-                {
-                    "time":"2020.02",
-                    "name":"The Sandbox",
-                    "value":161125
-                },
-                {
-                    "time":"2020.02",
-                    "name":"Somnium Space",
-                    "value":327613
-                },
-                {
-                    "time":"2020.02",
-                    "name":"NFT Worlds",
-                    "value":0
-                },
-                {
-                    "time":"2020.02",
-                    "name":"Worldwide Webb",
-                    "value":0
                 }
             ]
         },
@@ -17593,36 +17520,6 @@
                     "time":"2018Q3",
                     "name":"Worldwide Webb",
                     "value":0
-                },
-                {
-                    "time":"2018Q4",
-                    "name":"Cryptovoxels",
-                    "value":9979
-                },
-                {
-                    "time":"2018Q4",
-                    "name":"Decentraland",
-                    "value":1165494
-                },
-                {
-                    "time":"2018Q4",
-                    "name":"The Sandbox",
-                    "value":0
-                },
-                {
-                    "time":"2018Q4",
-                    "name":"Somnium Space",
-                    "value":0
-                },
-                {
-                    "time":"2018Q4",
-                    "name":"NFT Worlds",
-                    "value":0
-                },
-                {
-                    "time":"2018Q4",
-                    "name":"Worldwide Webb",
-                    "value":0
                 }
             ]
         },
@@ -17655,36 +17552,6 @@
                 },
                 {
                     "time":"2018",
-                    "name":"Worldwide Webb",
-                    "value":0
-                },
-                {
-                    "time":"2019",
-                    "name":"Cryptovoxels",
-                    "value":231258
-                },
-                {
-                    "time":"2019",
-                    "name":"Decentraland",
-                    "value":1679500
-                },
-                {
-                    "time":"2019",
-                    "name":"The Sandbox",
-                    "value":79687
-                },
-                {
-                    "time":"2019",
-                    "name":"Somnium Space",
-                    "value":3809515
-                },
-                {
-                    "time":"2019",
-                    "name":"NFT Worlds",
-                    "value":0
-                },
-                {
-                    "time":"2019",
                     "name":"Worldwide Webb",
                     "value":0
                 }
