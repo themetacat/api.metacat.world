@@ -1388,27 +1388,29 @@
   "msg": "success",
   "data": [
     {
-      "name": "Cryptovoxels",
-      "total_parcel_sales": {
-        "value": 20069,
-        "symbol": "ETH"
-      },
-      "number_of_parcel_sales": 6499,
-      "total_parcel_supply": 7336,
-      "total_land_owner": 2160,
-      "total_traffic": 20468022
-    },
-    {
-      "name": "Decentraland",
-      "total_parcel_sales": {
-        "value": 104302427,
-        "symbol": "USD"
-      },
-      "number_of_parcel_sales": 11321,
-      "total_parcel_supply": 92598,
-      "total_land_owner": 5308,
-      "total_traffic": 0
-    }
+            "name":"The Sandbox",
+            "total_parcel_sales":{
+                "value":149990412,
+                "symbol":"USD"
+            },
+            "number_of_parcel_sales":16703,
+            "total_parcel_supply":105400,
+            "total_land_owner":19780,
+            "total_traffic":0,
+            "total10_percent":0.13
+        },
+        {
+            "name":"NFT Worlds",
+            "total_parcel_sales":{
+                "value":138744717,
+                "symbol":"USD"
+            },
+            "number_of_parcel_sales":8809,
+            "total_parcel_supply":10000,
+            "total_land_owner":806,
+            "total_traffic":0,
+            "total10_percent":0.01
+        }
   ]
 }
 ```
