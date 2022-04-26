@@ -109,8 +109,9 @@
 ### 十六、All Worlds 相关接口
 1. 获取六个平台最近一月/季度/年和所有时间销售总额占比
 2. 获取六个平台每 月/季度 平均价
-3. 获取六个平台每 月/季度/年 各个总量
+3. 获取六个平台每 月/季度/年 各个价格总和
 4. 获取MetaIndex和ETH Price
+5. 获取六个平台每 月/季度/年 各个销售总量
 
 ----
 ## 全局错误码
@@ -17639,4 +17640,127 @@
         ]
     }
 }
+```
+---
+**16.5 获取六个平台每 月/季度/年 各个销售总量**
+###### 接口功能
+> 获取六个平台每 月/季度/年 各个销售总量
+
+###### URL
+> https://api.metacat.world/api/v1/analytics/get_all_number_of_sales
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回示例
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "monthly":[
+            {
+                "time":"2019.11",
+                "name":"Somnium Space",
+                "value":27
+            },
+            {
+                "time":"2019.11",
+                "name":"Cryptovoxels",
+                "value":197
+            },
+            {
+                "time":"2019.11",
+                "name":"Worldwide Webb",
+                "value":0
+            },
+            {
+                "time":"2019.11",
+                "name":"Decentraland",
+                "value":148
+            },
+            {
+                "time":"2019.11",
+                "name":"NFT Worlds",
+                "value":0
+            },
+            {
+                "time":"2019.11",
+                "name":"The Sandbox",
+                "value":0
+            }],
+        "quarterly":[
+            {
+                "time":"2018 Q2",
+                "name":"Somnium Space",
+                "value":0
+            },
+            {
+                "time":"2018 Q2",
+                "name":"Cryptovoxels",
+                "value":20
+            },
+            {
+                "time":"2018 Q2",
+                "name":"Worldwide Webb",
+                "value":0
+            },
+            {
+                "time":"2018 Q2",
+                "name":"Decentraland",
+                "value":0
+            },
+            {
+                "time":"2018 Q2",
+                "name":"NFT Worlds",
+                "value":0
+            },
+            {
+                "time":"2018 Q2",
+                "name":"The Sandbox",
+                "value":0
+            }],
+        "yearly":[
+            {
+                "time":"2018",
+                "name":"Somnium Space",
+                "value":0
+            },
+            {
+                "time":"2018",
+                "name":"Cryptovoxels",
+                "value":407
+            },
+            {
+                "time":"2018",
+                "name":"Worldwide Webb",
+                "value":0
+            },
+            {
+                "time":"2018",
+                "name":"Decentraland",
+                "value":1584
+            },
+            {
+                "time":"2018",
+                "name":"NFT Worlds",
+                "value":0
+            },
+            {
+                "time":"2018",
+                "name":"The Sandbox",
+                "value":0
+            }
+        ]
+    }
+}
+            
 ```
