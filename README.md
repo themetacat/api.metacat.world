@@ -130,6 +130,9 @@
 | 100009 | twitter_name exist                         |                                    |
 | 100010 | parcel not yours                           |       地块不属于当前用户              |
 | 100011 | parcel not in leased                           |       地块不属于当前用户              |
+| 100012 | save error                           |       保存数据库失败              |
+| 100013 | verification code has expired                           |       邮箱验证码失效              |
+| 100014 | verification code error                           |       邮箱验证码错误              |
 
 ----
 ## 接口详情
