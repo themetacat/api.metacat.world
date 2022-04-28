@@ -47,6 +47,9 @@
 21. 获取 Webb 地块成交均价统计信息接口
 22. 获取 Webb 地块成交总数量统计信息接口
 23. 获取 Webb 地块销售总额统计信息接口
+24. 获取 substrata 地块成交均价统计信息接口
+25. 获取 substrata 地块成交总数量统计信息接口
+26. 获取 substrata 地块销售总额统计信息接口
 
 ### 七、用户登录相关接口
 1. 获取钱包登录所需 nonce 接口
@@ -14250,6 +14253,388 @@
                     "type":"land"
                 }
             ]
+        }
+    }
+}
+```
+---
+**6\.24 获取 substrata 地块成交均价统计信息接口**
+###### 接口功能
+> 获取 substrata 地块成交均价统计信息接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_substrata_avg_price_stats
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回字段
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "daily":{
+            "data":{
+                "eth":[
+                    {
+                        "time":"2022.03.30",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2022.03.31",
+                        "value_avg":0.28,
+                        "value_min":0.25,
+                        "value_max":0.3,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2022.04.01",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    }
+                ],
+                "usd":[
+                    {
+                        "time":"2022.03.30",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2022.03.31",
+                        "value_avg":824,
+                        "value_min":749,
+                        "value_max":899,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2022.04.01",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    }
+                ]
+            }
+        },
+        "monthly":{
+            "data":{
+                "eth":[
+                    {
+                        "time":"2019.11",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2019.12",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2020.01",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    }
+                ],
+                "usd":[
+                    {
+                        "time":"2019.11",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2019.12",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2020.01",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    }
+                ]
+            }
+        },
+        "quarterly":{
+            "data":{
+                "eth":[
+                    {
+                        "time":"2021Q2",
+                        "value_avg":0.3,
+                        "value_min":0.3,
+                        "value_max":0.3,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2021Q3",
+                        "value_avg":1.18,
+                        "value_min":0.3,
+                        "value_max":6.86,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2021Q4",
+                        "value_avg":0.52,
+                        "value_min":0.03,
+                        "value_max":5,
+                        "type":"land"
+                    }
+                ],
+                "usd":[
+                    {
+                        "time":"2021Q2",
+                        "value_avg":899,
+                        "value_min":899,
+                        "value_max":899,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2021Q3",
+                        "value_avg":3544,
+                        "value_min":899,
+                        "value_max":20562,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2021Q4",
+                        "value_avg":1568,
+                        "value_min":93,
+                        "value_max":14992,
+                        "type":"land"
+                    }
+                ]
+            }
+        }
+    }
+}
+```
+---
+**6\.25 获取 substrata 地块成交总数量统计信息接口**
+###### 接口功能
+> 获取 substrata 地块成交总数量统计信息接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_substrata_sales_num
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回字段
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "daily":{
+            "data":[
+                {
+                    "time":"2022.03.30",
+                    "value":0,
+                    "type":"land"
+                },
+                {
+                    "time":"2022.03.31",
+                    "value":2,
+                    "type":"land"
+                },
+                {
+                    "time":"2022.04.01",
+                    "value":0,
+                    "type":"land"
+                },
+                {
+                    "time":"2022.04.02",
+                    "value":0,
+                    "type":"land"
+                },
+                {
+                    "time":"2022.04.03",
+                    "value":0,
+                    "type":"land"
+                }
+            ]
+        },
+        "monthly":{
+            "data":[
+                {
+                    "time":"2019.11",
+                    "value":0,
+                    "type":"land"
+                },
+                {
+                    "time":"2019.12",
+                    "value":0,
+                    "type":"land"
+                },
+                {
+                    "time":"2020.01",
+                    "value":0,
+                    "type":"land"
+                },
+                {
+                    "time":"2020.02",
+                    "value":0,
+                    "type":"land"
+                }
+            ]
+        },
+        "quarterly":{
+            "data":[
+                {
+                    "time":"2021Q2",
+                    "value":1,
+                    "type":"land"
+                },
+                {
+                    "time":"2021Q3",
+                    "value":31,
+                    "type":"land"
+                },
+                {
+                    "time":"2021Q4",
+                    "value":100,
+                    "type":"land"
+                }
+            ]
+        }
+    }
+}
+```
+---
+**6\.26 获取 substrata 地块销售总额统计信息接口**
+###### 接口功能
+> 获取 substrata 地块销售总额统计信息接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_substrata_sales_amount
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回字段
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "monthly":{
+            "data":{
+                "eth":[
+                    {
+                        "time":"2019.11",
+                        "value":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2019.12",
+                        "value":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2020.01",
+                        "value":0,
+                        "type":"land"
+                    }
+                ],
+                "usd":[
+                    {
+                        "time":"2019.11",
+                        "value":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2019.12",
+                        "value":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2020.01",
+                        "value":0,
+                        "type":"land"
+                    }
+                ]
+            }
+        },
+        "quarterly":{
+            "data":{
+                "eth":[
+                    {
+                        "time":"2021Q2",
+                        "value":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2021Q3",
+                        "value":36,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2021Q4",
+                        "value":52,
+                        "type":"land"
+                    }
+                ],
+                "usd":[
+                    {
+                        "time":"2021Q2",
+                        "value":899,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2021Q3",
+                        "value":109875,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2021Q4",
+                        "value":156810,
+                        "type":"land"
+                    }
+                ]
+            }
         }
     }
 }
