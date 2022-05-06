@@ -50,6 +50,12 @@
 24. 获取 substrata 地块成交均价统计信息接口
 25. 获取 substrata 地块成交总数量统计信息接口
 26. 获取 substrata 地块销售总额统计信息接口
+27. 获取 otherside 地块成交均价统计信息接口
+28. 获取 otherside 地块成交总数量统计信息接口
+29. 获取 otherside 地块销售总额统计信息接口
+30. 获取 netvrk 地块成交均价统计信息接口
+31. 获取 netvrk 地块成交总数量统计信息接口
+32. 获取 netvrk 地块销售总额统计信息接口
 
 ### 七、用户登录相关接口
 1. 获取钱包登录所需 nonce 接口
@@ -14631,6 +14637,635 @@
                     {
                         "time":"2021Q4",
                         "value":156810,
+                        "type":"land"
+                    }
+                ]
+            }
+        }
+    }
+}
+```
+---
+**6\.27 获取 otherside 地块成交均价统计信息接口**
+###### 接口功能
+> 获取 otherside 地块成交均价统计信息接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_otherside_avg_price_stats
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回字段
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "daily":{
+            "data":{
+                "eth":[
+                    {
+                        "time":"2022.04.07",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2022.04.08",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2022.04.09",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    }
+                ],
+                "usd":[
+                    {
+                        "time":"2022.04.07",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2022.04.08",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2022.04.09",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    }
+                ]
+            }
+        },
+        "monthly":{
+            "data":{
+                "eth":[
+                    {
+                        "time":"2019.12",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2020.01",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2020.02",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    }
+                ],
+                "usd":[
+                    {
+                        "time":"2019.12",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2020.01",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    }
+                ]
+            }
+        },
+        "quarterly":{
+            "data":{
+                "eth":[
+                    {
+                        "time":"2022Q2",
+                        "value_avg":9.87,
+                        "value_min":0,
+                        "value_max":333.33,
+                        "type":"land"
+                    }
+                ],
+                "usd":[
+                    {
+                        "time":"2022Q2",
+                        "value_avg":27665,
+                        "value_min":0,
+                        "value_max":975240,
+                        "type":"land"
+                    }
+                ]
+            }
+        }
+    }
+}
+```
+---
+**6\.28 获取 otherside 地块成交总数量统计信息接口**
+###### 接口功能
+> 获取 otherside 地块成交总数量统计信息接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_otherside_sales_num
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回字段
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "daily":{
+            "data":[
+                {
+                    "time":"2022.04.07",
+                    "value":0,
+                    "type":"land"
+                },
+                {
+                    "time":"2022.04.08",
+                    "value":0,
+                    "type":"land"
+                },
+                {
+                    "time":"2022.04.09",
+                    "value":0,
+                    "type":"land"
+                }
+            ]
+        },
+        "monthly":{
+            "data":[
+                {
+                    "time":"2019.12",
+                    "value":0,
+                    "type":"land"
+                },
+                {
+                    "time":"2020.01",
+                    "value":0,
+                    "type":"land"
+                },
+                {
+                    "time":"2020.02",
+                    "value":0,
+                    "type":"land"
+                }
+            ]
+        },
+        "quarterly":{
+            "data":[
+                {
+                    "time":"2022Q2",
+                    "value":13226,
+                    "type":"land"
+                }
+            ]
+        }
+    }
+}
+```
+---
+**6\.29 获取 otherside 地块销售总额统计信息接口**
+###### 接口功能
+> 获取 otherside 地块销售总额统计信息接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_otherside_sales_amount
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回字段
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "monthly":{
+            "data":{
+                "eth":[
+                    {
+                        "time":"2019.12",
+                        "value":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2020.01",
+                        "value":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2020.02",
+                        "value":0,
+                        "type":"land"
+                    }
+                ],
+                "usd":[
+                    {
+                        "time":"2019.12",
+                        "value":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2020.01",
+                        "value":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2020.02",
+                        "value":0,
+                        "type":"land"
+                    }
+                ]
+            }
+        },
+        "quarterly":{
+            "data":{
+                "eth":[
+                    {
+                        "time":"2021Q2",
+                        "value":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2021Q3",
+                        "value":37,
+                        "type":"land"
+                    }
+                ],
+                "usd":[
+                    {
+                        "time":"2021Q2",
+                        "value":899,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2021Q3",
+                        "value":112706,
+                        "type":"land"
+                    }
+                ]
+            }
+        }
+    }
+}
+```
+---
+**6\.30 获取 netvrk 地块成交均价统计信息接口**
+###### 接口功能
+> 获取 netvrk 地块成交均价统计信息接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_netvrk_avg_price_stats
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回字段
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "daily":{
+            "data":{
+                "eth":[
+                    {
+                        "time":"2022.04.07",
+                        "value_avg":0.62,
+                        "value_min":0.34,
+                        "value_max":1.23,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2022.04.08",
+                        "value_avg":1.11,
+                        "value_min":0.36,
+                        "value_max":6,
+                        "type":"land"
+                    }
+                ],
+                "usd":[
+                    {
+                        "time":"2022.04.07",
+                        "value_avg":1704,
+                        "value_min":942,
+                        "value_max":3380,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2022.04.08",
+                        "value_avg":3052,
+                        "value_min":967,
+                        "value_max":16491,
+                        "type":"land"
+                    }
+                ]
+            }
+        },
+        "monthly":{
+            "data":{
+                "eth":[
+                    {
+                        "time":"2019.12",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2020.01",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2020.02",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    }
+                ],
+                "usd":[
+                    {
+                        "time":"2019.12",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2020.01",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    }
+                ]
+            }
+        },
+        "quarterly":{
+            "data":{
+                "eth":[
+                    {
+                        "time":"2022Q1",
+                        "value_avg":1.39,
+                        "value_min":0.01,
+                        "value_max":21,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2022Q2",
+                        "value_avg":0.73,
+                        "value_min":0.21,
+                        "value_max":10,
+                        "type":"land"
+                    }
+                ],
+                "usd":[
+                    {
+                        "time":"2022Q1",
+                        "value_avg":3814,
+                        "value_min":27,
+                        "value_max":57624,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2022Q2",
+                        "value_avg":2010,
+                        "value_min":581,
+                        "value_max":27440,
+                        "type":"land"
+                    }
+                ]
+            }
+        }
+    }
+}
+```
+---
+**6\.31 获取 netvrk 地块成交总数量统计信息接口**
+###### 接口功能
+> 获取 netvrk 地块成交总数量统计信息接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_netvrk_sales_num
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回字段
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "daily":{
+            "data":[
+                {
+                    "time":"2022.04.07",
+                    "value":11,
+                    "type":"land"
+                },
+                {
+                    "time":"2022.04.08",
+                    "value":9,
+                    "type":"land"
+                },
+                {
+                    "time":"2022.04.09",
+                    "value":14,
+                    "type":"land"
+                }
+            ]
+        },
+        "monthly":{
+            "data":[
+                {
+                    "time":"2019.12",
+                    "value":0,
+                    "type":"land"
+                },
+                {
+                    "time":"2020.01",
+                    "value":0,
+                    "type":"land"
+                },
+                {
+                    "time":"2020.02",
+                    "value":0,
+                    "type":"land"
+                }
+            ]
+        },
+        "quarterly":{
+            "data":[
+                {
+                    "time":"2022Q1",
+                    "value":2993,
+                    "type":"land"
+                },
+                {
+                    "time":"2022Q2",
+                    "value":371,
+                    "type":"land"
+                }
+            ]
+        }
+    }
+}
+```
+---
+**6\.32 获取 netvrk 地块销售总额统计信息接口**
+###### 接口功能
+> 获取 netvrk 地块销售总额统计信息接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_netvrk_sales_amount
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回字段
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "monthly":{
+            "data":{
+                "eth":[
+                    {
+                        "time":"2019.12",
+                        "value":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2020.01",
+                        "value":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2020.02",
+                        "value":0,
+                        "type":"land"
+                    }
+                ],
+                "usd":[
+                    {
+                        "time":"2019.12",
+                        "value":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2020.01",
+                        "value":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2020.02",
+                        "value":0,
+                        "type":"land"
+                    }
+                ]
+            }
+        },
+        "quarterly":{
+            "data":{
+                "eth":[
+                    {
+                        "time":"2022Q1",
+                        "value":4174,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2022Q2",
+                        "value":272,
+                        "type":"land"
+                    }
+                ],
+                "usd":[
+                    {
+                        "time":"2022Q1",
+                        "value":11415918,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2022Q2",
+                        "value":746064,
                         "type":"land"
                     }
                 ]
