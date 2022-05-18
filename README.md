@@ -82,6 +82,8 @@
 2. 获取 OKX Wearable 详情页数据接口 
 3. 获取 WearableDao 的 Wearable 列表页数据接口
 4. 获取 WearableDao 的 Wearable 详情页数据接口 
+5. 获取 PFP Wearable 列表页数据接口
+6. 获取 PFP Wearable 详情页数据接口 
 
 ### 十、Decentraland 地图相关接口
 1. 获取 Decentraland 均价热力图数据接口
@@ -16488,7 +16490,7 @@
 }
 ```
 ---
-**9.4 获取 WearableDao 的 Wearable 详情页数据接口  **
+**9.4 获取 WearableDao 的 Wearable 详情页数据接口**
 
 ###### 接口功能
 > 通过id获取 WearableDao 的 Wearable 详情
@@ -16535,6 +16537,157 @@
       "id": 100
     }
   ]
+}
+```
+---
+**9.5 获取 PFP Wearable 列表页数据接口**
+
+###### 接口功能
+> 获取 PFP Wearable 列表页数据接口
+
+###### URL
+> https://api.metacat.world/api/v1/wearable/get_pfp_wearable_list
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| -        |    -  |     -   |     -   | -           |
+
+
+###### 接口示例
+> curl -s https://api.metacat.world/api/v1/wearable/get_pfp_wearable_list | jq .
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":[
+        {
+            "artwork":{
+                "name":"Lil Ghost#3061 head - by Xuechun - from wearabledao",
+                "desc":"",
+                "opensea_url":"https://opensea.io/assets/matic/0x9eA07c5Ee61e82993B0544CEcEcaDeDD3C9F0fA1/122",
+                "vox_url":"https://poster-phi.vercel.app/wearable/pfp/Lil_Ghost#3061_head.vox"
+            },
+            "artist":{
+                "name":"XUECHUN",
+                "contact":{
+                    "homepage":"https://opensea.io/XUECHUN",
+                    "twitter":"https://twitter.com/Xuechun.space",
+                    "weibo":"https://www.instagram.com/accounts/login/?next=/Xuechun.space/"
+                }
+            },
+            "id":100
+        },
+        {
+            "artwork":{
+                "name":"Lil Ghost#5373 head - by Xuechun - from wearabledao",
+                "desc":"",
+                "opensea_url":"https://opensea.io/assets/matic/0x9eA07c5Ee61e82993B0544CEcEcaDeDD3C9F0fA1/119",
+                "vox_url":"https://poster-phi.vercel.app/wearable/pfp/Lil_Ghost#5373_head.vox"
+            },
+            "artist":{
+                "name":"XUECHUN",
+                "contact":{
+                    "homepage":"https://opensea.io/XUECHUN",
+                    "twitter":"https://twitter.com/Xuechun.space",
+                    "weibo":"https://www.instagram.com/accounts/login/?next=/Xuechun.space/"
+                }
+            },
+            "id":101
+        },
+        {
+            "artwork":{
+                "name":"Lil Ghost#3061 necklace - by Xuechun - from wearabledao",
+                "desc":"",
+                "opensea_url":"https://opensea.io/assets/matic/0x9eA07c5Ee61e82993B0544CEcEcaDeDD3C9F0fA1/124",
+                "vox_url":"https://poster-phi.vercel.app/wearable/pfp/Lil_Ghost#5373_head.vox"
+            },
+            "artist":{
+                "name":"XUECHUN",
+                "contact":{
+                    "homepage":"https://opensea.io/XUECHUN",
+                    "twitter":"https://twitter.com/Xuechun.space",
+                    "weibo":"https://www.instagram.com/accounts/login/?next=/Xuechun.space/"
+                }
+            },
+            "id":102
+        },
+        {
+            "artwork":{
+                "name":"Breaking Panda",
+                "desc":"",
+                "opensea_url":"https://opensea.io/assets/matic/0x9eA07c5Ee61e82993B0544CEcEcaDeDD3C9F0fA1/139",
+                "vox_url":"https://poster-phi.vercel.app/wearable/pfp/breaking_panda_3d.vox"
+            },
+            "artist":{
+                "name":"MERMAID",
+                "contact":{
+                    "homepage":"https://opensea.io/JiaruiYu",
+                    "twitter":"https://twitter.com/YUJIARUI2003",
+                    "weibo":""
+                }
+            },
+            "id":103
+        }
+    ]
+}
+```
+---
+**9.6 获取 PFP Wearable 详情页数据接口**
+
+###### 接口功能
+> 获取 PFP Wearable 详情页数据接口
+
+###### URL
+> https://api.metacat.world/api/v1/wearable/get_pfp_wearable_detail
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| Body.id        |    true  |    int  |     -   |      |
+
+
+###### 接口示例
+> curl -s https://api.metacat.world/api/v1/wearable/get_pfp_wearable_detail?id=100 | jq .
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":[
+        {
+            "artwork":{
+                "name":"Lil Ghost#3061 head - by Xuechun - from wearabledao",
+                "desc":"",
+                "opensea_url":"https://opensea.io/assets/matic/0x9eA07c5Ee61e82993B0544CEcEcaDeDD3C9F0fA1/122",
+                "vox_url":"https://poster-phi.vercel.app/wearable/pfp/Lil_Ghost#3061_head.vox"
+            },
+            "artist":{
+                "name":"XUECHUN",
+                "contact":{
+                    "homepage":"https://opensea.io/XUECHUN",
+                    "twitter":"https://twitter.com/Xuechun.space",
+                    "weibo":"https://www.instagram.com/accounts/login/?next=/Xuechun.space/"
+                }
+            },
+            "id":100
+        }
+    ]
 }
 ```
 ---
@@ -18787,3 +18940,5 @@
 }
             
 ```
+
+
