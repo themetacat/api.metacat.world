@@ -124,6 +124,14 @@
 4. 获取MetaIndex和ETH Price
 5. 获取六个平台每 月/季度/年 各个销售总量
 
+### 十七、邮箱绑定 相关接口
+1. 发送邮箱验证码
+2. 验证邮箱验证码以及绑定邮箱
+
+### 十八、Substrata 地图相关接口
+1. 获取 Substrata 均价热力图数据接口
+2. 获取 Substrata 地块详情数据接口
+
 ----
 ## 全局错误码
 
@@ -18940,5 +18948,198 @@
 }
             
 ```
+---
+**17.1 发送邮箱验证码**
+###### 接口功能
+> 对要绑定的邮箱发送验证码
 
+###### URL
+> https://api.metacat.world/api/v1/bind_send_email?email=xx@xx.com
 
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| email  | True | str  | -    | 绑定邮箱的地址  |
+
+###### 返回示例
+```
+{
+  "code": 100000,
+  "msg": "success"
+}
+```
+---
+**17.2 验证邮箱验证码以及绑定邮箱**
+###### 接口功能
+> 验证邮箱验证码以及绑定邮箱
+
+###### URL
+> https://api.metacat.world/api/v1/bind_ver_email_code?code=000000
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> POST
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| code  | True | str  | -    | 邮箱验证码  |
+
+###### 返回示例
+```
+{
+  "code": 100000,
+  "msg": "success"
+}
+```
+---
+**18.1 获取 Substrata 均价热力图数据接口**
+
+###### 接口功能
+> 一次获取全部 Substrata 全部地块的均价热力图数据
+
+###### URL
+> https://api.metacat.world/api/v1/get_substrata_price_map_level_three
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| -        |    -  |    -  |     -   |      |
+
+###### 接口示例
+> curl -s 'https://api.metacat.world/api/v1/get_substrata_price_map_level_three' | jq .
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "stats":{
+            "price":{
+                "level_one":[
+                    {
+                        "month":{
+                            "start":2255,
+                            "end":2073
+                        },
+                        "quarter":{
+                            "start":11064,
+                            "end":2998
+                        },
+                        "year":{
+                            "start":20562,
+                            "end":5067
+                        },
+                        "all":{
+                            "start":20562,
+                            "end":5067
+                        }
+                    },
+                    {
+                        "month":{
+                            "start":1443,
+                            "end":1413
+                        },
+                        "quarter":{
+                            "start":2638,
+                            "end":2073
+                        },
+                        "year":{
+                            "start":4798,
+                            "end":2399
+                        },
+                        "all":{
+                            "start":4798,
+                            "end":2399
+                        }
+                    }
+                ]
+            }
+        },
+        "parcels":[
+            {
+                "properties":{
+                    "token_id":10,
+                    "coordinates":"15,60"
+                },
+                "price":{
+                    "month":0,
+                    "quarter":0,
+                    "year":0,
+                    "all":0
+                }
+            },
+            {
+                "properties":{
+                    "token_id":11,
+                    "coordinates":"35,60"
+                },
+                "price":{
+                    "month":0,
+                    "quarter":0,
+                    "year":0,
+                    "all":0
+                }
+            }
+        ]
+    }
+}
+```
+---
+**18.2 获取 Substrata 地块详情数据接口**
+
+###### 接口功能
+> 获取单个 Substrata 的详情数据
+
+###### URL
+> https://api.metacat.world/api/v1/get_substrata_parcel_detail
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| -        |    -  |    -  |     -   |      |
+
+###### 接口示例
+> curl -s 'https://api.metacat.world/api/v1/get_substrata_parcel_detail?token_id=11' | jq .
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "token_id":"11",
+        "name":"Parcel_ID:11",
+        "cover_img_url":"https://substrata.info/screenshot/100",
+        "opensea_url":"https://opensea.io/assets/0xa4535f84e8d746462f9774319e75b25bc151ba1d/11",
+        "parcel_page_url":"https://substrata.info/parcel/11",
+        "time_range_sale":{
+
+        },
+        "last_sale_list":[
+
+        ]
+    }
+}
+```
