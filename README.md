@@ -140,18 +140,19 @@
 | 100000 | success                                    |                                    |
 | 100001 | param error                                |                                    |
 | 100002 | signature verify failed                    |                                    |
-| 100003 | please login first                         | refresh_token 过期，请重新登录        |
+| 100003 | please login first                         | refresh_token 过期，请重新登录       |
 | 100004 | update failed                              |                                    |
 | 100005 | system error, please retry                 |                                    |
 | 100006 | nick_name exist                            |                                    |
 | 100007 | email exist                                |                                    |
-| 100008 | user not exist                             |  用户不存在                          |
+| 100008 | user not exist                             |  用户不存在                         |
 | 100009 | twitter_name exist                         |                                    |
-| 100010 | parcel not yours                           |       地块不属于当前用户              |
-| 100011 | parcel not in leased                           |       地块不属于当前用户              |
-| 100012 | save error                           |       保存数据库失败              |
-| 100013 | verification code has expired                           |       邮箱验证码失效              |
-| 100014 | verification code error                           |       邮箱验证码错误              |
+| 100010 | parcel not yours                           |       地块不属于当前用户             |
+| 100011 | parcel not in leased                       |       地块不属于当前用户             |
+| 100012 | save error                                 |       保存数据库失败                |
+| 100013 | verification code has expired              |       邮箱验证码失效                |
+| 100014 | verification code error                    |       邮箱验证码错误                |
+| 100015 | user not bind email                        |       用户未绑定邮箱                |
 
 ----
 ## 接口详情
@@ -18981,6 +18982,58 @@
 
 ###### URL
 > https://api.metacat.world/api/v1/bind_ver_email_code?code=000000
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> POST
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| code  | True | str  | -    | 邮箱验证码  |
+
+###### 返回示例
+```
+{
+  "code": 100000,
+  "msg": "success"
+}
+```
+---
+**17.3 更换邮箱之给旧邮箱发送验证码**
+###### 接口功能
+> 更换邮箱给旧邮箱发送验证码
+
+###### URL
+> https://api.metacat.world/api/v1/modify_send_email
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回示例
+```
+{
+  "code": 100000,
+  "msg": "success"
+}
+```
+---
+**17.4 更换邮箱之对旧邮箱验证码验证**
+###### 接口功能
+> 对旧邮箱验证码验证
+
+###### URL
+> https://api.metacat.world/api/v1/modify_old_email_ver_code?code=000000
 
 ###### 支持格式
 > JSON
