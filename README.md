@@ -15487,6 +15487,7 @@
     "profile": {
       "address": "0xd67c34169b372d5b3932c548a940d4ea74fe7af5",
       "nick_name": "k1ic",
+      "email": "xxx@xx.com",
       "avatar": "https://poster-phi.vercel.app/metacat_logo.png",
       "links": {
 			"twitter_name": "Metacat007",
@@ -15518,9 +15519,9 @@
 | Header.Authorization | true | sring  | 无     | 值为 access_token |
 | Body          |      |        |        | 请求体            |
 | Body.nick_name          | true | string | ‘’     | 用户昵称          |
-| Body.twitter_name         | true | string | ‘’     | 用户twitter名称          |
-| Body.website_url         | true | string | ‘’     | 用户个人站点链接          |
-| Body.avatar         | true | string | ‘’     | 用户头像url         |
+| Body.twitter_name         | false | string | ‘’     | 用户twitter名称          |
+| Body.website_url         | false | string | ‘’     | 用户个人站点链接          |
+| Body.avatar         | false | string | ‘’     | 用户头像url         |
 
 ###### 返回字段
 | 返回字段 | 字段类型 | 说明                                                     |
@@ -18989,7 +18990,7 @@
 > JSON
 
 ###### HTTP 请求方式
-> POST
+> GET
 
 ###### 请求参数
 | 参数  | 必选  | 类型 | 默认值 | 描述           |
@@ -19041,7 +19042,7 @@
 > JSON
 
 ###### HTTP 请求方式
-> POST
+> GET
 
 ###### 请求参数
 | 参数  | 必选  | 类型 | 默认值 | 描述           |
