@@ -698,7 +698,7 @@
 > 获取 Topic 详情页信息接口，一次返回Topic下的所有场馆数据
 
 ###### URL
-> https://testapi.metacat.world/api/v1/get_topic_detail
+> http://8.130.23.16/api/v1/get_topic_detail
 
 ###### 返回数据格式
 > JSON
@@ -734,7 +734,7 @@
 | wearable     | string   | 详见接口示例                                             |
 
 ###### 接口示例
-> curl -s 'https://testapi.metacat.world/api/v1/get_topic_detail?id=134' | jq . 
+> curl -s 'http://8.130.23.16/api/v1/get_topic_detail?id=134' | jq . 
 
 ```
 {
@@ -893,7 +893,7 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 > 获取 builders 列表接口
 
 ###### URL
-> https://testapi.metacat.world/api/v1/get_build_builders_list
+> http://8.130.23.16/api/v1/get_build_builders_list
 
 ###### 返回数据格式
 > JSON
@@ -908,7 +908,7 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 
 
 ###### 接口示例
-> curl -s 'https://testapi.metacat.world/api/v1/get_build_builders_list' | jq . 
+> curl -s 'http://8.130.23.16/api/v1/get_build_builders_list' | jq . 
 
 ```
 {
@@ -16793,7 +16793,7 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 > 获取 Wearable creator 数据接口
 
 ###### URL
-> https://testapi.metacat.world/api/v1/wearable/get_wearable_creators
+> http://8.130.23.16/api/v1/wearable/get_wearable_creators
 
 ###### 支持格式
 > JSON
@@ -16809,7 +16809,7 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 
 
 ###### 接口示例
-> curl -s https://testapi.metacat.world/api/v1/wearable/get_wearable_creators | jq .
+> curl -s http://8.130.23.16/api/v1/wearable/get_wearable_creators | jq .
 
 ```
 {
