@@ -21,8 +21,8 @@
 ### 五、Cryptovoxels 地图相关接口
 1. 获取 Cryptovoxels 地图的地块详细信息
 2. 获取 Cryptovoxels 第三级地图数据
-3.  获取 Decentraland 第三级地图数据
-4.  获取 Decentraland 地图的 Land 详细信息
+3. 获取 Decentraland 第三级地图数据
+4. 获取 Decentraland 地图的 Land 详细信息
 
 ### 六、Metaverse Analytics 相关接口
 1. 获取各元宇宙平台概要信息接口
