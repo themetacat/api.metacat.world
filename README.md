@@ -16,6 +16,7 @@
 1. 获取首页 Topic 列表接口
 2. 获取 Topic 详情页信息接口
 3. 获取 Topic 列表页信息接口
+4. 获取 builders 列表接口
 
 ### 五、Cryptovoxels 地图相关接口
 1. 获取 Cryptovoxels 地图的地块详细信息
@@ -84,6 +85,7 @@
 4. 获取 WearableDao 的 Wearable 详情页数据接口 
 5. 获取 PFP Wearable 列表页数据接口
 6. 获取 PFP Wearable 详情页数据接口 
+7. 获取 wearable creators 数据接口
 
 ### 十、Decentraland 地图相关接口
 1. 获取 Decentraland 均价热力图数据接口
@@ -696,7 +698,7 @@
 > 获取 Topic 详情页信息接口，一次返回Topic下的所有场馆数据
 
 ###### URL
-> https://api.metacat.world/api/v1/get_topic_detail
+> https://testapi.metacat.world/api/v1/get_topic_detail
 
 ###### 返回数据格式
 > JSON
@@ -708,6 +710,7 @@
 | 参数  | 必选  | 类型 | 默认值 | 描述           |
 | :---- | :---- | :--: | :----- | -------------- |
 | id  | ture | int  | 100    | topic_id          |
+| creator  | ture | str  | ""    | id与creator任选其一          |
 
 ###### 返回字段
 
@@ -728,9 +731,10 @@
 | data.parcel\_list.cover\_img\_url   |  string  |  场馆封面图url                                      |
 | data.parcel\_list.opensea\_url   |  string  |  场馆对应opensea url                                     |
 | data.parcel\_list.parcel\_page\_url   |  string  |  场馆详情页 url                                     |
+| wearable     | string   | 详见接口示例                                             |
 
 ###### 接口示例
-> curl -s 'https://api.metacat.world/api/v1/get_topic_detail?id=103' | jq . 
+> curl -s 'https://testapi.metacat.world/api/v1/get_topic_detail?id=134' | jq . 
 
 ```
 {
@@ -738,58 +742,67 @@
   "msg": "success",
   "data": {
     "base_info": {
-      "logo_url": "https://poster-phi.vercel.app/topic/logo/MetaLandscape_logo.png",
-      "name": "MetaLandscape",
-      "description": "ALL FOR METAVERSE",
-      "website": "",
-      "twitter": "https://twitter.com/ConFi0419",
+      "logo_url": "https://poster-phi.vercel.app/topic/logo/wackozacco_logo.png",
+      "name": "WackoZacco",
+      "description": "",
+      "website": "https://opensea.io/WackoZacco",
+      "twitter": "https://twitter.com/wackozacco420",
       "discord": ""
     },
     "parcel_list": [
       {
-        "parcel_id": 4540,
-        "name": "ConFi's Crystal Ball",
-        "description": "None",
+        "parcel_id": "92a52abb-54d9-4ce3-bd81-7c563db747fb",
+        "name": "ETHgypt: Tomb of Vitalik",
+        "description": "Built with blocks laid by hand to commemorate Vitalik, this tomb is made in respect of his contributions, as well as mocking our nature to glorify and worship figureheads. Many people wonder \"where is the Metaverse going?\" We 
+must realize we have been in the Alien Metaverse for eons and study our ancestors who were living beside our creators to add context to what we are bulding now.",
         "type": "Other",
-        "cover_img_url": "https://media-crvox.sfo2.digitaloceanspaces.com/0xa32c90129e5a78ff2f5984d306f12cc813dd2cda/womps/1640262479487-fbf0a779-c538-40f9-b820-c07d9273a5b7.jpg",
-        "opensea_url": "https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/4540",
-        "parcel_page_url": "https://www.cryptovoxels.com/parcels/4540"
+        "cover_img_url": "https://media-crvox.sfo2.digitaloceanspaces.com/0x081e7a89b50656111b50dc35dc7242cf12bc96f4/womps/1651419706254-b4ed6a6f-6b0b-4558-a5d0-cdc10ff60942.jpg",
+        "world": "Voxels",
+        "opensea_url": "",
+        "parcel_page_url": "https://www.cryptovoxels.com/spaces/92a52abb-54d9-4ce3-bd81-7c563db747fb/play"
       },
       {
-        "parcel_id": 3415,
-        "name": "Red Romance",
-        "description": "The Black Fractal Gallery on Proton Island",
-        "type": "Other",
-        "cover_img_url": "https://media-crvox.sfo2.digitaloceanspaces.com/0xa32c90129e5a78ff2f5984d306f12cc813dd2cda/womps/1638770908853-20aaf49b-a446-4780-901c-5e05a69b7f22.jpg",
-        "opensea_url": "https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/3415",
-        "parcel_page_url": "https://www.cryptovoxels.com/parcels/3415"
-      },
-      {
-        "parcel_id": 5249,
-        "name": "Parcel_Id: 5249",
+        "parcel_id": 6188,
+        "name": "Juicebox Transit Center",
         "description": "None",
         "type": "Other",
-        "cover_img_url": "https://www.cryptovoxels.com/api/womps/19153.jpg",
-        "opensea_url": "https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/5249",
-        "parcel_page_url": "https://www.cryptovoxels.com/parcels/5249"
+        "cover_img_url": "https://media-crvox.sfo2.digitaloceanspaces.com/0xcb3d44cf3722a0e48b5d4ecf4c9b413a4fed5fc1/womps/1653829327760-aad0a7a7-9e40-468c-afff-2fe18dc6e7fd.jpg",
+        "world": "Voxels",
+        "opensea_url": "https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/6188",
+        "parcel_page_url": "https://www.cryptovoxels.com/parcels/6188"
       }
     ],
-     "traffic_list":[
+    "traffic_list": [
       {
-        "time":"2022.04.22",
-        "value":0
+        "time": "2022.05.31",
+        "value": 0
       },
       {
-        "time":"2022.04.21",
-        "value":0
+        "time": "2022.05.30",
+        "value": 0
       },
       {
-        "time":"2022.04.20",
-        "value":2
-      },
+        "time": "2022.05.29",
+        "value": 13
+      }
+    ],
+    "wearable": [
       {
-        "time":"2022.04.19",
-        "value":9
+        "artwork": {
+          "name": "MetaCat Pet",
+          "desc": "",
+          "opensea_url": "https://opensea.io/assets/matic/0xb7469e28640bed0d7155f3ac220c240f4fdee0ec/29",
+          "vox_url": "https://poster-phi.vercel.app/wearable/dao/53272bc09a966cc827d21dcecb83402f4902b925.vox"
+        },
+        "artist": {
+          "name": "WackoZacco",
+          "contact": {
+            "homepage": "https://opensea.io/WackoZacco",
+            "twitter": "https://twitter.com/wackozacco420",
+            "weibo": ""
+          }
+        },
+        "id": 100
       }
     ]
   }
@@ -869,6 +882,77 @@
           "https://media-crvox.sfo2.digitaloceanspaces.com/0xa8093c09098452727492968ddfe4a0e033ab76bd/womps/1637657931992-7a2ef5e0-190f-412f-b09f-59c439b3d8e9.jpg",
           "https://media-crvox.sfo2.digitaloceanspaces.com/0xa8093c09098452727492968ddfe4a0e033ab76bd/womps/1637658522776-db362d6d-ef18-4b39-95ff-5415da26d09a.jpg"
         ]
+      }
+    ]
+  }
+}
+```
+---
+**4\.4 获取 builders 列表接口**
+###### 接口功能
+> 获取 builders 列表接口
+
+###### URL
+> https://testapi.metacat.world/api/v1/get_build_builders_list
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -   |   -  |  -    |     -     | -
+
+
+###### 接口示例
+> curl -s 'https://testapi.metacat.world/api/v1/get_build_builders_list' | jq . 
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "institution": [
+      {
+        "topic_id": 136,
+        "name": "APENFT",
+        "logo_url": "https://poster-phi.vercel.app/topic/logo/APENFT_logo.png",
+        "website": "https://apenft.io/",
+        "twitter": "https://twitter.com/apenftorg",
+        "discord": "https://discord.gg/PX6WfxdUEt",
+        "country": ""
+      },
+      {
+        "topic_id": 113,
+        "name": "Atomic Visual Studio",
+        "logo_url": "https://poster-phi.vercel.app/topic/logo/Atomic_Visual_Studio_logo.png",
+        "website": "",
+        "twitter": "https://twitter.com/Atomic_Visual",
+        "discord": "",
+        "country": "China"
+      }
+    ],
+    "individuals": [
+      {
+        "topic_id": 128,
+        "name": "Alotta Money",
+        "logo_url": "https://poster-phi.vercel.app/topic/logo/money_alotta_logo.png",
+        "website": "https://alottamoney.com/",
+        "twitter": "https://twitter.com/money_alotta",
+        "discord": "https://discord.com/invite/Ucv9989",
+        "country": "France"
+      },
+      {
+        "topic_id": 116,
+        "name": "BITPIXI",
+        "logo_url": "https://poster-phi.vercel.app/topic/logo/bitpixi_logo.png",
+        "website": "https://linktr.ee/bitpixi",
+        "twitter": "https://twitter.com/bitpixi",
+        "discord": "",
+        "country": "USA"
       }
     ]
   }
@@ -16700,6 +16784,63 @@
             "id":100
         }
     ]
+}
+```
+---
+**9.7 获取 Wearable creator 数据接口**
+
+###### 接口功能
+> 获取 Wearable creator 数据接口
+
+###### URL
+> https://testapi.metacat.world/api/v1/wearable/get_wearable_creators
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| -        |   -   |     -   |    -    | -            |
+
+
+
+###### 接口示例
+> curl -s https://testapi.metacat.world/api/v1/wearable/get_wearable_creators | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": [
+    {
+      "name": "WackoZacco",
+      "homepage": "https://opensea.io/WackoZacco",
+      "twitter": "https://twitter.com/wackozacco420",
+      "country": "USA",
+      "discord": "",
+      "logo_url": ""
+    },
+    {
+      "name": "SlimeDL",
+      "homepage": "https://opensea.io/SlimeDL",
+      "twitter": "",
+      "country": "China",
+      "discord": "",
+      "logo_url": ""
+    },
+    {
+      "name": "pixelgalaxy1",
+      "homepage": "https://opensea.io/pixelgalaxy1",
+      "twitter": "https://twitter.com/pixel_galaxy1",
+      "country": "China",
+      "discord": "",
+      "logo_url": ""
+    }
+  ]
 }
 ```
 ---
