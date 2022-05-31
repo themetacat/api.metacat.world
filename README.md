@@ -85,7 +85,7 @@
 4. 获取 WearableDao 的 Wearable 详情页数据接口 
 5. 获取 PFP Wearable 列表页数据接口
 6. 获取 PFP Wearable 详情页数据接口 
-7. 获取 wearable creators 数据接口
+7. 获取 Wearable creators 数据接口
 
 ### 十、Decentraland 地图相关接口
 1. 获取 Decentraland 均价热力图数据接口
@@ -16787,10 +16787,10 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 }
 ```
 ---
-**9.7 获取 Wearable creator 数据接口**
+**9.7 获取 Wearable creators 数据接口**
 
 ###### 接口功能
-> 获取 Wearable creator 数据接口
+> 获取 Wearable creators 数据接口
 
 ###### URL
 > http://8.130.23.16/api/v1/wearable/get_wearable_creators
