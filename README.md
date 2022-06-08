@@ -18704,9 +18704,9 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 }
 ```
 ---
-**16.3 获取六个平台每 月/季度/年 各个总量**
+**16.3 获取六个平台每 月/季度/年 各个价格总和**
 ###### 接口功能
-> 获取六个平台每 月/季度 各个总量
+> 获取六个平台每 月/季度/年 各个价格总和
 
 ###### URL
 > https://api.metacat.world/api/v1/analytics/get_sales_amount_stack
