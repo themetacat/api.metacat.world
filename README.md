@@ -1509,7 +1509,8 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
                     "bought_price_usd":16930.17,
                     "bought_time":"2022.05.27",
                     "name":"The Mayan Theater",
-                    "cover_img":"https://poster-phi.vercel.app/metacat_default_cover_img.png"
+                    "cover_img":"https://poster-phi.vercel.app/metacat_default_cover_img.png",
+                    "opensea_url":"https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/8009"
                 },
                 {
                     "parcel_id":7979,
@@ -1517,7 +1518,8 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
                     "bought_price_usd":9610.69,
                     "bought_time":"2022.05.26",
                     "name":"Brownieverse",
-                    "cover_img":"https://poster-phi.vercel.app/metacat_default_cover_img.png"
+                    "cover_img":"https://poster-phi.vercel.app/metacat_default_cover_img.png",
+                    "opensea_url":"https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/7979"
                 }
             ],
             "price_quarterly":[
@@ -1527,7 +1529,8 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
                     "bought_price_usd":18358.9,
                     "bought_time":"2022.04.05",
                     "name":"parcel id:7303",
-                    "cover_img":"https://poster-phi.vercel.app/metacat_default_cover_img.png"
+                    "cover_img":"https://poster-phi.vercel.app/metacat_default_cover_img.png",
+                    "opensea_url":"https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/7303"
                 },
                 {
                     "parcel_id":8009,
@@ -1535,7 +1538,8 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
                     "bought_price_usd":16930.17,
                     "bought_time":"2022.05.27",
                     "name":"The Mayan Theater",
-                    "cover_img":"https://poster-phi.vercel.app/metacat_default_cover_img.png"
+                    "cover_img":"https://poster-phi.vercel.app/metacat_default_cover_img.png",
+                    "opensea_url":"https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/8009"
                 }
             ],
             "price_yearly":[
@@ -1545,7 +1549,8 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
                     "bought_price_usd":264865.91,
                     "bought_time":"2021.10.22",
                     "name":"Shieldfolio Center",
-                    "cover_img":"https://media-crvox.sfo2.digitaloceanspaces.com/0xdb70eed3578f12929eae82e0f13e51ca01216789/womps/1641738653395-ac2190aa-40fa-450c-8d2d-0cc5f2f1a775.jpg"
+                    "cover_img":"https://media-crvox.sfo2.digitaloceanspaces.com/0xdb70eed3578f12929eae82e0f13e51ca01216789/womps/1641738653395-ac2190aa-40fa-450c-8d2d-0cc5f2f1a775.jpg",
+                    "opensea_url":"https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/102"
                 },
                 {
                     "parcel_id":851,
@@ -1553,7 +1558,8 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
                     "bought_price_usd":93058.95,
                     "bought_time":"2021.11.15",
                     "name":"Fenbushi Capital",
-                    "cover_img":"https://media-crvox.sfo2.digitaloceanspaces.com/0x38bbd375d49d6237984cbfa19719c419af9fe514/womps/1648041508495-1eceaa99-fb38-4ab5-be11-eac64668f4ce.jpg"
+                    "cover_img":"https://media-crvox.sfo2.digitaloceanspaces.com/0x38bbd375d49d6237984cbfa19719c419af9fe514/womps/1648041508495-1eceaa99-fb38-4ab5-be11-eac64668f4ce.jpg",
+                    "opensea_url":"https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/851"
                 }
             ],
             "price_all":[
@@ -1563,7 +1569,8 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
                     "bought_price_usd":264865.91,
                     "bought_time":"2021.10.22",
                     "name":"Shieldfolio Center",
-                    "cover_img":"https://media-crvox.sfo2.digitaloceanspaces.com/0xdb70eed3578f12929eae82e0f13e51ca01216789/womps/1641738653395-ac2190aa-40fa-450c-8d2d-0cc5f2f1a775.jpg"
+                    "cover_img":"https://media-crvox.sfo2.digitaloceanspaces.com/0xdb70eed3578f12929eae82e0f13e51ca01216789/womps/1641738653395-ac2190aa-40fa-450c-8d2d-0cc5f2f1a775.jpg",
+                    "opensea_url":"https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/102"
                 },
                 {
                     "parcel_id":3,
@@ -1571,7 +1578,8 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
                     "bought_price_usd":184557.39,
                     "bought_time":"2021.02.18",
                     "name":"@westcoastbill 21x: stone age",
-                    "cover_img":"https://media-crvox.sfo2.digitaloceanspaces.com/0x164c58b3fb3175a8b78034d0723f8bfc0066bc6d/womps/1651545681425-8a005fb4-0373-4dac-a280-bdcdf8391db8.jpg"
+                    "cover_img":"https://media-crvox.sfo2.digitaloceanspaces.com/0x164c58b3fb3175a8b78034d0723f8bfc0066bc6d/womps/1651545681425-8a005fb4-0373-4dac-a280-bdcdf8391db8.jpg",
+                    "opensea_url":"https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/3"
                 }
             ]
         },
@@ -1580,12 +1588,14 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
                 {
                     "parcel_id":7009,
                     "traffic":7059,
+                    "opensea_url":"https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/7009",
                     "name":"e.link",
                     "cover_img":"https://media-crvox.sfo2.digitaloceanspaces.com/0xa3b61ee71f56ce4ae43d65395c01f1e526f3b090/womps/1646935250323-1a54bcfd-66cc-441b-a5ce-8e9596a49012.jpg"
                 },
                 {
                     "parcel_id":6301,
                     "traffic":5825,
+                    "opensea_url":"https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/6301",
                     "name":"Block          ",
                     "cover_img":"https://media-crvox.sfo2.digitaloceanspaces.com/0x286EAeb802f68ee744a71E9F42D00B41dE944A2b/womps/1651511487731-0bcaa6b1-4894-46b7-9f2e-4f7084076f13.jpg"
                 }
@@ -1594,12 +1604,14 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
                 {
                     "parcel_id":7009,
                     "traffic":7059,
+                    "opensea_url":"https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/7009",
                     "name":"e.link",
                     "cover_img":"https://media-crvox.sfo2.digitaloceanspaces.com/0xa3b61ee71f56ce4ae43d65395c01f1e526f3b090/womps/1646935250323-1a54bcfd-66cc-441b-a5ce-8e9596a49012.jpg"
                 },
                 {
                     "parcel_id":6301,
                     "traffic":5825,
+                    "opensea_url":"https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/6301",
                     "name":"Block          ",
                     "cover_img":"https://media-crvox.sfo2.digitaloceanspaces.com/0x286EAeb802f68ee744a71E9F42D00B41dE944A2b/womps/1651511487731-0bcaa6b1-4894-46b7-9f2e-4f7084076f13.jpg"
                 }
@@ -1607,15 +1619,17 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
             "traffic_all":[
                 {
                     "parcel_id":5346,
-                    "name":"parcel id:5346",
                     "traffic":210908,
+                    "opensea_url":"https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/5346",
+                    "name":"parcel id:5346",
                     "cover_img":"https://media-crvox.sfo2.digitaloceanspaces.com/0x4bE34a11593d2463341824d334C4929D1e3d3166/womps/1646455598632-7becbc13-a033-4d80-938a-7e19aa8c7c40.jpg"
                 },
                 {
                     "parcel_id":6301,
-                    "name":"Block          ",
                     "traffic":158706,
-                    "cover_img":"https://media-crvox.sfo2.digitaloceanspaces.com/0x286EAeb802f68ee744a71E9F42D00B41dE944A2b/womps/1651511487731-0bcaa6b1-4894-46b7-9f2e-4f7084076f13.jpg",
+                    "opensea_url":"https://opensea.io/assets/0x79986aF15539de2db9A5086382daEdA917A9CF0C/6301",
+                    "name":"Block          ",
+                    "cover_img":"https://media-crvox.sfo2.digitaloceanspaces.com/0x286EAeb802f68ee744a71E9F42D00B41dE944A2b/womps/1651511487731-0bcaa6b1-4894-46b7-9f2e-4f7084076f13.jpg"
                 }
             ]
         }
