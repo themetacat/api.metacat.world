@@ -23,6 +23,7 @@
 2. 获取 Cryptovoxels 第三级地图数据
 3. 获取 Decentraland 第三级地图数据
 4. 获取 Decentraland 地图的 Land 详细信息
+5. 获取 Cryptovoxels top20 价格和流量
 
 ### 六、Metaverse Analytics 相关接口
 1. 获取各元宇宙平台概要信息接口
@@ -1471,6 +1472,154 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
       }
     ]
   }
+}
+```
+---
+**5\.5 获取 Cryptovoxels top20 价格和流量**
+###### 接口功能
+> 获取 Cryptovoxels top20 价格和流量
+
+###### URL
+> http://8.130.23.16/api/v1/get_cv_top20_parcel
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| - | - | -  | -    | -  |
+
+###### 接口示例
+> curl -s 'http://8.130.23.16/api/v1/get_cv_top20_parcel' | jq .
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "price_top":{
+            "price_monthly":[
+                {
+                    "parcel_id":8009,
+                    "bought_price_eth":9,
+                    "bought_price_usd":16930.17,
+                    "bought_time":"2022.05.27",
+                    "name":"The Mayan Theater",
+                    "cover_img":"https://poster-phi.vercel.app/metacat_default_cover_img.png"
+                },
+                {
+                    "parcel_id":7979,
+                    "bought_price_eth":4.92,
+                    "bought_price_usd":9610.69,
+                    "bought_time":"2022.05.26",
+                    "name":"Brownieverse",
+                    "cover_img":"https://poster-phi.vercel.app/metacat_default_cover_img.png"
+                }
+            ],
+            "price_quarterly":[
+                {
+                    "parcel_id":7303,
+                    "bought_price_eth":5.32,
+                    "bought_price_usd":18358.9,
+                    "bought_time":"2022.04.05",
+                    "name":"parcel id:7303",
+                    "cover_img":"https://poster-phi.vercel.app/metacat_default_cover_img.png"
+                },
+                {
+                    "parcel_id":8009,
+                    "bought_price_eth":9,
+                    "bought_price_usd":16930.17,
+                    "bought_time":"2022.05.27",
+                    "name":"The Mayan Theater",
+                    "cover_img":"https://poster-phi.vercel.app/metacat_default_cover_img.png"
+                }
+            ],
+            "price_yearly":[
+                {
+                    "parcel_id":102,
+                    "bought_price_eth":65,
+                    "bought_price_usd":264865.91,
+                    "bought_time":"2021.10.22",
+                    "name":"Shieldfolio Center",
+                    "cover_img":"https://media-crvox.sfo2.digitaloceanspaces.com/0xdb70eed3578f12929eae82e0f13e51ca01216789/womps/1641738653395-ac2190aa-40fa-450c-8d2d-0cc5f2f1a775.jpg"
+                },
+                {
+                    "parcel_id":851,
+                    "bought_price_eth":20,
+                    "bought_price_usd":93058.95,
+                    "bought_time":"2021.11.15",
+                    "name":"Fenbushi Capital",
+                    "cover_img":"https://media-crvox.sfo2.digitaloceanspaces.com/0x38bbd375d49d6237984cbfa19719c419af9fe514/womps/1648041508495-1eceaa99-fb38-4ab5-be11-eac64668f4ce.jpg"
+                }
+            ],
+            "price_all":[
+                {
+                    "parcel_id":102,
+                    "bought_price_eth":65,
+                    "bought_price_usd":264865.91,
+                    "bought_time":"2021.10.22",
+                    "name":"Shieldfolio Center",
+                    "cover_img":"https://media-crvox.sfo2.digitaloceanspaces.com/0xdb70eed3578f12929eae82e0f13e51ca01216789/womps/1641738653395-ac2190aa-40fa-450c-8d2d-0cc5f2f1a775.jpg"
+                },
+                {
+                    "parcel_id":3,
+                    "bought_price_eth":100,
+                    "bought_price_usd":184557.39,
+                    "bought_time":"2021.02.18",
+                    "name":"@westcoastbill 21x: stone age",
+                    "cover_img":"https://media-crvox.sfo2.digitaloceanspaces.com/0x164c58b3fb3175a8b78034d0723f8bfc0066bc6d/womps/1651545681425-8a005fb4-0373-4dac-a280-bdcdf8391db8.jpg"
+                }
+            ]
+        },
+        "traffic_top":{
+            "traffic_weekly":[
+                {
+                    "parcel_id":7009,
+                    "traffic":7059,
+                    "name":"e.link",
+                    "cover_img":"https://media-crvox.sfo2.digitaloceanspaces.com/0xa3b61ee71f56ce4ae43d65395c01f1e526f3b090/womps/1646935250323-1a54bcfd-66cc-441b-a5ce-8e9596a49012.jpg"
+                },
+                {
+                    "parcel_id":6301,
+                    "traffic":5825,
+                    "name":"Block          ",
+                    "cover_img":"https://media-crvox.sfo2.digitaloceanspaces.com/0x286EAeb802f68ee744a71E9F42D00B41dE944A2b/womps/1651511487731-0bcaa6b1-4894-46b7-9f2e-4f7084076f13.jpg"
+                }
+            ],
+            "traffic_monthly":[
+                {
+                    "parcel_id":7009,
+                    "traffic":7059,
+                    "name":"e.link",
+                    "cover_img":"https://media-crvox.sfo2.digitaloceanspaces.com/0xa3b61ee71f56ce4ae43d65395c01f1e526f3b090/womps/1646935250323-1a54bcfd-66cc-441b-a5ce-8e9596a49012.jpg"
+                },
+                {
+                    "parcel_id":6301,
+                    "traffic":5825,
+                    "name":"Block          ",
+                    "cover_img":"https://media-crvox.sfo2.digitaloceanspaces.com/0x286EAeb802f68ee744a71E9F42D00B41dE944A2b/womps/1651511487731-0bcaa6b1-4894-46b7-9f2e-4f7084076f13.jpg"
+                }
+            ],
+            "traffic_all":[
+                {
+                    "parcel_id":5346,
+                    "name":"parcel id:5346",
+                    "traffic":210908,
+                    "cover_img":"https://media-crvox.sfo2.digitaloceanspaces.com/0x4bE34a11593d2463341824d334C4929D1e3d3166/womps/1646455598632-7becbc13-a033-4d80-938a-7e19aa8c7c40.jpg"
+                },
+                {
+                    "parcel_id":6301,
+                    "name":"Block          ",
+                    "traffic":158706,
+                    "cover_img":"https://media-crvox.sfo2.digitaloceanspaces.com/0x286EAeb802f68ee744a71E9F42D00B41dE944A2b/womps/1651511487731-0bcaa6b1-4894-46b7-9f2e-4f7084076f13.jpg",
+                }
+            ]
+        }
+    }
 }
 ```
 ---
