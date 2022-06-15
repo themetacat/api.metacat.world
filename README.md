@@ -133,9 +133,11 @@
 3. 更换邮箱给旧邮箱发送验证码
 4. 对旧邮箱验证码验证
 
-### 十八、Substrata 地图相关接口
+### 十八、地图相关接口
 1. 获取 Substrata 均价热力图数据接口
 2. 获取 Substrata 地块详情数据接口
+3. 获取 Otherside 均价热力图数据接口
+4. 获取 Otherside 地块详情数据接口
 
 ----
 ## 全局错误码
@@ -19499,6 +19501,163 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
         },
         "last_sale_list":[
           
+        ]
+    }
+}
+```
+---
+**18.3 获取 Otherside 均价热力图数据接口**
+
+###### 接口功能
+> 一次获取全部 Otherside 全部地块的均价热力图数据
+
+###### URL
+> http://8.130.23.16/api/v1/get_otherside_price_map
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| -        |    -  |    -  |     -   |      |
+
+###### 接口示例
+> curl -s 'http://8.130.23.16/api/v1/get_otherside_price_map' | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "stats": {
+      "price": {
+        "level_one": [
+          {
+            "month": {
+              "start": 402354,
+              "end": 39441
+            },
+            "quarter": {
+              "start": 906908,
+              "end": 48325
+            },
+            "year": {
+              "start": 906908,
+              "end": 48325
+            },
+            "all": {
+              "start": 906908,
+              "end": 48325
+            }
+          },
+          {
+            "month": {
+              "start": 39434,
+              "end": 16425
+            },
+            "quarter": {
+              "start": 48264,
+              "end": 31564
+            },
+            "year": {
+              "start": 48264,
+              "end": 31564
+            },
+            "all": {
+              "start": 48264,
+              "end": 31564
+            }
+          }
+        ]
+      }
+    },
+    "parcels": [
+      {
+        "properties": {
+          "token_id": 1,
+          "coordinates": [
+            249.37468767166138,
+            248.87442588806152
+          ]
+        },
+        "price": {
+          "month": 0,
+          "quarter": 0,
+          "year": 0,
+          "all": 0
+        }
+      },
+      {
+        "properties": {
+          "token_id": 2,
+          "coordinates": [
+            250.62531232833862,
+            248.87442588806152
+          ]
+        },
+        "price": {
+          "month": 0,
+          "quarter": 0,
+          "year": 0,
+          "all": 0
+        }
+      }
+    ]
+  }
+}
+```
+---
+**18.4 获取 Otherside 地块详情数据接口**
+
+###### 接口功能
+> 获取 Otherside 地块详情数据接口
+
+###### URL
+> http://8.130.23.16/api/v1/get_otherside_parcel_detail?token_id=1009
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| -        |    -  |    -  |     -   |      |
+
+###### 接口示例
+> curl -s 'http://8.130.23.16/api/v1/get_otherside_parcel_detail?token_id=1009' | jq .
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "token_id":"1009",
+        "name":"Parcel_ID:1009",
+        "description":"",
+        "cover_img_url":"https://assets.otherside.xyz/otherdeeds/72816d456778b4d49cd3709c0c63e4dcaa78c531b1ada59513cfabbf0749c99a.jpg",
+        "opensea_url":"https://opensea.io/assets/0x34d85c9cdeb23fa97cb08333b511ac86e1c4e258/1009",
+        "parcel_page_url":"",
+        "time_range_sale":{
+            "eth":35.9,
+            "usd":97042.01,
+            "ape":0
+        },
+        "last_sale_list":[
+            {
+                "date":"2022.05.01",
+                "eth":35.9,
+                "usd":97042.01,
+                "ape":0
+            }
         ]
     }
 }
