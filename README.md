@@ -979,8 +979,8 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 ###### 请求参数
 | 参数  | 必选  | 类型 | 默认值 | 描述           |
 | :---- | :---- | :--: | :----- | -------------- |
-| -   |   -  |  -    |     -     | -
-
+| page   |   -  |  int    |     1     |   页码  |
+| count   |   -  |  int    |     80     |   数量  |
 
 ###### 接口示例
 > curl -s 'http://8.130.23.16/api/v1/get_cv_space_buildings' | jq . 
@@ -1010,7 +1010,10 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
             "cover_img":"https://poster-phi.vercel.app/metacat_logo.png",
             "detail_url":"https://www.cryptovoxels.com/spaces/1faa97c3-4ce9-453f-bbb3-e965842923df"
         }
-    ]
+    ],
+    "page":1,
+    "count":80,
+    "total_page":34
 }
 ```
 ---
