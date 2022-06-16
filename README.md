@@ -17,6 +17,7 @@
 2. 获取 Topic 详情页信息接口
 3. 获取 Topic 列表页信息接口
 4. 获取 builders 列表接口
+5. 获取 cv Space Buildings 接口
 
 ### 五、Cryptovoxels 地图相关接口
 1. 获取 Cryptovoxels 地图的地块详细信息
@@ -959,6 +960,57 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
       }
     ]
   }
+}
+```
+---
+**4\.5 获取 cv Space Buildings 接口**
+###### 接口功能
+> 获取 cv Space Buildings 接口
+
+###### URL
+> http://8.130.23.16/api/v1/get_cv_space_buildings
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -   |   -  |  -    |     -     | -
+
+
+###### 接口示例
+> curl -s 'http://8.130.23.16/api/v1/get_cv_space_buildings' | jq . 
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":[
+        {
+            "name":"Sarku Japan Colombia",
+            "cover_img":"https://poster-phi.vercel.app/metacat_logo.png",
+            "detail_url":"https://www.cryptovoxels.com/spaces/3ee8aa1c-9795-4ddc-86b9-581a10ee80a1"
+        },
+        {
+            "name":"Century Homebuilders",
+            "cover_img":"https://poster-phi.vercel.app/metacat_logo.png",
+            "detail_url":"https://www.cryptovoxels.com/spaces/dcd10a6e-7c8c-43b4-bbe1-0d9e167ea203"
+        },
+        {
+            "name":"Haceb",
+            "cover_img":"https://poster-phi.vercel.app/metacat_logo.png",
+            "detail_url":"https://www.cryptovoxels.com/spaces/6c767565-cb8c-445a-8131-136283777cb8"
+        },
+        {
+            "name":"Con-Concretoo",
+            "cover_img":"https://poster-phi.vercel.app/metacat_logo.png",
+            "detail_url":"https://www.cryptovoxels.com/spaces/1faa97c3-4ce9-453f-bbb3-e965842923df"
+        }
+    ]
 }
 ```
 ---
