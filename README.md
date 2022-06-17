@@ -19,12 +19,13 @@
 4. 获取 builders 列表接口
 5. 获取 cv Space Buildings 接口
 
-### 五、Cryptovoxels 地图相关接口
+### 五、cv dcl 地图相关接口
 1. 获取 Cryptovoxels 地图的地块详细信息
 2. 获取 Cryptovoxels 第三级地图数据
-3. 获取 Decentraland 第三级地图数据
+3. 获取 Decentraland 地图 price 数据
 4. 获取 Decentraland 地图的 Land 详细信息
 5. 获取 Cryptovoxels top20 价格和流量
+6. 获取 Decentraland 地图 traffic 数据
 
 ### 六、Metaverse Analytics 相关接口
 1. 获取各元宇宙平台概要信息接口
@@ -1278,9 +1279,9 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 	}
 ```
 ---
-**5\.3 获取 Decentraland 第三级地图数据**
+**5\.3 获取 Decentraland 地图 price 数据**
 ###### 接口功能
-> 获取 Decentraland 第三级地图数据接口
+> 获取 Decentraland 地图 price 数据
 
 ###### URL
 > https://api.metacat.world/api/v1/get_dcl_price_map_level_three
@@ -1482,7 +1483,7 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 > 获取 Decentraland 地图的 Land 详细信息接口
 
 ###### URL
-> https://api.metacat.world/api/v1/get_dcl_parcel_detail
+> https://api.metacat.world/api/v1/get_dcl_parcel_detail?land_id=xxx&map_type=price
 
 ###### 返回数据格式
 > JSON
@@ -1494,6 +1495,8 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 | 参数  | 必选  | 类型 | 默认值 | 描述           |
 | :---- | :---- | :--: | :----- | -------------- |
 | land_id | True | string  | ''    | 地块id  |
+| map_type | False | string  | price    | price/traffic  |
+| time_range | False | string  | all   | month/all/..  |
 
 ###### 接口示例
 > curl -s 'https://api.metacat.world/api/v1/get_dcl_parcel_detail?land_id=115792089237316195423570985008687907802227629627499794519951392893147897921560' | jq .
@@ -1691,6 +1694,102 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
             ]
         }
     }
+}
+```
+---
+**5.6 获取 Decentraland 地图 traffic 数据**
+###### 接口功能
+> 获取 Decentraland 地图 traffic 数据
+
+###### URL
+> http://8.130.23.16/api/v1/get_dcl_traffic_map
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| -  | - | -  | -    | -  |
+
+###### 返回字段
+```
+{
+  "code": 100000,
+  "msg": "success",
+  "data": {
+    "stats": {
+      "traffic": {
+        "level_one": [
+          {
+            "week": {
+              "start": 2909,
+              "end": 379
+            },
+            "month": {
+              "start": 3538,
+              "end": 756
+            },
+            "all": {
+              "start": 2909,
+              "end": 379
+            }
+          },
+          {
+            "week": {
+              "start": 365,
+              "end": 217
+            },
+            "month": {
+              "start": 742,
+              "end": 467
+            },
+            "all": {
+              "start": 365,
+              "end": 217
+            }
+          }
+        ]
+      }
+    },
+    "parcels": [
+      {
+        "properties": {
+          "land_id": "115792089237316195423570985008687907802227629627499794519951392893147897921686",
+          "id": "-150,150",
+          "type": "district",
+          "top": true,
+          "left": false,
+          "topLeft": false,
+          "estate_id": "1186"
+        },
+        "traffic": {
+          "week": 0,
+          "month": 0,
+          "all": 0
+        }
+      },
+      {
+        "properties": {
+          "land_id": "115792089237316195423570985008687907802227629627499794519951392893147897921685",
+          "id": "-150,149",
+          "type": "district",
+          "top": true,
+          "left": false,
+          "topLeft": false,
+          "estate_id": "1186"
+        },
+        "traffic": {
+          "week": 0,
+          "month": 0,
+          "all": 0
+        }
+      }
+    ]
+  }
 }
 ```
 ---
