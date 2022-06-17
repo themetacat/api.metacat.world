@@ -1483,7 +1483,7 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 > 获取 Decentraland 地图的 Land 详细信息接口
 
 ###### URL
-> https://api.metacat.world/api/v1/get_dcl_parcel_detail?land_id=xxx&map_type=price
+> http://8.130.23.16/api/v1/get_dcl_parcel_detail?land_id=xxx&map_type=price
 
 ###### 返回数据格式
 > JSON
@@ -1499,7 +1499,7 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 | time_range | False | string  | all   | month/all/..  |
 
 ###### 接口示例
-> curl -s 'https://api.metacat.world/api/v1/get_dcl_parcel_detail?land_id=115792089237316195423570985008687907802227629627499794519951392893147897921560' | jq .
+> curl -s 'http://8.130.23.16/api/v1/get_dcl_parcel_detail?land_id=115792089237316195423570985008687907802227629627499794519951392893147897921560' | jq .
 
 ```
 {
