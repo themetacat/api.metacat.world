@@ -70,6 +70,7 @@
 6. 更新当前登录者基本信息接口
 7. 获取当前登录者地块列表接口
 8. 判断 nick_name 是否已存在的接口
+9. 申请成为 creator
 
 ### 八、Cryptovoxels 租赁相关接口
 1. 获取当前登录者 Cryptovoxels 地块列表接口
@@ -162,6 +163,7 @@
 | 100013 | verification code has expired              |       邮箱验证码失效                |
 | 100014 | verification code error                    |       邮箱验证码错误                |
 | 100015 | user not bind email                        |       用户未绑定邮箱                |
+| 100016 | join filed                        |       申请加入失败               |
 
 ----
 ## 接口详情
@@ -16068,6 +16070,36 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 }
 ```
 ---
+**7.9 申请成为 creator**
+
+###### 接口功能
+> 申请成为 creator
+
+###### URL
+> http://8.130.23.16/api/v1/user/user_apply_become?join_type=creator
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| join_type      |  False    |   str     |   creator     |    申请类型       |
+
+
+###### 接口示例
+> curl -s http://8.130.23.16/api/v1/user/user_apply_become?join_type=creator | jq .
+
+```
+{
+  "code": 100000,
+  "msg": "success"
+}
+```
+---
 **8.1 获取当前登录者 Cryptovoxels 地块列表接口**
 
 ###### 接口功能
@@ -19444,7 +19476,7 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 > 验证邮箱验证码以及绑定邮箱
 
 ###### URL
-> https://api.metacat.world/api/v1/bind_ver_email_code?code=000000
+> http://8.130.23.16/api/v1/bind_ver_email_code?code=000000
 
 ###### 支持格式
 > JSON
@@ -19456,6 +19488,7 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 | 参数  | 必选  | 类型 | 默认值 | 描述           |
 | :---- | :---- | :--: | :----- | -------------- |
 | code  | True | str  | -    | 邮箱验证码  |
+| join_type  | False | str  | None    | creator / ...  |
 
 ###### 返回示例
 ```
