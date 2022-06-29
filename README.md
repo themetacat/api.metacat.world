@@ -90,6 +90,9 @@
 5. 获取 PFP Wearable 列表页数据接口
 6. 获取 PFP Wearable 详情页数据接口 
 7. 获取 Wearable creators 数据接口
+8. 获取登录用户创作的的所有wearable
+9. 用户设置自己wearable展示的状态
+10. 获取 Wearable 详情页数据接口 
 
 ### 十、Decentraland 地图相关接口
 1. 获取 Decentraland 均价热力图数据接口
@@ -17192,6 +17195,127 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
       "logo_url": ""
     }
   ]
+}
+```
+---
+**9.8 获取登录用户创作的的所有wearable**
+
+###### 接口功能
+> 获取登录用户创作的的所有wearable
+
+###### URL
+> https://api.metacat.world/api/v1/wearable/get_user_wearable
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header.Authorization   |   True   |  string   |  无 |值为access_token  |
+
+###### 接口示例
+> curl -s https://api.metacat.world/api/v1/wearable/get_user_wearable | jq .
+
+```
+{ 
+  "code":100000,
+  "msg":"success",
+  "data":
+  [
+  'id': --,
+  'name': --,
+  'cover_img': --,
+  'opensea_url': --,
+  'creator_name': --,
+  'show_status': 1/2 （1show 2hide）
+  ]
+}
+```
+---
+**9.9 用户设置自己wearable展示的状态**
+
+###### 接口功能
+> 用户设置自己wearable展示的状态
+
+###### URL
+> https://api.metacat.world/api/v1/wearable/set_wearable_show_status
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> POST
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header.Authorization   |   True   |  string   |  无 |值为access_token  |
+| parcel_type   |   False   |  string   |  cv  | 平台类型 cv/dcl/..  |
+| wearable_id   |   True   |  string   |  无  | wearable_id  |
+| show_status   |   True   |  int   |  无  | 展示状态 1为show 2为hide  |
+
+###### 接口示例
+> curl -s https://api.metacat.world/api/v1/wearable/set_wearable_show_status | jq .
+
+```
+{ 
+  "code":100000,
+  "msg":"success",
+}
+```
+---
+**9.10 获取 Wearable 详情页数据接口**
+
+###### 接口功能
+> 获取 Wearable 详情页数据接口 
+
+###### URL
+> https://api.metacat.world/api/v1/wearable/get_wearable_detail?wearable_id=xxx
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> POST
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| wearable_id   |   True   |  string   |  无 |wearable_id  |
+
+###### 接口示例
+> curl -s https://api.metacat.world/api/v1/wearable/get_wearable_detail?wearable_id=xxx | jq .
+
+```
+{ 
+{
+    "code":100000,
+    "data":[
+        {
+            "artist":{
+                "address":"0xd30a79e487351eb0064c8a78eb341da364d78a9a",
+                "contact":{
+                    "homepage":"https://opensea.io/WackoZacco",
+                    "twitter":"https://twitter.com/wackozacco420",
+                    "weibo":""
+                },
+                "logo_url":"https://poster-phi.vercel.app/topic/logo/wackozacco_logo.png",
+                "name":"WackoZacco"
+            },
+            "artwork":{
+                "desc":"The ape who ate the toxic sludge and liked it.",
+                "name":"Sludge Ape - Torso",
+                "opensea_url":"https://opensea.io/assets/matic/0x2414EBA42b6461daA45CD1970e8f7d47416559a2/13",
+                "vox_url":"https://wearable.vercel.app/4d1699152553aa7b8bd8b602a6e7a1b908196009.vox"
+            }
+        }
+    ],
+    "msg":"success"
+}
 }
 ```
 ---
