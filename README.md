@@ -3,6 +3,10 @@
 ### 一、首页轮播图
 
 1. 获取首页轮播图信息接口
+2. 获取首页Heatmap区域信息接口
+3. 获取首页Analytics区域流量数据接口
+4. 获取首页buildings区域信息接口
+5. 获取首页wearables区域信息接口
 
 ### 二、Cryptovoxels 相关接口
 1. 获取Cryptovoxels Parcel 列表接口
@@ -224,6 +228,216 @@
       }
     ]
   }
+}
+```
+----
+## 接口详情
+**1\.2 获取首页Heatmap区域信息接口**
+###### 接口功能
+> 获取首页Heatmap区域信息接口
+
+###### URL
+> http://8.130.23.16/api/v1/home_page/get_heatmap_info
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| --    |  --   | --    |  --   |   --      |
+
+###### 接口示例
+> curl -s 'http://8.130.23.16/api/v1/home_page/get_heatmap_info' | jq .
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "heatmap_parcel":{
+            "price":[
+                "Otherside",
+                "Decentraland",
+                "The Sandbox",
+                "Somnium Space",
+                "Voxels",
+                "SubStrata"
+            ],
+            "traffic":[
+                "Decentraland",
+                "Voxels"
+            ]
+        },
+        "heatmap_img":[
+            {
+                "img_url":"https://poster-phi.vercel.app/metacat_logo.png",
+                "name":"xxx",
+                "parcel_type":"cv"
+            },
+            {
+                "img_url":"https://poster-phi.vercel.app/metacat_logo.png",
+                "name":"xxx",
+                "parcel_type":"dcl"
+            }
+        ]
+    }
+}
+```
+----
+## 接口详情
+**1\.3 获取首页Analytics区域流量数据接口**
+###### 接口功能
+> 获取首页Analytics区域流量数据接口
+
+###### URL
+> http://8.130.23.16/api/v1/home_page/get_traffic
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| --    |  --   | --    |  --   |   --      |
+
+###### 接口示例
+> curl -s 'http://8.130.23.16/api/v1/home_page/get_traffic' | jq .
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "cv":[
+            {
+                "time":"2022.06.26",
+                "value":117705
+            },
+            {
+                "time":"2022.07.03",
+                "value":126719
+            },
+            {
+                "time":"2022.07.04",
+                "value":996
+            }
+        ],
+        "dcl":[
+            {
+                "time":"2022.06.26",
+                "value":55983
+            },
+            {
+                "time":"2022.07.03",
+                "value":43103
+            },
+            {
+                "time":"2022.07.04",
+                "value":0
+            }
+        ]
+    }
+}
+```
+----
+## 接口详情
+**1\.4 获取首页buildings区域信息接口**
+###### 接口功能
+> 获取首页buildings区域信息接口
+
+###### URL
+> http://8.130.23.16/api/v1/home_page/get_builings_info
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| --    |  --   | --    |  --   |   --      |
+
+###### 接口示例
+> curl -s 'http://8.130.23.16/api/v1/home_page/get_builings_info' | jq .
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "buildings":[
+            "https://poster-phi.vercel.app/metacat_logo.png",
+            "https://poster-phi.vercel.app/metacat_logo.png"
+        ],
+        "builder":[
+            {
+                "id":100,
+                "logo_url":"https://poster-phi.vercel.app/topic/logo/PonlaiiDesign_logo.png",
+                "is_creator":0
+            },
+            {
+                "id":101,
+                "logo_url":"https://poster-phi.vercel.app/topic/logo/MetaEstate_logo.png",
+                "is_creator":0
+            }
+        ]
+    }
+}
+```
+----
+## 接口详情
+**1\.5 获取首页wearables区域信息接口**
+###### 接口功能
+> 获取首页wearables区域信息接口
+
+###### URL
+> http://8.130.23.16/api/v1/home_page/get_wearables_info
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| --    |  --   | --    |  --   |   --      |
+
+###### 接口示例
+> curl -s 'http://8.130.23.16/api/v1/home_page/get_wearables_info' | jq .
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "wearables":[
+            "https://poster-phi.vercel.app/metacat_logo.png",
+            "https://poster-phi.vercel.app/metacat_logo.png"
+        ],
+        "creator":[
+            {
+                "address":"0xa32c90129e5a78ff2f5984d306f12cc813dd2cda",
+                "logo_url":"https://poster-phi.vercel.app/topic/logo/MetaLandscape_logo.png",
+                "is_buildings":1
+            },
+            {
+                "address":"0xb35ce74e3c571a303474142e8492cb24adfc3828",
+                "logo_url":"https://poster-phi.vercel.app/creators/logo/CARAT.png",
+                "is_buildings":0
+            }
+        ]
+    }
 }
 ```
 ---
