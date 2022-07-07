@@ -1,12 +1,13 @@
 ## 接口清单
 
-### 一、首页轮播图
+### 一、首页
 
 1. 获取首页轮播图信息接口
 2. 获取首页Heatmap区域信息接口
 3. 获取首页Analytics区域流量数据接口
 4. 获取首页buildings区域信息接口
 5. 获取首页wearables区域信息接口
+6. 获取首页Analytics区域 Floor Price 数据接口
 
 ### 二、Cryptovoxels 相关接口
 1. 获取Cryptovoxels Parcel 列表接口
@@ -438,6 +439,82 @@
             }
         ]
     }
+}
+```
+----
+## 接口详情
+**1\.5 获取首页Analytics区域 Floor Price 数据接口**
+###### 接口功能
+> 获取首页Analytics区域 Floor Price 数据接口
+
+###### URL
+> https://api.metacat.world/api/v1/home_page/get_floor_price
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| --    |  --   | --    |  --   |   --      |
+
+###### 接口示例
+> curl -s 'https://api.metacat.world/api/v1/home_page/get_floor_price' | jq .
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":[
+        {
+            "world":"nft-worlds",
+            "floor_price":3.42,
+            "percentage":-0.03
+        },
+        {
+            "world":"otherdeed",
+            "floor_price":2.93,
+            "percentage":0.03
+        },
+        {
+            "world":"decentraland",
+            "floor_price":2.38,
+            "percentage":0.03
+        },
+        {
+            "world":"sandbox",
+            "floor_price":2.1,
+            "percentage":0.02
+        },
+        {
+            "world":"cryptovoxels",
+            "floor_price":0.86,
+            "percentage":0.18
+        },
+        {
+            "world":"worldwidewebbland",
+            "floor_price":0.48,
+            "percentage":-0.02
+        },
+        {
+            "world":"somnium-space",
+            "floor_price":0.45,
+            "percentage":0
+        },
+        {
+            "world":"netvrkland",
+            "floor_price":0.38,
+            "percentage":-0.06
+        },
+        {
+            "world":"substrata-parcel",
+            "floor_price":0.24,
+            "percentage":0
+        }
+    ]
 }
 ```
 ---
