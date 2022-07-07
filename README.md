@@ -443,7 +443,7 @@
 ```
 ----
 ## 接口详情
-**1\.5 获取首页Analytics区域 Floor Price 数据接口**
+**1\.6 获取首页Analytics区域 Floor Price 数据接口**
 ###### 接口功能
 > 获取首页Analytics区域 Floor Price 数据接口
 
