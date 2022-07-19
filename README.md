@@ -23,6 +23,7 @@
 3. 获取 Topic 列表页信息接口
 4. 获取 builders 列表接口
 5. 获取 cv Space Buildings 接口
+6. 获取 dcl scene 接口
 
 ### 五、cv dcl 地图相关接口
 1. 获取 Cryptovoxels 地图的地块详细信息
@@ -1313,6 +1314,55 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
     "page":1,
     "count":80,
     "total_page":34
+}
+```
+---
+**4\.6 获取 dcl scene 接口**
+###### 接口功能
+> 获取 dcl scene 接口
+
+###### URL
+> http://8.130.23.16/api/v1/get_dcl_scenes
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+| page   |   -  |  int    |     1     |   页码  |
+| count   |   -  |  int    |     80     |   数量  |
+
+###### 接口示例
+> curl -s 'http://8.130.23.16/api/v1/get_dcl_scenes' | jq . 
+
+```
+{
+    "code":100000,
+    "count":80,
+    "data":[
+        {
+            "cover_img":"https://builder-api.decentraland.org/v1/projects/ebecbf6d-2ddf-451b-b03d-ca8c8bc77529/media/preview.png",
+            "detail_url":"https://builder.decentraland.org/view/pool/ebecbf6d-2ddf-451b-b03d-ca8c8bc77529?position=1%2C-1",
+            "name":"Testing Scene\" QWERTY <svg> ="
+        },
+        {
+            "cover_img":"https://builder-api.decentraland.org/v1/projects/f24e6f1f-5c5e-4a02-ad31-23dcb84ca876/media/preview.png",
+            "detail_url":"https://builder.decentraland.org/view/pool/f24e6f1f-5c5e-4a02-ad31-23dcb84ca876?position=1%2C-1",
+            "name":"ST_palace "
+        },
+        {
+            "cover_img":"https://builder-api.decentraland.org/v1/projects/cd608d17-dabe-4b15-98c8-2456c8395462/media/preview.png",
+            "detail_url":"https://builder.decentraland.org/view/pool/cd608d17-dabe-4b15-98c8-2456c8395462?position=1%2C-1",
+            "name":"Park "
+        }
+    ],
+    "msg":"success",
+    "page":"2",
+    "total_page":247
 }
 ```
 ---
