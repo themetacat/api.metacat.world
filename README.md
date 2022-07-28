@@ -68,6 +68,7 @@
 32. 获取 netvrk 地块销售总额统计信息接口
 33. 获取 Decentraland 流量统计信息接口
 34. 获取各个平台的地主总数统计信息接口
+35. 获取各个平台 floor price接口
 
 ### 七、用户登录相关接口
 1. 获取钱包登录所需 nonce 接口
@@ -8283,6 +8284,112 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
             "value":1239
         }
     ]
+}
+```
+---
+**6\.35 获取各个平台 floor price接口**
+###### 接口功能
+> 获取各个平台 floor price接口
+
+###### URL
+> http://8.130.23.16/api/v1/get_all_worlds_floor_price
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+|  -     |    -   |    -   |  -     |   -        |
+
+###### 返回字段
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "daily":{
+            "2022.06.29":[
+                {
+                    "floor_price":0,
+                    "name":"Otherside"
+                },
+                {
+                    "floor_price":0,
+                    "name":"Voxels"
+                },
+                {
+                    "floor_price":0,
+                    "name":"Decentraland"
+                },
+                {
+                    "floor_price":0,
+                    "name":"The Sandbox"
+                },
+                {
+                    "floor_price":0,
+                    "name":"Somnium Space"
+                },
+                {
+                    "floor_price":0,
+                    "name":"NFT Worlds"
+                },
+                {
+                    "floor_price":0,
+                    "name":"Worldwide Webb"
+                },
+                {
+                    "floor_price":0,
+                    "name":"Netvrk"
+                },
+                {
+                    "floor_price":0,
+                    "name":"Substrata"
+                }
+            ],
+            "2022.06.30":[
+                {
+                    "floor_price":0,
+                    "name":"Otherside"
+                },
+                {
+                    "floor_price":0,
+                    "name":"Voxels"
+                },
+                {
+                    "floor_price":0,
+                    "name":"Decentraland"
+                },
+                {
+                    "floor_price":0,
+                    "name":"The Sandbox"
+                },
+                {
+                    "floor_price":0,
+                    "name":"Somnium Space"
+                },
+                {
+                    "floor_price":0,
+                    "name":"NFT Worlds"
+                },
+                {
+                    "floor_price":0,
+                    "name":"Worldwide Webb"
+                },
+                {
+                    "floor_price":0,
+                    "name":"Netvrk"
+                },
+                {
+                    "floor_price":0,
+                    "name":"Substrata"
+                }
+            ]
+        }
+    }
 }
 ```
 ---
