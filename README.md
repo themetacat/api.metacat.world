@@ -68,7 +68,6 @@
 32. 获取 netvrk 地块销售总额统计信息接口
 33. 获取 Decentraland 流量统计信息接口
 34. 获取各个平台的地主总数统计信息接口
-35. 获取各个平台 floor price接口
 
 ### 七、用户登录相关接口
 1. 获取钱包登录所需 nonce 接口
@@ -141,6 +140,7 @@
 3. 获取六个平台每 月/季度/年 各个价格总和
 4. 获取MetaIndex和ETH Price
 5. 获取六个平台每 月/季度/年 各个销售总量
+6. 获取各个平台 floor price接口
 
 ### 十七、邮箱绑定 相关接口
 1. 发送邮箱验证码
@@ -2221,57 +2221,80 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
         "daily":{
             "data":[
                 {
-                    "time":"2022.06.09",
-                    "value":16010,
-                    "type":"all"
+                    "time":"2022.07.06",
+                    "value":18160
                 },
                 {
-                    "time":"2022.06.10",
-                    "value":17841,
-                    "type":"all"
+                    "time":"2022.07.07",
+                    "value":16512
                 },
                 {
-                    "time":"2022.06.11",
-                    "value":16828,
-                    "type":"all"
+                    "time":"2022.07.08",
+                    "value":13628
                 }
             ]
         },
         "weekly":{
             "data":[
                 {
-                    "time":"2021.12.19",
-                    "value":314955,
-                    "type":"all"
+                    "time":"2022.01.16",
+                    "value":229479
                 },
                 {
-                    "time":"2021.12.26",
-                    "value":298014,
-                    "type":"all"
+                    "time":"2022.01.23",
+                    "value":311831
                 },
                 {
-                    "time":"2022.01.02",
-                    "value":310207,
-                    "type":"all"
-                }
+                    "time":"2022.01.30",
+                    "value":273506
+                ]
             ]
         },
         "monthly":{
             "data":[
                 {
-                    "time":"2020.02",
-                    "value":496149,
-                    "type":"all"
-                },
-                {
                     "time":"2020.03",
-                    "value":563487,
-                    "type":"all"
+                    "value":538292
                 },
                 {
                     "time":"2020.04",
-                    "value":151320,
-                    "type":"all"
+                    "value":150530
+                },
+                {
+                    "time":"2020.05",
+                    "value":391050
+                },
+                {
+                    "time":"2020.06",
+                    "value":372042
+                }
+            ]
+        },
+        "quarterly":{
+            "data":[
+                {
+                    "time":"2018Q2",
+                    "value":0
+                },
+                {
+                    "time":"2018Q3",
+                    "value":0
+                },
+                {
+                    "time":"2018Q4",
+                    "value":0
+                }
+            ]
+        },
+        "yearly":{
+            "data":[
+                {
+                    "time":"2018",
+                    "value":0
+                },
+                {
+                    "time":"2019",
+                    "value":1204124
                 }
             ]
         }
@@ -8200,38 +8223,92 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
         "daily":{
             "data":[
                 {
-                    "time":"2022.06.09",
-                    "value":0,
-                    "type":"all"
+                    "time":"2022.07.06",
+                    "value":28198
                 },
                 {
-                    "time":"2022.06.10",
-                    "value":0,
-                    "type":"all"
+                    "time":"2022.07.07",
+                    "value":26060
                 },
                 {
-                    "time":"2022.06.11",
-                    "value":0,
-                    "type":"all"
+                    "time":"2022.07.08",
+                    "value":27484
                 }
             ]
         },
-        "week":{
+        "weekly":{
             "data":[
                 {
-                    "time":"2021.12.19",
-                    "value":0,
-                    "type":"all"
+                    "time":"2022.01.16",
+                    "value":0
                 },
                 {
-                    "time":"2021.12.26",
-                    "value":0,
-                    "type":"all"
+                    "time":"2022.01.23",
+                    "value":0
                 },
                 {
-                    "time":"2022.01.02",
-                    "value":0,
-                    "type":"all"
+                    "time":"2022.01.30",
+                    "value":0
+                }
+            ]
+        },
+        "monthly":{
+            "data":[
+                {
+                    "time":"2020.03",
+                    "value":0
+                },
+                {
+                    "time":"2020.04",
+                    "value":0
+                },
+                {
+                    "time":"2020.05",
+                    "value":0
+                },
+                {
+                    "time":"2020.06",
+                    "value":0
+                }
+            ]
+        },
+        "quarterly":{
+            "data":[
+                {
+                    "time":"2018Q4",
+                    "value":0
+                },
+                {
+                    "time":"2019Q1",
+                    "value":0
+                },
+                {
+                    "time":"2019Q2",
+                    "value":0
+                }
+            ]
+        },
+        "yearly":{
+            "data":[
+                {
+                    "time":"2018",
+                    "value":0
+                },
+                {
+                    "time":"2019",
+                    "value":0
+                },
+                {
+                    "time":"2020",
+                    "value":0
+                },
+                {
+                    "time":"2021",
+                    "value":0
+                },
+                {
+                    "time":"2022",
+                    "value":1405781
                 }
             ]
         }
@@ -8284,112 +8361,6 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
             "value":1239
         }
     ]
-}
-```
----
-**6\.35 获取各个平台 floor price接口**
-###### 接口功能
-> 获取各个平台 floor price接口
-
-###### URL
-> http://8.130.23.16/api/v1/get_all_worlds_floor_price
-
-###### 返回数据格式
-> JSON
-
-###### HTTP 请求方式
-> GET
-
-###### 请求参数
-| 参数  | 必选  | 类型 | 默认值 | 描述           |
-| :---- | :---- | :--: | :----- | -------------- |
-|  -     |    -   |    -   |  -     |   -        |
-
-###### 返回字段
-```
-{
-    "code":100000,
-    "msg":"success",
-    "data":{
-        "daily":{
-            "2022.06.29":[
-                {
-                    "floor_price":0,
-                    "name":"Otherside"
-                },
-                {
-                    "floor_price":0,
-                    "name":"Voxels"
-                },
-                {
-                    "floor_price":0,
-                    "name":"Decentraland"
-                },
-                {
-                    "floor_price":0,
-                    "name":"The Sandbox"
-                },
-                {
-                    "floor_price":0,
-                    "name":"Somnium Space"
-                },
-                {
-                    "floor_price":0,
-                    "name":"NFT Worlds"
-                },
-                {
-                    "floor_price":0,
-                    "name":"Worldwide Webb"
-                },
-                {
-                    "floor_price":0,
-                    "name":"Netvrk"
-                },
-                {
-                    "floor_price":0,
-                    "name":"Substrata"
-                }
-            ],
-            "2022.06.30":[
-                {
-                    "floor_price":0,
-                    "name":"Otherside"
-                },
-                {
-                    "floor_price":0,
-                    "name":"Voxels"
-                },
-                {
-                    "floor_price":0,
-                    "name":"Decentraland"
-                },
-                {
-                    "floor_price":0,
-                    "name":"The Sandbox"
-                },
-                {
-                    "floor_price":0,
-                    "name":"Somnium Space"
-                },
-                {
-                    "floor_price":0,
-                    "name":"NFT Worlds"
-                },
-                {
-                    "floor_price":0,
-                    "name":"Worldwide Webb"
-                },
-                {
-                    "floor_price":0,
-                    "name":"Netvrk"
-                },
-                {
-                    "floor_price":0,
-                    "name":"Substrata"
-                }
-            ]
-        }
-    }
 }
 ```
 ---
@@ -12264,6 +12235,112 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
     }
 }
             
+```
+---
+**16\.6 获取各个平台 floor price接口**
+###### 接口功能
+> 获取各个平台 floor price接口
+
+###### URL
+> http://8.130.23.16/api/v1/get_all_worlds_floor_price
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+|  -     |    -   |    -   |  -     |   -        |
+
+###### 返回字段
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "daily":{
+            "2022.06.29":[
+                {
+                    "floor_price":0,
+                    "name":"Otherside"
+                },
+                {
+                    "floor_price":0,
+                    "name":"Voxels"
+                },
+                {
+                    "floor_price":0,
+                    "name":"Decentraland"
+                },
+                {
+                    "floor_price":0,
+                    "name":"The Sandbox"
+                },
+                {
+                    "floor_price":0,
+                    "name":"Somnium Space"
+                },
+                {
+                    "floor_price":0,
+                    "name":"NFT Worlds"
+                },
+                {
+                    "floor_price":0,
+                    "name":"Worldwide Webb"
+                },
+                {
+                    "floor_price":0,
+                    "name":"Netvrk"
+                },
+                {
+                    "floor_price":0,
+                    "name":"Substrata"
+                }
+            ],
+            "2022.06.30":[
+                {
+                    "floor_price":0,
+                    "name":"Otherside"
+                },
+                {
+                    "floor_price":0,
+                    "name":"Voxels"
+                },
+                {
+                    "floor_price":0,
+                    "name":"Decentraland"
+                },
+                {
+                    "floor_price":0,
+                    "name":"The Sandbox"
+                },
+                {
+                    "floor_price":0,
+                    "name":"Somnium Space"
+                },
+                {
+                    "floor_price":0,
+                    "name":"NFT Worlds"
+                },
+                {
+                    "floor_price":0,
+                    "name":"Worldwide Webb"
+                },
+                {
+                    "floor_price":0,
+                    "name":"Netvrk"
+                },
+                {
+                    "floor_price":0,
+                    "name":"Substrata"
+                }
+            ]
+        }
+    }
+}
 ```
 ---
 **17.1 发送邮箱验证码**
