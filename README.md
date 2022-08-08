@@ -129,6 +129,9 @@
 3. 获取当前登录者 Cryptovoxels 地块每日流量统计接口 
 4. 获取当前登录者 Cryptovoxels 地块id 列表接口
 5. 获取当前登录者 Cryptovoxels 单个地块一段时间内的每日流量统计接口
+6. 获取当前登录者 Decentraland 地块每日流量总数接口
+7. 获取当前登录者 Decentraland 地块每日/每周/每月流量占比接口 
+8. 获取当前登录者 Decentraland 每个地块流量详情接口
 
 ### 十五、Metaverse Learn 相关接口
 1. 获取 Metaverse Learn 文章列表接口
@@ -11028,182 +11031,6 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
     {
       "parcel_id": 932,
       "name": "Metapurse HQ"
-    },
-    {
-      "parcel_id": 1251,
-      "name": ""
-    },
-    {
-      "parcel_id": 1341,
-      "name": "The Open Gallery"
-    },
-    {
-      "parcel_id": 1847,
-      "name": ""
-    },
-    {
-      "parcel_id": 2152,
-      "name": "Pranksyland"
-    },
-    {
-      "parcel_id": 2246,
-      "name": "Pranksyland"
-    },
-    {
-      "parcel_id": 2727,
-      "name": ""
-    },
-    {
-      "parcel_id": 2770,
-      "name": ""
-    },
-    {
-      "parcel_id": 2791,
-      "name": ""
-    },
-    {
-      "parcel_id": 2808,
-      "name": "Pranksyland"
-    },
-    {
-      "parcel_id": 2810,
-      "name": ""
-    },
-    {
-      "parcel_id": 2832,
-      "name": ""
-    },
-    {
-      "parcel_id": 2839,
-      "name": ""
-    },
-    {
-      "parcel_id": 2846,
-      "name": ""
-    },
-    {
-      "parcel_id": 2848,
-      "name": ""
-    },
-    {
-      "parcel_id": 2873,
-      "name": ""
-    },
-    {
-      "parcel_id": 2883,
-      "name": ""
-    },
-    {
-      "parcel_id": 2884,
-      "name": "Playa non hate-ah"
-    },
-    {
-      "parcel_id": 2895,
-      "name": ""
-    },
-    {
-      "parcel_id": 2905,
-      "name": ""
-    },
-    {
-      "parcel_id": 2911,
-      "name": ""
-    },
-    {
-      "parcel_id": 2918,
-      "name": ""
-    },
-    {
-      "parcel_id": 2931,
-      "name": ""
-    },
-    {
-      "parcel_id": 2937,
-      "name": ""
-    },
-    {
-      "parcel_id": 2948,
-      "name": ""
-    },
-    {
-      "parcel_id": 2954,
-      "name": ""
-    },
-    {
-      "parcel_id": 2956,
-      "name": ""
-    },
-    {
-      "parcel_id": 2958,
-      "name": "The Face Shrine"
-    },
-    {
-      "parcel_id": 2962,
-      "name": ""
-    },
-    {
-      "parcel_id": 2966,
-      "name": ""
-    },
-    {
-      "parcel_id": 2973,
-      "name": ""
-    },
-    {
-      "parcel_id": 2974,
-      "name": ""
-    },
-    {
-      "parcel_id": 2976,
-      "name": ""
-    },
-    {
-      "parcel_id": 2986,
-      "name": ""
-    },
-    {
-      "parcel_id": 2987,
-      "name": ""
-    },
-    {
-      "parcel_id": 2988,
-      "name": ""
-    },
-    {
-      "parcel_id": 2994,
-      "name": ""
-    },
-    {
-      "parcel_id": 2999,
-      "name": ""
-    },
-    {
-      "parcel_id": 3004,
-      "name": ""
-    },
-    {
-      "parcel_id": 3005,
-      "name": ""
-    },
-    {
-      "parcel_id": 3007,
-      "name": ""
-    },
-    {
-      "parcel_id": 3013,
-      "name": ""
-    },
-    {
-      "parcel_id": 3016,
-      "name": "a flower and a rock"
-    },
-    {
-      "parcel_id": 3019,
-      "name": ""
-    },
-    {
-      "parcel_id": 3024,
-      "name": ""
     }
   ]
 }
@@ -11259,108 +11086,197 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
     {
       "time": "2022.03.21",
       "value": 3
-    },
-    {
-      "time": "2022.03.22",
-      "value": 14
-    },
-    {
-      "time": "2022.03.23",
-      "value": 4
-    },
-    {
-      "time": "2022.03.24",
-      "value": 32
-    },
-    {
-      "time": "2022.03.25",
-      "value": 7
-    },
-    {
-      "time": "2022.03.26",
-      "value": 0
-    },
-    {
-      "time": "2022.03.27",
-      "value": 3
-    },
-    {
-      "time": "2022.03.28",
-      "value": 7
-    },
-    {
-      "time": "2022.03.29",
-      "value": 1
-    },
-    {
-      "time": "2022.03.30",
-      "value": 2
-    },
-    {
-      "time": "2022.03.31",
-      "value": 4
-    },
-    {
-      "time": "2022.04.01",
-      "value": 6
-    },
-    {
-      "time": "2022.04.02",
-      "value": 2
-    },
-    {
-      "time": "2022.04.03",
-      "value": 0
-    },
-    {
-      "time": "2022.04.04",
-      "value": 1
-    },
-    {
-      "time": "2022.04.05",
-      "value": 5
-    },
-    {
-      "time": "2022.04.06",
-      "value": 1
-    },
-    {
-      "time": "2022.04.07",
-      "value": 2
-    },
-    {
-      "time": "2022.04.08",
-      "value": 5
-    },
-    {
-      "time": "2022.04.09",
-      "value": 0
-    },
-    {
-      "time": "2022.04.10",
-      "value": 0
-    },
-    {
-      "time": "2022.04.11",
-      "value": 0
-    },
-    {
-      "time": "2022.04.12",
-      "value": 3
-    },
-    {
-      "time": "2022.04.13",
-      "value": 4
-    },
-    {
-      "time": "2022.04.14",
-      "value": 0
-    },
-    {
-      "time": "2022.04.15",
-      "value": 0
     }
   ]
+}
+```
+---
+**14.6 获取当前登录者 Decentraland 地块每日流量总数接口**
+
+###### 接口功能
+> 获取当前登录者 Decentraland 地块每日流量总数接口
+
+###### URL
+> http://8.130.23.16/api/v1/user/get_dcl_parcel_traffic_daily_stats
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":[
+        {
+            "time":"2022.08.08",
+            "value":0
+        },
+        {
+            "time":"2022.08.07",
+            "value":0
+        },
+        {
+            "time":"2022.08.06",
+            "value":0
+        },
+        {
+            "time":"2022.08.05",
+            "value":0
+        }
+    ]
+}
+```
+---
+**14.7 获取当前登录者 Decentraland 地块每日/每周/每月流量占比接口 **
+
+###### 接口功能
+> 获取当前登录者 Decentraland 地块每日/每周/每月流量占比接口 
+
+###### URL
+> http://8.130.23.16/api/v1/user/get_dcl_parcel_traffic_percentage
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "day":[
+            {
+                "name":"-71,-125",
+                "value":0.36
+            },
+            {
+                "name":"27,43",
+                "value":0.09
+            },
+            {
+                "name":"-69,-125",
+                "value":0.08
+            }
+        ],
+        "week":[
+            {
+                "name":"-69,-124",
+                "value":0.2
+            },
+            {
+                "name":"-69,-118",
+                "value":0.17
+            },
+            {
+                "name":"-69,-123",
+                "value":0.09
+            }
+        ],
+        "month":[
+            {
+                "name":"-71,-125",
+                "value":0.33
+            },
+            {
+                "name":"-69,-125",
+                "value":0.11
+            },
+            {
+                "name":"-69,-121",
+                "value":0.06
+            }
+        ]
+    }
+}
+```
+---
+**14.8 获取当前登录者 Decentraland 每个地块流量详情接口 **
+
+###### 接口功能
+> 获取当前登录者 Decentraland 每个地块流量详情接口
+
+###### URL
+> http://8.130.23.16/api/v1/user/get_dcl_parcel_traffic_detail_info
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":[
+        {
+            "name":"-37,-18",
+            "total_visits":356,
+            "daily_visits":[
+                {
+                    "time":"2022.08.08",
+                    "value":0
+                },
+                {
+                    "time":"2022.08.07",
+                    "value":0
+                },
+                {
+                    "time":"2022.08.06",
+                    "value":0
+                },
+                {
+                    "time":"2022.08.05",
+                    "value":0
+                }
+            ]
+        },
+        {
+            "name":"-37,-18",
+            "total_visits":356,
+            "daily_visits":[
+                {
+                    "time":"2022.08.08",
+                    "value":0
+                },
+                {
+                    "time":"2022.08.07",
+                    "value":0
+                },
+                {
+                    "time":"2022.08.06",
+                    "value":0
+                },
+                {
+                    "time":"2022.08.05",
+                    "value":0
+                }
+            ]
+        }
+    ]
 }
 ```
 ---
