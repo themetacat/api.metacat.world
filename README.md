@@ -12868,11 +12868,11 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
         {
             "name": "test",
             "address": "0xfefe2222222222222222222222222222",
-            "homepage": "",
-            "twitter": "",
-            "country": "",
+            "homepage": "https://poster-phi.",
+            "twitter": "https://pxxx",
+            "country": "China",
             "logo_url": "https://poster-phi.vercel.app/metacat_logo.png",
-            "discord": ""
+            "discord": "https://pxxx"
         },
         {
             "name": "test",
