@@ -78,7 +78,7 @@
 6. 更新当前登录者基本信息接口
 7. 获取当前登录者地块列表接口
 8. 判断 nick_name 是否已存在的接口
-9. 申请成为 creator
+9. 申请成为 creator/builder
 
 ### 八、Cryptovoxels 租赁相关接口
 1. 获取当前登录者 Cryptovoxels 地块列表接口
@@ -123,7 +123,7 @@
 1. 获取 SomniumSpace 均价热力图数据接口
 2. 获取 SomniumSpace 地块详情数据接口
 
-### 十四、Cryptovoxels 用户地块流量相关接口
+### 十四、当前登录用户地块流量相关接口
 1. 获取当前登录者 Cryptovoxels 地块每日流量总数接口
 2. 获取当前登录者 Cryptovoxels 地块每日/每周/每月流量占比接口 
 3. 获取当前登录者 Cryptovoxels 地块每日流量统计接口 
@@ -157,6 +157,13 @@
 3. 获取 Otherside 均价热力图数据接口
 4. 获取 Otherside 地块详情数据接口
 
+### 十九、builder-buildings相关接口
+1. 上传或者修改building
+2. builder获取自己所有的buildings
+3. 获取所有的builders
+4. builder删除自己的building
+5. 获取 building详细信息
+
 ----
 ## 全局错误码
 
@@ -179,6 +186,16 @@
 | 100014 | verification code error                    |       邮箱验证码错误                |
 | 100015 | user not bind email                        |       用户未绑定邮箱                |
 | 100016 | join filed                        |       申请加入失败               |
+| 100017 | not builder                        |       不是builder               |
+| 100018 | text too long                    |       内容太长               |
+| 100019 | files ≥ 8                        |       文件数量超过8个               |
+| 100020 | files link cover is None                        |       building封面图为空               |
+| 100021 | Add Files is None                        |      添加building情况下添加的图片为空               |
+| 100022 | delete building error                        |       删除building失败               |
+| 100023 | have been creator/builder                       |       已经是creator/builder               |
+| 100024 | have been apply                       |       已经申请过了             |
+| 100025 | add field                        |       添加文件失败               |
+| 100026 | delete field                        |       删除文件失败               |
 
 ----
 ## 接口详情
@@ -8744,10 +8761,10 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 }
 ```
 ---
-**7.9 申请成为 creator**
+**7.9 申请成为 creator/builder**
 
 ###### 接口功能
-> 申请成为 creator
+> 申请成为 creator/builder
 
 ###### URL
 > http://8.130.23.16/api/v1/user/user_apply_become?join_type=creator
@@ -8756,12 +8773,15 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 > JSON
 
 ###### HTTP 请求方式
-> GET
+> POST
 
 ###### 请求参数
 | 参数          | 必选 |  类型  | 默认值 | 描述              |
 | :------------ | :--- | :----: | :----- | ----------------- |
-| join_type      |  False    |   str     |   creator     |    申请类型       |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+| join_type      |  False    |   string     |   creator/builder     |    申请类型       |
+| representative_links  |  False    |   string     |   -     |    如果申请类型是builder的情况下必选，链接以逗号分隔 例 http:xx,http:xx,http:ss       |
 
 
 ###### 接口示例
@@ -8771,6 +8791,26 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 {
   "code": 100000,
   "msg": "success"
+}
+----------
+{
+  "code": 100023,
+  "msg": "have been (creator/builder)"
+}
+----------
+{
+  "code": 100024,
+  "msg": "have been apply"
+}
+----------
+{
+  "code": 100001, 
+  "msg": "param error"
+}
+----------
+{
+  "code": 100012, 
+  "msg": "save error"
 }
 ```
 ---
@@ -11136,7 +11176,7 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 }
 ```
 ---
-**14.7 获取当前登录者 Decentraland 地块每日/每周/每月流量占比接口 **
+**14.7 获取当前登录者 Decentraland 地块每日/每周/每月流量占比接口**
 
 ###### 接口功能
 > 获取当前登录者 Decentraland 地块每日/每周/每月流量占比接口 
@@ -11207,7 +11247,7 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 }
 ```
 ---
-**14.8 获取当前登录者 Decentraland 每个地块流量详情接口 **
+**14.8 获取当前登录者 Decentraland 每个地块流量详情接口**
 
 ###### 接口功能
 > 获取当前登录者 Decentraland 每个地块流量详情接口
@@ -12659,6 +12699,272 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
                 "usd":97042.01,
                 "ape":0
             }
+        ]
+    }
+}
+```
+---
+**19.1 上传或者修改building**
+
+###### 接口功能
+> 上传或者修改building
+
+###### URL
+> http://8.130.23.16/api/v1/building/user_add_or_edit_building
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> POST
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+| body |  |   |      |  |
+| operation_type | true | str  |      | 新上传building or 修改之前的信息  参数值: (add / edit)  |
+| building_name | true | str  |      | building 名字  |
+| platform       | true | str  |      | 平台名字  参数值: (Decentraland / Voxels / Others)|
+| building_link | true |  str |      | building链接 |
+| building_desc | false |  str |   ' '   | building 描述    |
+| building_format | true |  str |   ' '   | building 格式  参数值: (VOX / GLB)     |
+| files_link_add | false |  str |   ' '   | 在上传的情况下必传 例 http:xx,http:xx,http:xx 每个链接以逗号隔开   |
+| files_link_cover | true |  str |      | building 封面图   |
+| files_link_del | false |  str |   ' '   | 修改情况下要删除的图片 格式同 files_link_add  |
+
+```
+{
+  "code": 100000, 
+  "msg": "success"
+}
+---------
+{
+  "code": 100001,
+  "msg": "operation_type error"
+}
+---------
+{
+  "code": 100017,
+  "msg": "not builder"
+}
+---------
+{
+  "code": 100001,
+  "msg": "platform error"
+}
+---------
+{
+  "code": 100001,
+  "msg": "building_link error"
+}
+---------
+{
+  "code": 100018, 
+  "msg": "text too long"
+}
+---------
+{
+  "code": 100001, 
+  "msg": "building format error"
+}
+---------
+{
+  "code": 100020, 
+  "msg": "files link cover is None"
+}
+---------
+{
+  "code": 100021, 
+  "msg": "Add Files is None"
+}
+---------
+{
+  "code": 100019, 
+  "msg": "files ≥ 8"
+}
+---------
+{
+  "code": 100012, 
+  "msg": "save error"
+}
+---------
+{
+  "code": 100025,
+  "msg": "add field",
+  "field_files": [
+    'httpxxxxx',
+    'httpxxxxx'
+  ]
+}
+---------
+{
+  "code": 100026,
+  "msg": "delete field",
+  "field_files": [
+    'httpxxxxx',
+    'httpxxxxx'
+  ]
+}
+```
+---
+**19.2 builder获取自己所有的buildings**
+
+###### 接口功能
+> builder获取自己所有的buildings
+
+###### URL
+> http://8.130.23.16/api/v1/building/builder_get_self_buildings
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+```
+{
+    "code": 100000,
+    "msg": "success",
+    "data": [
+        {
+            "building_name": "fsff",
+            "platform": "Voxels",
+            "file_link_cover": "http://xxx",
+            "building_link": "http://test/test/te"
+        }
+    ]
+}
+```
+---
+**19.3 获取所有的builders**
+
+###### 接口功能
+> 获取所有的builders
+
+###### URL
+> http://8.130.23.16/api/v1/building/get_all_builders
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+```
+{
+    "code": 100000,
+    "msg": "success",
+    "data": [
+        {
+            "name": "test",
+            "address": "0xfefe2222222222222222222222222222",
+            "homepage": "",
+            "twitter": "",
+            "country": "",
+            "logo_url": "https://poster-phi.vercel.app/metacat_logo.png",
+            "discord": ""
+        },
+        {
+            "name": "test",
+            "address": "0xfefe2222222222222222222222222222",
+            "homepage": "",
+            "twitter": "",
+            "country": "",
+            "logo_url": "https://poster-phi.vercel.app/metacat_logo.png",
+            "discord": ""
+        }
+    ]
+}
+```
+---
+**19.4 builder删除自己的building**
+
+###### 接口功能
+> builder删除自己的building
+
+###### URL
+> http://8.130.23.16/api/v1/building/builder_del_self_building
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> POST
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Header        |      |        |        | 请求头            |
+| Header.Authorization | true | sring  | 无     | 值为 access_token |
+| body |  |   |      |  |
+| building_link | true | string  |      | building_link |
+```
+{
+  "code": 100000, 
+  "msg": "success"
+}
+---------
+{
+  "code": 100001, 
+  "msg": "building link error"
+}
+---------
+{
+  "code": 100022, 
+  "msg": "delete building error"
+}
+---------
+{
+  "code": 100023, 
+  "msg": "delete building files error"
+}
+```
+---
+**19.5 获取 building详细信息**
+
+###### 接口功能
+> 获取 building详细信息
+
+###### URL
+> http://8.130.23.16/api/v1/building/get_building_detail_info
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> POST
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| body |  |   |      |  |
+| building_link | true | string  |      | building_link |
+```
+{
+    "code": 100000,
+    "msg": "success",
+    "data": {
+        "building_name": "fsff",
+        "platform": "Voxels",
+        "building_link": "http://test/test/te",
+        "building_desc": "",
+        "building_format": "VOX",
+        "file_link_cover": ""http://test/test/te",",
+        "detail_files": [
+            "http://test/test/te",
+            "http://test/test/te",
+            "http://test/test/te",
+            "http://test/test/te",
         ]
     }
 }
