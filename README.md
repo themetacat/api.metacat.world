@@ -138,12 +138,15 @@
 2. 获取 Metaverse Report 文章列表接口
 
 ### 十六、All Worlds 相关接口
-1. 获取六个平台最近一月/季度/年和所有时间销售总额占比
-2. 获取六个平台每 月/季度 平均价
-3. 获取六个平台每 月/季度/年 各个价格总和
-4. 获取MetaIndex和ETH Price
-5. 获取六个平台每 月/季度/年 各个销售总量
-6. 获取各个平台 floor price接口
+1. 各个平台最近一月/季度/年和所有时间交易总额占比
+2. 各个平台每 月/季度 平均价
+3. 各个平台每 月/季度/年 各个价格总和
+4. MetaIndex和ETH Price
+5. 各个平台每 月/季度/年 各个交易总量
+6. 各个平台 floor price接口
+6. 各个平台 本月与上月的交易均价对比
+6. 各个平台 本月与上月的交易总额对比
+6. 各个平台 本月与上月的交易数量对比
 
 ### 十七、邮箱绑定 相关接口
 1. 发送邮箱验证码
@@ -11484,9 +11487,9 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 }
 ```
 ---
-**16.1 获取六个平台最近一月/季度/年和所有时间销售总额占比**
+**16.1 各个平台最近一月/季度/年和所有时间交易总额占比**
 ###### 接口功能
-> 获取六个平台最近一月/季度/年和所有时间销售总额占比
+> 各个平台最近一月/季度/年和所有时间交易总额占比
 
 ###### URL
 > https://api.metacat.world/api/v1/analytics/get_sales_amount_percent
@@ -11528,10 +11531,6 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
             {
                 "name":"nft",
                 "value":0.39
-            },
-            {
-                "name":"webb",
-                "value":0.23
             }
         ],
         "quarter":[
@@ -11550,14 +11549,6 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
             {
                 "name":"somniumspace",
                 "value":0.02
-            },
-            {
-                "name":"nft",
-                "value":0.39
-            },
-            {
-                "name":"webb",
-                "value":0.23
             }
         ],
         "year":[
@@ -11576,14 +11567,6 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
             {
                 "name":"somniumspace",
                 "value":0.01
-            },
-            {
-                "name":"nft",
-                "value":0.43
-            },
-            {
-                "name":"webb",
-                "value":0.2
             }
         ],
         "all_time":[
@@ -11602,14 +11585,7 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
             {
                 "name":"somniumspace",
                 "value":0.08
-            },
-            {
-                "name":"nft",
-                "value":0.28
-            },
-            {
-                "name":"webb",
-                "value":0.14
+            }
 				
 			}
         ]
@@ -11617,9 +11593,9 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 }
 ```
 ---
-**16.2 获取六个平台每 月/季度 平均价**
+**16.2 各个平台每 月/季度 平均价**
 ###### 接口功能
-> 获取六个平台每 月/季度 平均价
+> 各个平台每 月/季度 平均价
 
 ###### URL
 > https://api.metacat.world/api/v1/analytics/get_avg_parcel_price
@@ -11667,71 +11643,6 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
                     "time":"2019.11",
                     "name":"NFT Worlds",
                     "value":0
-                },
-                {
-                    "time":"2019.11",
-                    "name":"Worldwide Webb",
-                    "value":0
-                },
-                {
-                    "time":"2019.12",
-                    "name":"Cryptovoxels",
-                    "value":176
-                },
-                {
-                    "time":"2019.12",
-                    "name":"Decentraland",
-                    "value":1309
-                },
-                {
-                    "time":"2019.12",
-                    "name":"The Sandbox",
-                    "value":545
-                },
-                {
-                    "time":"2019.12",
-                    "name":"Somnium Space",
-                    "value":5594
-                },
-                {
-                    "time":"2019.12",
-                    "name":"NFT Worlds",
-                    "value":0
-                },
-                {
-                    "time":"2019.12",
-                    "name":"Worldwide Webb",
-                    "value":0
-                },
-                {
-                    "time":"2020.01",
-                    "name":"Cryptovoxels",
-                    "value":318
-                },
-                {
-                    "time":"2020.01",
-                    "name":"Decentraland",
-                    "value":1598
-                },
-                {
-                    "time":"2020.01",
-                    "name":"The Sandbox",
-                    "value":872
-                },
-                {
-                    "time":"2020.01",
-                    "name":"Somnium Space",
-                    "value":5192
-                },
-                {
-                    "time":"2020.01",
-                    "name":"NFT Worlds",
-                    "value":0
-                },
-                {
-                    "time":"2020.01",
-                    "name":"Worldwide Webb",
-                    "value":0
                 }
             ]
         },
@@ -11756,56 +11667,16 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
                     "time":"2018Q2",
                     "name":"Somnium Space",
                     "value":0
-                },
-                {
-                    "time":"2018Q2",
-                    "name":"NFT Worlds",
-                    "value":0
-                },
-                {
-                    "time":"2018Q2",
-                    "name":"Worldwide Webb",
-                    "value":0
-                },
-                {
-                    "time":"2018Q3",
-                    "name":"Cryptovoxels",
-                    "value":52
-                },
-                {
-                    "time":"2018Q3",
-                    "name":"Decentraland",
-                    "value":0
-                },
-                {
-                    "time":"2018Q3",
-                    "name":"The Sandbox",
-                    "value":0
-                },
-                {
-                    "time":"2018Q3",
-                    "name":"Somnium Space",
-                    "value":0
-                },
-                {
-                    "time":"2018Q3",
-                    "name":"NFT Worlds",
-                    "value":0
-                },
-                {
-                    "time":"2018Q3",
-                    "name":"Worldwide Webb",
-                    "value":0
-                },
+                }
             ]
         }
     }
 }
 ```
 ---
-**16.3 获取六个平台每 月/季度/年 各个价格总和**
+**16.3 各个平台每 月/季度/年 各个价格总和**
 ###### 接口功能
-> 获取六个平台每 月/季度/年 各个价格总和
+> 各个平台每 月/季度/年 各个价格总和
 
 ###### URL
 > https://api.metacat.world/api/v1/analytics/get_sales_amount_stack
@@ -11848,46 +11719,6 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
                     "time":"2019.11",
                     "name":"Somnium Space",
                     "value":223774
-                },
-                {
-                    "time":"2019.11",
-                    "name":"NFT Worlds",
-                    "value":0
-                },
-                {
-                    "time":"2019.11",
-                    "name":"Worldwide Webb",
-                    "value":0
-                },
-                {
-                    "time":"2019.12",
-                    "name":"Cryptovoxels",
-                    "value":50771
-                },
-                {
-                    "time":"2019.12",
-                    "name":"Decentraland",
-                    "value":57829
-                },
-                {
-                    "time":"2019.12",
-                    "name":"The Sandbox",
-                    "value":79687
-                },
-                {
-                    "time":"2019.12",
-                    "name":"Somnium Space",
-                    "value":55943
-                },
-                {
-                    "time":"2019.12",
-                    "name":"NFT Worlds",
-                    "value":0
-                },
-                {
-                    "time":"2019.12",
-                    "name":"Worldwide Webb",
-                    "value":0
                 }
             ]
         },
@@ -11917,41 +11748,6 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
                     "time":"2018Q2",
                     "name":"NFT Worlds",
                     "value":0
-                },
-                {
-                    "time":"2018Q2",
-                    "name":"Worldwide Webb",
-                    "value":0
-                },
-                {
-                    "time":"2018Q3",
-                    "name":"Cryptovoxels",
-                    "value":8828
-                },
-                {
-                    "time":"2018Q3",
-                    "name":"Decentraland",
-                    "value":0
-                },
-                {
-                    "time":"2018Q3",
-                    "name":"The Sandbox",
-                    "value":0
-                },
-                {
-                    "time":"2018Q3",
-                    "name":"Somnium Space",
-                    "value":0
-                },
-                {
-                    "time":"2018Q3",
-                    "name":"NFT Worlds",
-                    "value":0
-                },
-                {
-                    "time":"2018Q3",
-                    "name":"Worldwide Webb",
-                    "value":0
                 }
             ]
         },
@@ -11976,16 +11772,6 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
                     "time":"2018",
                     "name":"Somnium Space",
                     "value":0
-                },
-                {
-                    "time":"2018",
-                    "name":"NFT Worlds",
-                    "value":0
-                },
-                {
-                    "time":"2018",
-                    "name":"Worldwide Webb",
-                    "value":0
                 }
             ]
         }
@@ -11993,9 +11779,9 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 }
 ```
 ---
-**16.4 获取MetaIndex和ETH Price**
+**16.4 MetaIndex和ETH Price**
 ###### 接口功能
-> 获取MetaIndex和ETH Price
+> MetaIndex和ETH Price
 
 ###### URL
 > https://api.metacat.world/api/v1/analytics/get_metaindex_ethprice
@@ -12070,9 +11856,9 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 }
 ```
 ---
-**16.5 获取六个平台每 月/季度/年 各个销售总量**
+**16.5 各个平台每 月/季度/年 各个交易总量**
 ###### 接口功能
-> 获取六个平台每 月/季度/年 各个销售总量
+> 各个平台每 月/季度/年 各个交易总量
 
 ###### URL
 > https://api.metacat.world/api/v1/analytics/get_all_number_of_sales
@@ -12114,16 +11900,6 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
                 "time":"2019.11",
                 "name":"Decentraland",
                 "value":148
-            },
-            {
-                "time":"2019.11",
-                "name":"NFT Worlds",
-                "value":0
-            },
-            {
-                "time":"2019.11",
-                "name":"The Sandbox",
-                "value":0
             }],
         "quarterly":[
             {
@@ -12145,16 +11921,6 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
                 "time":"2018 Q2",
                 "name":"Decentraland",
                 "value":0
-            },
-            {
-                "time":"2018 Q2",
-                "name":"NFT Worlds",
-                "value":0
-            },
-            {
-                "time":"2018 Q2",
-                "name":"The Sandbox",
-                "value":0
             }],
         "yearly":[
             {
@@ -12170,21 +11936,6 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
             {
                 "time":"2018",
                 "name":"Worldwide Webb",
-                "value":0
-            },
-            {
-                "time":"2018",
-                "name":"Decentraland",
-                "value":1584
-            },
-            {
-                "time":"2018",
-                "name":"NFT Worlds",
-                "value":0
-            },
-            {
-                "time":"2018",
-                "name":"The Sandbox",
                 "value":0
             }
         ]
@@ -12296,6 +12047,676 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
             ]
         }
     }
+}
+```
+---
+**16\.7 各个平台 本月与上月的交易均价对比**
+###### 接口功能
+> 各个平台 本月与上月的交易均价对比
+
+###### URL
+> https://api.metacat.world/api/v1/analytics/cur_data_compared_last_avg
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+|  -     |    -   |    -   |  -     |   -        |
+
+###### 返回字段
+```
+{
+    "code":100000,
+    "data":{
+        "monthly":{
+            "eth":[
+                {
+                    "name":"Otherside",
+                    "time":"2022.08",
+                    "value":3.43
+                },
+                {
+                    "name":"Otherside",
+                    "time":"2022.07",
+                    "value":5.18
+                },
+                {
+                    "name":"The Sandbox",
+                    "time":"2022.08",
+                    "value":1.62
+                },
+                {
+                    "name":"The Sandbox",
+                    "time":"2022.07",
+                    "value":2.07
+                },
+                {
+                    "name":"NFT Worlds",
+                    "time":"2022.08",
+                    "value":0.99
+                },
+                {
+                    "name":"NFT Worlds",
+                    "time":"2022.07",
+                    "value":1.45
+                },
+                {
+                    "name":"Decentraland",
+                    "time":"2022.08",
+                    "value":2.44
+                },
+                {
+                    "name":"Decentraland",
+                    "time":"2022.07",
+                    "value":3.77
+                },
+                {
+                    "name":"Worldwide Webb",
+                    "time":"2022.08",
+                    "value":0.82
+                },
+                {
+                    "name":"Worldwide Webb",
+                    "time":"2022.07",
+                    "value":0.62
+                },
+                {
+                    "name":"Voxels",
+                    "time":"2022.08",
+                    "value":0.73
+                },
+                {
+                    "name":"Voxels",
+                    "time":"2022.07",
+                    "value":0.86
+                },
+                {
+                    "name":"Somnium Space",
+                    "time":"2022.08",
+                    "value":1.55
+                },
+                {
+                    "name":"Somnium Space",
+                    "time":"2022.07",
+                    "value":1.99
+                },
+                {
+                    "name":"Netvrk",
+                    "time":"2022.08",
+                    "value":0.57
+                },
+                {
+                    "name":"Netvrk",
+                    "time":"2022.07",
+                    "value":0.77
+                }
+            ],
+            "eth_percent":[
+                {
+                    "name":"Otherside",
+                    "value":-0.34
+                },
+                {
+                    "name":"The Sandbox",
+                    "value":-0.22
+                },
+                {
+                    "name":"NFT Worlds",
+                    "value":-0.32
+                },
+                {
+                    "name":"Decentraland",
+                    "value":-0.35
+                },
+                {
+                    "name":"Worldwide Webb",
+                    "value":0.32
+                },
+                {
+                    "name":"Voxels",
+                    "value":-0.15
+                },
+                {
+                    "name":"Somnium Space",
+                    "value":-0.22
+                },
+                {
+                    "name":"Netvrk",
+                    "value":-0.26
+                }
+            ],
+            "usd":[
+                {
+                    "name":"Otherside",
+                    "time":"2022.08",
+                    "value":4820
+                },
+                {
+                    "name":"Otherside",
+                    "time":"2022.07",
+                    "value":6313
+                },
+                {
+                    "name":"The Sandbox",
+                    "time":"2022.08",
+                    "value":2371
+                },
+                {
+                    "name":"The Sandbox",
+                    "time":"2022.07",
+                    "value":2569
+                },
+                {
+                    "name":"NFT Worlds",
+                    "time":"2022.08",
+                    "value":1395
+                },
+                {
+                    "name":"NFT Worlds",
+                    "time":"2022.07",
+                    "value":1879
+                },
+                {
+                    "name":"Decentraland",
+                    "time":"2022.08",
+                    "value":5013
+                },
+                {
+                    "name":"Decentraland",
+                    "time":"2022.07",
+                    "value":5035
+                },
+                {
+                    "name":"Worldwide Webb",
+                    "time":"2022.08",
+                    "value":1152
+                },
+                {
+                    "name":"Worldwide Webb",
+                    "time":"2022.07",
+                    "value":726
+                },
+                {
+                    "name":"Voxels",
+                    "time":"2022.08",
+                    "value":1251
+                },
+                {
+                    "name":"Voxels",
+                    "time":"2022.07",
+                    "value":1138
+                },
+                {
+                    "name":"Somnium Space",
+                    "time":"2022.08",
+                    "value":2186
+                },
+                {
+                    "name":"Somnium Space",
+                    "time":"2022.07",
+                    "value":2390
+                },
+                {
+                    "name":"Netvrk",
+                    "time":"2022.08",
+                    "value":794
+                },
+                {
+                    "name":"Netvrk",
+                    "time":"2022.07",
+                    "value":932
+                }
+            ],
+            "usd_percent":[
+                {
+                    "name":"Otherside",
+                    "value":-0.24
+                },
+                {
+                    "name":"The Sandbox",
+                    "value":-0.08
+                },
+                {
+                    "name":"NFT Worlds",
+                    "value":-0.26
+                },
+                {
+                    "name":"Decentraland",
+                    "value":0
+                },
+                {
+                    "name":"Worldwide Webb",
+                    "value":0.59
+                },
+                {
+                    "name":"Voxels",
+                    "value":0.1
+                },
+                {
+                    "name":"Somnium Space",
+                    "value":-0.09
+                },
+                {
+                    "name":"Netvrk",
+                    "value":-0.15
+                }
+            ]
+        }
+    },
+    "msg":"success"
+}
+```
+---
+**16\.8 各个平台 本月与上月的交易总额对比**
+###### 接口功能
+> 各个平台 本月与上月的交易总额对比
+
+###### URL
+> https://api.metacat.world/api/v1/analytics/cur_data_compared_last_sum
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+|  -     |    -   |    -   |  -     |   -        |
+
+###### 返回字段
+```
+{
+    "code":100000,
+    "data":{
+        "monthly":{
+            "eth":[
+                {
+                    "name":"Otherside",
+                    "time":"2022.08",
+                    "value":4673.07
+                },
+                {
+                    "name":"Otherside",
+                    "time":"2022.07",
+                    "value":13171.84
+                },
+                {
+                    "name":"The Sandbox",
+                    "time":"2022.08",
+                    "value":474.77
+                },
+                {
+                    "name":"The Sandbox",
+                    "time":"2022.07",
+                    "value":1359.37
+                },
+                {
+                    "name":"NFT Worlds",
+                    "time":"2022.08",
+                    "value":246.06
+                },
+                {
+                    "name":"NFT Worlds",
+                    "time":"2022.07",
+                    "value":1891.4
+                },
+                {
+                    "name":"Decentraland",
+                    "time":"2022.08",
+                    "value":115.94
+                },
+                {
+                    "name":"Decentraland",
+                    "time":"2022.07",
+                    "value":410.53
+                },
+                {
+                    "name":"Worldwide Webb",
+                    "time":"2022.08",
+                    "value":206.52
+                },
+                {
+                    "name":"Worldwide Webb",
+                    "time":"2022.07",
+                    "value":243.74
+                },
+                {
+                    "name":"Voxels",
+                    "time":"2022.08",
+                    "value":64.9
+                },
+                {
+                    "name":"Voxels",
+                    "time":"2022.07",
+                    "value":90.95
+                },
+                {
+                    "name":"Somnium Space",
+                    "time":"2022.08",
+                    "value":31.08
+                },
+                {
+                    "name":"Somnium Space",
+                    "time":"2022.07",
+                    "value":85.55
+                },
+                {
+                    "name":"Netvrk",
+                    "time":"2022.08",
+                    "value":29.38
+                },
+                {
+                    "name":"Netvrk",
+                    "time":"2022.07",
+                    "value":103.42
+                }
+            ],
+            "eth_percent":[
+                {
+                    "name":"Otherside",
+                    "value":-0.65
+                },
+                {
+                    "name":"The Sandbox",
+                    "value":-0.65
+                },
+                {
+                    "name":"NFT Worlds",
+                    "value":-0.87
+                },
+                {
+                    "name":"Decentraland",
+                    "value":-0.72
+                },
+                {
+                    "name":"Worldwide Webb",
+                    "value":-0.15
+                },
+                {
+                    "name":"Voxels",
+                    "value":-0.29
+                },
+                {
+                    "name":"Somnium Space",
+                    "value":-0.64
+                },
+                {
+                    "name":"Netvrk",
+                    "value":-0.72
+                }
+            ],
+            "usd":[
+                {
+                    "name":"Otherside",
+                    "time":"2022.08",
+                    "value":6575315
+                },
+                {
+                    "name":"Otherside",
+                    "time":"2022.07",
+                    "value":16068876
+                },
+                {
+                    "name":"The Sandbox",
+                    "time":"2022.08",
+                    "value":694760
+                },
+                {
+                    "name":"The Sandbox",
+                    "time":"2022.07",
+                    "value":1688211
+                },
+                {
+                    "name":"NFT Worlds",
+                    "time":"2022.08",
+                    "value":346185
+                },
+                {
+                    "name":"NFT Worlds",
+                    "time":"2022.07",
+                    "value":2443928
+                },
+                {
+                    "name":"Decentraland",
+                    "time":"2022.08",
+                    "value":234070
+                },
+                {
+                    "name":"Decentraland",
+                    "time":"2022.07",
+                    "value":545342
+                },
+                {
+                    "name":"Worldwide Webb",
+                    "time":"2022.08",
+                    "value":290548
+                },
+                {
+                    "name":"Worldwide Webb",
+                    "time":"2022.07",
+                    "value":283326
+                },
+                {
+                    "name":"Voxels",
+                    "time":"2022.08",
+                    "value":111358
+                },
+                {
+                    "name":"Voxels",
+                    "time":"2022.07",
+                    "value":120686
+                },
+                {
+                    "name":"Somnium Space",
+                    "time":"2022.08",
+                    "value":43733
+                },
+                {
+                    "name":"Somnium Space",
+                    "time":"2022.07",
+                    "value":102789
+                },
+                {
+                    "name":"Netvrk",
+                    "time":"2022.08",
+                    "value":41335
+                },
+                {
+                    "name":"Netvrk",
+                    "time":"2022.07",
+                    "value":125012
+                }
+            ],
+            "usd_percent":[
+                {
+                    "name":"Otherside",
+                    "value":-0.59
+                },
+                {
+                    "name":"The Sandbox",
+                    "value":-0.59
+                },
+                {
+                    "name":"NFT Worlds",
+                    "value":-0.86
+                },
+                {
+                    "name":"Decentraland",
+                    "value":-0.57
+                },
+                {
+                    "name":"Worldwide Webb",
+                    "value":0.03
+                },
+                {
+                    "name":"Voxels",
+                    "value":-0.08
+                },
+                {
+                    "name":"Somnium Space",
+                    "value":-0.57
+                },
+                {
+                    "name":"Netvrk",
+                    "value":-0.67
+                }
+            ]
+        }
+    },
+    "msg":"success"
+}
+```
+---
+**16\.9 各个平台 本月与上月的交易数量对比**
+###### 接口功能
+> 各个平台 本月与上月的交易数量对比
+
+###### URL
+> https://api.metacat.world/api/v1/analytics/cur_data_compared_last_sales
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+|  -     |    -   |    -   |  -     |   -        |
+
+###### 返回字段
+```
+{
+    "code":100000,
+    "data":{
+        "monthly":{
+            "percent":[
+                {
+                    "name":"Otherside",
+                    "value":-0.46
+                },
+                {
+                    "name":"The Sandbox",
+                    "value":-0.55
+                },
+                {
+                    "name":"NFT Worlds",
+                    "value":-0.81
+                },
+                {
+                    "name":"Decentraland",
+                    "value":-0.65
+                },
+                {
+                    "name":"Worldwide Webb",
+                    "value":-0.35
+                },
+                {
+                    "name":"Voxels",
+                    "value":-0.16
+                },
+                {
+                    "name":"Somnium Space",
+                    "value":-0.53
+                },
+                {
+                    "name":"Netvrk",
+                    "value":-0.61
+                }
+            ],
+            "sales_data":[
+                {
+                    "name":"Otherside",
+                    "time":"2022.08",
+                    "value":1364
+                },
+                {
+                    "name":"Otherside",
+                    "time":"2022.07",
+                    "value":2545
+                },
+                {
+                    "name":"The Sandbox",
+                    "time":"2022.08",
+                    "value":293
+                },
+                {
+                    "name":"The Sandbox",
+                    "time":"2022.07",
+                    "value":657
+                },
+                {
+                    "name":"NFT Worlds",
+                    "time":"2022.08",
+                    "value":248
+                },
+                {
+                    "name":"NFT Worlds",
+                    "time":"2022.07",
+                    "value":1300
+                },
+                {
+                    "name":"Decentraland",
+                    "time":"2022.08",
+                    "value":92
+                },
+                {
+                    "name":"Decentraland",
+                    "time":"2022.07",
+                    "value":266
+                },
+                {
+                    "name":"Worldwide Webb",
+                    "time":"2022.08",
+                    "value":252
+                },
+                {
+                    "name":"Worldwide Webb",
+                    "time":"2022.07",
+                    "value":390
+                },
+                {
+                    "name":"Voxels",
+                    "time":"2022.08",
+                    "value":89
+                },
+                {
+                    "name":"Voxels",
+                    "time":"2022.07",
+                    "value":106
+                },
+                {
+                    "name":"Somnium Space",
+                    "time":"2022.08",
+                    "value":20
+                },
+                {
+                    "name":"Somnium Space",
+                    "time":"2022.07",
+                    "value":43
+                },
+                {
+                    "name":"Netvrk",
+                    "time":"2022.08",
+                    "value":52
+                },
+                {
+                    "name":"Netvrk",
+                    "time":"2022.07",
+                    "value":134
+                }
+            ]
+        }
+    },
+    "msg":"success"
 }
 ```
 ---
