@@ -159,6 +159,8 @@
 2. 获取 Substrata 地块详情数据接口
 3. 获取 Otherside 均价热力图数据接口
 4. 获取 Otherside 地块详情数据接口
+5. 获取 tz1and 均价热力图数据接口
+6. 获取 tz1and 地块详情数据接口
 
 ### 十九、builder-buildings相关接口
 1. 上传或者修改building
@@ -13119,6 +13121,327 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
                 "eth":35.9,
                 "usd":97042.01,
                 "ape":0
+            }
+        ]
+    }
+}
+```
+---
+**18.5 获取 tz1and 均价热力图数据接口**
+
+###### 接口功能
+> 一次获取全部 tz1and 全部地块的均价热力图数据
+
+###### URL
+> http://8.130.23.16/api/v1/get_tz1and_price_map
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| -        |    -  |    -  |     -   |      |
+
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "stats":{
+            "price":{
+                "level_one":[
+                    {
+                        "month":{
+                            "start":0,
+                            "end":1
+                        },
+                        "quarter":{
+                            "start":283,
+                            "end":111
+                        },
+                        "year":{
+                            "start":913,
+                            "end":253
+                        },
+                        "all":{
+                            "start":913,
+                            "end":253
+                        }
+                    },
+                    {
+                        "month":{
+                            "start":2,
+                            "end":3
+                        },
+                        "quarter":{
+                            "start":108,
+                            "end":100
+                        },
+                        "year":{
+                            "start":250,
+                            "end":197
+                        },
+                        "all":{
+                            "start":250,
+                            "end":197
+                        }
+                    },
+                    {
+                        "month":{
+                            "start":4,
+                            "end":5
+                        },
+                        "quarter":{
+                            "start":97,
+                            "end":88
+                        },
+                        "year":{
+                            "start":195,
+                            "end":127
+                        },
+                        "all":{
+                            "start":195,
+                            "end":127
+                        }
+                    },
+                    {
+                        "month":{
+                            "start":6,
+                            "end":7
+                        },
+                        "quarter":{
+                            "start":87,
+                            "end":82
+                        },
+                        "year":{
+                            "start":117,
+                            "end":96
+                        },
+                        "all":{
+                            "start":117,
+                            "end":96
+                        }
+                    },
+                    {
+                        "month":{
+                            "start":8,
+                            "end":9
+                        },
+                        "quarter":{
+                            "start":80,
+                            "end":77
+                        },
+                        "year":{
+                            "start":94,
+                            "end":81
+                        },
+                        "all":{
+                            "start":94,
+                            "end":81
+                        }
+                    },
+                    {
+                        "month":{
+                            "start":10,
+                            "end":12
+                        },
+                        "quarter":{
+                            "start":76,
+                            "end":69
+                        },
+                        "year":{
+                            "start":80,
+                            "end":63
+                        },
+                        "all":{
+                            "start":80,
+                            "end":63
+                        }
+                    },
+                    {
+                        "month":{
+                            "start":13,
+                            "end":15
+                        },
+                        "quarter":{
+                            "start":68,
+                            "end":63
+                        },
+                        "year":{
+                            "start":62,
+                            "end":45
+                        },
+                        "all":{
+                            "start":62,
+                            "end":45
+                        }
+                    },
+                    {
+                        "month":{
+                            "start":16,
+                            "end":0
+                        },
+                        "quarter":{
+                            "start":62,
+                            "end":0
+                        },
+                        "year":{
+                            "start":44,
+                            "end":0
+                        },
+                        "all":{
+                            "start":44,
+                            "end":0
+                        }
+                    }
+                ]
+            }
+        },
+        "parcels":[
+            {
+                "geometry":{
+                    "coordinates":[
+                        [
+                            -14,
+                            0,
+                            5.799
+                        ],
+                        [
+                            -5.799,
+                            0,
+                            14
+                        ],
+                        [
+                            5.799,
+                            0,
+                            14
+                        ],
+                        [
+                            14,
+                            0,
+                            5.799
+                        ],
+                        [
+                            14,
+                            0,
+                            -5.799
+                        ],
+                        [
+                            5.799,
+                            0,
+                            -14
+                        ],
+                        [
+                            -5.799,
+                            0,
+                            -14
+                        ],
+                        [
+                            -14,
+                            0,
+                            -5.799
+                        ]
+                    ],
+                    "type":"Polygon"
+                },
+                "properties":{
+                    "token_id":0
+                },
+                "price":{
+                    "month":0,
+                    "quarter":0,
+                    "year":0,
+                    "all":0
+                }
+            },
+            {
+                "geometry":{
+                    "coordinates":[
+                        [
+                            -4.2752,
+                            0,
+                            -26
+                        ],
+                        [
+                            4.2752,
+                            0,
+                            -26
+                        ],
+                        [
+                            15.8732,
+                            0,
+                            -54
+                        ],
+                        [
+                            -15.8732,
+                            0,
+                            -54
+                        ]
+                    ],
+                    "type":"Polygon"
+                },
+                "properties":{
+                    "token_id":1
+                },
+                "price":{
+                    "month":0,
+                    "quarter":0,
+                    "year":0,
+                    "all":0
+                }
+            }
+        ]
+    }
+}
+
+```
+---
+**18.6 获取 tz1and 地块详情数据接口**
+
+###### 接口功能
+> 获取 tz1and 地块详情数据接口
+
+###### URL
+> http://8.130.23.16/api/v1/get_tz1and_parcel_detail?token_id=6
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| -        |    -  |    -  |     -   |      |
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "token_id":"6",
+        "name":"Place #6",
+        "description":"463.80 ㎡",
+        "cover_img_url":"",
+        "opensea_url":"",
+        "parcel_page_url":"https://www.tz1and.com/explore?placeid=6",
+        "time_range_sale":{
+            "tez":3.5,
+            "usd":11.42
+        },
+        "last_sale_list":[
+            {
+                "date":"2022.03.21",
+                "tez":3.5,
+                "usd":11.42
             }
         ]
     }
