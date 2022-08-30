@@ -13133,7 +13133,7 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 > 一次获取全部 tz1and 全部地块的均价热力图数据
 
 ###### URL
-> http://8.130.23.16/api/v1/get_tz1and_price_map
+> https://api.metacat.world/api/v1/get_tz1and_price_map
 
 ###### 支持格式
 > JSON
@@ -13408,7 +13408,7 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 > 获取 tz1and 地块详情数据接口
 
 ###### URL
-> http://8.130.23.16/api/v1/get_tz1and_parcel_detail?token_id=6
+> https://api.metacat.world/api/v1/get_tz1and_parcel_detail?token_id=6
 
 ###### 支持格式
 > JSON
