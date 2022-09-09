@@ -13559,7 +13559,7 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 > builder获取自己所有的buildings
 
 ###### URL
-> http://8.130.23.16/api/v1/building/builder_get_self_buildings
+> http://8.130.23.16/api/v1/building/get_builder_buildings
 
 ###### 支持格式
 > JSON
@@ -13709,6 +13709,43 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
             "http://test/test/te",
             "http://test/test/te",
             "http://test/test/te",
+        ]
+    }
+}
+```
+---
+**19.6 获取 添加building详细信息中各个下拉框选项值**
+
+###### 接口功能
+> 获取 添加building详细信息中各个下拉框选项值
+
+###### URL
+> https://api.metacat.world/api/v1/building/get_building_select_info
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> POST
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| - | - | -  |  -    |-  |
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "platform":[
+            "Decentraland",
+            "Voxels",
+            "Others"
+        ],
+        "format":[
+            "VOX",
+            "GLB"
         ]
     }
 }
