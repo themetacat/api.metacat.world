@@ -193,7 +193,7 @@
 | 100016 | join filed                        |       申请加入失败               |
 | 100017 | not builder                        |       不是builder               |
 | 100018 | text too long                    |       内容太长               |
-| 100019 | files ≥ 8                        |       文件数量超过8个               |
+| 100019 | The number has reached the limit                        |       文件数量超过限制               |
 | 100020 | files link cover is None                        |       building封面图为空               |
 | 100021 | Add Files is None                        |      添加building情况下添加的图片为空               |
 | 100022 | delete building error                        |       删除building失败               |
@@ -201,6 +201,7 @@
 | 100024 | have been apply                       |       已经申请过了             |
 | 100025 | add field                        |       添加文件失败               |
 | 100026 | delete field                        |       删除文件失败               |
+| 100027 | * url verification failed                        |       某个字段传入的url验证失败               |
 
 ----
 ## 接口详情
@@ -13559,7 +13560,7 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 > builder获取自己所有的buildings
 
 ###### URL
-> http://8.130.23.16/api/v1/building/get_builder_buildings
+> http://8.130.23.16/api/v1/building/get_builder_buildings?addr=xxx
 
 ###### 支持格式
 > JSON
@@ -13570,8 +13571,7 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 ###### 请求参数
 | 参数          | 必选 |  类型  | 默认值 | 描述              |
 | :------------ | :--- | :----: | :----- | ----------------- |
-| Header        |      |        |        | 请求头            |
-| Header.Authorization | true | sring  | 无     | 值为 access_token |
+| addr        |   true   |   str     |        | 钱包地址           |
 ```
 {
     "code": 100000,
