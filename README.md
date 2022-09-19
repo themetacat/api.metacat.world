@@ -144,9 +144,11 @@
 4. MetaIndex和ETH Price
 5. 各个平台每 月/季度/年 各个交易总量
 6. 各个平台 floor price接口
-6. 各个平台 本月与上月的交易均价对比
-6. 各个平台 本月与上月的交易总额对比
-6. 各个平台 本月与上月的交易数量对比
+7. 各个平台 本月与上月的交易均价对比
+8. 各个平台 本月与上月的交易总额对比
+9. 各个平台 本月与上月的交易数量对比
+10. 获取 landworlds 土地租赁总价
+11. 获取 landworlds 土地租赁总数
 
 ### 十七、邮箱绑定 相关接口
 1. 发送邮箱验证码
@@ -12722,6 +12724,130 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
     "msg":"success"
 }
 ```
+---
+**16\.10 获取 landworlds 土地租赁总价**
+###### 接口功能
+> 获取 landworlds 土地租赁总价
+
+###### URL
+> https://api.metacat.world/api/v1/analytics/rent_sum_price
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+|  -     |    -   |    -   |  -     |   -        |
+
+###### 返回字段
+```
+{
+    "code":100000,
+    "data":{
+        "weekly":{
+            "eth":[
+                {
+                    "name":"Decentraland",
+                    "time":"2022.03.06",
+                    "value":0
+                },
+                {
+                    "name":"Voxels",
+                    "time":"2022.03.06",
+                    "value":0
+                },
+                {
+                    "name":"Decentraland",
+                    "time":"2022.03.13",
+                    "value":0
+                },
+                {
+                    "name":"Voxels",
+                    "time":"2022.03.13",
+                    "value":0
+                }
+            ],
+            "usd":[
+                {
+                    "name":"Decentraland",
+                    "time":"2022.03.06",
+                    "value":0
+                },
+                {
+                    "name":"Voxels",
+                    "time":"2022.03.06",
+                    "value":0
+                },
+                {
+                    "name":"Decentraland",
+                    "time":"2022.03.13",
+                    "value":0
+                },
+                {
+                    "name":"Voxels",
+                    "time":"2022.03.13",
+                    "value":0
+                }
+            ]
+        }
+    },
+    "msg":"success"
+}
+```
+**16\.11 获取 landworlds 土地租赁总数**
+###### 接口功能
+> 获取 landworlds 土地租赁总数
+
+###### URL
+> https://api.metacat.world/api/v1/analytics/num_of_rent
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+|  -     |    -   |    -   |  -     |   -        |
+
+###### 返回字段
+```
+{
+    "code":100000,
+    "data":{
+        "weekly":{
+            {
+                "name":"Decentraland",
+                "time":"2022.03.06",
+                "value":0
+            },
+            {
+                "name":"Voxels",
+                "time":"2022.03.06",
+                "value":0
+            },
+            {
+                "name":"Decentraland",
+                "time":"2022.03.13",
+                "value":0
+            },
+            {
+                "name":"Voxels",
+                "time":"2022.03.13",
+                "value":0
+            }
+        }
+    },
+    "msg":"success"
+}
+```
+---
 ---
 **17.1 发送邮箱验证码**
 ###### 接口功能
