@@ -171,6 +171,9 @@
 4. builder删除自己的building
 5. 获取 building详细信息
 
+### 二十、搜索
+1. 全局搜索以及单个搜索
+
 ----
 ## 全局错误码
 
@@ -13716,7 +13719,7 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 **19.3 获取所有的builders**
 
 ###### 接口功能
-> 获取所有的builders
+> 获取所有的新builders + creators
 
 ###### URL
 > http://8.130.23.16/api/v1/building/get_all_builders
@@ -13874,5 +13877,85 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
             "GLB"
         ]
     }
+}
+```
+---
+**20.1 全局搜索以及单个搜索**
+
+###### 接口功能
+> 全局搜索以及单个搜索
+
+###### URL
+> https://api.metacat.world/api/v1/the_search?query=metaverse
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| query        |      |    str  |     ''   |   搜索参数 query=搜索词   |
+| page        |      |    int  |     1   |   搜索结果的页数   |
+| per_page      |     |    int  |    8    |   搜索结果每页展示多少条数据   |
+| search_item   |      |    str  |     ''   |   懒加载或者搜索单个模块 的数据 (cv_parcel, dcl_parcel, creator_info, learn) |
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":[
+        {
+            "name":"Place",
+            "data":{
+                "count":415,
+                "menu_two":[
+                    "Voxels",
+                    "Decentranland"
+                ],
+                "Voxels":[
+                    {
+                        "name":"蓬莱仙境 Fairytale in Metaverse 02",
+                        "parcel_id":"6ba38feb-e9ca-46f8-9d0c-1b33ad207ca1",
+                        "type":"Free Space",
+                        "cover_img":"https://poster-phi.vercel.app/metacat_default_cover_img.png",
+                        "detail_url":"https://www.voxels.com/spaces/6ba38feb-e9ca-46f8-9d0c-1b33ad207ca1"
+                    }
+                ],
+                "Decentranland":[
+                    {
+                        "name":"land in metaverse",
+                        "token_id":"fb48e6ba-9b6b-4682-9e0e-c9530ab11e32",
+                        "type":"Scene",
+                        "cover_img":"https://builder-api.decentraland.org/v1/projects/fb48e6ba-9b6b-4682-9e0e-c9530ab11e32/media/preview.png",
+                        "detail_url":"https://builder.decentraland.org/view/pool/fb48e6ba-9b6b-4682-9e0e-c9530ab11e32?position=1%2C-1"
+                    }
+                ]
+            }
+        },
+        {
+            "name":"Learn",
+            "data":{
+                "count":68,
+                "menu_two":[
+
+                ],
+                "data":[
+                    {
+                        "author":"DawnXue",
+                        "cover_img_url":"https://poster-phi.vercel.app/metaverse_learn/Metaverse_Monthly_Summary_2022–02.png",
+                        "desc":"2022年2月多个重要指标持续下降，如均价、交易额、交易量等。",
+                        "link_url":"https://mp.weixin.qq.com/s/dW2PyksB5Ld2jS4jzQsHUw",
+                        "source":"MetaCat",
+                        "time":"2022-03-04",
+                        "title":"Metaverse 月报 2022-02"
+                    }
+                ]
+            }
+        }
+    ]
 }
 ```
