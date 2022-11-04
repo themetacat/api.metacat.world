@@ -174,6 +174,19 @@
 ### 二十、搜索
 1. 全局搜索以及单个搜索
 
+### 二十一、place接口
+1. Oncyber Space 列表接口
+2. Mona Space 列表接口
+3. Protoworld Zone 列表接口
+4. SomniumSpace Parcel 列表接口
+5. Rarerooms room 列表接口
+6. Sandbox Parcel 列表接口
+7. Spatial Space 列表接口
+8. Hyper parcel 列表接口
+9. Mozilla Hubs Scene 列表接口
+10. Arium Space 列表接口
+11. Artifex World 列表接口
+
 ----
 ## 全局错误码
 
@@ -13979,6 +13992,976 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
         "menu_one":[
             "Place",
             "Learn"
+        ]
+    }
+}
+```
+---
+**21.1 Oncyber Space 列表接口**
+
+###### 接口功能
+> Oncyber Space 列表接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_oncyber_space_list?page=1&count=50
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| type        |      |    str  |    'All'   |   空间类型   |
+| page        |      |    int  |     1   |   搜索结果的页数   |
+| count      |     |    int  |    8    |   搜索结果每页展示多少条数据   |
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "page":1,
+        "parcel_list":[
+            {
+                "name":"Meta Trap house ",
+                "cover_img":"https://res.cloudinary.com/oncyber-io/image/upload/v1642004600/exhibit_preview/ySfg4vnifD7v3sC9xmre.jpg",
+                "detail_url":"https://oncyber.io/spaces/ySfg4vnifD7v3sC9xmre",
+                "type":"Rtfktspacepod",
+                "description":""
+            },
+            {
+                "name":"6529 Museum District",
+                "cover_img":"https://firebasestorage.googleapis.com/v0/b/cyber-art-prod.appspot.com/o/images%2F5P8XBjWClakkWNVTEkzQ%2Fhero?alt=media&token=91c915ca-2ba9-429e-b7c0-cb4fa730bd4b",
+                "detail_url":"https://oncyber.io/spaces/5P8XBjWClakkWNVTEkzQ",
+                "type":"Other",
+                "description":"The 6529 Museum District is the alpha version of the first district of OM. For more info: 6529.io/om"
+            },
+            {
+                "name":"The Vincent Van Dough Gallery",
+                "cover_img":"https://res.cloudinary.com/oncyber-io/image/upload/v1641503034/exhibit_preview/8GTsZuvNX0jucmfCYWIL.jpg",
+                "detail_url":"https://oncyber.io/spaces/8GTsZuvNX0jucmfCYWIL",
+                "type":"Other",
+                "description":""
+            }
+        ],
+        "count":3,
+        "total_page":16977,
+        "type":"All",
+        "type_total":[
+            {
+                "name":"All",
+                "count":50930
+            },
+            {
+                "name":"Wolfgang-n2",
+                "count":13801
+            },
+            {
+                "name":"White-cube",
+                "count":13748
+            },
+            {
+                "name":"Classic",
+                "count":5825
+            },
+            {
+                "name":"Loft",
+                "count":4166
+            },
+            {
+                "name":"Warehouse",
+                "count":3246
+            },
+            {
+                "name":"Rtfktspacepod",
+                "count":1775
+            },
+            {
+                "name":"Rtfktlootpod",
+                "count":1420
+            },
+            {
+                "name":"Other",
+                "count":6949
+            }
+        ]
+    }
+}
+```
+---
+**21.2 Mona Space 列表接口**
+
+###### 接口功能
+> Mona Space 列表接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_mona_space_list?page=1&count=2
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| type        |      |    str  |    'All'   |   空间类型   |
+| page        |      |    int  |     1   |   搜索结果的页数   |
+| count      |     |    int  |    8    |   搜索结果每页展示多少条数据   |
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "page":1,
+        "parcel_list":[
+            {
+                "name":"Hymenaea III",
+                "cover_img":"https://res.cloudinary.com/mona-gallery/image/fetch/q_auto,f_auto,w_400/https://ipfs.mona.gallery/ipfs/bafybeib5yk4fdhqu3likzfqruttgotnc2xmbwbihfesuvagvfs4m2tnul4",
+                "detail_url":"https://monaverse.com/spaces/hymenaea-iii",
+                "type":"Classical",
+                "description":"An architecturally pleasurable space to discover and connect amazing worlds."
+            },
+            {
+                "name":"Jumping Game 01",
+                "cover_img":"https://res.cloudinary.com/mona-gallery/image/fetch/q_auto,f_auto,w_400/https://ipfs.mona.gallery/ipfs/bafybeicwqbcyxex6dv335wycxkevvtszmn4v2hx56xijru4yivqt46xpqe",
+                "detail_url":"https://monaverse.com/spaces/jumping-game-01",
+                "type":"Sci-fi",
+                "description":"Welcome to the most skill-intensive NFT gallery you've ever seen. Three rooms of running and jumping game action will test you in many different ways: log rolling, low gravity, and high speed!"
+            }
+        ],
+        "count":2,
+        "total_page":240,
+        "type":"All",
+        "type_total":[
+            {
+                "name":"All",
+                "count":479
+            },
+            {
+                "name":"Nature",
+                "count":170
+            },
+            {
+                "name":"Sci-fi",
+                "count":121
+            },
+            {
+                "name":"Gallery",
+                "count":111
+            },
+            {
+                "name":"Classical",
+                "count":37
+            },
+            {
+                "name":"Satire",
+                "count":15
+            },
+            {
+                "name":"Music",
+                "count":8
+            },
+            {
+                "name":"Education",
+                "count":4
+            },
+            {
+                "name":"Other",
+                "count":13
+            }
+        ]
+    }
+}
+```
+---
+**21.3 Protoworld Zone 列表接口**
+
+###### 接口功能
+> Protoworld Zone 列表接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_protoworld_zone_list?page=2&count=2&type=Personal
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| type        |      |    str  |    'All'   |   空间类型   |
+| page        |      |    int  |     1   |   搜索结果的页数   |
+| count      |     |    int  |    8    |   搜索结果每页展示多少条数据   |
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "page":2,
+        "parcel_list":[
+            {
+                "name":"d r e a m s p a c e \u2122",
+                "cover_img":"https://res.cloudinary.com/protoworld/image/upload/c_thumb,w_600,h_315,q_auto,f_auto/zonePreview/blo5hvoeppz0g3rrahgj",
+                "detail_url":"https://protoworld.io/tz2WoHgA1HrQnp8Z2rTu7hv1a7AoXtBpLVdD",
+                "description":"dreamspace\u2122 - an immersive virtual getaway for relaxation, reflection and recreation. featuring works by Sky Goodman, lxtxcx and more.",
+                "type":"Personal"
+            },
+            {
+                "name":"tz1XJX9MN4hsDnWc6KuUAZUGiLrsQXZD3C6S_TEST",
+                "cover_img":"https://res.cloudinary.com/protoworld/image/upload/c_thumb,w_600,h_315,q_auto,f_auto/zonePreview/ov7zpzcpqdcuy8o6hd21",
+                "detail_url":"https://protoworld.io/tz1XJX9MN4hsDnWc6KuUAZUGiLrsQXZD3C6S_TEST",
+                "description":"Lost",
+                "type":"Personal"
+            }
+        ],
+        "count":2,
+        "total_page":163,
+        "type":"Personal",
+        "type_total":[
+            {
+                "name":"All",
+                "count":356
+            },
+            {
+                "name":"Personal",
+                "count":326
+            },
+            {
+                "name":"Dev",
+                "count":14
+            },
+            {
+                "name":"Demo",
+                "count":9
+            },
+            {
+                "name":"Group",
+                "count":3
+            },
+            {
+                "name":"Other",
+                "count":4
+            }
+        ]
+    }
+}
+```
+---
+**21.4 SomniumSpace Parcel 列表接口**
+
+###### 接口功能
+> SomniumSpace Parcel 列表接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_somniumspace_parcel_list?page=1&count=2
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| type        |      |    str  |    'All'   |   空间类型   |
+| page        |      |    int  |     1   |   搜索结果的页数   |
+| count      |     |    int  |    8    |   搜索结果每页展示多少条数据   |
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "page":1,
+        "parcel_list":[
+            {
+                "name":"Parcel #1",
+                "description":"",
+                "type":"Other",
+                "parcel_id":1,
+                "cover_img":"https://somniumspace-imgs.vercel.app/1.png",
+                "opensea_url":"https://opensea.io/assets/0x913ae503153d9a335398d0785ba60a2d63ddb4e2/1",
+                "detail_url":"https://somniumspace.com/parcel/1"
+            },
+            {
+                "name":"LayerX Properties",
+                "description":"",
+                "type":"Other",
+                "parcel_id":2,
+                "cover_img":"https://somniumspace-imgs.vercel.app/2.png",
+                "opensea_url":"https://opensea.io/assets/0x913ae503153d9a335398d0785ba60a2d63ddb4e2/2",
+                "detail_url":"https://somniumspace.com/parcel/2"
+            }
+        ],
+        "count":2,
+        "total_page":2500,
+        "type":"All",
+        "type_total":[
+            {
+                "name":"All",
+                "count":5000
+            },
+            {
+                "name":"Plaza",
+                "count":39
+            },
+            {
+                "name":"Gallery",
+                "count":33
+            },
+            {
+                "name":"House",
+                "count":21
+            },
+            {
+                "name":"HQ",
+                "count":20
+            },
+            {
+                "name":"Tower",
+                "count":13
+            },
+            {
+                "name":"Club",
+                "count":10
+            },
+            {
+                "name":"Space",
+                "count":10
+            },
+            {
+                "name":"Museum",
+                "count":10
+            },
+            {
+                "name":"Garden",
+                "count":5
+            },
+            {
+                "name":"Shop",
+                "count":3
+            },
+            {
+                "name":"Monument",
+                "count":2
+            },
+            {
+                "name":"Park",
+                "count":1
+            },
+            {
+                "name":"Other",
+                "count":4833
+            }
+        ]
+    }
+}
+```
+---
+**21.5 Rarerooms room 列表接口**
+
+###### 接口功能
+> Rarerooms room 列表接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_rarerooms_room_list?page=1&count=3
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| type        |      |    str  |    'All'   |   空间类型   |
+| page        |      |    int  |     1   |   搜索结果的页数   |
+| count      |     |    int  |    8    |   搜索结果每页展示多少条数据   |
+
+```{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "page":1,
+        "parcel_list":[
+            {
+                "name":"Alotta Money Forever",
+                "cover_img":"https://storage.googleapis.com/darts-1/RareRoomsThumbnails/1.png",
+                "detail_url":"https://app.rarerooms.io/1",
+                "description":"He made us feel, smile, and think <3",
+                "type":"Other"
+            },
+            {
+                "name":"Kintsugi Ball Room",
+                "cover_img":"https://storage.googleapis.com/darts-1/RareRoomsThumbnails/1.png",
+                "detail_url":"https://app.rarerooms.io/2",
+                "description":"Kintsugi Ball Fragments from the Bleacher Report.  Bringing all 6 fragments together!",
+                "type":"Other"
+            },
+            {
+                "name":"Brian\u2019s Room",
+                "cover_img":"https://storage.googleapis.com/darts-1/RareRoomsThumbnails/1.png",
+                "detail_url":"https://app.rarerooms.io/3",
+                "description":"Hope you like my pieces!",
+                "type":"Other"
+            }
+        ],
+        "count":3,
+        "total_page":4136,
+        "type":"All",
+        "type_total":[
+            {
+                "name":"All",
+                "count":12407
+            },
+            {
+                "name":"Gallery",
+                "count":6059
+            },
+            {
+                "name":"Museum",
+                "count":22
+            },
+            {
+                "name":"Garden",
+                "count":16
+            },
+            {
+                "name":"House",
+                "count":15
+            },
+            {
+                "name":"Space",
+                "count":15
+            },
+            {
+                "name":"Club",
+                "count":4
+            },
+            {
+                "name":"Temple",
+                "count":4
+            },
+            {
+                "name":"HQ",
+                "count":2
+            },
+            {
+                "name":"Shop",
+                "count":2
+            },
+            {
+                "name":"Other",
+                "count":6268
+            }
+        ]
+    }
+}
+
+```
+---
+**21.6 Sandbox Parcel 列表接口**
+
+###### 接口功能
+> Sandbox Parcel 列表接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_sandbox_parcel_list?page=3&count=3
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| type        |      |    str  |    'All'   |   空间类型   |
+| page        |      |    int  |     1   |   搜索结果的页数   |
+| count      |     |    int  |    8    |   搜索结果每页展示多少条数据   |
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "page":3,
+        "parcel_list":[
+            {
+                "name":"Land (-153,-204)",
+                "cover_img":"https://api.sandbox.game/lands/44e54522-ac55-4c99-a9f6-2d5335abf1bc/preview",
+                "detail_url":"https://www.sandbox.game/en/map/?currentX=1514¤tY=615&zoom=0.5&liteMap=false&x=-153&y=-204",
+                "description":"",
+                "opensea_url":"https://opensea.io/assets/0x5cc5b05a8a13e3fbdb0bb9fccd98d38e50f90c38/51",
+                "type":"Other"
+            },
+            {
+                "name":"Land (-152,-204)",
+                "cover_img":"https://api.sandbox.game/lands/62333bf3-6183-437c-b0aa-cb42aa3ca0df/preview",
+                "detail_url":"https://www.sandbox.game/en/map/?currentX=1514¤tY=615&zoom=0.5&liteMap=false&x=-152&y=-204",
+                "description":"",
+                "opensea_url":"https://opensea.io/assets/0x5cc5b05a8a13e3fbdb0bb9fccd98d38e50f90c38/52",
+                "type":"Other"
+            },
+            {
+                "name":"Land (-151,-204)",
+                "cover_img":"https://api.sandbox.game/lands/7e8d197c-f4ad-4ab5-a7af-aef6194b9d3a/preview",
+                "detail_url":"https://www.sandbox.game/en/map/?currentX=1514¤tY=615&zoom=0.5&liteMap=false&x=-151&y=-204",
+                "description":"",
+                "opensea_url":"https://opensea.io/assets/0x5cc5b05a8a13e3fbdb0bb9fccd98d38e50f90c38/53",
+                "type":"Other"
+            }
+        ],
+        "count":3,
+        "total_page":37190,
+        "type":"All",
+        "type_total":[
+            {
+                "name":"All",
+                "count":111568
+            },
+            {
+                "name":"House",
+                "count":59
+            },
+            {
+                "name":"Club",
+                "count":53
+            },
+            {
+                "name":"HQ",
+                "count":45
+            },
+            {
+                "name":"Gallery",
+                "count":40
+            },
+            {
+                "name":"Garden",
+                "count":33
+            },
+            {
+                "name":"Space",
+                "count":32
+            },
+            {
+                "name":"Shop",
+                "count":15
+            },
+            {
+                "name":"Park",
+                "count":15
+            },
+            {
+                "name":"Tower",
+                "count":8
+            },
+            {
+                "name":"Museum",
+                "count":6
+            },
+            {
+                "name":"Temple",
+                "count":2
+            },
+            {
+                "name":"Other",
+                "count":111260
+            }
+        ]
+    }
+}
+```
+---
+**21.7 Spatial Space 列表接口**
+
+###### 接口功能
+> Spatial Space 列表接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_spatial_space_list?page=2&count=3&type=Other
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| type        |      |    str  |    'All'   |   空间类型   |
+| page        |      |    int  |     1   |   搜索结果的页数   |
+| count      |     |    int  |    8    |   搜索结果每页展示多少条数据   |
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "page":2,
+        "parcel_list":[
+            {
+                "name":"Buddhaverse 3",
+                "cover_img":"https://place-cover-img.vercel.app/spatial_img/63217ef78f09c800017000f9.png",
+                "detail_url":"https://www.spatial.io/s/Buddhaverse-3-63217ef78f09c800017000f9?share=5911661732098869522",
+                "description":"",
+                "type":"Other"
+            },
+            {
+                "name":"VERSES Gallery",
+                "cover_img":"https://place-cover-img.vercel.app/spatial_img/62053ee64202c9000136e63e.png",
+                "detail_url":"https://www.spatial.io/s/VERSES-Gallery-62053ee64202c9000136e63e?share=7454859656663147052",
+                "description":"",
+                "type":"Other"
+            },
+            {
+                "name":"Metadurso",
+                "cover_img":"https://place-cover-img.vercel.app/spatial_img/62ed608b7e22f400012e0f58.png",
+                "detail_url":"https://www.spatial.io/s/Metadurso-62ed608b7e22f400012e0f58?share=7112208711169705533",
+                "description":"",
+                "type":"Other"
+            }
+        ],
+        "count":3,
+        "total_page":75,
+        "type":"Other",
+        "type_total":[
+            {
+                "name":"All",
+                "count":242
+            },
+            {
+                "name":"Private_lobby",
+                "count":17
+            },
+            {
+                "name":"Other",
+                "count":225
+            }
+        ]
+    }
+}
+```
+---
+**21.8 Hyper parcel 列表接口**
+
+###### 接口功能
+> Hyper parcel 列表接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_hyperfy_parcel_list?page=1&count=3
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| type        |      |    str  |    'All'   |   空间类型   |
+| page        |      |    int  |     1   |   搜索结果的页数   |
+| count      |     |    int  |    8    |   搜索结果每页展示多少条数据   |
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "page":1,
+        "parcel_list":[
+            {
+                "name":"HyperLab",
+                "cover_img":"https://res.cloudinary.com/di74yvrj5/image/upload/v1666339404/uploads/80c1f18c0dab1e9c9862691f627365c3.png",
+                "detail_url":"https://hyperfy.io/Hyperlab",
+                "description":"Experiments happen here",
+                "type":"Other"
+            },
+            {
+                "name":"Holomedia",
+                "cover_img":"https://res.cloudinary.com/di74yvrj5/image/upload/v1663055654/uploads/ca6b6ef3ae12168ca38b8f713858eb1b.png",
+                "detail_url":"https://hyperfy.io/Holomedia",
+                "description":"Test Area",
+                "type":"Other"
+            },
+            {
+                "name":"Favela DAO",
+                "cover_img":"https://res.cloudinary.com/di74yvrj5/image/upload/v1666575855/uploads/c4507e7ef8bb037b7f2d60596f766e03.png",
+                "detail_url":"https://hyperfy.io/Faveladao",
+                "description":"This is the space for Favela DAO's metaverse world.",
+                "type":"Other"
+            }
+        ],
+        "count":3,
+        "total_page":28,
+        "type":"Other",
+        "type_total":[
+            {
+                "name":"All",
+                "count":94
+            },
+            {
+                "name":"HQ",
+                "count":2
+            },
+            {
+                "name":"Space",
+                "count":2
+            },
+            {
+                "name":"House",
+                "count":2
+            },
+            {
+                "name":"Club",
+                "count":1
+            },
+            {
+                "name":"Tower",
+                "count":1
+            },
+            {
+                "name":"Shop",
+                "count":1
+            },
+            {
+                "name":"Park",
+                "count":1
+            },
+            {
+                "name":"Gallery",
+                "count":1
+            },
+            {
+                "name":"Other",
+                "count":83
+            }
+        ]
+    }
+}
+```
+---
+**21.9 Mozilla Hubs Scene 列表接口**
+
+###### 接口功能
+> Mozilla Hubs Scene 列表接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_mozilla_hubs_scene_list?page=1&count=3
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| type        |      |    str  |    'All'   |   空间类型   |
+| page        |      |    int  |     1   |   搜索结果的页数   |
+| count      |     |    int  |    8    |   搜索结果每页展示多少条数据   |
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "page":1,
+        "parcel_list":[
+            {
+                "name":"Avanti's Christmas Grotto",
+                "cover_img":"https://uploads-prod.reticulum.io/files/5b2ed0bb-6609-432a-8270-7386236bdbec.png",
+                "detail_url":"https://hubs.mozilla.com/scenes/ZZSgBeQ",
+                "description":"",
+                "type":"Scene_listing"
+            },
+            {
+                "name":"Outdoor Festival",
+                "cover_img":"https://uploads-prod.reticulum.io/files/b853e25f-6397-4fcc-8aed-697c1adf3b79.jpg",
+                "detail_url":"https://hubs.mozilla.com/scenes/Rpt8DJS",
+                "description":"",
+                "type":"Scene_listing"
+            },
+            {
+                "name":"Interdimensional Art Gallery",
+                "cover_img":"https://uploads-prod.reticulum.io/files/50748e8c-766b-4061-9807-3a4f3fd3c893.jpg",
+                "detail_url":"https://hubs.mozilla.com/scenes/rX32zZQ",
+                "description":"",
+                "type":"Scene_listing"
+            }
+        ],
+        "count":3,
+        "total_page":29,
+        "type":"All",
+        "type_total":[
+            {
+                "name":"All",
+                "count":87
+            },
+            {
+                "name":"Scene_listing",
+                "count":87
+            }
+        ]
+    }
+}
+```
+---
+**21.1 Arium Space 列表接口**
+
+###### 接口功能
+> Arium Space 列表接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_arium_space_list?page=2&count=3
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| type        |      |    str  |    'All'   |   空间类型   |
+| page        |      |    int  |     1   |   搜索结果的页数   |
+| count      |     |    int  |    8    |   搜索结果每页展示多少条数据   |
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "page":2,
+        "parcel_list":[
+            {
+                "name":"Pupila Dilatada",
+                "cover_img":"https://assets.vlts.pw/spaceUserAssets/pupila-dilatada/3JgRiHjdmbOOTwAHcWE9ZjIMfo33/default-meta-jNY6dcsl.jpg",
+                "detail_url":"https://arium.xyz/spaces/pupila-dilatada",
+                "description":"Pupila Dilatada",
+                "type":"Other"
+            },
+            {
+                "name":"Hackatao: Encounter",
+                "cover_img":"https://assets.vlts.pw/spaceUserAssets/whale-community-staging/Vnbelp2GOYPXiAwZyQzp6eWZIIJ3/default-meta-N2QbBFMd.jpg",
+                "detail_url":"https://arium.xyz/spaces/whale-community-hackatao",
+                "description":"Hackatao x Whale Community x Breezy Art",
+                "type":"Other"
+            },
+            {
+                "name":"The Vault: XCopy Collection",
+                "cover_img":"https://assets.vlts.pw/spaceUserAssets/whale-community/FALZQmkbeRMgHten7UM938OboZH3/default-meta-2YOcMZRO.jpg",
+                "detail_url":"https://arium.xyz/spaces/whale-community-xcopy",
+                "description":"XCopy x Whale Community x Breezy Art",
+                "type":"Other"
+            }
+        ],
+        "count":3,
+        "total_page":6,
+        "type":"All",
+        "type_total":[
+            {
+                "name":"All",
+                "count":18
+            },
+            {
+                "name":"Other",
+                "count":18
+            }
+        ]
+    }
+}
+```
+---
+**21.11 Artifex World 列表接口**
+
+###### 接口功能
+> Artifex World 列表接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_artifex_world_list?page=1&count=3
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| type        |      |    str  |    'All'   |   空间类型   |
+| page        |      |    int  |     1   |   搜索结果的页数   |
+| count      |     |    int  |    8    |   搜索结果每页展示多少条数据   |
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "page":1,
+        "parcel_list":[
+            {
+                "name":"Bryan Brinkman",
+                "cover_img":"https://artifex-project.storage.googleapis.com/2022/06/09150900/BRAYNFIRST_FRAME.jpg",
+                "detail_url":"https://artifex.art/unreal-experiences/bryan-brinkman",
+                "description":"",
+                "type":"Other"
+            },
+            {
+                "name":"Chewy Stoll",
+                "cover_img":"https://artifex-project.storage.googleapis.com/2022/06/09151654/chewyfirstframe_1.jpg",
+                "detail_url":"https://artifex.art/unreal-experiences/chewy-stoll",
+                "description":"",
+                "type":"Other"
+            },
+            {
+                "name":"Dave Krugman",
+                "cover_img":"https://artifex-project.storage.googleapis.com/2022/08/11113820/dave_firstframe.jpg",
+                "detail_url":"https://artifex.art/unreal-experiences/dave-krugman",
+                "description":"",
+                "type":"Other"
+            }
+        ],
+        "count":3,
+        "total_page":4,
+        "type":"All",
+        "type_total":[
+            {
+                "name":"All",
+                "count":11
+            },
+            {
+                "name":"Other",
+                "count":11
+            }
         ]
     }
 }
