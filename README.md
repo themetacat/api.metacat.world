@@ -101,6 +101,7 @@
 8. 获取登录用户创作的的所有wearable
 9. 用户设置自己wearable展示的状态
 10. 获取 Wearable 详情页数据接口 
+10. 获取所有正在展示的 Wearable
 
 ### 十、Decentraland 地图相关接口
 1. 获取 Decentraland 均价热力图数据接口
@@ -10015,7 +10016,7 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
 > JSON
 
 ###### HTTP 请求方式
-> POST
+> GET
 
 ###### 请求参数
 | 参数          | 必选 |  类型  | 默认值 | 描述              |
@@ -10051,6 +10052,60 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
     ],
     "msg":"success"
 }
+}
+```
+---
+**9.11 获取所有正在展示的 Wearable**
+
+###### 接口功能
+> 获取所有正在展示的 Wearable 
+
+###### URL
+> https://api.metacat.world/api/v1/wearable/get_wearable_list?page=6&count=16&world=all
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| page   |   False   |  int   |  1 |页数  |
+| count   |   False   |  int   |  15 |每页展示数量  |
+| world   |   False   |  string   |  'all' |平台名字 Voxels  |
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":[
+        {
+            "id":"75f2fed8-7d23-4bb6-baeb-457addfb15e6",
+            "name":"Voxeth\u2122 3Dream DVD/VHS Combo TV Set",
+            "cover_img":"https://wearable.vercel.app/1d32614847144f0f90c04b7521955c10af805edb.vox",
+            "opensea_url":"https://opensea.io/assets/matic/0xe4963FD7B58B36DD6d87b5B00C878c590609C8bE/62",
+            "creator_name":"Nvllsekt",
+            "world":"Voxels"
+        },
+        {
+            "id":"04179a0c-7b25-49dc-85bd-b3b07e0c1f2c",
+            "name":"Voxeth\u2122 3YE CAM V.0138",
+            "cover_img":"https://wearable.vercel.app/b0021b97b21139949c05326442f5a156b9cd1c2f.vox",
+            "opensea_url":"https://opensea.io/assets/matic/0xe4963FD7B58B36DD6d87b5B00C878c590609C8bE/46",
+            "creator_name":"Nvllsekt",
+            "world":"Voxels"
+        },
+        {
+            "id":"138d925e-96ab-48ab-bc6d-fa53301ff0a4",
+            "name":"Voxeth\u2122 DR-2049 Cranial Replacement",
+            "cover_img":"https://wearable.vercel.app/c524575eb6315415b58c881055da44756ccc48ca.vox",
+            "opensea_url":"https://opensea.io/assets/matic/0xe4963FD7B58B36DD6d87b5B00C878c590609C8bE/64",
+            "creator_name":"Nvllsekt",
+            "world":"Voxels"
+        }
+    ]
 }
 ```
 ---
