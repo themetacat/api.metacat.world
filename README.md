@@ -68,6 +68,9 @@
 32. 获取 netvrk 地块销售总额统计信息接口
 33. 获取 Decentraland 流量统计信息接口
 34. 获取各个平台的地主总数统计信息接口
+35. 获取 aavegotchi 地块成交均价统计信息接口
+36. 获取 aavegotchi 地块成交总数量统计信息接口
+37. 获取 aavegotchi 地块销售总额统计信息接口
 
 ### 七、用户登录相关接口
 1. 获取钱包登录所需 nonce 接口
@@ -8406,6 +8409,376 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
             "value":1239
         }
     ]
+}
+```
+---
+**6\.35 获取 aavegotchi 地块成交均价统计信息接口**
+###### 接口功能
+> 获取 aavegotchi 地块成交均价统计信息接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_aavegotchi_avg_price_stats
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+
+
+###### 返回字段
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "daily":{
+            "data":{
+                "eth":[
+                    {
+                        "time":"2022.10.20",
+                        "value_avg":0.25,
+                        "value_min":0.05,
+                        "value_max":0.44,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2022.10.21",
+                        "value_avg":0.3,
+                        "value_min":0.03,
+                        "value_max":0.93,
+                        "type":"land"
+                    }
+                ],
+                "usd":[
+                    {
+                        "time":"2022.10.20",
+                        "value_avg":316,
+                        "value_min":62,
+                        "value_max":569,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2022.10.21",
+                        "value_avg":383,
+                        "value_min":39,
+                        "value_max":1197,
+                        "type":"land"
+                    }
+                ],
+                "usd":[
+                    {
+                        "time":"2022.05.01",
+                        "value_avg":1374,
+                        "value_min":158,
+                        "value_max":16684,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2022.05.08",
+                        "value_avg":904,
+                        "value_min":174,
+                        "value_max":6164,
+                        "type":"land"
+                    }
+                ]
+            }
+        },
+        "monthly":{
+            "data":{
+                "eth":[
+                    {
+                        "time":"2020.06",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2020.07",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    }
+                ]
+            }
+        },
+        "quarterly":{
+            "data":{
+                "eth":[
+                    {
+                        "time":"2020 Q1",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2020 Q2",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    }
+                ],
+                "usd":[
+                    {
+                        "time":"2020 Q1",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2020 Q2",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    }
+                ]
+            }
+        }
+    }
+}
+```
+---
+**6\.36 获取 aavegotchi 地块成交总数量统计信息接口**
+###### 接口功能
+> 获取 aavegotchi 地块成交总数量统计信息接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_aavegotchi_sales_num
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+
+
+###### 返回字段
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "daily":{
+            "data":[
+                {
+                    "time":"2022.10.20",
+                    "value":2,
+                    "type":"land"
+                },
+                {
+                    "time":"2022.10.21",
+                    "value":8,
+                    "type":"land"
+                }
+            ]
+        },
+        "weekly":{
+            "data":[
+                {
+                    "time":"2022.05.01",
+                    "value":374,
+                    "type":"land"
+                },
+                {
+                    "time":"2022.05.08",
+                    "value":310,
+                    "type":"land"
+                }
+            ]
+        },
+        "monthly":{
+            "data":[
+                {
+                    "time":"2020.06",
+                    "value":0,
+                    "type":"land"
+                },
+                {
+                    "time":"2020.07",
+                    "value":0,
+                    "type":"land"
+                }
+            ]
+        },
+        "quarterly":{
+            "data":[
+                {
+                    "time":"2020 Q1",
+                    "value":0,
+                    "type":"land"
+                },
+                {
+                    "time":"2020 Q2",
+                    "value":0,
+                    "type":"land"
+                }
+            ]
+        },
+        "yearly":{
+            "data":[
+                {
+                    "time":"2018",
+                    "value":0,
+                    "type":"land"
+                },
+                {
+                    "time":"2019",
+                    "value":0,
+                    "type":"land"
+                }
+            ]
+        }
+    }
+}
+```
+---
+**6\.37 获取 aavegotchi 地块销售总额统计信息接口**
+###### 接口功能
+> 获取 aavegotchi 地块销售总额统计信息接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_aavegotchi_sales_amount
+
+###### 返回数据格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数  | 必选  | 类型 | 默认值 | 描述           |
+| :---- | :---- | :--: | :----- | -------------- |
+
+
+###### 返回字段
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "daily":{
+            "data":{
+                "eth":[
+                    {
+                        "time":"2022.10.20",
+                        "value_avg":0.25,
+                        "value_min":0.05,
+                        "value_max":0.44,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2022.10.21",
+                        "value_avg":0.3,
+                        "value_min":0.03,
+                        "value_max":0.93,
+                        "type":"land"
+                    }
+                ],
+                "usd":[
+                    {
+                        "time":"2022.10.20",
+                        "value_avg":316,
+                        "value_min":62,
+                        "value_max":569,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2022.10.21",
+                        "value_avg":383,
+                        "value_min":39,
+                        "value_max":1197,
+                        "type":"land"
+                    }
+                ],
+                "usd":[
+                    {
+                        "time":"2022.05.01",
+                        "value_avg":1374,
+                        "value_min":158,
+                        "value_max":16684,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2022.05.08",
+                        "value_avg":904,
+                        "value_min":174,
+                        "value_max":6164,
+                        "type":"land"
+                    }
+                ]
+            }
+        },
+        "monthly":{
+            "data":{
+                "eth":[
+                    {
+                        "time":"2020.06",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2020.07",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    }
+                ]
+            }
+        },
+        "quarterly":{
+            "data":{
+                "eth":[
+                    {
+                        "time":"2020 Q1",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2020 Q2",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    }
+                ],
+                "usd":[
+                    {
+                        "time":"2020 Q1",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    },
+                    {
+                        "time":"2020 Q2",
+                        "value_avg":0,
+                        "value_min":0,
+                        "value_max":0,
+                        "type":"land"
+                    }
+                ]
+            }
+        }
+    }
 }
 ```
 ---
