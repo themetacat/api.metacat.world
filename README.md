@@ -190,6 +190,9 @@
 9. Mozilla Hubs Scene 列表接口
 10. Arium Space 列表接口
 11. Artifex World 列表接口
+12. Substrata 列表接口
+13. NiftyIsland Island 列表接口
+14. palyone space 列表接口
 
 ----
 ## 全局错误码
@@ -15389,6 +15392,208 @@ must realize we have been in the Alien Metaverse for eons and study our ancestor
             {
                 "name":"Other",
                 "count":11
+            }
+        ]
+    }
+}
+```
+---
+**21.12 Substrata 列表接口**
+
+###### 接口功能
+> Substrata 列表接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_substrata_parcel_list
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| type        |      |    str  |    'All'   |   空间类型   |
+| page        |      |    int  |     1   |   搜索结果的页数   |
+| count      |     |    int  |    8    |   搜索结果每页展示多少条数据   |
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "page":1,
+        "parcel_list":[
+            {
+                "name":"Parcel 10",
+                "cover_img":"https://substrata.info/screenshot/98",
+                "detail_url":"https://substrata.info/parcel/10",
+                "description":"Dimensions: 20.0 m x 20.0 m (area: 400 m^2), height: 10.0 m.  Location: x: 15, y: 60 (62 m from the origin).  Visit https://substrata.info/parcel/10 for more info.",
+                "opensea_url":"https://opensea.io/assets/0xa4535f84e8d746462f9774319e75b25bc151ba1d/10",
+                "type":"Other"
+            },
+            {
+                "name":"Parcel 11",
+                "cover_img":"https://substrata.info/screenshot/100",
+                "detail_url":"https://substrata.info/parcel/11",
+                "description":"Dimensions: 20.0 m x 20.0 m (area: 400 m^2), height: 10.0 m.  Location: x: 35, y: 60 (70 m from the origin).  Visit https://substrata.info/parcel/11 for more info.",
+                "opensea_url":"https://opensea.io/assets/0xa4535f84e8d746462f9774319e75b25bc151ba1d/11",
+                "type":"Other"
+            },
+            {
+                "name":"Parcel 13",
+                "cover_img":"https://substrata.info/screenshot/104",
+                "detail_url":"https://substrata.info/parcel/13",
+                "description":"Dimensions: 20.0 m x 20.0 m (area: 400 m^2), height: 10.0 m.  Location: x: 15, y: 80 (82 m from the origin).  Visit https://substrata.info/parcel/13 for more info.",
+                "opensea_url":"https://opensea.io/assets/0xa4535f84e8d746462f9774319e75b25bc151ba1d/13",
+                "type":"Other"
+            }
+        ],
+        "count":3,
+        "total_page":392,
+        "type":"All",
+        "type_total":[
+            {
+                "name":"All",
+                "count":1175
+            },
+            {
+                "name":"Other",
+                "count":1175
+            }
+        ]
+    }
+}
+```
+---
+**21.13 NiftyIsland Island 列表接口**
+
+###### 接口功能
+> NiftyIsland Island 列表接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_niftyisland_island_list
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| type        |      |    str  |    'All'   |   空间类型   |
+| page        |      |    int  |     1   |   搜索结果的页数   |
+| count      |     |    int  |    8    |   搜索结果每页展示多少条数据   |
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "page":1,
+        "parcel_list":[
+            {
+                "name":"SS Nifty",
+                "cover_img":"https://content.niftyisland.com/nftables/54fad06d-6a52-48f6-ab63-67b00407d9db/v/1/preview.png",
+                "detail_url":"https://niftyisland.com/item/0xaa39a968b77bdf74a8d402cfdcc07128ce7927b3/132",
+                "description":"SS Nifty  - \n\nAfter extensive research and exploration, Chroma's research wing discovered the wreckage of the SS Nifty, an ancient ship fabled to have brought the first explorers to the area.\n\nUsing his advanced workshop, Chroma manufactured a limited number of replicas, using one as his mobile base of operations as he searches for more artifacts from the history of Nifty Island. Although not a perfect replica, she is sea worth and quite impressive.\n\nThis land was created by @ChromaTheMaker on November 13, 2022 using the Nifty Island creator tool.\n\nThis land was created by @ChromaTheMaker on November 13, 2022 using the Nifty Island creator tool.",
+                "type":"Other"
+            },
+            {
+                "name":"SquishIsland_1a",
+                "cover_img":"https://content.niftyisland.com/nftables/4e33a8d4-d199-4a3a-bb6d-5d1d4cf3e906/v/1/preview.png",
+                "detail_url":"https://niftyisland.com/item/0x3fc0616fc88e8cee5a58e35a8963c8d0cfe8b085/36",
+                "description":"This land was created by @SQUISH on November 5, 2022 using the Nifty Island creator tool.",
+                "type":"Other"
+            }
+        ],
+        "count":2,
+        "total_page":10,
+        "type":"All",
+        "type_total":[
+            {
+                "name":"All",
+                "count":20
+            },
+            {
+                "name":"House",
+                "count":1
+            },
+            {
+                "name":"Other",
+                "count":19
+            }
+        ]
+    }
+}
+```
+```
+---
+**21.14 palyone space 列表接口**
+
+###### 接口功能
+> palyone space 列表接口
+
+###### URL
+> https://api.metacat.world/api/v1/get_playerone_space_list
+
+###### 支持格式
+> JSON
+
+###### HTTP 请求方式
+> GET
+
+###### 请求参数
+| 参数          | 必选 |  类型  | 默认值 | 描述              |
+| :------------ | :--- | :----: | :----- | ----------------- |
+| Body        |      |        |        | 请求体            |
+| type        |      |    str  |    'All'   |   空间类型   |
+| page        |      |    int  |     1   |   搜索结果的页数   |
+| count      |     |    int  |    8    |   搜索结果每页展示多少条数据   |
+
+```
+{
+    "code":100000,
+    "msg":"success",
+    "data":{
+        "page":1,
+        "parcel_list":[
+            {
+                "name":"PPPP",
+                "cover_img":"https://playeroneworld.s3.ap-southeast-1.amazonaws.com/uimg/shared-d8a6dfe2-e23c-47fe-aecc-237ccf4ed1b8.jpg",
+                "detail_url":"https://www.playerone.world/preview/space/d8a6dfe2-e23c-47fe-aecc-237ccf4ed1b8",
+                "type":"Other",
+                "description":""
+            },
+            {
+                "name":"LEAP OF FAITH",
+                "cover_img":"https://playeroneworld.s3.ap-southeast-1.amazonaws.com/uimg/shared-46c8ae20-802b-4294-b9e7-895ca26c418a.jpg",
+                "detail_url":"https://www.playerone.world/preview/space/46c8ae20-802b-4294-b9e7-895ca26c418a",
+                "type":"Other",
+                "description":""
+            }
+        ],
+        "count":2,
+        "total_page":7,
+        "type":"All",
+        "type_total":[
+            {
+                "name":"All",
+                "count":14
+            },
+            {
+                "name":"Museum",
+                "count":1
+            },
+            {
+                "name":"Other",
+                "count":13
             }
         ]
     }
